@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-17 07:46
-- Branche : `main` — dernier commit : 7c77656 « Outillage de mise à jour de la documentation » (2026-09-17)
-- Arbre de travail : 2 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-17 07:48
+- Branche : `main` — dernier commit : 8039547 « test hook (doit passer) » (2026-09-17)
+- Arbre de travail : 3 fichier(s) modifié(s) non commité(s)
 - Code : core 0 fichier(s) · tests 0 cas dans 0 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
@@ -75,4 +75,3 @@ Si la synthèse du juge est introuvable : relancer une conception selon [AGENT.m
 - **2026-09-17** — Cadrage, scaffolding Expo SDK 57, nettoyage du template, dépendances, premier commit. Lancement du workflow de conception (3 propositions indépendantes + synthèse).
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
-- **2026-09-17** — (test du garde-fou, ligne à supprimer)

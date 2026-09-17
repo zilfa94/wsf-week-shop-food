@@ -57,13 +57,16 @@ function countMatches(files, re) {
   return n;
 }
 
-/** Partie d'AVANCEMENT.md rédigée à la main (bloc auto retiré). */
+/**
+ * Partie d'AVANCEMENT.md rédigée à la main (bloc auto retiré), normalisée pour la comparaison :
+ * fins de ligne LF et sans blancs finaux (git() retire le \n final de `git show`, pas readFileSync).
+ */
 function manualPart(text) {
   if (text == null) return null;
   const a = text.indexOf(AUTO_START);
   const b = text.indexOf(AUTO_END);
-  if (a === -1 || b === -1 || b < a) return text;
-  return text.slice(0, a) + text.slice(b + AUTO_END.length);
+  const manual = a === -1 || b === -1 || b < a ? text : text.slice(0, a) + text.slice(b + AUTO_END.length);
+  return manual.replace(/\r\n/g, '\n').replace(/\s+$/, '');
 }
 
 function isCodePath(p) {
@@ -246,4 +249,5 @@ switch (cmd) {
     process.stderr.write('usage : node scripts/docs.mjs <status [--verify] | check [--staged] | install-hooks>\n');
     code = 2;
 }
-process.exit(code);
+// Pas de process.exit() : sur un pipe, stdout est asynchrone et la sortie JSON du hook serait tronquée.
+process.exitCode = code;

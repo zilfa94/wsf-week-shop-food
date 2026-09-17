@@ -11,7 +11,7 @@
 2. **Vérifier l'état du dépôt** : `git status --short` et `git log --oneline | head -20`. Un `git status` non vide signifie qu'un travail a été interrompu : lire le diff (`git diff`) avant toute action, ne jamais `git checkout --` / `git reset --hard` sans avoir compris ce qui s'y trouve.
 3. **Reconstituer la base** : `npm install` (si `node_modules/` manque), puis recréer `expo-env.d.ts` s'il est absent (§ 4.3), puis `npm run typecheck` et `npm test`. **Ces deux commandes doivent être vertes avant de toucher au code.** Si elles ne le sont pas, c'est le premier chantier ; le noter dans AVANCEMENT.md.
 4. **Reprendre à la « Prochaine étape »** d'AVANCEMENT.md. Ne pas refaire ce qui est coché « fait ». Ne pas changer les décisions du § 2 sans accord explicite du propriétaire.
-5. **Avant de terminer une session** : `npm run typecheck` + `npm test` verts, commit, mise à jour d'AVANCEMENT.md (statut, journal daté, prochaine étape). Une session ne se termine jamais avec un état non documenté.
+5. **Avant de terminer une session** : `npm run typecheck` + `npm test` verts, mise à jour de la partie rédigée d'AVANCEMENT.md (section « Reprise », cases, journal daté), `npm run docs:status`, commit. Une session ne se termine jamais avec un état non documenté — des hooks le vérifient (§ 8).
 
 ---
 
@@ -54,6 +54,9 @@ WSF-Week Shop Food/
 ├── package.json        dépendances, scripts, config jest (bloc "jest")
 ├── tsconfig.json       strict + alias
 ├── expo-env.d.ts       GÉNÉRÉ, gitignoré, requis par tsc (voir § 4.3)
+├── scripts/docs.mjs    outillage doc : bloc auto d'AVANCEMENT.md, garde-fous, hooks (§ 8)
+├── .githooks/          pre-commit (activé par `npm install` via le script `prepare`)
+├── .claude/settings.json  hook Stop de Claude Code (§ 8) — settings.local.json est personnel, gitignoré
 ├── assets/             icône, splash, favicon
 └── src/
     ├── app/            routes expo-router : _layout.tsx (racine), (tabs)/…, recette/[id].tsx, onboarding…
@@ -134,7 +137,7 @@ printf '/// <reference types="expo/types" />\n' > expo-env.d.ts
 
 ## 6. Conventions
 
-- **Commits** : message en français, impératif, corps optionnel expliquant le pourquoi ; dernière ligne `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` quand l'IA a contribué. Un commit par étape cohérente. Pas de push sans demande.
+- **Commits** : message en français, impératif, corps optionnel expliquant le pourquoi ; dernière ligne `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>` quand l'IA a contribué. Un commit par étape cohérente. Pas de push sans demande. **Jamais `--no-verify`** ni `WSF_SKIP_DOCS_CHECK` de la part de l'IA : si le pre-commit refuse, c'est que la doc n'est pas à jour — la mettre à jour.
 - **Nommage** : fichiers `kebab-case.ts(x)`, types `PascalCase`, fonctions/variables `camelCase`, constantes `UPPER_SNAKE` uniquement pour de vraies constantes.
 - **Composants** : un composant exporté par fichier, props typées, pas de style inline hors cas trivial ; couleurs et espacements depuis le thème.
 - **Textes UI** : français, avec typographie française (espace avant `:` `;` `!` `?`, guillemets « »).
@@ -150,3 +153,21 @@ printf '/// <reference types="expo/types" />\n' > expo-env.d.ts
 | `expo-env.d.ts` absent | § 4.3. |
 | Tests rouges après reprise | Lire la sortie ; ne pas supprimer/ignorer un test pour le faire passer ; corriger le code ou, si la spec a changé, le test **et** la spec. |
 | Doute sur une décision | § 2 de ce fichier, puis AVANCEMENT.md « Décisions prises » ; sinon demander au propriétaire. |
+
+## 8. Mise à jour de la documentation : ce qui est automatique, ce qui reste à rédiger
+
+**Principe** : une info vit à un seul endroit. Les règles/décisions/commandes/pièges sont dans ce fichier (stable). L'**état** est dans AVANCEMENT.md (change souvent) et c'est **le seul fichier à tenir à jour au quotidien**. README.md et AGENT.md ne sont que des pointeurs.
+
+| Quoi | Qui | Comment |
+|---|---|---|
+| Bloc « État instantané » d'AVANCEMENT.md (date, branche, dernier commit, arbre propre/sale, compteurs de code, dernier résultat typecheck/tests) | **Automatique** | `npm run docs:status` (rapide) ou `npm run docs:verify` (lance aussi `tsc` + `jest` et enregistre le résultat). Le pre-commit le régénère et l'indexe à chaque commit. Ne jamais l'éditer à la main. |
+| Section « Reprise » (ce qui existe / n'existe pas / en cours, **prochaine étape**), cases Fait / En cours / À faire, ligne de **Journal** datée | **Rédigé** (IA ou humain) | À chaque étape franchie et à chaque fin de session. C'est le contenu que les garde-fous exigent. |
+| Ce manuel (CLAUDE.md) | Rédigé, rare | Uniquement quand une décision, une règle, une commande ou un piège change. |
+
+**Garde-fous** (`scripts/docs.mjs`) — règle unique : *si du code change (`src/`, `assets/`, `package.json`, `app.json`, `tsconfig.json`), la partie rédigée d'AVANCEMENT.md doit avoir changé depuis le dernier commit.*
+
+- **Hook git `pre-commit`** (`.githooks/pre-commit`, activé par `git config core.hooksPath .githooks`, que `npm install` exécute via le script `prepare`) : régénère le bloc auto, l'indexe, puis **refuse le commit** si la règle n'est pas respectée, avec la marche à suivre. Après un clone : `npm install` suffit ; sinon `npm run prepare`.
+- **Hook Claude Code `Stop`** (`.claude/settings.json`) : à chaque fin de tour de l'IA, même règle sur l'arbre de travail. Si elle n'est pas respectée, le hook renvoie `decision: block` avec la marche à suivre → l'IA continue et met la doc à jour avant de s'arrêter (une seule relance, pas de boucle : `stop_hook_active`). Une IA qui n'exécute pas les hooks Claude Code reste protégée par le pre-commit.
+- Contournement d'urgence, **réservé au propriétaire** : `WSF_SKIP_DOCS_CHECK=1 git commit …` (l'IA n'a pas le droit de l'utiliser, ni `--no-verify`).
+
+**Procédure minimale quand le hook refuse** : 1) éditer AVANCEMENT.md (« Reprise » + cases + une ligne de journal datée) ; 2) `npm run docs:status` ; 3) relancer le commit.
