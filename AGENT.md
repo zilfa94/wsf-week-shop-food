@@ -72,3 +72,12 @@ Quelques demandes types que je sais traiter directement :
 ## 8. Pour les sous-agents que j'orchestre
 
 Si tu lis ce fichier en tant que sous-agent : tu travailles pour la mission décrite au § 2, sous les règles du § 4. Ne modifie que les fichiers qui t'ont été attribués, respecte `src/core/types.ts` sans le changer, écris les tests demandés, ne touche ni à `package.json` ni aux layouts `expo-router`, et rends compte de ce que tu n'as pas pu faire plutôt que de le masquer.
+
+## 9. Si une autre IA reprend le projet
+
+Le projet est conçu pour être repris **à tout moment**, y compris au milieu d'une étape, sans dépendre de ma mémoire de session :
+
+1. [CLAUDE.md](CLAUDE.md) est le **manuel opérationnel** : protocole de reprise (§ 0), décisions figées (§ 2), arborescence (§ 3), commandes et pièges connus (§ 4), garde-fous anti-erreurs (§ 5), conventions (§ 6), où retrouver un artefact manquant (§ 7). Il est chargé automatiquement par Claude Code.
+2. [AVANCEMENT.md](AVANCEMENT.md) § « Reprise » donne l'**état exact** (dernier commit, ce qui existe / n'existe pas, ce qui tournait) et la **prochaine étape** numérotée.
+3. `docs/SPEC.md` est la spécification que le code doit suivre ; en cas d'écart entre code et spec, la spec fait foi jusqu'à décision contraire du propriétaire, consignée dans AVANCEMENT.md.
+4. Règle d'or : **ne rien déclarer terminé sans `npm run typecheck` et `npm test` verts**, et **ne jamais quitter une session sans mettre à jour AVANCEMENT.md**.

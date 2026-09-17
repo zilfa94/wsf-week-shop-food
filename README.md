@@ -1,56 +1,40 @@
-# Welcome to your Expo app 👋
+# WSF · Week Shop Food
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Application mobile **Android + iOS** (Expo / React Native / TypeScript) qui construit votre **programme nutritionnel de la semaine** (7 jours, vrais plats variés et naturels) et génère la **liste de courses** correspondante, **organisée pour ne rien gaspiller** : quantités agrégées et arrondies aux conditionnements réels, produits périssables réutilisés d'un repas à l'autre, déduction du garde-manger, suggestions pour les restes, remplacement d'un repas avec recalcul de la liste, rayons du magasin, estimation du budget.
 
-## Get started
+100 % hors-ligne, sans compte ni backend. Interface en français.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Démarrer
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Scannez le QR code avec **Expo Go** (Android / iOS), ou appuyez sur `a` (émulateur Android) / `i` (simulateur iOS).
 
-### Other setup steps
+## Vérifier
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm run typecheck   # TypeScript strict
+npm test            # tests unitaires (jest-expo)
+```
 
-## Learn more
+## Documentation
 
-To learn more about developing your project with Expo, look at the following resources:
+| Fichier | Contenu |
+|---|---|
+| [CLAUDE.md](CLAUDE.md) | Manuel de reprise : protocole, décisions figées, arborescence, commandes, pièges, garde-fous |
+| [AVANCEMENT.md](AVANCEMENT.md) | État du projet, fait / en cours / à faire, prochaine étape, journal |
+| [AGENT.md](AGENT.md) | Rôle, mission et méthode de l'agent IA qui développe le projet |
+| `docs/SPEC.md` | Spécification définitive (écrans, types, données, algorithmes, tests) |
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Structure
 
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+src/app/         routes expo-router (écrans)
+src/core/        logique métier pure et testée (plan, courses, unités, packs, gaspillage, nutrition)
+src/data/        ingrédients canoniques et recettes (français)
+src/store/       état zustand + persistance AsyncStorage
+src/components/  composants UI
+```

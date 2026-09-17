@@ -3,6 +3,25 @@
 > Application mobile Android + iOS : programme nutritionnel sur 7 jours + liste de courses hebdomadaire optimisée anti-gaspillage.
 > Dernière mise à jour : 2026-09-17
 
+## Reprise — état exact et prochaine étape
+
+> Section à mettre à jour **à chaque fin de session**. Toute IA qui reprend doit d'abord lire [CLAUDE.md](CLAUDE.md) § 0 (protocole), puis cette section.
+
+- **Dernier commit** : `ff1964b` — dépôt propre (`git status` vide) au moment de l'écriture.
+- **Base vérifiée** : `npm run typecheck` ✅ et `npm test` ✅ sur le scaffold (aucun code métier encore écrit).
+- **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, ce fichier).
+- **Ce qui n'existe pas encore** : `docs/SPEC.md`, `src/core/`, `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
+- **En cours au moment de l'écriture** : workflow de conception `wf_4122c8d8-7cf` — les 3 propositions (UX, algorithmes, ingénierie) sont rendues ; le juge de synthèse tourne. Résultats bruts dans le `journal.jsonl` indiqué dans CLAUDE.md § 7.
+
+**Prochaine étape (dans l'ordre)** :
+1. Récupérer la synthèse du juge → écrire `docs/SPEC.md` (spec) et conserver le découpage en modules.
+2. Implémenter **seul, en premier** le module `types` (`src/core/types.ts`, `src/core/units.ts`) + `npm run typecheck`.
+3. Lancer l'implémentation **parallèle** des modules à fichiers disjoints (données, core, store, thème/composants, écrans), chacun avec ses tests.
+4. Intégration par l'agent principal (layouts `expo-router`, `package.json`), puis `typecheck`, `test`, `expo-doctor`, `expo export`.
+5. Revue adversariale, corrections, mise à jour de ce fichier, commit.
+
+Si la synthèse du juge est introuvable : relancer une conception selon [AGENT.md](AGENT.md) § 4 (3 angles + juge) en réutilisant les propositions brutes du journal si elles existent.
+
 ## Statut global
 
 | Phase | État | Détail |
@@ -67,3 +86,4 @@ npm test            # tests unitaires
 ## Journal
 
 - **2026-09-17** — Cadrage, scaffolding Expo SDK 57, nettoyage du template, dépendances, premier commit. Lancement du workflow de conception (3 propositions indépendantes + synthèse).
+- **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
