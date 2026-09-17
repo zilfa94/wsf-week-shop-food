@@ -7,3 +7,5 @@ export default function Index() {
     </View>
   );
 }
+
+// test hook
