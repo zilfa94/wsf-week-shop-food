@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/docs.mjs check",
+            "timeout": 20,
+            "statusMessage": "Vérification de la documentation de suivi…"
+          }
+        ]
+      }
+    ]
+  }
+}

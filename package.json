@@ -50,7 +50,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "typecheck": "tsc --noEmit",
-    "doctor": "expo-doctor"
+    "doctor": "expo-doctor",
+    "docs:status": "node scripts/docs.mjs status",
+    "docs:verify": "node scripts/docs.mjs status --verify",
+    "docs:check": "node scripts/docs.mjs check --staged",
+    "prepare": "node scripts/docs.mjs install-hooks"
   },
   "jest": {
     "preset": "jest-expo",

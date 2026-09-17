@@ -1,0 +1,4 @@
+#!/bin/sh
+# Garde-fou documentation (CLAUDE.md § 8) : régénère le bloc auto d'AVANCEMENT.md
+# et refuse le commit si du code est indexé sans mise à jour rédigée d'AVANCEMENT.md.
+exec node "$(git rev-parse --show-toplevel)/scripts/docs.mjs" check --staged

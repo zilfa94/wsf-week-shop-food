@@ -1,15 +1,23 @@
 # Avancement du projet — WSF · Week Shop Food
 
 > Application mobile Android + iOS : programme nutritionnel sur 7 jours + liste de courses hebdomadaire optimisée anti-gaspillage.
-> Dernière mise à jour : 2026-09-17
+> **Ce fichier est la source de vérité de l'ÉTAT du projet.** Les décisions, commandes, pièges et règles vivent dans [CLAUDE.md](CLAUDE.md) (ne pas les dupliquer ici). Mécanisme de mise à jour : CLAUDE.md § 8.
+
+## État instantané (automatique)
+
+<!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
+- Généré le : 2026-09-17 07:46
+- Branche : `main` — dernier commit : 6e0fc4e « Documentation de reprise : CLAUDE.md, README, section Reprise, renvoi AGENT.md » (2026-09-17)
+- Arbre de travail : 6 fichier(s) modifié(s) non commité(s)
+- Code : core 0 fichier(s) · tests 0 cas dans 0 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
+- Vérification : non exécutée (`npm run docs:verify`)
+<!-- auto:end -->
 
 ## Reprise — état exact et prochaine étape
 
-> Section à mettre à jour **à chaque fin de session**. Toute IA qui reprend doit d'abord lire [CLAUDE.md](CLAUDE.md) § 0 (protocole), puis cette section.
+> Partie rédigée, à mettre à jour **à chaque fin de session** (les hooks refusent un commit / une fin de session si du code a changé sans elle). Toute IA qui reprend lit d'abord [CLAUDE.md](CLAUDE.md) § 0, puis cette section.
 
-- **Dernier commit** : `ff1964b` — dépôt propre (`git status` vide) au moment de l'écriture.
-- **Base vérifiée** : `npm run typecheck` ✅ et `npm test` ✅ sur le scaffold (aucun code métier encore écrit).
-- **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, ce fichier).
+- **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, `README.md`, ce fichier), outillage `scripts/docs.mjs` + hooks (git pre-commit, Claude Code Stop).
 - **Ce qui n'existe pas encore** : `docs/SPEC.md`, `src/core/`, `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **En cours au moment de l'écriture** : workflow de conception `wf_4122c8d8-7cf` — les 3 propositions (UX, algorithmes, ingénierie) sont rendues ; le juge de synthèse tourne. Résultats bruts dans le `journal.jsonl` indiqué dans CLAUDE.md § 7.
 
@@ -33,24 +41,17 @@ Si la synthèse du juge est introuvable : relancer une conception selon [AGENT.m
 | 4. Intégration & vérification | ⏳ À venir | `tsc`, `jest`, `expo-doctor`, `expo export`, revue adversariale |
 | 5. Test sur appareil | ⏳ À venir | Expo Go (Android / iOS) puis build EAS |
 
-## Décisions prises
-
-- **Stack** : Expo (React Native) + TypeScript strict, navigation `expo-router` (dossier `src/app/`), une seule base de code pour Android et iOS.
-- **État** : `zustand` + persistance `AsyncStorage`. Application **100 % hors-ligne**, aucun backend.
-- **Logique métier** en fonctions pures dans `src/core/` (génération du plan, agrégation des courses, conversions d'unités, conditionnements, score anti-gaspillage, nutrition), testée avec `jest-expo`.
-- **Données** : base locale de recettes (≥ 60 plats réels, variés, naturels, en français) et d'ingrédients canoniques (rayon, unité, taille de pack, périssabilité, prix indicatif).
-- **Langue de l'interface** : français.
-- Nom du package : `wsf-week-shop-food`, slug Expo `wsf-week-shop-food`, scheme `wsf`.
-
 ## Fait
 
-- [x] Dossier projet initialisé (`git init`, branche `main`, premier commit `da51785`).
-- [x] Template Expo `default` SDK 57 extrait manuellement — `create-expo-app` est incompatible avec npm 12 (format de `npm pack --json` changé) et refuse les noms de dossier avec espaces.
+- [x] Dossier projet initialisé (`git init`, branche `main`).
+- [x] Template Expo `default` SDK 57 extrait manuellement (voir CLAUDE.md § 4.2 pour le pourquoi).
 - [x] Boilerplate de démo supprimé (écran Explore, composants d'exemple, images React/Expo, script `reset-project`).
 - [x] Dépendances ajoutées : `zustand`, `@react-native-async-storage/async-storage`, `expo-haptics`, `@expo/vector-icons` ; dev : `jest`, `jest-expo`, `@types/jest`, `@testing-library/react-native`.
-- [x] Scripts npm : `test`, `test:watch`, `typecheck`, `doctor` ; config Jest (`preset: jest-expo`).
+- [x] Scripts npm : `test`, `test:watch`, `typecheck`, `doctor`, `docs:*` ; config Jest (`preset: jest-expo`).
 - [x] `app.json` renommé (WSF – Week Shop Food).
 - [x] Base vérifiée : `npx tsc --noEmit` ✅ et `npx jest` ✅ (test de fumée).
+- [x] Documentation de reprise (`CLAUDE.md`, `AGENT.md`, `README.md`, ce fichier).
+- [x] Outillage doc : bloc auto-généré, hook git pre-commit, hook Claude Code Stop (`scripts/docs.mjs`).
 
 ## En cours
 
@@ -69,21 +70,8 @@ Si la synthèse du juge est introuvable : relancer une conception selon [AGENT.m
 - [ ] Icône / splash screen personnalisés.
 - [ ] Test sur téléphone via Expo Go, puis build EAS (Android APK/AAB, iOS TestFlight).
 
-## Comment lancer
-
-```bash
-npm install
-npx expo start
-```
-
-Puis scanner le QR code avec **Expo Go** (Android/iOS), ou `a` / `i` pour un émulateur.
-
-```bash
-npm run typecheck   # vérification TypeScript
-npm test            # tests unitaires
-```
-
 ## Journal
 
 - **2026-09-17** — Cadrage, scaffolding Expo SDK 57, nettoyage du template, dépendances, premier commit. Lancement du workflow de conception (3 propositions indépendantes + synthèse).
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
+- **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
