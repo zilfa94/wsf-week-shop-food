@@ -17,6 +17,7 @@
 
 - **Rythme** : avant chaque grosse étape, lire l'usage (outil `get_usage` de l'app : fenêtre 5 h et hebdomadaire). S'arrêter proprement vers **85 % de la fenêtre 5 h** (AVANCEMENT.md à jour + commit) et indiquer l'heure de reprise. **Commiter à chaque étape cohérente**, pas seulement en fin de session.
 - **Mode économe** : l'agent principal écrit lui-même spec, core, store, écrans ; seules les tâches mécaniques volumineuses (recettes, ingrédients) sont déléguées à 2-3 agents Sonnet. Pas de panels adversariaux multi-agents : `tsc` + `jest` font foi. Ne pas relancer de workflow massif sans accord explicite.
+- **Budget des agents** (mesuré le 2026-09-19) : un agent Sonnet « données » consomme ~160 k tokens, surtout en lectures/`grep` ; 3 agents en parallèle lancés à 55 % de la fenêtre ont provoqué une coupure. Règles : lui donner dans le prompt tout ce qu'il doit savoir (table compacte des ingrédients, règles, format) et lui interdire d'explorer ; ne lancer des agents en parallèle que si la fenêtre 5 h est < 50 % ; compter ~8 % de fenêtre par agent.
 - **Reprise après coupure** : le propriétaire écrit simplement « Reprends, on a été interrompu par le quota ». Même session → relire `git status` / `git diff` (ce qui a été écrit avant la coupure) et continuer. Nouvelle session → protocole § 0 complet (AVANCEMENT.md « Reprise » + état git + typecheck/tests). Les fichiers non commités au moment de la coupure sont sur le disque : ne jamais les écraser sans avoir lu le diff.
 
 ---

@@ -1841,7 +1841,7 @@ export const INGREDIENTS: readonly Ingredient[] = [
     shelfLifeDays: 60,
     freezable: false,
     staple: false,
-    foodClass: 'plant',
+    foodClass: 'egg',
     allergens: ['egg'],
   },
   {

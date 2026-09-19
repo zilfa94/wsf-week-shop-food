@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 14:37
-- Branche : `main` — dernier commit : 8a288d9 « Termine le core : bilan de semaine (report) et baril d'API publique » (2026-09-19)
-- Arbre de travail : 3 fichier(s) modifié(s) non commité(s)
-- Code : core 19 fichier(s) · tests 111 cas dans 14 fichier(s) · données ≈ 0 recette(s), ≈ 150 ingrédient(s) · routes 1 · composants 0 · store 0
+- Généré le : 2026-09-19 19:16
+- Branche : `main` — dernier commit : 0ee69a3 « Ajoute le référentiel de 150 ingrédients et son test d'intégrité » (2026-09-19)
+- Arbre de travail : 13 fichier(s) modifié(s) non commité(s)
+- Code : core 19 fichier(s) · tests 118 cas dans 15 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -27,11 +27,12 @@
 - **Ce qui n'existe pas encore** : `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **`src/data/ingredients.ts`** fait : 150 ingrédients (agent Sonnet, validés par `src/data/__tests__/ingredients.test.ts`, 4 tests). Piège découvert : `expect(valeur, message)` est une syntaxe Vitest ; en Jest 29, accumuler les violations et faire `expect(problems).toEqual([])`.
-- **En cours au moment de l'écriture** : 3 agents Sonnet rédigent les recettes (`recipes-breakfast.ts` + `recipes-snacks.ts` ; `recipes-french.ts` + `recipes-mediterranean.ts` ; `recipes-asian.ts` + `recipes-oriental.ts` + `recipes-veggie.ts`). Le test des recettes est prêt dans le scratchpad de la session (`data/dataset.test.ts`), à copier dans `src/data/__tests__/` avec `recipes.ts` et `index.ts` quand les fichiers existeront. Si la session est coupée ici : `git status` montre les fichiers de recettes livrés ; les valider avec ce test avant commit.
+- **`src/data/` complet** : 7 fichiers `recipes-*.ts` (13 petits-déjeuners, 8 collations, 10 français, 10 méditerranéens, 8 asiatiques, 8 orientaux, 9 végé = **66 recettes**, rédigées par 3 agents Sonnet), `recipes.ts`, `index.ts` (`DATASET`, `DATASET_VERSION = '2026.09.1'`), `__tests__/dataset.test.ts` (7 invariants : ids/noms uniques, ingrédients existants et convertibles, champs cohérents, couverture par créneau omnivore et végétalien sans gluten, variété, périssables jamais utilisés une seule fois, génération réelle d'une semaine de 28 repas sans créneau vide). Démo réelle : 2 personnes, 41 articles, 110,80 €, score anti-gaspi 96, variété 0, génération 302 ms (paramètres par défaut — à mesurer sur téléphone, réduire `anneal.iterations` si besoin).
+- **En cours au moment de l'écriture** : l'agent végé remplace 4 recettes en doublon de concept (2e shakshuka, 2e ratatouille, 2e gratin d'aubergine, curry de pois chiches ≈ chana masala) dans `recipes-veggie.ts` ; le test `src/data` doit rester vert. Observation à traiter plus tard : aucun batch cooking n'est apparu dans la démo réelle (`batchBonus` 2 peut-être trop faible sur les vraies données).
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. Données : `src/data/ingredients.ts` (~150, SPEC § 3.2-3.3) et `src/data/__tests__/dataset.test.ts` (invariants SPEC § 3.4) par l'agent principal, PUIS les `recipes-*.ts` par 2-3 agents **Sonnet** (quotas SPEC § 3.3), `recipes.ts`, `index.ts` (`DATASET`, `DATASET_VERSION`).
-2. Store zustand + persistance + tests (SPEC § 5) ; thème + composants (SPEC § 6) ; écrans (SPEC § 1.3).
+1. Valider et commiter la retouche végé (4 recettes remplacées), `npx jest src/data` vert.
+2. Store zustand + persistance + tests (SPEC § 5) — `jest.setup.ts` + `setupFilesAfterEnv` dans `package.json` (agent principal) ; thème + composants (SPEC § 6) ; écrans (SPEC § 1.3).
 3. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 
 ## Statut global
@@ -41,7 +42,7 @@
 | 0. Cadrage | ✅ Terminé | Objectif produit, contraintes techniques fixées |
 | 1. Scaffolding technique | ✅ Terminé | Projet Expo SDK 57 + TypeScript strict, dépendances installées, base vérifiée |
 | 2. Conception (spec) | ✅ Terminé | 3 propositions (`docs/conception/`) arbitrées par l'agent principal dans `docs/SPEC.md` (2026-09-19) |
-| 3. Implémentation | 🔄 En cours | Mode économe : **core complet** (107 tests) ; données, store, composants, écrans à venir |
+| 3. Implémentation | 🔄 En cours | Mode économe : **core complet** (107 tests), **données complètes** (66 recettes, 150 ingrédients, 11 tests) ; store, composants, écrans à venir |
 | 4. Intégration & vérification | ⏳ À venir | `tsc`, `jest`, `expo-doctor`, `expo export`, revue adversariale |
 | 5. Test sur appareil | ⏳ À venir | Expo Go (Android / iOS) puis build EAS |
 
@@ -62,9 +63,11 @@
 
 - [x] Core complet (2026-09-19) : `nutrition`, `planner` (+ `needs`), `aisles`, `leftovers`, `shopping`, `plan-edit`, `swap`, `report`, baril `index.ts` — 107 tests, génération d'un plan ≈ 150 ms.
 
+- [x] Données (2026-09-19) : 150 ingrédients + 66 recettes (agents Sonnet) + 2 tests d'intégrité (11 cas) ; génération réelle validée.
+
 ## En cours
 
-- [ ] Données : ingrédients canoniques (agent principal) + recettes (agents Sonnet) + test d'intégrité.
+- [ ] Retouche des 4 recettes végé en doublon (agent Sonnet), puis store.
 
 ## À faire
 - [ ] Store zustand (profil, plan, courses cochées, garde-manger, réglages) + persistance.
@@ -81,4 +84,4 @@
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
 - **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅. Arrêt à 79 % de la fenêtre 5 h.
-- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**. Phase données lancée : test d'intégrité des ingrédients + agent Sonnet pour `ingredients.ts`.
+- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**. Phase données lancée : test d'intégrité des ingrédients + agent Sonnet pour `ingredients.ts` (150, commité). Recettes : 3 agents Sonnet en parallèle ; petits-déjeuners + collations livrés (20 recettes) ; les 2 autres coupés par le quota (fenêtre saturée à 3 agents + agent principal), relancés après réinitialisation avec une table compacte des ingrédients (règle « Budget des agents » ajoutée à CLAUDE.md § 0.1). 66 recettes assemblées, test d'intégrité vert après 3 retouches (saisons de 2 petits-déjeuners, ciboulette partagée, 13e petit-déjeuner végétalien sans gluten toutes saisons) ; 118 tests au total.
