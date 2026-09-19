@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 19:21
-- Branche : `main` — dernier commit : 046a597 « Ajoute 66 recettes, l'assemblage du jeu de données et son test d'intégrité » (2026-09-19)
-- Arbre de travail : 10 fichier(s) modifié(s) non commité(s)
-- Code : core 19 fichier(s) · tests 129 cas dans 16 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 1 · composants 0 · store 6
+- Généré le : 2026-09-19 19:27
+- Branche : `main` — dernier commit : 212602d « Ajoute le store zustand persisté, ses hooks dérivés et remplace 4 recettes végé en doublon » (2026-09-19)
+- Arbre de travail : 22 fichier(s) modifié(s) non commité(s)
+- Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 1 · composants 14 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -24,16 +24,17 @@
 - **`src/core/aisles.ts`** (ordre de parcours), **`leftovers.ts`** (restes notables, recettes qui les absorbent, pack réutilisé par un repas ultérieur, faisabilité par garde-manger, « cuisiner avec ce que j'ai ») et **`shopping.ts`** (liste dérivée : agrégation multi-unités, garde-manger non périmé au premier usage, staples, optionnels interdits, choix de pack, sections par rayon, articles libres, `wasteScore`, `diffShoppingLists`, `addPurchasesToPantry`, `consumeFromPantry` FIFO) faits.
 - **`src/core/plan-edit.ts`** (verrou, cuisiné, portions, semaine terminée, dérive du profil, repas incompatibles) et **`swap.ts`** (suggestions à impact : liste courante = garde-manger virtuel, cochés acquis, delta articles/prix, raisons FR ; `applySwap` verrouille, regénère le déjeuner « restes » lié, rend ses portions au dîner source, recalcule le coût) faits.
 - **`src/core/report.ts`** (bilan : cuisinés, scores, restes orphelins, économie des packs partagés) et **`src/core/index.ts`** (baril de l'API publique) faits → **le core est complet : 19 fichiers, 107 tests.**
-- **Ce qui n'existe pas encore** : `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
+- **Ce qui n'existe pas encore** : composants métier (`src/components/plan|shopping|pantry|profile/`) et les écrans de `src/app/` (seuls `_layout.tsx` minimal et `index.tsx` placeholder existent).
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **`src/data/ingredients.ts`** fait : 150 ingrédients (agent Sonnet, validés par `src/data/__tests__/ingredients.test.ts`, 4 tests). Piège découvert : `expect(valeur, message)` est une syntaxe Vitest ; en Jest 29, accumuler les violations et faire `expect(problems).toEqual([])`.
 - **`src/data/` complet** : 7 fichiers `recipes-*.ts` (13 petits-déjeuners, 8 collations, 10 français, 10 méditerranéens, 8 asiatiques, 8 orientaux, 9 végé = **66 recettes**, rédigées par 3 agents Sonnet), `recipes.ts`, `index.ts` (`DATASET`, `DATASET_VERSION = '2026.09.1'`), `__tests__/dataset.test.ts` (7 invariants : ids/noms uniques, ingrédients existants et convertibles, champs cohérents, couverture par créneau omnivore et végétalien sans gluten, variété, périssables jamais utilisés une seule fois, génération réelle d'une semaine de 28 repas sans créneau vide). Démo réelle : 2 personnes, 41 articles, 110,80 €, score anti-gaspi 96, variété 0, génération 302 ms (paramètres par défaut — à mesurer sur téléphone, réduire `anneal.iterations` si besoin).
 - Retouche végé faite : 4 doublons de concept remplacés (pad thaï végétarien, risotto aux champignons, galettes de lentilles corail, soupe de butternut au lait de coco). Observation à traiter plus tard : aucun batch cooking n'est apparu dans la démo réelle (`batchBonus` 2 peut-être trop faible sur les vraies données).
 - **`src/store/` complet** (SPEC § 5) : `types.ts` (slices, `PersistedState`, défauts), `migrations.ts` (`STORE_VERSION = 1`, table de migrations, `sanitizePersisted` qui rejette un plan d'une autre `datasetVersion` ou avec une recette inconnue), `index.ts` (`useAppStore` = 5 slices + `persist` AsyncStorage, `partialize`, `merge` assainissant ; actions qui n'appellent que le core : générer/regénérer avec repas conservés, swap + undo, verrou, cuisiné avec décompte du garde-manger, portions, semaine suivante, cochage/pack/articles libres, « j'en ai déjà », entrée au garde-manger après courses, réglages, reset), `selectors.ts`, `hooks.ts` (`useHydrated`, `useToday` = seule horloge, `useShoppingList`, `useWeekNutrition`, `useDayNutrition`, `useSwapSuggestions`, `useCookWithPantry`, `usePantryAlerts`, `useWeekReport`, `useRecipeIngredientStatus`) ; `jest.setup.ts` (mocks AsyncStorage + haptics) référencé par `setupFilesAfterEnv` ; 11 tests sur le vrai jeu de données.
+- **Thème et composants de base faits** (SPEC § 6) : `src/constants/theme.ts` (palette clair/sombre typée `ThemeColors`, `Spacing`, `Radius`, `Typography`, `TouchTarget`), `src/hooks/use-theme.ts` (suit `settings.themeMode`), `src/hooks/use-haptics.ts` ; `src/components/ui/` : AppText, Screen, Card, Button, Chip, Checkbox, Stepper, SegmentedControl, SectionHeader, EmptyState, StatTile, MacroBar, Snackbar (+ baril) ; 5 tests RNTL (`src/components/__tests__/ui.test.tsx`). Pièges Jest consignés dans CLAUDE.md § 4.4 (RNTL 14 asynchrone, stub CSS).
 - **En cours au moment de l'écriture** : rien ne tourne.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. Thème (`src/constants/theme.ts` étendu, `src/hooks/use-theme.ts`) + composants `src/components/` (SPEC § 6), puis écrans `src/app/` (SPEC § 1.3) dans l'ordre : layouts + onboarding + génération → Semaine/Jour/Recette/Swap → Courses/Article/Magasin → Garde-manger/Ajout/Cuisiner-avec → Profil/Bilan.
+1. Écrans `src/app/` (SPEC § 1.3) avec leurs composants métier, dans l'ordre : `_layout.tsx` (thème, gate `useHydrated`, modales) + `index.tsx` (redirection) + `(tabs)/_layout.tsx` + `onboarding.tsx` + `generating.tsx` → Semaine/Jour/Recette/Swap (`components/plan/`) → Courses/Article/Magasin (`components/shopping/`) → Garde-manger/Ajout/Cuisiner-avec (`components/pantry/`) → Profil/Bilan (`components/profile/`).
 2. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 
 ## Statut global
@@ -43,7 +44,7 @@
 | 0. Cadrage | ✅ Terminé | Objectif produit, contraintes techniques fixées |
 | 1. Scaffolding technique | ✅ Terminé | Projet Expo SDK 57 + TypeScript strict, dépendances installées, base vérifiée |
 | 2. Conception (spec) | ✅ Terminé | 3 propositions (`docs/conception/`) arbitrées par l'agent principal dans `docs/SPEC.md` (2026-09-19) |
-| 3. Implémentation | 🔄 En cours | Mode économe : **core** (107 tests), **données** (66 recettes, 150 ingrédients, 11 tests), **store** (11 tests) faits ; composants et écrans à venir |
+| 3. Implémentation | 🔄 En cours | Mode économe : **core** (107 tests), **données** (66 recettes, 150 ingrédients, 11 tests), **store** (11 tests), **thème + composants ui** (5 tests) faits ; écrans à venir |
 | 4. Intégration & vérification | ⏳ À venir | `tsc`, `jest`, `expo-doctor`, `expo export`, revue adversariale |
 | 5. Test sur appareil | ⏳ À venir | Expo Go (Android / iOS) puis build EAS |
 
@@ -68,12 +69,13 @@
 
 - [x] Store zustand (2026-09-19) : 5 slices + persistance + migrations + hooks dérivés, 11 tests.
 
+- [x] Thème + composants de base (2026-09-19) : 13 composants `ui/`, 5 tests.
+
 ## En cours
 
-- [ ] Thème + composants réutilisables.
+- [ ] Écrans (layouts, onboarding, semaine, courses, garde-manger, profil) + composants métier.
 
 ## À faire
-- [ ] Écrans : onboarding, semaine + détail recette, courses, garde-manger + réglages.
 - [ ] Intégration finale (layout/onglets, `package.json`), `tsc`, `jest`, `expo-doctor`, `expo export`.
 - [ ] Revue adversariale (bugs, cas limites : allergies, végan, 1 vs 6 personnes, arrondis, unités mixtes).
 - [ ] Icône / splash screen personnalisés.
@@ -85,4 +87,4 @@
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
 - **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅. Arrêt à 79 % de la fenêtre 5 h.
-- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**. Phase données lancée : test d'intégrité des ingrédients + agent Sonnet pour `ingredients.ts` (150, commité). Recettes : 3 agents Sonnet en parallèle ; petits-déjeuners + collations livrés (20 recettes) ; les 2 autres coupés par le quota (fenêtre saturée à 3 agents + agent principal), relancés après réinitialisation avec une table compacte des ingrédients (règle « Budget des agents » ajoutée à CLAUDE.md § 0.1). 66 recettes assemblées, test d'intégrité vert après 3 retouches (saisons de 2 petits-déjeuners, ciboulette partagée, 13e petit-déjeuner végétalien sans gluten toutes saisons) ; 118 tests au total. Retouche végé (4 doublons remplacés). Store zustand complet + hooks + `jest.setup.ts` : 129 tests.
+- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**. Phase données lancée : test d'intégrité des ingrédients + agent Sonnet pour `ingredients.ts` (150, commité). Recettes : 3 agents Sonnet en parallèle ; petits-déjeuners + collations livrés (20 recettes) ; les 2 autres coupés par le quota (fenêtre saturée à 3 agents + agent principal), relancés après réinitialisation avec une table compacte des ingrédients (règle « Budget des agents » ajoutée à CLAUDE.md § 0.1). 66 recettes assemblées, test d'intégrité vert après 3 retouches (saisons de 2 petits-déjeuners, ciboulette partagée, 13e petit-déjeuner végétalien sans gluten toutes saisons) ; 118 tests au total. Retouche végé (4 doublons remplacés). Store zustand complet + hooks + `jest.setup.ts` : 129 tests. Thème + 13 composants `ui/` + tests RNTL : 134 tests.

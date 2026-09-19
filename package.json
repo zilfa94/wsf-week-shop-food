@@ -61,6 +61,9 @@
     "setupFilesAfterEnv": [
       "<rootDir>/jest.setup.ts"
     ],
+    "moduleNameMapper": {
+      "\\.css$": "<rootDir>/jest.css-stub.js"
+    },
     "testMatch": [
       "**/__tests__/**/*.test.ts",
       "**/__tests__/**/*.test.tsx"

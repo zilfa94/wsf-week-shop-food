@@ -117,6 +117,9 @@ printf '/// <reference types="expo/types" />\n' > expo-env.d.ts
 - Config dans le bloc `"jest"` de `package.json` : preset `jest-expo`, `testMatch` = `**/__tests__/**/*.test.ts(x)`, `transformIgnorePatterns` étendu (inclut `zustand`).
 - Le premier run est lent (~15 s) : normal.
 - Les tests du core ne doivent importer **aucun** module React Native ; sinon ils deviennent lents et fragiles.
+- `jest.setup.ts` (référencé par `setupFilesAfterEnv`) mocke AsyncStorage et expo-haptics ; `moduleNameMapper` renvoie les imports `.css` (`src/global.css` via `constants/theme.ts`) vers `jest.css-stub.js`.
+- **Jest 29 n'accepte pas `expect(valeur, message)`** (syntaxe Vitest) : accumuler les violations dans un tableau et faire `expect(problems).toEqual([])` (voir les tests de `src/data/`).
+- **`@testing-library/react-native` 14 : `render` et `fireEvent.*` sont asynchrones** (`await render(...)`, `await fireEvent.press(...)`) ; `screen` n'est pas alimenté, utiliser le retour de `render`. `Pressable` normalise `accessibilityState` (`busy`, `checked`, … à `undefined`) : comparer avec `toMatchObject`.
 
 ### 4.5 Expo / expo-router
 
