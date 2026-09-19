@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { AppText, Button, Card, EmptyState, Screen, SectionHeader } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
@@ -7,6 +8,7 @@ import { INGREDIENT_INDEX, usePantryAlerts, useToday } from '@/store/hooks';
 
 /** Garde-manger : stock déclaré, alertes de péremption. L'ajout manuel arrive avec l'écran `pantry-add`. */
 export default function PantryScreen() {
+  const router = useRouter();
   const today = useToday();
   const pantry = useAppStore((s) => s.pantry);
   const remove = useAppStore((s) => s.removePantryItem);
@@ -15,14 +17,15 @@ export default function PantryScreen() {
   if (pantry.length === 0) {
     return (
       <Screen>
-        <EmptyState icon="file-tray-stacked-outline" title="Garde-manger vide" body="Ajoutez ce que vous avez : on le déduira de vos courses. Les articles cochés après les courses y entrent automatiquement." />
+        <EmptyState icon="file-tray-stacked-outline" title="Garde-manger vide" body="Ajoutez ce que vous avez : on le déduira de vos courses. Les articles cochés après les courses y entrent en un tap." cta={{ label: 'Ajouter un ingrédient', onPress: () => router.push('/pantry-add') }} />
       </Screen>
     );
   }
 
   return (
     <Screen>
-      <SectionHeader title={`${pantry.length} ligne${pantry.length > 1 ? 's' : ''} en stock`} subtitle={alerts.length > 0 ? `${alerts.length} à consommer rapidement` : undefined} />
+      <SectionHeader title={`${pantry.length} ligne${pantry.length > 1 ? 's' : ''} en stock`} subtitle={alerts.length > 0 ? `${alerts.length} à consommer rapidement` : undefined} right={<Button label="Ajouter" icon="add" compact onPress={() => router.push('/pantry-add')} />} />
+      <Button label="Cuisiner avec ce que j’ai" icon="restaurant-outline" variant="secondary" onPress={() => router.push('/cook-with')} />
       {pantry.map((p) => {
         const ing = INGREDIENT_INDEX.get(p.ingredientId);
         const soon = alerts.includes(p);

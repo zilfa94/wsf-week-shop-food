@@ -34,7 +34,6 @@ export default function WeekScreen() {
   const showCalories = useAppStore((s) => s.settings.showCalories);
   const toggleLock = useAppStore((s) => s.toggleLock);
   const setCooked = useAppStore((s) => s.setCooked);
-  const startNextWeek = useAppStore((s) => s.startNextWeek);
   const previousPlan = useAppStore((s) => s.previousPlan);
   const undoSwap = useAppStore((s) => s.undoSwap);
   const dismissUndo = useAppStore((s) => s.dismissUndo);
@@ -85,7 +84,10 @@ export default function WeekScreen() {
     setSheet({
       title: 'Régénérer toute la semaine ?',
       message: 'Les repas verrouillés et déjà cuisinés sont conservés.',
-      actions: [{ label: 'Régénérer', icon: 'refresh', variant: 'primary', onPress: () => router.push('/generating') }],
+      actions: [
+        { label: 'Régénérer', icon: 'refresh', variant: 'primary', onPress: () => router.push('/generating') },
+        { label: 'Bilan de la semaine', icon: 'stats-chart-outline', onPress: () => router.push('/report') },
+      ],
     });
 
   const snackMessage = snack ?? (previousPlan ? 'Repas remplacé, liste de courses mise à jour.' : null);
@@ -98,7 +100,7 @@ export default function WeekScreen() {
         {expired ? (
           <Card tone="accent">
             <AppText variant="bodyStrong">Cette semaine est terminée.</AppText>
-            <Button label="Composer la semaine suivante" compact onPress={() => startNextWeek({ today })} />
+            <Button label="Voir le bilan et composer la suivante" compact onPress={() => router.push('/report')} />
           </Card>
         ) : null}
         {drift.length > 0 ? (

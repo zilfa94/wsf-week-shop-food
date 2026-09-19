@@ -1,7 +1,7 @@
 import { computeTarget, weekNutrition } from '../nutrition';
 import { sharedSavings, weekReport } from '../report';
 import { buildShoppingList } from '../shopping';
-import { indexRecipes } from '../dataset';
+import { indexIngredients, indexRecipes } from '../dataset';
 import { makeMeal, makePlan } from './fixtures/plans';
 import { FIXTURE_INGREDIENTS, FIXTURE_RECIPES, OMNIVORE_2 } from './fixtures/recipes';
 
@@ -29,13 +29,25 @@ describe('weekReport', () => {
     expect(r.balanceScore).toBeLessThanOrEqual(100);
     const orphanIds = r.orphanLeftovers.map((o) => o.ingredientId);
     expect(orphanIds).not.toContain('tomate'); // réutilisée jeudi
-    expect(orphanIds).toContain('pates_penne'); // 300 g de reste, un seul repas
+    expect(orphanIds).not.toContain('pates_penne'); // 300 g de reste mais longue conservation : pas un gaspillage
+    expect(orphanIds).toEqual(['lait', 'oeuf']); // brique entamée et 2 œufs sur 6, un seul repas chacun
     for (const o of r.orphanLeftovers) expect(o.quantity).toBeGreaterThan(0);
   });
 
-  it('savedEur : l’huile partagée par 3 repas évite 2 bouteilles', () => {
-    // 30 ml + 5 ml + 15 ml : 3 bouteilles achetées séparément, 1 seule en agrégé → 2 × 6,50 €
-    expect(sharedSavings(list)).toBeGreaterThanOrEqual(13);
+  it('savedEur ne compte que les périssables partagés : le lait de 2 repas évite une brique, l’huile (staple) non', () => {
+    const INGREDIENTS = indexIngredients(FIXTURE_INGREDIENTS);
+    // omelette (2 c. à s. de lait) + pancakes (200 ml) : 2 briques séparément, 1 en agrégé → 1,10 €
+    const shared = buildShoppingList({
+      plan: makePlan([makeMeal(0, 'dinner', 'omelette'), makeMeal(1, 'breakfast', 'pancakes_miel')], PROFILE),
+      dataset: DATASET,
+      profile: PROFILE,
+      pantry: [],
+      checked: {},
+      packChoices: {},
+      manualItems: [],
+    });
+    expect(sharedSavings(shared, INGREDIENTS)).toBeCloseTo(1.1 + 2.1, 2); // lait + œufs (4 + 1 = 5 : 2 boîtes séparément, 1 en agrégé)
+    expect(sharedSavings(list, INGREDIENTS)).toBe(0); // huile partagée mais staple ; pâtes et coriandre non partagées
     const single = buildShoppingList({
       plan: makePlan([makeMeal(0, 'dinner', 'pates_poulet')], PROFILE),
       dataset: DATASET,
@@ -45,6 +57,6 @@ describe('weekReport', () => {
       packChoices: {},
       manualItems: [],
     });
-    expect(sharedSavings(single)).toBe(0);
+    expect(sharedSavings(single, INGREDIENTS)).toBe(0);
   });
 });

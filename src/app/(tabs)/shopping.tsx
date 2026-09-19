@@ -1,20 +1,27 @@
 import { useRouter } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
-import { AppText, Card, Checkbox, EmptyState, Screen, SectionHeader } from '@/components/ui';
-import { Spacing } from '@/constants/theme';
+import { useState } from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
+import { AppText, Button, Card, Checkbox, EmptyState, Screen, SectionHeader } from '@/components/ui';
+import { Radius, Spacing, Typography } from '@/constants/theme';
 import { AISLE_LABELS, WEEKDAY_SHORT_LABELS } from '@/core/labels';
 import { formatPrice, formatQuantity } from '@/core/units';
 import { useHaptics } from '@/hooks/use-haptics';
+import { useTheme } from '@/hooks/use-theme';
 import { useAppStore } from '@/store';
-import { INGREDIENT_INDEX, useShoppingList } from '@/store/hooks';
+import { INGREDIENT_INDEX, useShoppingList, useToday } from '@/store/hooks';
 
 export default function ShoppingScreen() {
   const router = useRouter();
+  const theme = useTheme();
+  const today = useToday();
   const haptics = useHaptics();
   const list = useShoppingList();
   const plan = useAppStore((s) => s.currentPlan);
   const toggleChecked = useAppStore((s) => s.toggleChecked);
   const toggleManual = useAppStore((s) => s.toggleManualItem);
+  const addManualItem = useAppStore((s) => s.addManualItem);
+  const commitPurchases = useAppStore((s) => s.commitPurchasesToPantry);
+  const [newItem, setNewItem] = useState('');
 
   if (!plan || !list) {
     return (
@@ -26,6 +33,12 @@ export default function ShoppingScreen() {
 
   const toBuy = list.items.filter((i) => i.packs > 0);
   const done = toBuy.filter((i) => i.checked).length;
+  const submitManual = () => {
+    const label = newItem.trim();
+    if (!label) return;
+    addManualItem(plan.id, { label, aisle: 'other' });
+    setNewItem('');
+  };
   if (toBuy.length === 0 && list.manualItems.length === 0) {
     return (
       <Screen>
@@ -36,7 +49,11 @@ export default function ShoppingScreen() {
 
   return (
     <Screen>
-      <SectionHeader title={`${toBuy.length} articles · ${formatPrice(list.totalPrice)}`} subtitle={`${done}/${toBuy.length} cochés · score anti-gaspi ${list.wasteScore} % · reste à risque ${formatPrice(list.totalLeftoverValue)}`} />
+      <SectionHeader
+        title={`${toBuy.length} articles · ${formatPrice(list.totalPrice)}`}
+        subtitle={`${done}/${toBuy.length} cochés · score anti-gaspi ${list.wasteScore} % · reste à risque ${formatPrice(list.totalLeftoverValue)}`}
+        right={<Button label="Magasin" icon="storefront-outline" variant="secondary" compact onPress={() => router.push('/store-mode')} />}
+      />
       {list.sections.map((section) => (
         <View key={section.aisle} style={styles.section}>
           <AppText variant="h2">{AISLE_LABELS[section.aisle]}</AppText>
@@ -45,7 +62,7 @@ export default function ShoppingScreen() {
             const leftover = list.leftovers.find((l) => l.ingredientId === item.ingredientId);
             const reuse = leftover?.reusedByMealId ? plan.meals.find((m) => m.id === leftover.reusedByMealId) : undefined;
             return (
-              <Card key={item.ingredientId} style={[styles.row, item.checked ? styles.checked : null]} onPress={() => router.push({ pathname: '/recipe/[id]', params: { id: item.usedIn[0]?.recipeId ?? '' } })}>
+              <Card key={item.ingredientId} style={[styles.row, item.checked ? styles.checked : null]} onPress={() => router.push({ pathname: '/item/[ingredientId]', params: { ingredientId: item.ingredientId } })}>
                 <Checkbox
                   checked={item.checked}
                   onToggle={() => {
@@ -84,6 +101,29 @@ export default function ShoppingScreen() {
           ))}
         </View>
       ))}
+      <View style={styles.addRow}>
+        <TextInput
+          value={newItem}
+          onChangeText={setNewItem}
+          placeholder="Ajouter un article libre (ex. papier alu)"
+          placeholderTextColor={theme.textMuted}
+          accessibilityLabel="Article libre"
+          onSubmitEditing={() => submitManual()}
+          style={[styles.input, { borderColor: theme.border, color: theme.text, backgroundColor: theme.surface }]}
+        />
+        <Button label="Ajouter" compact onPress={submitManual} disabled={newItem.trim().length === 0} />
+      </View>
+      {done > 0 ? (
+        <Button
+          label={`Mettre les ${done} article${done > 1 ? 's' : ''} coché${done > 1 ? 's' : ''} au garde-manger`}
+          icon="file-tray-stacked-outline"
+          variant="secondary"
+          onPress={() => {
+            commitPurchases(today);
+            haptics.success();
+          }}
+        />
+      ) : null}
       {list.staplesToCheck.length > 0 ? (
         <Card tone="alt">
           <AppText variant="bodyStrong">À vérifier dans vos placards</AppText>
@@ -101,4 +141,6 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.sm, paddingLeft: Spacing.xs },
   checked: { opacity: 0.55 },
   texts: { flex: 1, gap: 2 },
+  addRow: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center' },
+  input: { ...Typography.body, flex: 1, borderWidth: 1, borderRadius: Radius.button, paddingHorizontal: Spacing.lg, minHeight: 44 },
 });
