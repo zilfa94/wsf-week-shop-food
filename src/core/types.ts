@@ -521,6 +521,14 @@ export interface PlannerParams {
   readonly maxBatchPerWeek: number;
 }
 
+/** Surcharge partielle (en profondeur) des paramètres du planificateur. */
+export interface PlannerParamsOverride {
+  readonly weights?: Partial<PlannerParams['weights']>;
+  readonly anneal?: Partial<PlannerParams['anneal']>;
+  readonly greedyTopK?: number;
+  readonly maxBatchPerWeek?: number;
+}
+
 export interface GenerateInput {
   readonly dataset: Dataset;
   readonly profile: UserProfile;
@@ -531,7 +539,7 @@ export interface GenerateInput {
   readonly seed: number;
   /** Repas verrouillés ou cuisinés d'un plan précédent, à conserver tels quels. */
   readonly keep?: readonly Meal[];
-  readonly params?: Partial<PlannerParams>;
+  readonly params?: PlannerParamsOverride;
 }
 
 // ---------------------------------------------------------------------------
