@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 14:11
-- Branche : `main` — dernier commit : e9407bf « Ajoute le planificateur 7 jours (glouton + recuit simulé, batch cooking) et needs » (2026-09-19)
-- Arbre de travail : 7 fichier(s) modifié(s) non commité(s)
-- Code : core 15 fichier(s) · tests 93 cas dans 10 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
+- Généré le : 2026-09-19 14:15
+- Branche : `main` — dernier commit : 9389d2b « Ajoute la liste de courses dérivée, les restes prévisibles et l'ordre des rayons au core » (2026-09-19)
+- Arbre de travail : 5 fichier(s) modifié(s) non commité(s)
+- Code : core 17 fichier(s) · tests 105 cas dans 12 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -22,7 +22,8 @@
 - **`src/core/nutrition.ts`** fait (cibles Mifflin-St Jeor / défauts, répartition par repas, macros journalières, pénalité continue, scores jour/semaine, diversité végétale) + fixture `plans.ts`.
 - **`src/core/needs.ts`** (besoins d'une recette à l'échelle, optionnels interdits retirés) et **`src/core/planner.ts`** faits : contexte + état incrémental (`wasteDelta` vérifié contre un recalcul complet), glouton top-k, recuit simulé, batch cooking avec `batchBonus`, repas conservés (verrouillés/cuisinés), créneaux `unfilled`, `stateFromPlan` pour le swap ; jeu de données synthétique `__tests__/fixtures/synthetic.ts` (34 recettes, 21 ingrédients) ; génération complète en ~150 ms.
 - **`src/core/aisles.ts`** (ordre de parcours), **`leftovers.ts`** (restes notables, recettes qui les absorbent, pack réutilisé par un repas ultérieur, faisabilité par garde-manger, « cuisiner avec ce que j'ai ») et **`shopping.ts`** (liste dérivée : agrégation multi-unités, garde-manger non périmé au premier usage, staples, optionnels interdits, choix de pack, sections par rayon, articles libres, `wasteScore`, `diffShoppingLists`, `addPurchasesToPantry`, `consumeFromPantry` FIFO) faits.
-- **Ce qui n'existe pas encore** : `src/core/plan-edit.ts`, `swap.ts`, `report.ts`, `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
+- **`src/core/plan-edit.ts`** (verrou, cuisiné, portions, semaine terminée, dérive du profil, repas incompatibles) et **`swap.ts`** (suggestions à impact : liste courante = garde-manger virtuel, cochés acquis, delta articles/prix, raisons FR ; `applySwap` verrouille, regénère le déjeuner « restes » lié, rend ses portions au dîner source, recalcule le coût) faits.
+- **Ce qui n'existe pas encore** : `src/core/report.ts`, `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **En cours au moment de l'écriture** : rien ne tourne (session en cours, chaque module est commité dès qu'il est vert).
 
@@ -60,7 +61,7 @@
 
 ## En cours
 
-- [ ] Core « intelligent » : ~~`nutrition`~~ (11 tests) → ~~`planner`~~ (12) → ~~`leftovers`~~ (9) → ~~`shopping`~~ (14) → `plan-edit` + `swap` → `report`.
+- [ ] Core « intelligent » : ~~`nutrition`~~ (11 tests) → ~~`planner`~~ (12) → ~~`leftovers`~~ (9) → ~~`shopping`~~ (14) → ~~`plan-edit`~~ (5) + ~~`swap`~~ (7) → `report`.
 
 ## À faire
 - [ ] Données : ingrédients canoniques + recettes (scindées par cuisine/slot pour paralléliser, agents Sonnet).
@@ -78,4 +79,4 @@
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
 - **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅. Arrêt à 79 % de la fenêtre 5 h.
-- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93).
+- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105).
