@@ -1,0 +1,61 @@
+import { Ionicons } from '@expo/vector-icons';
+import { StyleSheet, View } from 'react-native';
+import { AppText, Card, Chip } from '@/components/ui';
+import { Spacing } from '@/constants/theme';
+import { MEAL_TYPE_LABELS } from '@/core/labels';
+import type { Meal, Recipe } from '@/core/types';
+import { useTheme } from '@/hooks/use-theme';
+
+export interface MealCardProps {
+  readonly meal: Meal;
+  readonly recipe: Recipe | undefined;
+  readonly showCalories?: boolean;
+  readonly onPress: () => void;
+  readonly onLongPress?: () => void;
+}
+
+/** Carte d'un repas planifié : type, nom, durée, kcal, état (verrouillé, cuisiné, restes). */
+export function MealCard({ meal, recipe, showCalories = true, onPress, onLongPress }: MealCardProps) {
+  const theme = useTheme();
+  const minutes = recipe ? recipe.prepMin + recipe.cookMin : 0;
+  const name = recipe?.name ?? 'Recette indisponible';
+  const status = meal.cooked ? 'cuisiné' : meal.locked ? 'verrouillé' : meal.leftoverOf ? 'restes' : '';
+  return (
+    <Card
+      onPress={onPress}
+      onLongPress={onLongPress}
+      accessibilityLabel={`${MEAL_TYPE_LABELS[meal.slot.type]} : ${name}${status ? `, ${status}` : ''}`}
+      style={meal.cooked ? styles.cooked : undefined}
+    >
+      <View style={styles.header}>
+        <AppText variant="caption" color="textMuted">
+          {MEAL_TYPE_LABELS[meal.slot.type]}
+        </AppText>
+        <View style={styles.icons}>
+          {meal.locked ? <Ionicons name="lock-closed" size={16} color={theme.textMuted} /> : null}
+          {meal.cooked ? <Ionicons name="checkmark-circle" size={18} color={theme.success} /> : null}
+        </View>
+      </View>
+      <AppText variant="bodyStrong" numberOfLines={2} style={meal.cooked ? styles.strike : undefined}>
+        {name}
+      </AppText>
+      <View style={styles.meta}>
+        {meal.leftoverOf ? (
+          <Chip label="Restes de la veille" icon="repeat" />
+        ) : (
+          <AppText variant="caption" color="textMuted" tabular>
+            {`⏱ ${minutes} min${showCalories && recipe ? ` · ${Math.round(recipe.nutritionPerServing.kcal)} kcal` : ''}${meal.servings > 0 ? ` · ${meal.servings} portions` : ''}`}
+          </AppText>
+        )}
+      </View>
+    </Card>
+  );
+}
+
+const styles = StyleSheet.create({
+  header: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
+  icons: { flexDirection: 'row', gap: Spacing.xs },
+  meta: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  cooked: { opacity: 0.65 },
+  strike: { textDecorationLine: 'line-through' },
+});

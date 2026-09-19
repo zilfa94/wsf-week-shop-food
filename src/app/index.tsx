@@ -1,11 +1,9 @@
-import { Text, View } from 'react-native';
+import { Redirect } from 'expo-router';
+import { useAppStore } from '@/store';
+import { selectHasOnboarded } from '@/store/selectors';
 
+/** Point d'entrée : onboarding au premier lancement, sinon les onglets. */
 export default function Index() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>WSF – Week Shop Food</Text>
-    </View>
-  );
+  const hasOnboarded = useAppStore(selectHasOnboarded);
+  return <Redirect href={hasOnboarded ? '/(tabs)' : '/onboarding'} />;
 }
-
-// test hook
