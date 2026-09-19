@@ -36,6 +36,7 @@ export const HONEY = makeIngredient({
   id: 'miel',
   name: 'miel',
   aisle: 'sweet_grocery',
+  conversions: { tbsp: 20, tsp: 7 },
   packaging: { kind: 'pack', size: 250, price: 4, label: 'pot de 250 g' },
   foodClass: 'honey',
 });

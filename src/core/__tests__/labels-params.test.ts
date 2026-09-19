@@ -46,6 +46,7 @@ describe('params', () => {
     expect(p.anneal).toEqual({ iterations: 10, t0: 2, tEnd: 0.02 });
     expect(p.weights).toEqual({ waste: 2, variety: 1.5, nutrition: 8, budget: 0 });
     expect(p.greedyTopK).toBe(3);
+    expect(p.batchBonus).toBe(2);
     expect(DEFAULT_PLANNER_PARAMS.anneal.iterations).toBe(4000); // défauts non mutés
   });
 });

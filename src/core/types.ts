@@ -519,6 +519,8 @@ export interface PlannerParams {
   readonly anneal: { readonly iterations: number; readonly t0: number; readonly tEnd: number };
   readonly greedyTopK: number;
   readonly maxBatchPerWeek: number;
+  /** Valeur (échelle euro) d'une session de cuisine économisée : un batch est accepté si son surcoût reste sous ce bonus. */
+  readonly batchBonus: number;
 }
 
 /** Surcharge partielle (en profondeur) des paramètres du planificateur. */
@@ -527,6 +529,7 @@ export interface PlannerParamsOverride {
   readonly anneal?: Partial<PlannerParams['anneal']>;
   readonly greedyTopK?: number;
   readonly maxBatchPerWeek?: number;
+  readonly batchBonus?: number;
 }
 
 export interface GenerateInput {

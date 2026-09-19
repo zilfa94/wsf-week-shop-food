@@ -166,7 +166,7 @@ greedyBuild(st, ctx, rng): void ; anneal(st, ctx, rng): PlanState ; applyBatchCo
 generateWeekPlan(input: GenerateInput): WeekPlan
 ```
 
-Deltas vs proposition : `needsOf` calculé pour `profile.persons` **en retirant les ingrédients optionnels interdits** ; les repas `keep` (verrouillés ou cuisinés) sont posés avant le glouton et exclus des mouvements ; un créneau sans candidat va dans `unfilled` ; `Meal.id = slotKey(slot)` ; `WeekPlan.id = ${weekStart}-${seed}` ; poids `budget` = `BUDGET_GOAL_WEIGHT` si `goal === 'budget'` sinon 0 ; « Régénérer » = `seed + 1` (store). Batch cooking : dîner `batchable` doublé (`servings = 2 × persons`) → déjeuner du lendemain `{ recipeId: idem, servings: 0, leftoverOf: dinnerId }`, max `maxBatchPerWeek`, accepté seulement si le coût baisse.
+Deltas vs proposition : `needsOf` calculé pour `profile.persons` **en retirant les ingrédients optionnels interdits** ; les repas `keep` (verrouillés ou cuisinés) sont posés avant le glouton et exclus des mouvements ; un créneau sans candidat va dans `unfilled` ; `Meal.id = slotKey(slot)` ; `WeekPlan.id = ${weekStart}-${seed}` ; poids `budget` = `BUDGET_GOAL_WEIGHT` si `goal === 'budget'` sinon 0 ; « Régénérer » = `seed + 1` (store). Batch cooking : dîner `batchable` doublé (`servings = 2 × persons`) → déjeuner du lendemain `{ recipeId: idem, servings: 0, leftoverOf: dinnerId }`, max `maxBatchPerWeek`. Le coût ne modélise pas le temps de cuisine : une session économisée vaut `params.batchBonus` (2 € par défaut) et le batch est accepté si son surcoût reste sous ce bonus. Un dîner **cuisiné** n'est jamais doublé ; un dîner verrouillé peut l'être. Les besoins d'une recette (`needs.ts : recipeNeeds`) sont partagés avec la liste de courses.
 
 ### 4.4 `shopping.ts`
 
@@ -276,3 +276,4 @@ L'agent principal écrit spec, core, store, composants, écrans, **un module + s
 ## 8. Journal des arbitrages
 
 - **2026-09-19** — Rédaction initiale. Arbitrages du § 2 ; aucune nouvelle dépendance en v1 ; onboarding en un seul écran ; `cooked` et `unfilled` ajoutés au contrat ; régimes dérivés de `foodClass` ; clés `${planId}:${ingredientId}` pour l'état coché et le choix de pack ; `useToday` comme unique source d'horloge côté store.
+- **2026-09-19** — Planificateur : sur le jeu synthétique, un batch augmente toujours le coût (+1,3 à +4,3 « € ») car le temps de cuisine n'est pas modélisé → ajout de `PlannerParams.batchBonus` (2) ; `PlanState.cooked` distingue « cuisiné » (jamais doublé) de « verrouillé ». Les petits-déjeuners/collations peuvent se répéter (pénalisés) si les candidats sont épuisés ; déjeuners/dîners restent uniques.

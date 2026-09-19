@@ -10,6 +10,7 @@ export const DEFAULT_PLANNER_PARAMS: PlannerParams = {
   anneal: { iterations: 4000, t0: 2, tEnd: 0.02 },
   greedyTopK: 3,
   maxBatchPerWeek: 2,
+  batchBonus: 2,
 };
 
 /** Poids budget appliqué uniquement pour l'objectif `budget`. */
@@ -23,6 +24,7 @@ export function resolvePlannerParams(partial?: PlannerParamsOverride): PlannerPa
     anneal: { ...DEFAULT_PLANNER_PARAMS.anneal, ...partial.anneal },
     greedyTopK: partial.greedyTopK ?? DEFAULT_PLANNER_PARAMS.greedyTopK,
     maxBatchPerWeek: partial.maxBatchPerWeek ?? DEFAULT_PLANNER_PARAMS.maxBatchPerWeek,
+    batchBonus: partial.batchBonus ?? DEFAULT_PLANNER_PARAMS.batchBonus,
   };
 }
 
