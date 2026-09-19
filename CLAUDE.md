@@ -154,7 +154,7 @@ printf '/// <reference types="expo/types" />\n' > expo-env.d.ts
 
 | Manque | Où le retrouver / quoi faire |
 |---|---|
-| `docs/SPEC.md` absent alors qu'AVANCEMENT.md dit que la conception est finie | Les propositions brutes et la synthèse sont dans le journal du workflow : `C:\Users\fazil\.claude\projects\C--Users-fazil-Desktop-WSF-Week-Shop-Food\98708e73-e0b6-42ef-b83a-e0993e24c7d0\subagents\workflows\wf_4122c8d8-7cf\journal.jsonl` (lignes `result`). À défaut, relancer une conception en suivant AGENT.md § 4. |
+| `docs/SPEC.md` absent ou incomplet | Les 3 propositions brutes sont versionnées dans `docs/conception/` ; la spec est un arbitrage de ces propositions + le contrat `src/core/types.ts`. La réécrire à partir de là (mode économe : par l'agent principal, sans workflow). |
 | `node_modules/` absent | `npm install` (le `package-lock.json` est versionné). |
 | `expo-env.d.ts` absent | § 4.3. |
 | Tests rouges après reprise | Lire la sortie ; ne pas supprimer/ignorer un test pour le faire passer ; corriger le code ou, si la spec a changé, le test **et** la spec. |
