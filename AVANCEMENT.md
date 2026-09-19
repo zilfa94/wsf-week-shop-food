@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 08:20
-- Branche : `main` — dernier commit : 4572d42 « AVANCEMENT : état exact après arrêt volontaire (quota), prochaine étape = docs/SPEC.md » (2026-09-19)
+- Généré le : 2026-09-19 08:22
+- Branche : `main` — dernier commit : 1e889a6 « Ajoute labels (libellés FR des énumérations) et params (paramètres réglables) au core » (2026-09-19)
 - Arbre de travail : 5 fichier(s) modifié(s) non commité(s)
-- Code : core 7 fichier(s) · tests 35 cas dans 5 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
+- Code : core 9 fichier(s) · tests 47 cas dans 6 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -17,14 +17,14 @@
 
 > Partie rédigée, à mettre à jour **à chaque fin de session** (les hooks refusent un commit / une fin de session si du code a changé sans elle). Toute IA qui reprend lit d'abord [CLAUDE.md](CLAUDE.md) § 0, puis cette section.
 
-- **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, `README.md`, ce fichier), outillage `scripts/docs.mjs` + hooks (git pre-commit, Claude Code Stop). **Depuis le 2026-09-19** : les 3 propositions de conception copiées dans `docs/conception/` ; le **contrat de types** `src/core/types.ts` (arbitrage des propositions algo + ingénierie, identifiants anglais, `cooked`/`unfilled`/`packagingIndex`/`ManualItem` ajoutés) ; modules de base `src/core/rng.ts`, `date.ts`, `units.ts`, `packaging.ts`, `labels.ts` (libellés FR de toutes les énumérations, vérifiés par `Record` complets), `params.ts` (paramètres réglables + `resolvePlannerParams`) avec fixtures et 35 tests verts ; `tsconfig.json` : `"types": ["jest"]` (TypeScript 6 n'inclut plus les `@types/*` automatiquement).
-- **Ce qui n'existe pas encore** : `docs/SPEC.md`, le reste de `src/core/` (filter, nutrition, planner, shopping, swap, leftovers, report), `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
+- **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, `README.md`, ce fichier), outillage `scripts/docs.mjs` + hooks (git pre-commit, Claude Code Stop). **Depuis le 2026-09-19** : les 3 propositions de conception copiées dans `docs/conception/` ; le **contrat de types** `src/core/types.ts` (arbitrage des propositions algo + ingénierie, identifiants anglais, `cooked`/`unfilled`/`packagingIndex`/`ManualItem` ajoutés) ; modules de base `src/core/rng.ts`, `date.ts`, `units.ts`, `packaging.ts`, `labels.ts` (libellés FR de toutes les énumérations, vérifiés par `Record` complets), `params.ts` (paramètres réglables + `resolvePlannerParams`), `dataset.ts` (index par id), `filter.ts` (régimes dérivés de `foodClass`, allergènes, aversions, temps semaine/week-end, saison, `candidatesForSlot`, `slotsForProfile`, `slotKey`) avec fixtures (ingrédients, recettes, profils) et 47 tests verts ; `tsconfig.json` : `"types": ["jest"]` (TypeScript 6 n'inclut plus les `@types/*` automatiquement).
+- **Ce qui n'existe pas encore** : `docs/SPEC.md`, le reste de `src/core/` (nutrition, planner, shopping, swap, leftovers, report), `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
-- **En cours au moment de l'écriture** : rien ne tourne. Session du 2026-09-19 arrêtée volontairement à 72 % de la fenêtre de quota 5 h (seuil 85 %, CLAUDE.md § 0.1), arbre propre après commit. Reprendre à l'étape 1 ci-dessous.
+- **En cours au moment de l'écriture** : rien ne tourne. Session du 2026-09-19 arrêtée volontairement vers 80 % de la fenêtre de quota 5 h (seuil 85 %, CLAUDE.md § 0.1), arbre propre après commit. Reprendre à l'étape 1 ci-dessous.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1) :
 1. Écrire `docs/SPEC.md` (arbitrage concis des 3 propositions de `docs/conception/`, le contrat étant `src/core/types.ts`).
-2. Core, par l'agent principal, un module + ses tests à la fois : `filter`, `nutrition`, `planner`, `shopping`, `swap`, `leftovers`, `report` (source : `docs/conception/proposition-algo.md` adaptée aux noms de `types.ts` ; constantes déjà dans `params.ts`).
+2. Core, par l'agent principal, un module + ses tests à la fois : `nutrition`, `planner`, `shopping`, `swap`, `leftovers`, `report` (source : `docs/conception/proposition-algo.md` adaptée aux noms de `types.ts` ; constantes dans `params.ts`, éligibilité dans `filter.ts`, fixtures dans `src/core/__tests__/fixtures/`).
 3. Données : `src/data/aisles.ts`, `ingredients.ts` (~150), `recipes-*.ts` (≥ 60) — déléguer la rédaction à 2-3 agents **Sonnet** avec le test d'intégrité `src/data/__tests__/dataset.test.ts` écrit AVANT par l'agent principal.
 4. Store zustand + persistance + tests ; thème + composants ; écrans ; intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09).
 5. `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
@@ -58,10 +58,10 @@
 
 ## À faire
 
-- [x] Module `types` (contrat entre modules) — implémenté seul, en premier (2026-09-19), avec `rng`, `date`, `units`, `packaging`, `labels`, `params` et 35 tests.
+- [x] Module `types` (contrat entre modules) — implémenté seul, en premier (2026-09-19), avec `rng`, `date`, `units`, `packaging`, `labels`, `params`, `dataset`, `filter` et 47 tests.
 - [ ] `docs/SPEC.md` (arbitrage concis ; les propositions détaillées sont dans `docs/conception/`).
 - [ ] Données : ingrédients canoniques + recettes (scindées par cuisine/slot pour paralléliser, agents Sonnet).
-- [ ] Core : filter, nutrition, planificateur 7 jours, agrégation des courses + garde-manger + restes + swap + bilan.
+- [ ] Core : nutrition, planificateur 7 jours, agrégation des courses + garde-manger + restes + swap + bilan.
 - [ ] Store zustand (profil, plan, courses cochées, garde-manger, réglages) + persistance.
 - [ ] Thème + composants réutilisables (MealCard, IngredientRow, AisleSection, Chip…).
 - [ ] Écrans : onboarding, semaine + détail recette, courses, garde-manger + réglages.
@@ -75,4 +75,4 @@
 - **2026-09-17** — Cadrage, scaffolding Expo SDK 57, nettoyage du template, dépendances, premier commit. Lancement du workflow de conception (3 propositions indépendantes + synthèse).
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
-- **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), 35 tests. typecheck ✅ tests ✅.
+- **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅.
