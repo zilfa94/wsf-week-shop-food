@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 08:15
-- Branche : `main` — dernier commit : 2adf8a8 « Corrige le hook Stop (comparaison normalisée, sortie non tronquée) et documente le mécanisme » (2026-09-17)
-- Arbre de travail : 16 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-19 08:16
+- Branche : `main` — dernier commit : cc6349b « Contrat de types et modules de base du core (rng, date, units, packaging) avec tests » (2026-09-19)
+- Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 5 fichier(s) · tests 30 cas dans 4 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
@@ -20,7 +20,7 @@
 - **Ce qui existe** : scaffold Expo SDK 57 nettoyé, `src/app/_layout.tsx` (Stack minimal) et `src/app/index.tsx` (placeholder), thème/hooks du template, docs (`CLAUDE.md`, `AGENT.md`, `README.md`, ce fichier), outillage `scripts/docs.mjs` + hooks (git pre-commit, Claude Code Stop). **Depuis le 2026-09-19** : les 3 propositions de conception copiées dans `docs/conception/` ; le **contrat de types** `src/core/types.ts` (arbitrage des propositions algo + ingénierie, identifiants anglais, `cooked`/`unfilled`/`packagingIndex`/`ManualItem` ajoutés) ; modules de base `src/core/rng.ts`, `date.ts`, `units.ts`, `packaging.ts` avec fixtures et 30 tests verts ; `tsconfig.json` : `"types": ["jest"]` (TypeScript 6 n'inclut plus les `@types/*` automatiquement).
 - **Ce qui n'existe pas encore** : `docs/SPEC.md`, le reste de `src/core/` (filter, nutrition, planner, shopping, swap, leftovers, report, labels, params), `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
-- **En cours au moment de l'écriture** : workflow de synthèse `wf_204fbc5c-27c` (session `faa12641-9515-4c9b-abf9-c20950e15a0b`) qui remplace le juge : contrat de types → 3 vérifications adversariales → correction → 6 sections de spec en parallèle → 2 critiques de cohérence → correcteur. Sorties dans le scratchpad de la session, sous-dossier `conception/spec/` (`00-types.ts`, `00-types-decisions.md`, `S1-produit.md` … `S6-tests-modules.md`), à assembler dans `docs/SPEC.md`.
+- **En cours au moment de l'écriture** : rien ne tourne. Session du 2026-09-19 arrêtée volontairement à 72 % de la fenêtre de quota 5 h (seuil 85 %, CLAUDE.md § 0.1), arbre propre après commit. Reprendre à l'étape 1 ci-dessous.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1) :
 1. Écrire `docs/SPEC.md` (arbitrage concis des 3 propositions de `docs/conception/`, le contrat étant `src/core/types.ts`).
