@@ -28,6 +28,8 @@ describe('cibles', () => {
     const t = computeTarget(OMNIVORE_2);
     expect(t.kcal).toBe(2000);
     expect(t.protein).toBe(100); // 20 % / 4
+    expect(t.plannedKcal).toBe(1440); // 72 % couverts par les repas planifiés
+    expect(t.plannedProtein).toBe(72);
     expect(t.carbs).toBe(250);
     expect(t.fat).toBe(67);
     expect(computeTarget({ ...OMNIVORE_2, goal: 'weight_loss' }).kcal).toBe(1700);
@@ -97,19 +99,19 @@ describe('macros journalières', () => {
 });
 
 describe('scores', () => {
-  const target = computeTarget(OMNIVORE_2); // 2000 kcal, 100 g protéines
-  const perfect: Macros = { kcal: 2000, protein: 100, carbs: 250, fat: 67, fiber: 25 };
+  const target = computeTarget(OMNIVORE_2); // 2000 kcal/j dont 1440 attendus des repas planifiés, 72 g de protéines
+  const perfect: Macros = { kcal: 1440, protein: 72, carbs: 180, fat: 48, fiber: 25 };
 
   it('dayScore : cible exacte → 100 ; +30 % kcal → ≤ 40 ; déficit protéines seul → 80', () => {
     expect(dayScore(perfect, target)).toBe(100);
-    expect(dayScore({ ...perfect, kcal: 2600 }, target)).toBeLessThanOrEqual(40);
-    expect(dayScore({ ...perfect, protein: 70 }, target)).toBe(80);
+    expect(dayScore({ ...perfect, kcal: 1872 }, target)).toBeLessThanOrEqual(40); // +30 %
+    expect(dayScore({ ...perfect, protein: 50.4 }, target)).toBe(80); // −30 % de protéines
     expect(dayScore({ ...perfect, fiber: 0 }, target)).toBe(90);
   });
 
   it('nutritionPenalty : 0 dans la bande ±10 %, > 0 en dehors', () => {
-    expect(nutritionPenalty([perfect, { ...perfect, kcal: 2150, protein: 90 }], target)).toBe(0);
-    expect(nutritionPenalty([{ ...perfect, kcal: 2600 }], target)).toBeGreaterThan(0);
+    expect(nutritionPenalty([perfect, { ...perfect, kcal: 1550, protein: 65 }], target)).toBe(0);
+    expect(nutritionPenalty([{ ...perfect, kcal: 1900 }], target)).toBeGreaterThan(0);
     expect(nutritionPenalty([{ ...perfect, fiber: 5 }], target)).toBeGreaterThan(0);
   });
 

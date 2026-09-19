@@ -114,7 +114,8 @@ describe('applySwap', () => {
     expect(lunch.leftoverOf).toBeUndefined();
     expect(lunch.servings).toBe(2);
     expect(lunch.recipeId).not.toBe('plat_4');
-    expect(next.meals).toHaveLength(plan.meals.length);
+    // le glouton de réparation peut aussi remplir un créneau resté vide : jamais moins de repas qu'avant
+    expect(next.meals.length).toBeGreaterThanOrEqual(plan.meals.length);
   });
 
   it('remplacer un déjeuner « restes » rend ses portions normales au dîner source', () => {

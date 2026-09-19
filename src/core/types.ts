@@ -175,10 +175,18 @@ export interface Macros {
 
 /** Cible journalière calculée par `nutrition.ts` à partir du profil. */
 export interface NutritionTarget {
+  /** Besoin journalier total (tout compris). */
   readonly kcal: number;
   readonly protein: number;
   readonly carbs: number;
   readonly fat: number;
+  /**
+   * Part attendue des repas planifiés (assiettes cuisinées) : `PLANNED_SHARE` × kcal. Le reste
+   * (pain, fruits, laitages, boissons) n'est pas planifié par l'application. Les scores et la
+   * pénalité du planificateur comparent les macros des repas à cette part.
+   */
+  readonly plannedKcal: number;
+  readonly plannedProtein: number;
   /** Part de kcal par type de repas (somme = kcal). */
   readonly perMeal: Readonly<Record<MealType, number>>;
 }

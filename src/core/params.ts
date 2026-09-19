@@ -36,6 +36,9 @@ export const LEFTOVER_MIN_RATIO = 0.2;
 /** Bande de tolérance sans pénalité nutritionnelle. */
 export const NUTRITION_TOLERANCE = { kcal: 0.1, protein: 0.15 } as const;
 
+/** Part du besoin journalier couverte par les repas planifiés (le reste : pain, fruits, laitages, boissons). */
+export const PLANNED_SHARE = 0.72;
+
 /** Un garde-manger « bientôt périmé » : à moins de N jours de la date limite. */
 export const PANTRY_EXPIRY_WARNING_DAYS = 2;
 

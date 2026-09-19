@@ -3,7 +3,7 @@
  * = par personne ; tout est donc calculé par personne. Voir docs/SPEC.md § 4.2.
  */
 import type { IngredientIndex, RecipeIndex } from './dataset';
-import { NUTRITION_TOLERANCE } from './params';
+import { NUTRITION_TOLERANCE, PLANNED_SHARE } from './params';
 import type {
   Activity,
   BodyInfo,
@@ -85,9 +85,12 @@ export function computeTarget(profile: UserProfile): NutritionTarget {
   }
   perMeal.dinner = kcal - allocated; // le dîner absorbe l'arrondi : la somme vaut exactement kcal
 
+  const protein = Math.round((kcal * split.p) / 4);
   return {
     kcal,
-    protein: Math.round((kcal * split.p) / 4),
+    protein,
+    plannedKcal: Math.round(kcal * PLANNED_SHARE),
+    plannedProtein: Math.round(protein * PLANNED_SHARE),
     carbs: Math.round((kcal * split.c) / 4),
     fat: Math.round((kcal * split.f) / 9),
     perMeal,
@@ -130,17 +133,17 @@ function bandDeviation(value: number, target: number, tolerance: number): number
 export function nutritionPenalty(daily: readonly Macros[], target: NutritionTarget): number {
   let penalty = 0;
   for (const d of daily) {
-    penalty += bandDeviation(d.kcal, target.kcal, NUTRITION_TOLERANCE.kcal) ** 2;
-    penalty += 0.5 * bandDeviation(d.protein, target.protein, NUTRITION_TOLERANCE.protein) ** 2;
+    penalty += bandDeviation(d.kcal, target.plannedKcal, NUTRITION_TOLERANCE.kcal) ** 2;
+    penalty += 0.5 * bandDeviation(d.protein, target.plannedProtein, NUTRITION_TOLERANCE.protein) ** 2;
     penalty += 0.2 * Math.max(0, (20 - d.fiber) / 20) ** 2;
   }
   return penalty;
 }
 
-/** Score lisible 0..100 d'une journée par rapport à la cible. */
+/** Score lisible 0..100 d'une journée par rapport à la part attendue des repas planifiés. */
 export function dayScore(m: Macros, target: NutritionTarget): number {
-  const kcalDev = Math.abs(m.kcal - target.kcal) / target.kcal;
-  const proteinDev = Math.max(0, (target.protein - m.protein) / target.protein); // seul le déficit pénalise
+  const kcalDev = Math.abs(m.kcal - target.plannedKcal) / target.plannedKcal;
+  const proteinDev = Math.max(0, (target.plannedProtein - m.protein) / target.plannedProtein); // seul le déficit pénalise
   const fatRatio = (m.fat * 9) / Math.max(1, m.kcal);
   const fatDev = Math.max(0, fatRatio - 0.4); // > 40 % des kcal en lipides
   const fiberDev = Math.max(0, (25 - m.fiber) / 25);
