@@ -1,3 +1,4 @@
+export { ActionSheet, type ActionSheetProps, type SheetAction } from './action-sheet';
 export { AppText, type AppTextProps } from './app-text';
 export { Button, type ButtonProps, type IoniconName } from './button';
 export { Card, type CardProps } from './card';

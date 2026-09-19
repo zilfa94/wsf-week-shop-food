@@ -1,9 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
-import { Alert, Pressable, StyleSheet, View } from 'react-native';
+import { Pressable, StyleSheet, View } from 'react-native';
 import { MealCard } from '@/components/plan/meal-card';
-import { AppText, Button, Card, EmptyState, Screen, Snackbar, StatTile } from '@/components/ui';
+import { ActionSheet, AppText, Button, Card, EmptyState, Screen, Snackbar, StatTile, type SheetAction } from '@/components/ui';
 import { Radius, Spacing } from '@/constants/theme';
 import { addDays, parseISO } from '@/core/date';
 import { MONTH_SHORT_LABELS, WEEKDAY_LABELS } from '@/core/labels';
@@ -35,9 +35,13 @@ export default function WeekScreen() {
   const toggleLock = useAppStore((s) => s.toggleLock);
   const setCooked = useAppStore((s) => s.setCooked);
   const startNextWeek = useAppStore((s) => s.startNextWeek);
+  const previousPlan = useAppStore((s) => s.previousPlan);
+  const undoSwap = useAppStore((s) => s.undoSwap);
+  const dismissUndo = useAppStore((s) => s.dismissUndo);
   const list = useShoppingList();
   const nutrition = useWeekNutrition();
   const [snack, setSnack] = useState<string | null>(null);
+  const [sheet, setSheet] = useState<{ title: string; message?: string; actions: SheetAction[] } | null>(null);
 
   const expired = plan ? isPlanExpired(plan, today) : false;
   const drift = useMemo(() => (plan ? profileDrift(plan, profile) : []), [plan, profile]);
@@ -58,20 +62,33 @@ export default function WeekScreen() {
   const onMealLongPress = (mealId: string) => {
     const meal = plan.meals.find((m) => m.id === mealId);
     if (!meal) return;
-    Alert.alert(RECIPE_INDEX.get(meal.recipeId)?.name ?? 'Repas', undefined, [
-      { text: 'Remplacer', onPress: () => router.push({ pathname: '/swap/[mealId]', params: { mealId } }) },
-      { text: meal.locked ? 'Déverrouiller' : 'Verrouiller', onPress: () => toggleLock(mealId) },
-      {
-        text: meal.cooked ? 'Pas encore cuisiné' : 'Marquer cuisiné',
-        onPress: () => {
-          setCooked(mealId, !meal.cooked);
-          haptics.success();
-          setSnack(meal.cooked ? 'Repas remis à cuisiner.' : 'Repas cuisiné : garde-manger mis à jour.');
+    setSheet({
+      title: RECIPE_INDEX.get(meal.recipeId)?.name ?? 'Repas',
+      actions: [
+        { label: 'Remplacer', icon: 'swap-horizontal', onPress: () => router.push({ pathname: '/swap/[mealId]', params: { mealId } }) },
+        { label: meal.locked ? 'Déverrouiller' : 'Verrouiller', icon: meal.locked ? 'lock-open' : 'lock-closed', onPress: () => toggleLock(mealId) },
+        {
+          label: meal.cooked ? 'Pas encore cuisiné' : 'Marquer cuisiné',
+          icon: 'checkmark',
+          variant: meal.cooked ? 'secondary' : 'primary',
+          onPress: () => {
+            setCooked(mealId, !meal.cooked);
+            haptics.success();
+            setSnack(meal.cooked ? 'Repas remis à cuisiner.' : 'Repas cuisiné : garde-manger mis à jour.');
+          },
         },
-      },
-      { text: 'Annuler', style: 'cancel' },
-    ]);
+      ],
+    });
   };
+
+  const confirmRegenerate = () =>
+    setSheet({
+      title: 'Régénérer toute la semaine ?',
+      message: 'Les repas verrouillés et déjà cuisinés sont conservés.',
+      actions: [{ label: 'Régénérer', icon: 'refresh', variant: 'primary', onPress: () => router.push('/generating') }],
+    });
+
+  const snackMessage = snack ?? (previousPlan ? 'Repas remplacé, liste de courses mise à jour.' : null);
 
   return (
     <View style={styles.root}>
@@ -137,17 +154,20 @@ export default function WeekScreen() {
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Régénérer la semaine"
-        onPress={() =>
-          Alert.alert('Régénérer toute la semaine ?', 'Les repas verrouillés et déjà cuisinés sont conservés.', [
-            { text: 'Annuler', style: 'cancel' },
-            { text: 'Régénérer', onPress: () => router.push('/generating') },
-          ])
-        }
+        onPress={confirmRegenerate}
         style={[styles.fab, { backgroundColor: theme.accent }]}
       >
         <Ionicons name="refresh" size={26} color={theme.onPrimary} />
       </Pressable>
-      <Snackbar message={snack} onDismiss={() => setSnack(null)} />
+      <Snackbar
+        message={snackMessage}
+        action={!snack && previousPlan ? { label: 'Annuler', onPress: undoSwap } : undefined}
+        onDismiss={() => {
+          if (snack) setSnack(null);
+          else if (previousPlan) dismissUndo();
+        }}
+      />
+      <ActionSheet visible={sheet !== null} title={sheet?.title ?? ''} message={sheet?.message} actions={sheet?.actions ?? []} onClose={() => setSheet(null)} />
     </View>
   );
 }

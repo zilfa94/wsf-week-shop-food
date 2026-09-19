@@ -128,8 +128,8 @@ export function suggestSwaps(args: SwapArgs): SwapSuggestion[] {
     const deltaPrice = round2(delta.price - currentDelta.price);
     const reasons: string[] = [];
     if (delta.reused.length > 0) {
-      const names = delta.reused.slice(0, 2).map((i) => ingredientName(ctx.ingredients.get(i)!, 2));
-      reasons.push(`Utilise vos restes de ${names.join(' et ')}`);
+      const names = delta.reused.slice(0, 2).map((i) => withDe(ingredientName(ctx.ingredients.get(i)!, 2)));
+      reasons.push(`Utilise vos restes ${names.join(' et ')}`);
     }
     if (deltaItems > 0) reasons.push(`+${deltaItems} article${deltaItems > 1 ? 's' : ''} · ${signed(deltaPrice)}`);
     else if (deltaItems < 0) reasons.push(`−${-deltaItems} article${deltaItems < -1 ? 's' : ''} · ${signed(deltaPrice)}`);
@@ -187,6 +187,11 @@ export function applySwap(
   for (const id of orphanIds) if (!st.assign.has(id)) st.assign.set(id, null);
   greedyBuild(st, ctx, mulberry32(plan.seed));
   return toWeekPlan(st, ctx, { weekStart: plan.weekStart, seed: plan.seed, dataset, keep: meals });
+}
+
+/** « de » avec élision devant une voyelle ou un h muet : « d'ail », « de poivrons ». */
+export function withDe(name: string): string {
+  return /^[aeiouyàâäéèêëïîôöùûüœh]/i.test(name) ? `d’${name}` : `de ${name}`;
 }
 
 function signed(eur: number): string {

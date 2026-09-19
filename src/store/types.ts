@@ -17,6 +17,8 @@ export interface PlanSlice {
   regeneratePlan: (args: { today: ISODate }) => void;
   swapMeal: (mealId: string, recipeId: RecipeId, today: ISODate) => void;
   undoSwap: () => void;
+  /** Abandonne la possibilité d'annuler le dernier swap (snackbar expirée). */
+  dismissUndo: () => void;
   toggleLock: (mealId: string) => void;
   /** Marquer cuisiné décompte les ingrédients du garde-manger ; démarquer ne les restitue pas. */
   setCooked: (mealId: string, cooked: boolean) => void;

@@ -39,7 +39,7 @@ describe('suggestSwaps', () => {
     const omelette = s.find((x) => x.recipeId === 'omelette')!;
     expect(omelette.newIngredientIds).toEqual([]);
     expect([...omelette.reusedIngredientIds].sort()).toEqual(['lait', 'oeuf']);
-    expect(omelette.reasons[0]).toBe('Utilise vos restes de œufs et lait');
+    expect(omelette.reasons[0]).toBe('Utilise vos restes d’œufs et de lait');
     expect(omelette.reasons).toContain('Aucun achat supplémentaire');
     expect(omelette.deltaPrice).toBe(0);
     expect(s[0]!.recipeId).toBe('omelette'); // rien à acheter : meilleur score
@@ -63,7 +63,7 @@ describe('suggestSwaps', () => {
     expect(unchecked.reusedIngredientIds).toEqual([]);
     expect(checked.newIngredientIds).toEqual(['tomate']);
     expect(checked.reusedIngredientIds).toEqual(['oeuf']);
-    expect(checked.reasons[0]).toBe('Utilise vos restes de œufs');
+    expect(checked.reasons[0]).toBe('Utilise vos restes d’œufs');
     expect(checked.score).toBeLessThan(unchecked.score);
   });
 

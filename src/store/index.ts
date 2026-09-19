@@ -46,6 +46,7 @@ const createPlanSlice: Slice<
     | 'regeneratePlan'
     | 'swapMeal'
     | 'undoSwap'
+    | 'dismissUndo'
     | 'toggleLock'
     | 'setCooked'
     | 'setMealServings'
@@ -92,6 +93,7 @@ const createPlanSlice: Slice<
       const s = get();
       if (s.previousPlan) set({ currentPlan: s.previousPlan, previousPlan: null });
     },
+    dismissUndo: () => set({ previousPlan: null }),
     toggleLock: (mealId) => set((s) => (s.currentPlan ? { currentPlan: toggleLockPure(s.currentPlan, mealId) } : {})),
     setCooked: (mealId, cooked) => {
       const s = get();
@@ -243,3 +245,6 @@ export const useAppStore = create<AppState>()(
     },
   ),
 );
+
+// Aide au débogage en développement : `__wsfStore.getState()` dans la console.
+if (__DEV__) (globalThis as { __wsfStore?: typeof useAppStore }).__wsfStore = useAppStore;

@@ -1,5 +1,6 @@
-import { Alert, StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, Chip, Screen, SectionHeader, SegmentedControl, Stepper } from '@/components/ui';
+import { useState } from 'react';
+import { StyleSheet, View } from 'react-native';
+import { ActionSheet, AppText, Button, Card, Chip, Screen, SectionHeader, SegmentedControl, Stepper } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { ALLERGEN_LABELS, DIET_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
 import type { Allergen, Diet, Goal } from '@/core/types';
@@ -20,6 +21,7 @@ export default function ProfileScreen() {
   const settings = useAppStore((s) => s.settings);
   const setSetting = useAppStore((s) => s.setSetting);
   const resetAll = useAppStore((s) => s.resetAll);
+  const [confirmReset, setConfirmReset] = useState(false);
   const toggleAllergen = (a: Allergen) =>
     setProfile({ allergens: profile.allergens.includes(a) ? profile.allergens.filter((x) => x !== a) : [...profile.allergens, a] });
 
@@ -79,15 +81,13 @@ export default function ProfileScreen() {
           Les prix sont indicatifs et varient selon le magasin. Les macros sont approximatives, par portion.
         </AppText>
       </Card>
-      <Button
-        label="Effacer toutes les données"
-        variant="danger"
-        onPress={() =>
-          Alert.alert('Effacer toutes les données ?', 'Profil, semaine, courses et garde-manger seront supprimés.', [
-            { text: 'Annuler', style: 'cancel' },
-            { text: 'Effacer', style: 'destructive', onPress: resetAll },
-          ])
-        }
+      <Button label="Effacer toutes les données" variant="danger" onPress={() => setConfirmReset(true)} />
+      <ActionSheet
+        visible={confirmReset}
+        title="Effacer toutes les données ?"
+        message="Profil, semaine, courses et garde-manger seront supprimés."
+        actions={[{ label: 'Effacer', variant: 'danger', icon: 'trash', onPress: resetAll }]}
+        onClose={() => setConfirmReset(false)}
       />
     </Screen>
   );

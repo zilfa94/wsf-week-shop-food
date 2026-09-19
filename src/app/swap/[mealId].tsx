@@ -43,7 +43,8 @@ export default function SwapScreen() {
               onPress={() => {
                 swapMeal(meal.id, s.recipeId, today);
                 haptics.success();
-                router.back();
+                if (router.canGoBack()) router.back();
+                else router.replace('/(tabs)');
               }}
               accessibilityLabel={`Choisir ${recipe?.name ?? s.recipeId}`}
             >
