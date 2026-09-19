@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-19 14:15
-- Branche : `main` — dernier commit : 9389d2b « Ajoute la liste de courses dérivée, les restes prévisibles et l'ordre des rayons au core » (2026-09-19)
-- Arbre de travail : 5 fichier(s) modifié(s) non commité(s)
-- Code : core 17 fichier(s) · tests 105 cas dans 12 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
+- Généré le : 2026-09-19 14:17
+- Branche : `main` — dernier commit : 82da5ed « Ajoute plan-edit (verrou, cuisiné, portions, signaux) et swap (remplacement à impact) » (2026-09-19)
+- Arbre de travail : 4 fichier(s) modifié(s) non commité(s)
+- Code : core 19 fichier(s) · tests 107 cas dans 13 fichier(s) · données ≈ 0 recette(s), ≈ 0 ingrédient(s) · routes 1 · composants 0 · store 0
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -23,15 +23,15 @@
 - **`src/core/needs.ts`** (besoins d'une recette à l'échelle, optionnels interdits retirés) et **`src/core/planner.ts`** faits : contexte + état incrémental (`wasteDelta` vérifié contre un recalcul complet), glouton top-k, recuit simulé, batch cooking avec `batchBonus`, repas conservés (verrouillés/cuisinés), créneaux `unfilled`, `stateFromPlan` pour le swap ; jeu de données synthétique `__tests__/fixtures/synthetic.ts` (34 recettes, 21 ingrédients) ; génération complète en ~150 ms.
 - **`src/core/aisles.ts`** (ordre de parcours), **`leftovers.ts`** (restes notables, recettes qui les absorbent, pack réutilisé par un repas ultérieur, faisabilité par garde-manger, « cuisiner avec ce que j'ai ») et **`shopping.ts`** (liste dérivée : agrégation multi-unités, garde-manger non périmé au premier usage, staples, optionnels interdits, choix de pack, sections par rayon, articles libres, `wasteScore`, `diffShoppingLists`, `addPurchasesToPantry`, `consumeFromPantry` FIFO) faits.
 - **`src/core/plan-edit.ts`** (verrou, cuisiné, portions, semaine terminée, dérive du profil, repas incompatibles) et **`swap.ts`** (suggestions à impact : liste courante = garde-manger virtuel, cochés acquis, delta articles/prix, raisons FR ; `applySwap` verrouille, regénère le déjeuner « restes » lié, rend ses portions au dîner source, recalcule le coût) faits.
-- **Ce qui n'existe pas encore** : `src/core/report.ts`, `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
+- **`src/core/report.ts`** (bilan : cuisinés, scores, restes orphelins, économie des packs partagés) et **`src/core/index.ts`** (baril de l'API publique) faits → **le core est complet : 19 fichiers, 107 tests.**
+- **Ce qui n'existe pas encore** : `src/data/`, `src/store/`, `src/components/` (hors template), écrans.
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **En cours au moment de l'écriture** : rien ne tourne (session en cours, chaque module est commité dès qu'il est vert).
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. Core, un module + ses tests + un commit à la fois, signatures de SPEC § 4 : `nutrition` → `planner` → `shopping` → `plan-edit` + `swap` → `leftovers` → `report` (source algorithmique : `docs/conception/proposition-algo.md` ; fixtures dans `src/core/__tests__/fixtures/`).
-2. Données : `src/data/aisles.ts`, `ingredients.ts` (~150) et `src/data/__tests__/dataset.test.ts` par l'agent principal, PUIS les `recipes-*.ts` par 2-3 agents **Sonnet** (quotas SPEC § 3.3).
-3. Store zustand + persistance + tests (SPEC § 5) ; thème + composants (SPEC § 6) ; écrans (SPEC § 1.3).
-4. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
+1. Données : `src/data/ingredients.ts` (~150, SPEC § 3.2-3.3) et `src/data/__tests__/dataset.test.ts` (invariants SPEC § 3.4) par l'agent principal, PUIS les `recipes-*.ts` par 2-3 agents **Sonnet** (quotas SPEC § 3.3), `recipes.ts`, `index.ts` (`DATASET`, `DATASET_VERSION`).
+2. Store zustand + persistance + tests (SPEC § 5) ; thème + composants (SPEC § 6) ; écrans (SPEC § 1.3).
+3. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 
 ## Statut global
 
@@ -40,7 +40,7 @@
 | 0. Cadrage | ✅ Terminé | Objectif produit, contraintes techniques fixées |
 | 1. Scaffolding technique | ✅ Terminé | Projet Expo SDK 57 + TypeScript strict, dépendances installées, base vérifiée |
 | 2. Conception (spec) | ✅ Terminé | 3 propositions (`docs/conception/`) arbitrées par l'agent principal dans `docs/SPEC.md` (2026-09-19) |
-| 3. Implémentation | 🔄 En cours | Mode économe : types + fondations du core faits ; nutrition/planner/shopping/swap/leftovers/report, données, store, écrans à venir |
+| 3. Implémentation | 🔄 En cours | Mode économe : **core complet** (107 tests) ; données, store, composants, écrans à venir |
 | 4. Intégration & vérification | ⏳ À venir | `tsc`, `jest`, `expo-doctor`, `expo export`, revue adversariale |
 | 5. Test sur appareil | ⏳ À venir | Expo Go (Android / iOS) puis build EAS |
 
@@ -59,12 +59,13 @@
 - [x] **Spec définitive** `docs/SPEC.md` (2026-09-19) : arbitrage des 3 propositions, routes, données et quotas, signatures du core, store, design, ordre de travail, scénarios à réfuter.
 - [x] Module `types` (contrat entre modules) — implémenté seul, en premier (2026-09-19), avec `rng`, `date`, `units`, `packaging`, `labels`, `params`, `dataset`, `filter` et 47 tests.
 
+- [x] Core complet (2026-09-19) : `nutrition`, `planner` (+ `needs`), `aisles`, `leftovers`, `shopping`, `plan-edit`, `swap`, `report`, baril `index.ts` — 107 tests, génération d'un plan ≈ 150 ms.
+
 ## En cours
 
-- [ ] Core « intelligent » : ~~`nutrition`~~ (11 tests) → ~~`planner`~~ (12) → ~~`leftovers`~~ (9) → ~~`shopping`~~ (14) → ~~`plan-edit`~~ (5) + ~~`swap`~~ (7) → `report`.
+- [ ] Données : ingrédients canoniques (agent principal) + recettes (agents Sonnet) + test d'intégrité.
 
 ## À faire
-- [ ] Données : ingrédients canoniques + recettes (scindées par cuisine/slot pour paralléliser, agents Sonnet).
 - [ ] Store zustand (profil, plan, courses cochées, garde-manger, réglages) + persistance.
 - [ ] Thème + composants réutilisables (MealCard, IngredientRow, AisleSection, Chip…).
 - [ ] Écrans : onboarding, semaine + détail recette, courses, garde-manger + réglages.
@@ -79,4 +80,4 @@
 - **2026-09-17** — Documentation de reprise : `CLAUDE.md` (manuel, pièges, garde-fous), `AGENT.md` (rôle de l'agent), section « Reprise » ici, `README.md` réécrit. Les 3 propositions de conception sont rendues (UX 07:26, ingénierie 07:29, algorithmes 07:33) ; juge de synthèse en cours.
 - **2026-09-17** — Optimisation de la mise à jour des docs : dédoublonnage (état ici, règles dans CLAUDE.md), bloc « État instantané » auto-généré, `scripts/docs.mjs`, hook git `pre-commit` et hook Claude Code `Stop` qui exigent une mise à jour rédigée d'AVANCEMENT.md dès que du code change.
 - **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅. Arrêt à 79 % de la fenêtre 5 h.
-- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105).
+- **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**.
