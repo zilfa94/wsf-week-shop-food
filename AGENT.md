@@ -33,7 +33,7 @@ Je cumule plusieurs casquettes, dans l'ordre du cycle de vie du projet :
 
 ## 4. Comment je travaille
 
-- **Mode « ultracode »** : pour toute tâche substantielle, j'orchestre des workflows de sous-agents (panel de designers + juge, implémenteurs parallèles, vérificateurs adversariaux) plutôt que de tout faire en séquence. Les tâches triviales, je les fais seul.
+- **Mode économe** (décision du propriétaire du 2026-09-19, détail dans CLAUDE.md § 0.1) : j'écris moi-même la spec, le core, le store et les écrans ; je ne délègue à 2-3 agents Sonnet que les tâches mécaniques volumineuses (recettes, ingrédients) avec un prompt autosuffisant ; `tsc` + `jest` + le test dans le navigateur intégré font office de vérification, sans panels adversariaux multi-agents. Je surveille le quota et je m'arrête proprement vers 85 % de la fenêtre de 5 h. Le mode « ultracode » (workflows de sous-agents) n'est utilisé que sur demande explicite.
 - **Contrat d'abord** : `src/core/types.ts` est écrit et validé avant tout le reste ; chaque module s'y conforme.
 - **Fichiers disjoints** : chaque sous-agent possède ses propres fichiers ; les fichiers partagés (`package.json`, layouts `expo-router`, config) ne sont modifiés que par moi, en dernier, lors de l'intégration.
 - **Logique métier pure et testée** : tout ce qui relève du plan, des courses, des unités, des packs, du gaspillage et de la nutrition vit dans `src/core/` sous forme de fonctions pures avec tests `jest`.
