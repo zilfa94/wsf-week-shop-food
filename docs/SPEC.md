@@ -86,7 +86,7 @@ Référence : `proposition-ux.md` § 3, retenue intégralement. Deltas : « Vég
 
 | Fichier | Export | Contenu |
 |---|---|---|
-| `aisles.ts` | `AISLE_ORDER: readonly Aisle[]` | ordre de parcours : `fruits_vegetables, bakery, butcher, fish, dairy, dry_goods, condiments, sweet_grocery, drinks, frozen, other` |
+| — | `AISLE_ORDER` vit dans **`src/core/aisles.ts`** (le core ne dépend pas des données) | ordre de parcours : `fruits_vegetables, bakery, butcher, fish, dairy, dry_goods, condiments, sweet_grocery, drinks, frozen, other` |
 | `ingredients.ts` | `INGREDIENTS: readonly Ingredient[]` | ~150 ingrédients, groupés par rayon dans le fichier |
 | `recipes-breakfast.ts`, `recipes-snacks.ts`, `recipes-french.ts`, `recipes-mediterranean.ts`, `recipes-asian.ts`, `recipes-oriental.ts`, `recipes-veggie.ts` | `RECIPES_<GROUPE>: readonly Recipe[]` | recettes par groupe (voir quotas § 3.3) |
 | `recipes.ts` | `RECIPES: readonly Recipe[]` | concaténation |
@@ -128,7 +128,7 @@ Règles globales : aucune recette dupliquée par le nom ; **≥ 40 %** des déje
 4. ≥ 60 recettes ; pour un omnivore (30/90 min) : ≥ 10 candidats par type de créneau tous jours confondus ; pour végétalien + sans gluten : ≥ 7 déjeuners/dîners, ≥ 3 petits-déjeuners.
 5. cohérence : une recette taguée `no_cook` a `cookMin === 0` ; une recette `batchable` est un déjeuner/dîner ; `mainProtein` cohérent avec les `foodClass` présents (ex. `poultry` ⇒ un ingrédient `poultry`).
 6. chaque ingrédient périssable (`shelfLifeDays ≤ 14`, non staple) apparaît dans ≥ 2 recettes.
-7. `AISLE_ORDER` contient chaque `Aisle` exactement une fois.
+7. `AISLE_ORDER` (core) contient chaque `Aisle` exactement une fois ; chaque `aisle` du jeu de données existe.
 
 ---
 
