@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 01:33
-- Branche : `main` — dernier commit : 2077859 « Applique les retours du test téléphone : repas de la journée au choix, régime base + sans porc, onboarding en 5 étapes » (2026-09-20)
-- Arbre de travail : 3 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-20 01:45
+- Branche : `main` — dernier commit : fb8969b « Consigne la décision « prix réels par scraping » (CLAUDE.md § 1-2, SPEC § 1.4, AVANCEMENT) » (2026-09-20)
+- Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 18 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
