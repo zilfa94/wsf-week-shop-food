@@ -38,7 +38,10 @@ export default function StoreModeScreen() {
   return (
     <Screen>
       <View style={styles.header}>
-        <AppText variant="caption" color="textMuted">{`Rayon ${index + 1}/${sections.length}`}</AppText>
+        <View style={styles.headerRow}>
+          <AppText variant="caption" color="textMuted">{`Rayon ${index + 1}/${sections.length}`}</AppText>
+          <Button label="Quitter" icon="close" variant="ghost" compact onPress={exit} accessibilityLabel="Quitter le mode magasin" />
+        </View>
         <AppText variant="display">{AISLE_LABELS[section.aisle]}</AppText>
       </View>
       {rows.map((r) => (
@@ -73,6 +76,7 @@ export default function StoreModeScreen() {
 
 const styles = StyleSheet.create({
   header: { gap: Spacing.xs },
+  headerRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, borderWidth: StyleSheet.hairlineWidth, borderRadius: Radius.card, paddingVertical: Spacing.sm, paddingRight: Spacing.lg },
   checked: { opacity: 0.45 },
   grow: { flex: 1 },
