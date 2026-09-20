@@ -66,6 +66,8 @@ WSF-Week Shop Food/
 ├── .githooks/          pre-commit (activé par `npm install` via le script `prepare`)
 ├── .claude/settings.json  hook Stop de Claude Code (§ 8) — settings.local.json est personnel, gitignoré
 ├── assets/             icône, splash, favicon
+├── scraper/            projet Node SÉPARÉ (prix réels) : src/ (robots, contrat PriceFile), config/ingredients.json, tests node:test — exclu du tsc et du jest de l'app
+├── .github/workflows/scrape.yml  cron quotidien : scraper → JSON dans la branche gh-pages (prices/)
 └── src/
     ├── app/            routes expo-router : _layout.tsx (racine), (tabs)/…, recette/[id].tsx, onboarding…
     ├── core/           logique métier pure : types.ts (CONTRAT), units.ts, nutrition.ts, planner.ts, shopping.ts…
@@ -120,6 +122,7 @@ printf '/// <reference types="expo/types" />\n' > expo-env.d.ts
 - Les tests du core ne doivent importer **aucun** module React Native ; sinon ils deviennent lents et fragiles.
 - `jest.setup.ts` (référencé par `setupFilesAfterEnv`) mocke AsyncStorage et expo-haptics ; `moduleNameMapper` renvoie les imports `.css` (`src/global.css` via `constants/theme.ts`) vers `jest.css-stub.js`.
 - **Jest 29 n'accepte pas `expect(valeur, message)`** (syntaxe Vitest) : accumuler les violations dans un tableau et faire `expect(problems).toEqual([])` (voir les tests de `src/data/`).
+- **`scraper/` a son propre `tsconfig`, ses propres dépendances et ses tests `node:test`** (`cd scraper && npm test`). Le `tsconfig.json` racine l'exclut (`exclude`) et le bloc jest l'ignore (`modulePathIgnorePatterns`) : sinon `tsc` racine échoue sur `node:*` / `.ts` et jest tente d'exécuter ses tests. Ne jamais importer `scraper/` depuis `src/`.
 - **`@testing-library/react-native` 14 : `render` et `fireEvent.*` sont asynchrones** (`await render(...)`, `await fireEvent.press(...)`) ; `screen` n'est pas alimenté, utiliser le retour de `render`. `Pressable` normalise `accessibilityState` (`busy`, `checked`, … à `undefined`) : comparer avec `toMatchObject`.
 
 ### 4.5 Expo / expo-router

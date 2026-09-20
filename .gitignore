@@ -44,3 +44,6 @@ example
 
 # Claude Code (réglages personnels)
 .claude/settings.local.json
+
+# Sortie du scraper de prix (publiée sur la branche gh-pages par GitHub Actions)
+/prices/

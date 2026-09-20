@@ -1,0 +1,18 @@
+{
+  "name": "wsf-price-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Relevé quotidien des prix réels par enseigne pour WSF · Week Shop Food (GitHub Actions → JSON statique).",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --import tsx src/__tests__/*.test.ts",
+    "lidl": "tsx src/run.ts lidl",
+    "all": "tsx src/run.ts all"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^6.0.0"
+  }
+}

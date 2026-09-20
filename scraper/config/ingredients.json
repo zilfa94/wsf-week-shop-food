@@ -1,0 +1,606 @@
+{
+ "_doc": "Règles de rattachement produit → ingrédient WSF. `any` : au moins une expression présente dans le libellé (mots entiers, pluriel toléré) ; `not` : exclusions propres ; `globalNot` : exclusions communes. Comparaison sans accents ni majuscules. Un produit non rattaché n'a pas de prix : on ne devine jamais (règle de crédibilité, CLAUDE.md § 2). Garde-fou : ≤ 8 `any` et ≤ 20 `not` par règle (test scraper).",
+ "globalNot": ["cuiseur", "machine", "robot", "appareil", "ustensile", "couteau", "poele", "casserole", "marmite", "passoire", "grille pain", "mousseur", "electrique", "moule a", "boite a", "coussin", "bouillotte", "bougie", "peluche", "jouet", "livre", "deco", "tapis", "textile", "t shirt", "pyjama", "chaussette", "robe", "sandale", "sac", "gel douche", "shampoing", "savon", "dentifrice", "lessive", "cosmetique", "masque", "litiere", "croquette", "croquettes", "patee", "chat", "chats", "chien", "chiens", "chaton", "chiot", "oiseaux", "rongeur", "plat cuisine", "plat prepare", "cuisine", "cuisines", "cuisinee", "cuisinees", "soupe", "veloute", "pizza", "quiche", "tarte", "gratin", "lasagne", "lasagnes", "burger", "nugget", "nuggets", "cordon bleu", "pane", "panes", "panee", "panees", "salade composee", "sandwich", "wrap", "bento", "sushi", "poke", "micro ondes", "express", "instantane", "minute", "cup", "box", "barquette", "repas", "en sauce", "chips", "biscuit", "biscuits", "gateau", "gateaux", "brioche", "viennoiserie", "glace", "sorbet", "dessert", "bonbon", "confiserie", "barre", "cereales", "muesli", "granola", "boisson", "soda", "nectar", "smoothie", "biere", "cidre", "alcool", "liqueur", "aperitif", "arome", "saveur", "gout", "parfum", "preparation pour", "kit", "bebe", "infantile", "lait de croissance", "lait de suite", "1er age", "2eme age", "a la sauce", "boulettes", "marinees", "marinee", "bocaditos", "sumol", "fanta", "oasis", "schweppes", "orangina", "tropico", "raviolis", "ravioli"],
+ "rules": {
+  "tomate": {
+   "any": ["tomate", "tomates rondes", "tomates grappe", "tomate coeur de boeuf"],
+   "not": ["sauce", "coulis", "concentre", "pelees", "pulpe", "sechee", "sechees", "confite", "ketchup", "jus", "en boite", "conserve", "cerise", "cerises"]
+  },
+  "tomates_cerises": {
+   "any": ["tomates cerises", "tomate cerise", "tomates cocktail"],
+   "not": ["sauce", "sechees", "confites", "conserve"]
+  },
+  "oignon": {
+   "any": ["oignon", "oignons jaunes", "oignons rouges"],
+   "not": ["frit", "frits", "poudre", "confit", "sauce", "surgele", "surgeles", "vinaigre", "semoule", "a l oignon", "aux oignons", "porc", "boeuf", "poulet"]
+  },
+  "echalote": {
+   "any": ["echalote"],
+   "not": ["sauce", "poudre", "confite", "beurre", "vinaigre"]
+  },
+  "ail": {
+   "any": ["ail", "tete d ail", "ail rose", "ail blanc", "ail violet"],
+   "not": ["poudre", "semoule", "sauce", "beurre", "huile", "aioli", "pain", "puree", "confit", "saucisson", "fromage", "des ours", "persil"]
+  },
+  "carotte": {
+   "any": ["carotte"],
+   "not": ["rapee", "rapees", "jus", "puree", "surgele", "surgeles", "en boite", "conserve", "cake", "graines"]
+  },
+  "pomme_de_terre": {
+   "any": ["pomme de terre", "pommes de terre"],
+   "not": ["puree", "frite", "frites", "rosti", "surgele", "surgelees", "flocon", "flocons", "en boite", "conserve", "galette", "cuite", "cuites"]
+  },
+  "courgette": {
+   "any": ["courgette"],
+   "not": ["surgele", "surgelees", "grillee", "grillees", "conserve", "farcie", "spaghetti"]
+  },
+  "aubergine": {
+   "any": ["aubergine"],
+   "not": ["caviar", "grillee", "grillees", "conserve", "farcie", "surgele", "surgelees"]
+  },
+  "poivron": {
+   "any": ["poivron"],
+   "not": ["grille", "grilles", "conserve", "poudre", "farci", "farcis", "surgele", "surgeles", "marine", "marines", "creme de"]
+  },
+  "concombre": {
+   "any": ["concombre"],
+   "not": ["cornichon", "pickles", "vinaigre", "eau de"]
+  },
+  "salade": {
+   "any": ["salade", "laitue", "batavia", "feuille de chene", "mache", "roquette", "sucrine", "jeunes pousses"],
+   "not": ["salade de", "cesar", "piemontaise", "fruits", "sauce", "vinaigrette", "saladier", "essoreuse"]
+  },
+  "poireau": {
+   "any": ["poireau"],
+   "not": ["surgele", "surgeles", "fondue", "flamiche"]
+  },
+  "champignon": {
+   "any": ["champignon de paris", "champignons de paris", "champignon blanc", "champignons blancs", "champignons bruns", "champignon"],
+   "not": ["conserve", "en boite", "surgele", "surgeles", "seche", "seches", "sauce", "creme de", "farci", "farcis", "poudre", "shiitake", "pleurote", "noir"]
+  },
+  "brocoli": {
+   "any": ["brocoli", "brocolis"],
+   "not": ["surgele", "surgeles", "puree", "poudre"]
+  },
+  "chou_fleur": {
+   "any": ["chou fleur", "choux fleurs"],
+   "not": ["surgele", "surgeles", "puree", "semoule de", "riz de"]
+  },
+  "epinard": {
+   "any": ["epinard", "epinards frais", "pousses d epinard"],
+   "not": ["surgele", "surgeles", "hache", "haches", "a la creme", "creme d", "conserve", "en boite", "feuillete", "poudre"]
+  },
+  "haricot_vert": {
+   "any": ["haricot vert", "haricots verts"],
+   "not": ["surgele", "surgeles", "conserve", "en boite", "poelee"]
+  },
+  "celeri_branche": {
+   "any": ["celeri branche", "celeri branches", "branche de celeri", "celeri en branche"],
+   "not": ["rave", "remoulade", "sel de", "graines", "poudre", "jus"]
+  },
+  "celeri_rave": {
+   "any": ["celeri rave", "celeri raves"],
+   "not": ["remoulade", "conserve", "puree"]
+  },
+  "betterave": {
+   "any": ["betterave"],
+   "not": ["cuite", "cuites", "sous vide", "conserve", "jus", "poudre", "houmous", "tartinade"]
+  },
+  "radis": {
+   "any": ["radis", "botte de radis", "radis rose", "radis roses"],
+   "not": ["noir", "daikon", "germe", "germes", "graines", "pickles", "beurre"]
+  },
+  "asperge": {
+   "any": ["asperge"],
+   "not": ["conserve", "en boite", "surgele", "surgelees", "creme d"]
+  },
+  "courge_butternut": {
+   "any": ["butternut", "courge butternut", "courge musquee", "doubeurre"],
+   "not": ["puree", "surgele", "surgelee", "surgeles", "spaghetti"]
+  },
+  "patate_douce": {
+   "any": ["patate douce", "patates douces"],
+   "not": ["frite", "frites", "puree", "surgele", "surgelees", "gnocchi"]
+  },
+  "avocat": {
+   "any": ["avocat", "avocats hass", "avocat hass"],
+   "not": ["guacamole", "huile", "puree", "tartinade", "houmous", "sauce", "mayonnaise", "creme", "surgele", "surgeles"]
+  },
+  "banane": {
+   "any": ["banane", "bananes cavendish"],
+   "not": ["sechee", "sechees", "plantain", "puree", "jus", "compote", "yaourt", "lait", "cake", "surgele", "surgelees", "pain"]
+  },
+  "pomme": {
+   "any": ["pomme", "pommes gala", "pommes golden", "pommes pink lady", "pommes granny", "pommes fuji", "pommes jonagold", "pommes reinette"],
+   "not": ["de terre", "jus", "compote", "puree", "sechee", "sechees", "vinaigre", "chausson", "pin", "d amour", "cannelle", "beurre", "confiture", "poudre"]
+  },
+  "orange": {
+   "any": ["orange", "oranges a jus", "oranges de table", "oranges navel"],
+   "not": ["jus", "sirop", "sanguine", "confiture", "marmelade", "ecorce", "zeste", "chocolat", "fleur d", "eau de", "carotte", "poudre", "the", "couleur"]
+  },
+  "citron": {
+   "any": ["citron", "citrons jaunes", "citron jaune"],
+   "not": ["vert", "verts", "jus", "sirop", "confit", "confits", "the", "infusion", "nettoyant", "vaisselle", "zeste", "poudre", "vinaigre", "presse"]
+  },
+  "citron_vert": {
+   "any": ["citron vert", "citrons verts", "lime", "limes"],
+   "not": ["jus", "sirop", "the", "infusion", "eau"]
+  },
+  "fraise": {
+   "any": ["fraise", "fraises gariguette", "fraises rondes", "fraises ciflorette", "fraises mara des bois"],
+   "not": ["confiture", "sirop", "surgele", "surgelees", "yaourt", "lait", "tagada", "compote", "coulis", "jus", "chocolat", "sechee", "sechees"]
+  },
+  "gingembre": {
+   "any": ["gingembre", "racine de gingembre", "gingembre frais"],
+   "not": ["poudre", "moulu", "confit", "sirop", "the", "infusion", "jus", "shot", "marine", "huile"]
+  },
+  "persil": {
+   "any": ["persil", "persil plat", "persil frise", "botte de persil"],
+   "not": ["seche", "sechee", "deshydrate", "surgele", "surgelee", "poudre", "sel", "beurre", "sauce", "graines", "ail"]
+  },
+  "coriandre": {
+   "any": ["coriandre", "coriandre fraiche", "botte de coriandre"],
+   "not": ["graines", "moulue", "poudre", "seche", "sechee", "surgelee", "surgele", "sauce", "pesto", "huile"]
+  },
+  "basilic": {
+   "any": ["basilic", "basilic frais", "plant de basilic", "basilic en pot"],
+   "not": ["seche", "sechee", "surgele", "surgelee", "pesto", "sauce", "huile", "poudre", "graines", "the", "sirop", "tomate", "mozzarella"]
+  },
+  "ciboulette": {
+   "any": ["ciboulette", "botte de ciboulette"],
+   "not": ["seche", "sechee", "surgelee", "surgele", "fromage", "sauce", "beurre", "poudre", "graines"]
+  },
+  "menthe": {
+   "any": ["menthe", "menthe fraiche", "botte de menthe", "plant de menthe"],
+   "not": ["the", "infusion", "sirop", "chewing", "chocolat", "sechee", "seche", "huile", "eau", "poivree", "sauce"]
+  },
+  "thym": {
+   "any": ["thym", "thym frais", "botte de thym", "thym seche"],
+   "not": ["infusion", "the", "miel", "huile essentielle", "sirop", "citronne", "poudre", "sel"]
+  },
+  "pain": {
+   "any": ["baguette", "baguettes", "pain de campagne", "pain tradition", "baguette tradition", "pain complet", "pain aux cereales", "boule de pain"],
+   "not": ["hot dog", "de mie", "epices", "surprise", "viennois", "chocolat", "farine", "sans gluten", "toast", "pita", "chapelure", "perdu", "surgele", "precuit"]
+  },
+  "pain_mie": {
+   "any": ["pain de mie", "pains de mie", "pain de mie complet", "pain de mie nature", "pain de mie sans croute"],
+   "not": ["sans gluten", "toast", "chapelure", "perdu", "special", "hot dog"]
+  },
+  "pain_burger": {
+   "any": ["pain burger", "pains burger", "buns", "pains a burger", "pain a burger", "pains pour hamburger", "hamburger buns", "pains hamburger"],
+   "not": ["hot dog", "sans gluten", "steak", "surgele", "surgeles"]
+  },
+  "croissant": {
+   "any": ["croissant", "croissants pur beurre", "croissant pur beurre"],
+   "not": ["jambon", "fromage", "chocolat", "amande", "amandes", "surgele", "surgeles", "pate a", "mini", "sale", "sales"]
+  },
+  "biscotte": {
+   "any": ["biscotte", "biscottes"],
+   "not": ["chocolat", "sans gluten", "sans sel", "sans sucre", "briochee", "briochees"]
+  },
+  "poulet_blanc": {
+   "any": ["blanc de poulet", "blancs de poulet", "filet de poulet", "filets de poulet", "escalope de poulet", "escalopes de poulet", "emince de poulet", "eminces de poulet"],
+   "not": ["fume", "fumes", "fumee", "cuit", "cuits", "roti", "rotis", "tranche", "tranches", "marine", "marines", "brochette", "brochettes", "surgele"]
+  },
+  "poulet_cuisse": {
+   "any": ["cuisse de poulet", "cuisses de poulet", "haut de cuisse", "hauts de cuisse", "hauts de cuisses", "pilon de poulet", "pilons de poulet"],
+   "not": ["roti", "rotis", "cuit", "cuits", "marine", "marines", "surgele", "surgeles", "tandoori", "fume", "fumes", "confit"]
+  },
+  "poulet_entier": {
+   "any": ["poulet entier", "poulet fermier", "poulet jaune", "poulet pret a cuire", "poulet label rouge", "poulet bio"],
+   "not": ["roti", "rotis", "cuit", "cuits", "filet", "filets", "cuisse", "cuisses", "pilon", "pilons", "emince", "eminces", "escalope", "escalopes"]
+  },
+  "dinde_escalope": {
+   "any": ["escalope de dinde", "escalopes de dinde", "filet de dinde", "filets de dinde", "emince de dinde", "eminces de dinde", "aiguillettes de dinde", "blanc de dinde"],
+   "not": ["fume", "fumes", "fumee", "cuit", "cuits", "tranche", "tranches", "roti", "rotis", "marine", "marines", "surgele", "surgeles", "brochettes"]
+  },
+  "boeuf_hache": {
+   "any": ["boeuf hache", "steak hache", "steaks haches", "haches de boeuf", "hache de boeuf", "viande hachee de boeuf", "pur boeuf"],
+   "not": ["porc", "veau", "agneau", "volaille", "poulet", "dinde", "vegetal", "vegan", "soja", "surgele", "surgeles", "cuit", "boulette"]
+  },
+  "steak_boeuf": {
+   "any": ["entrecote", "entrecotes", "faux filet", "rumsteck", "bavette", "pave de boeuf", "paves de boeuf", "steak a griller"],
+   "not": ["hache", "haches", "hachee", "surgele", "surgeles", "marine", "marines", "cuit", "cuits", "vegetal", "vegan", "soja", "brochette", "sauce"]
+  },
+  "boeuf_bourguignon": {
+   "any": ["bourguignon", "boeuf a mijoter", "paleron", "macreuse", "boeuf a braiser", "pot au feu", "jarret de boeuf", "carbonade"],
+   "not": ["prepare", "preparee", "conserve", "en boite", "sauce", "surgele", "surgeles", "escargots", "fondue", "cuit", "cuits"]
+  },
+  "porc_echine": {
+   "any": ["echine de porc", "rouelle de porc", "roti de porc", "rotis de porc", "cote de porc", "cotes de porc", "saute de porc", "filet mignon de porc"],
+   "not": ["cuit", "cuits", "fume", "fumes", "seche", "marine", "marines", "surgele", "surgeles", "saucisse", "lardons", "jambon", "effiloche", "ribs"]
+  },
+  "lardons": {
+   "any": ["lardon", "lardons", "allumettes de lardons", "lardons fumes", "lardons nature", "allumettes fumees", "allumettes de lard"],
+   "not": ["vegetal", "vegetaux", "vegan", "volaille", "dinde", "poulet", "soja", "tofu", "saumon"]
+  },
+  "jambon_blanc": {
+   "any": ["jambon blanc", "jambon cuit", "jambon superieur", "jambon de paris", "jambon decouenne", "jambon degraisse", "le bon paris"],
+   "not": ["cru", "sec", "seche", "fume", "fumes", "serrano", "bayonne", "parme", "italien", "iberique", "dinde", "poulet", "volaille", "des de"]
+  },
+  "saucisse": {
+   "any": ["saucisse", "saucisses", "chipolata", "chipolatas", "saucisses de toulouse", "saucisse de toulouse", "merguez"],
+   "not": ["seche", "sechee", "sechees", "fumee", "fumees", "morteau", "montbeliard", "strasbourg", "francfort", "knack", "cocktail", "vegetal", "volaille", "lentilles"]
+  },
+  "chorizo": {
+   "any": ["chorizo"],
+   "not": ["sauce", "volaille", "poulet", "vegetal", "vegan", "des de", "tartiner", "tartinable", "pain", "petit pain", "pizza"]
+  },
+  "agneau_epaule": {
+   "any": ["epaule d agneau", "gigot d agneau", "agneau a mijoter", "saute d agneau", "collier d agneau", "cotes d agneau", "cotelettes d agneau", "souris d agneau"],
+   "not": ["prepare", "preparee", "tajine", "surgele", "surgeles", "hache", "hachee", "merguez", "cuit", "cuits", "brochette", "brochettes", "marine", "kefta"]
+  },
+  "saumon": {
+   "any": ["pave de saumon", "paves de saumon", "filet de saumon", "filets de saumon", "saumon frais", "saumon atlantique", "darne de saumon", "coeur de filet de saumon"],
+   "not": ["fume", "fumes", "fumee", "gravlax", "rillettes", "tartinable", "tarama", "surgele", "surgeles", "en boite", "conserve", "marine", "marines", "cuit"]
+  },
+  "cabillaud": {
+   "any": ["cabillaud", "dos de cabillaud", "filet de cabillaud", "filets de cabillaud", "pave de cabillaud", "morue fraiche"],
+   "not": ["surgele", "surgeles", "sale", "salee", "seche", "sechee", "brandade", "beignet", "beignets", "batonnet", "batonnets", "conserve", "rillettes"]
+  },
+  "thon_frais": {
+   "any": ["thon frais", "steak de thon", "steaks de thon", "pave de thon", "paves de thon", "longe de thon", "thon rouge", "darne de thon"],
+   "not": ["en boite", "boite", "conserve", "huile", "naturel", "miettes", "emiette", "rillettes", "tartinable", "salade", "surgele", "surgeles", "marine", "tartare"]
+  },
+  "crevette": {
+   "any": ["crevette", "crevettes", "crevettes crues", "crevettes decortiquees", "crevettes cuites", "crevettes roses", "gambas", "queues de crevettes"],
+   "not": ["cracker", "crackers", "beignet", "beignets", "surgele", "surgeles", "cocktail", "salade", "sauce", "tempura", "nem", "nems", "rillettes", "brochettes"]
+  },
+  "moules": {
+   "any": ["moule", "moules", "moules de bouchot", "moules fraiches", "moules de corde", "bouchot"],
+   "not": ["a gateau", "a cake", "a tarte", "silicone", "a glace", "en boite", "conserve", "marinieres", "surgele", "surgelees", "sauce", "decortiquees", "frites", "preparees"]
+  },
+  "sardine_fraiche": {
+   "any": ["sardine fraiche", "sardines fraiches", "sardines entieres", "sardine entiere", "sardines a griller"],
+   "not": ["en boite", "boite", "conserve", "huile", "tomate", "citron", "rillettes", "millesimee", "sans arete", "surgele", "surgelees", "fumees", "salees"]
+  },
+  "dorade": {
+   "any": ["dorade", "daurade", "dorade royale", "daurade royale", "dorade grise", "filet de dorade", "filets de dorade", "dorade entiere"],
+   "not": ["surgele", "surgeles", "surgelee", "surgelees", "fumee", "fume", "sauce", "conserve", "terrine", "rillettes"]
+  },
+  "lait": {
+   "any": ["lait demi ecreme", "lait entier", "lait ecreme", "lait uht", "lait frais", "lait de vache", "lait de montagne", "lait bio"],
+   "not": ["coco", "amande", "amandes", "soja", "avoine", "riz", "chevre", "brebis", "concentre", "poudre", "chocolat", "fraise", "vanille", "sans lactose"]
+  },
+  "creme_fraiche": {
+   "any": ["creme fraiche", "creme fraiche epaisse", "creme epaisse", "creme fraiche entiere", "creme fraiche legere", "creme epaisse legere", "creme fraiche bio"],
+   "not": ["liquide", "fluide", "chantilly", "fouettee", "brulee", "coco", "soja", "vegetale", "vegetal", "amande", "avoine", "catalane", "anglaise", "creme dessert"]
+  },
+  "creme_liquide": {
+   "any": ["creme liquide", "creme fluide", "creme liquide entiere", "creme liquide legere", "creme entiere liquide", "creme uht", "creme fleurette", "creme liquide bio"],
+   "not": ["epaisse", "chantilly", "fouettee", "brulee", "coco", "soja", "vegetale", "vegetal", "amande", "avoine", "anglaise", "creme dessert", "siphon", "cafe"]
+  },
+  "beurre": {
+   "any": ["beurre doux", "beurre demi sel", "beurre sale", "beurre de baratte", "beurre gastronomique", "beurre tendre", "plaquette de beurre", "beurre bio"],
+   "not": ["cacahuete", "arachide", "amande", "amandes", "noisette", "karite", "cacao", "coco", "margarine", "allege", "tartine", "caramel", "escargot", "ail"]
+  },
+  "oeuf": {
+   "any": ["oeufs", "oeufs frais", "oeufs plein air", "oeufs bio", "oeufs de plein air", "oeufs de poule", "oeufs moyens", "oeufs gros"],
+   "not": ["chocolat", "paques", "surprise", "caille", "cailles", "poisson", "lump", "saumon", "cuits", "durs", "mayonnaise", "liquide", "poudre", "coquetier"]
+  },
+  "yaourt": {
+   "any": ["yaourt nature", "yaourts nature", "yaourt nature sucre", "yaourts nature sucres", "yaourt au lait entier", "yaourts au lait entier", "yaourt brasse nature", "yaourts brasses nature"],
+   "not": ["grec", "grecs", "grecque", "fruits", "vanille", "chocolat", "soja", "vegetal", "chevre", "brebis", "a boire", "skyr", "bifidus", "sans lactose"]
+  },
+  "yaourt_grec": {
+   "any": ["yaourt grec", "yaourts grecs", "yaourt a la grecque", "yaourts a la grecque", "yaourt grec nature", "yaourt nature a la grecque"],
+   "not": ["fruits", "vanille", "chocolat", "miel", "caramel", "fraise", "skyr", "a boire", "sauce", "tzatziki", "sucre", "sucres", "coco"]
+  },
+  "fromage_blanc": {
+   "any": ["fromage blanc", "fromages blancs", "fromage blanc nature", "faisselle", "fromage blanc battu", "fromage blanc lisse", "fromage blanc campagne", "fromage frais nature"],
+   "not": ["fruits", "vanille", "chocolat", "miel", "fraise", "skyr", "a boire", "sauce", "sucre", "sucres", "ail", "fines herbes", "petit suisse", "cheesecake"]
+  },
+  "emmental_rape": {
+   "any": ["emmental rape", "rape emmental", "emmental francais rape", "fromage rape emmental", "emmental en rape", "rape d emmental", "emmental rapee", "fromage rape"],
+   "not": ["gruyere", "comte", "parmesan", "mozzarella", "cheddar", "3 fromages", "4 fromages", "special pizza", "raclette", "fondue", "melange", "duo", "carotte", "coco"]
+  },
+  "parmesan": {
+   "any": ["parmesan", "parmigiano reggiano", "parmigiano", "parmesan rape", "parmesan en copeaux", "grana padano", "parmesan aop"],
+   "not": ["sauce", "cracker", "crackers", "pesto", "risotto", "gnocchi", "beurre", "pain", "gressin", "gressins", "vegetal", "vegan", "cesar", "melange"]
+  },
+  "mozzarella": {
+   "any": ["mozzarella", "mozzarella di bufala", "mozzarella de bufflonne", "mozzarella fior di latte", "boule de mozzarella", "boules de mozzarella", "mozzarella rapee", "mozzarella bio"],
+   "not": ["batonnet", "batonnets", "sticks", "tranches", "salade", "caprese", "tomate", "pesto", "roule", "roules", "burrata", "stracciatella", "fumee", "vegan"]
+  },
+  "feta": {
+   "any": ["feta", "feta aop", "feta grecque", "fromage feta", "feta de brebis", "feta nature", "feta en des", "feta bio"],
+   "not": ["salade", "feuillete", "roule", "herbes", "ail", "olive", "olives", "marines", "huile", "sauce", "tartinable", "vegan", "cubes"]
+  },
+  "chevre_frais": {
+   "any": ["fromage de chevre", "chevre frais", "buche de chevre", "buches de chevre", "crottin de chevre", "crottin", "chavroux", "petit billy"],
+   "not": ["lait de chevre", "yaourt", "yaourts", "beurre", "salade", "feuillete", "roule", "toast", "chaud", "chauds", "huile", "herbes", "miel", "sauce"]
+  },
+  "comte": {
+   "any": ["comte", "comte aop", "comte 6 mois", "comte 12 mois", "comte 18 mois", "comte 24 mois", "comte affine", "comte fruite"],
+   "not": ["gruyere", "emmental", "beaufort", "abondance", "raclette", "fondue", "melange", "3 fromages", "4 fromages", "sauce", "comte de", "comtesse", "vin", "tolosan"]
+  },
+  "mascarpone": {
+   "any": ["mascarpone", "mascarpone italien", "mascarpone galbani", "fromage mascarpone", "mascarpone bio"],
+   "not": ["tiramisu", "creme dessert", "sauce", "cheesecake", "cracker", "vegan", "melange", "fruits", "fraise", "citron", "chocolat", "cafe", "vanille", "speculoos", "gorgonzola", "et gorgonzola"]
+  },
+  "ricotta": {
+   "any": ["ricotta", "ricotta italienne", "ricotta galbani", "fromage ricotta", "ricotta fraiche", "ricotta bio"],
+   "not": ["salata", "salee", "fumee", "affinee", "epinard", "epinards", "tortellini", "cannelloni", "gnocchi", "cheesecake", "sauce", "herbes"]
+  },
+  "camembert": {
+   "any": ["camembert", "camembert de normandie", "camembert aop", "camembert au lait cru", "camembert pasteurise", "camembert le rustique", "camembert president", "camembert bio"],
+   "not": ["brie", "coulommiers", "cuit", "cuits", "au four", "rotir", "roti", "frit", "frits", "cracker", "sauce", "portion", "portions", "mini"]
+  },
+  "pates": {
+   "any": ["pates", "fusilli", "farfalle", "coquillettes", "macaroni", "tagliatelle", "linguine", "torsades"],
+   "not": ["a tartiner", "pate a", "pate de", "pate d", "feuilletee", "brisee", "sablee", "sauce", "bolognaise", "carbonara", "tortellini", "fraiches", "surgele"]
+  },
+  "pates_penne": {
+   "any": ["penne", "penne rigate", "pennes", "mezze penne", "penne integrale", "penne completes", "penne bio"],
+   "not": ["sauce", "bolognaise", "carbonara", "arrabbiata", "arrabiata", "fraiches", "surgele", "surgeles", "de riz", "de lentilles", "de pois chiches", "sans gluten", "proteine", "proteinees"]
+  },
+  "spaghetti": {
+   "any": ["spaghetti", "spaghettis", "spaghetti n 5", "spaghettini", "spaghetti integrale", "spaghetti complet", "spaghetti bio", "spaghettoni"],
+   "not": ["sauce", "bolognaise", "carbonara", "fraiches", "surgele", "surgeles", "de courgette", "courgettes", "de legumes", "de konjac", "konjac", "de riz", "de lentilles", "sans gluten"]
+  },
+  "riz": {
+   "any": ["riz long", "riz long grain", "riz blanc", "riz thai", "riz parfume", "riz jasmin", "riz complet", "riz etuve"],
+   "not": ["au lait", "galette", "galettes", "cracker", "souffle", "farine", "nouilles", "vermicelles", "pates", "vinaigre", "cantonais", "pilaf", "risotto", "chou fleur"]
+  },
+  "riz_basmati": {
+   "any": ["riz basmati", "basmati", "riz basmati blanc", "riz basmati complet", "riz basmati bio"],
+   "not": ["au lait", "galette", "cracker", "farine", "nouilles", "pilaf", "biryani", "poelee", "salade", "melange", "et quinoa", "et lentilles", "curry", "poulet"]
+  },
+  "semoule": {
+   "any": ["semoule", "semoule de ble", "semoule de ble dur", "semoule fine", "semoule moyenne", "couscous", "couscous fin", "couscous moyen"],
+   "not": ["au lait", "royal", "poulet", "merguez", "agneau", "legumes", "taboule", "de mais", "de riz", "sans gluten", "epices", "bouillon", "couscoussier", "polenta"]
+  },
+  "boulgour": {
+   "any": ["boulgour", "boulghour", "bulgur", "boulgour fin", "boulgour gros", "boulgour de ble", "boulgour complet", "boulgour bio"],
+   "not": ["taboule", "salade", "melange", "et quinoa", "et lentilles", "et riz", "et legumes", "legumes", "poulet", "galette", "steak", "proteine"]
+  },
+  "quinoa": {
+   "any": ["quinoa", "quinoa blanc", "quinoa rouge", "quinoa noir", "quinoa tricolore", "quinoa bio", "quinoa real", "quinoa d anjou"],
+   "not": ["taboule", "salade", "melange", "et boulgour", "et lentilles", "et riz", "et legumes", "legumes", "galette", "steak", "farine", "flocons", "souffle", "lait"]
+  },
+  "lentilles": {
+   "any": ["lentilles vertes", "lentille verte", "lentilles du puy", "lentilles blondes", "lentilles brunes", "lentilles"],
+   "not": ["corail", "rouges", "beluga", "en boite", "conserve", "au naturel", "saucisses", "lardons", "farine", "pates", "germees", "de contact", "cuites", "vapeur"]
+  },
+  "lentilles_corail": {
+   "any": ["lentilles corail", "lentille corail", "lentilles rouges", "lentille rouge", "corail"],
+   "not": ["en boite", "conserve", "farine", "pates", "cuites", "vapeur", "dahl", "curry", "poisson", "bijou", "rouge a levres", "vernis", "couleur"]
+  },
+  "pois_chiches_secs": {
+   "any": ["pois chiches secs", "pois chiche sec", "pois chiches a cuire", "pois chiches a tremper"],
+   "not": ["en boite", "conserve", "au naturel", "egouttes", "cuits", "vapeur", "farine", "grilles", "roties", "houmous", "falafel"]
+  },
+  "pois_chiches": {
+   "any": ["pois chiches", "pois chiche", "pois chiches au naturel", "pois chiches cuits", "pois chiches vapeur", "pois chiches egouttes"],
+   "not": ["secs", "sec", "a cuire", "a tremper", "farine", "grilles", "roties", "houmous", "falafel", "salade", "epices", "cumin", "curry", "tajine"]
+  },
+  "haricots_rouges": {
+   "any": ["haricots rouges", "haricot rouge", "haricots rouges au naturel", "haricots rouges secs", "red kidney", "kidney beans"],
+   "not": ["chili", "con carne", "mexicain", "mexicaine", "sauce", "tomate", "epices", "salade", "mais", "melange", "blancs", "noirs", "coco", "cassoulet"]
+  },
+  "tomates_pelees": {
+   "any": ["tomates pelees", "tomate pelee", "tomates concassees", "pulpe de tomate", "pulpe de tomates", "tomates en des", "polpa", "pelati"],
+   "not": ["sauce", "coulis", "concentre", "ketchup", "jus", "sechees", "cerises", "basilic", "ail", "oignon", "herbes", "provencale", "bolognaise", "arrabbiata"]
+  },
+  "concentre_tomate": {
+   "any": ["concentre de tomate", "concentre de tomates", "double concentre", "triple concentre", "concentre tomate", "concentrato di pomodoro"],
+   "not": ["sauce", "coulis", "ketchup", "jus", "pelees", "concassees", "pulpe", "basilic", "ail", "herbes", "jus de fruits", "lessive", "nettoyant", "engrais"]
+  },
+  "lait_coco": {
+   "any": ["lait de coco", "lait de noix de coco", "lait coco", "creme de coco", "creme de noix de coco", "coconut milk"],
+   "not": ["boisson", "vegetale", "a boire", "riz au lait", "yaourt", "creme dessert", "flan", "chocolat", "vanille", "curry", "sauce", "corps", "cheveux", "monoi"]
+  },
+  "thon_boite": {
+   "any": ["thon au naturel", "thon naturel", "thon a l huile", "thon entier", "thon albacore", "thon listao", "thon germon", "miettes de thon"],
+   "not": ["frais", "steak", "steaks", "pave", "paves", "longe", "darne", "surgele", "rillettes", "tartinable", "salade", "sauce", "tomate", "citron"]
+  },
+  "mais_boite": {
+   "any": ["mais doux", "mais en grains", "mais doux en grains", "mais doux en boite", "mais doux bio", "mais doux extra croquant", "mais doux sans sucres ajoutes"],
+   "not": ["farine", "semoule", "polenta", "galette", "galettes", "pop corn", "popcorn", "corn flakes", "souffle", "huile", "salade", "melange", "surgele", "surgeles"]
+  },
+  "nouilles_riz": {
+   "any": ["nouilles de riz", "nouille de riz", "vermicelles de riz", "vermicelle de riz", "pates de riz", "rice noodles", "nouilles pad thai", "banh pho"],
+   "not": ["sauce", "instantanees", "bol", "bols", "sautees", "wok", "legumes", "poulet", "crevettes", "soja", "de ble", "udon", "ramen", "konjac"]
+  },
+  "farine": {
+   "any": ["farine de ble", "farine t45", "farine t55", "farine t65", "farine fluide", "farine tous usages", "farine patissiere", "farine de froment"],
+   "not": ["de mais", "maizena", "fecule", "de riz", "de sarrasin", "de chataigne", "de pois chiche", "de coco", "d amande", "de seigle", "d epeautre", "sans gluten", "levante", "pour gateau"]
+  },
+  "farine_de_mais": {
+   "any": ["maizena", "fecule de mais", "farine de mais", "amidon de mais", "fleur de mais", "fecule"],
+   "not": ["de pomme de terre", "polenta", "semoule de mais", "galette", "galettes", "tortilla", "tortillas", "chips", "pop corn", "sans gluten mix", "preparation", "gateau"]
+  },
+  "chapelure": {
+   "any": ["chapelure", "chapelure fine", "chapelure doree", "chapelure de pain", "panko", "chapelure panko", "chapelure bio"],
+   "not": ["assaisonnee", "epicee", "aux herbes", "sans gluten", "kit", "escalope", "escalopes", "poisson", "poulet", "preparation"]
+  },
+  "bouillon_cube": {
+   "any": ["bouillon de volaille", "bouillon de legumes", "bouillon de boeuf", "bouillon cube", "bouillons cube", "kub or", "bouillon de poule", "bouillon deshydrate"],
+   "not": ["liquide", "brique", "fond de", "fumet", "pot au feu prepare", "pho", "ramen", "soupe", "sauce", "gelee", "marmite de", "coeur de bouillon"]
+  },
+  "olives": {
+   "any": ["olives vertes", "olives noires", "olives vertes denoyautees", "olives noires denoyautees", "olives a la grecque", "olives kalamata", "olives", "olive"],
+   "not": ["huile", "tapenade", "pate d", "farcies", "farcie", "pain", "cake", "fougasse", "pizza", "sauce", "piment", "ail", "herbes", "aux olives", "romarin"]
+  },
+  "capres": {
+   "any": ["capres", "capre", "capres au vinaigre", "capres en saumure", "capres nonpareilles", "capres surfines", "capres fines", "capres bio"],
+   "not": ["sauce", "tapenade", "pate", "tartinable", "salade", "poulet", "poisson", "pizza", "fleurs de", "caprons"]
+  },
+  "tortillas": {
+   "any": ["tortillas de ble", "tortilla de ble", "tortillas", "tortilla", "wraps de ble", "galettes de ble", "tortillas souples", "tortillas bio"],
+   "not": ["chips", "nachos", "de mais", "kit", "fajitas kit", "garnies", "garnie", "espagnole", "aux pommes de terre", "omelette", "sauce", "epices", "poulet", "boeuf"]
+  },
+  "levure_chimique": {
+   "any": ["levure chimique", "levure chimique alsacienne", "levure alsacienne", "poudre a lever", "poudre levante", "baking powder", "levure chimique bio"],
+   "not": ["boulangere", "boulanger", "de boulanger", "fraiche", "seche", "de biere", "maltee", "nutritionnelle", "vanille", "sucre vanille", "preparation", "gateau", "pain"]
+  },
+  "levure_boulangere": {
+   "any": ["levure de boulanger", "levure boulangere", "levure de boulangerie", "levure fraiche", "levure seche", "levure seche active", "levure instantanee", "levure de boulanger seche"],
+   "not": ["chimique", "alsacienne", "poudre a lever", "de biere", "maltee", "nutritionnelle", "preparation", "farine", "pain", "brioche", "pizza"]
+  },
+  "polenta": {
+   "any": ["polenta", "polenta instantanee", "polenta express", "polenta precuite", "semoule de mais pour polenta", "polenta bio", "polenta fine", "polenta moyenne"],
+   "not": ["cuisinee", "preparee", "aux legumes", "fromage", "parmesan", "champignons", "tranches", "en tranches", "chips", "frites", "galettes", "gnocchi", "sans gluten mix"]
+  },
+  "sauce_tomate": {
+   "any": ["sauce tomate", "sauce tomates", "sauce tomate basilic", "sauce tomate nature", "coulis de tomate", "coulis de tomates", "passata", "sauce tomate bio"],
+   "not": ["ketchup", "concentre", "pelees", "concassees", "pulpe", "bolognaise", "carbonara", "pesto", "arrabbiata", "curry", "barbecue", "piquante", "pizza", "viande", "a la sauce tomate", "moules", "coquillage", "coquillages", "poisson", "thon"]
+  },
+  "sel": {
+   "any": ["sel fin", "sel de cuisine", "sel de table", "sel marin", "sel de guerande", "gros sel", "fleur de sel", "sel iode"],
+   "not": ["de bain", "regenerant", "lave vaisselle", "adoucisseur", "deneigement", "aromatise", "aux herbes", "au celeri", "a l ail", "fume", "de mer poudre", "himalaya rose", "substitut", "sans sodium"]
+  },
+  "poivre": {
+   "any": ["poivre noir", "poivre noir moulu", "poivre noir en grains", "poivre moulu", "poivre en grains", "poivre gris", "poivre blanc", "poivre 5 baies"],
+   "not": ["moulin", "moulins", "sauce", "au poivre", "steak", "de cayenne", "cayenne", "piment", "de sichuan", "melange", "sel et poivre", "salade", "vert", "rose"]
+  },
+  "huile_olive": {
+   "any": ["huile d olive", "huile d olive vierge extra", "huile d olive vierge", "huile d olive extra vierge", "huile d olive bio", "huile olive"],
+   "not": ["aromatisee", "a l ail", "au basilic", "au citron", "a la truffe", "melange", "et colza", "et tournesol", "thon", "sardines", "sardine", "maquereaux", "conserve", "feta", "anchois", "filets", "filet"]
+  },
+  "huile_tournesol": {
+   "any": ["huile de tournesol", "huile tournesol", "huile de tournesol bio", "huile de tournesol oleique", "huile de friture tournesol"],
+   "not": ["melange", "et colza", "et olive", "aromatisee", "graines", "margarine", "mayonnaise", "thon", "sardines", "sardine", "maquereaux", "conserve", "a l huile", "anchois", "filets", "filet"]
+  },
+  "vinaigre_balsamique": {
+   "any": ["vinaigre balsamique", "vinaigre balsamique de modene", "balsamique de modene", "aceto balsamico", "vinaigre balsamique blanc", "vinaigre balsamique bio"],
+   "not": ["creme de", "creme balsamique", "reduction", "glaze", "glacage", "vinaigrette", "sauce", "salade", "aromatise", "figue", "framboise", "truffe"]
+  },
+  "vinaigre_blanc": {
+   "any": ["vinaigre blanc", "vinaigre d alcool", "vinaigre d alcool blanc", "vinaigre cristal", "vinaigre menager", "vinaigre blanc menager", "vinaigre d alcool cristal"],
+   "not": ["balsamique", "de cidre", "de vin", "de riz", "de xeres", "aromatise", "vinaigrette", "sauce", "parfume", "lavande", "citron", "eucalyptus", "gel", "spray"]
+  },
+  "vinaigre_de_riz": {
+   "any": ["vinaigre de riz", "vinaigre de riz japonais", "vinaigre de riz pour sushi", "vinaigre pour sushi", "rice vinegar", "vinaigre de riz bio"],
+   "not": ["balsamique", "de cidre", "de vin", "d alcool", "aromatise", "vinaigrette", "sauce", "assaisonnement", "kit", "riz a", "nouilles"]
+  },
+  "moutarde": {
+   "any": ["moutarde de dijon", "moutarde forte", "moutarde fine", "moutarde a l ancienne", "moutarde en grains", "moutarde douce", "moutarde", "moutarde bio"],
+   "not": ["au miel", "miel", "aromatisee", "a l estragon", "estragon", "au vin blanc", "sauce", "vinaigrette", "mayonnaise", "graines de", "farine de", "huile de", "cornichons", "condiment"]
+  },
+  "sauce_soja": {
+   "any": ["sauce soja", "sauce soja salee", "sauce soja sucree", "sauce soja japonaise", "sauce soja chinoise", "shoyu", "tamari", "kikkoman"],
+   "not": ["teriyaki", "yakitori", "nuoc mam", "poisson", "huitre", "aigre douce", "sucree piquante", "nems", "wok", "kit", "sushi", "lait de soja", "steak", "graines"]
+  },
+  "curry_poudre": {
+   "any": ["curry en poudre", "curry poudre", "poudre de curry", "curry madras", "curry doux", "curry fort", "curry", "curry bio"],
+   "not": ["pate de", "pate", "sauce", "en sauce", "poulet", "crevettes", "riz", "nouilles", "coco", "vert", "rouge", "jaune", "massaman", "feuilles de"]
+  },
+  "cumin": {
+   "any": ["cumin", "cumin moulu", "cumin en poudre", "cumin en graines", "graines de cumin", "cumin bio"],
+   "not": ["carvi", "noir", "nigelle", "melange", "gouda", "fromage", "sauce", "pois chiches", "huile", "the", "infusion", "bonbons"]
+  },
+  "paprika": {
+   "any": ["paprika", "paprika doux", "paprika fume", "paprika fort", "paprika en poudre", "paprika moulu", "pimenton", "paprika bio"],
+   "not": ["chips", "sauce", "melange", "poulet", "epices a", "cacahuetes", "noix", "fromage", "saucisson", "chorizo", "creme"]
+  },
+  "cannelle": {
+   "any": ["cannelle", "cannelle moulue", "cannelle en poudre", "cannelle en baton", "batons de cannelle", "cannelle de ceylan", "cannelle bio"],
+   "not": ["sucre", "sucre a la", "the", "infusion", "sirop", "chewing", "pomme", "compote", "cereales", "biscuits", "bougie", "huile essentielle", "melange", "epices a"]
+  },
+  "curcuma": {
+   "any": ["curcuma", "curcuma en poudre", "curcuma moulu", "curcuma frais", "racine de curcuma", "curcuma bio", "turmeric"],
+   "not": ["the", "infusion", "gelule", "gelules", "complement", "jus", "shot", "latte", "golden milk", "melange", "huile", "sirop"]
+  },
+  "herbes_de_provence": {
+   "any": ["herbes de provence", "herbes de provence bio", "melange herbes de provence", "herbes provencales", "herbes de provence label rouge"],
+   "not": ["sel", "sel aux", "huile", "moutarde", "sauce", "marinade", "fromage", "chevre", "olives", "biscuits", "crackers", "poulet", "chips"]
+  },
+  "piment_en_poudre": {
+   "any": ["piment en poudre", "piment de cayenne", "poudre de piment", "piment moulu", "piment d espelette", "piment fort", "piment doux", "chili en poudre"],
+   "not": ["sauce", "tabasco", "sriracha", "harissa", "pate de", "huile", "frais", "en flocons", "flocons", "fume", "chips", "cacahuetes", "melange", "epices a"]
+  },
+  "noix_de_muscade": {
+   "any": ["noix de muscade", "muscade", "muscade moulue", "muscade en poudre", "noix de muscade entiere", "noix de muscade moulue", "noix de muscade bio"],
+   "not": ["rape a", "rape", "moulin", "melange", "epices a", "huile", "the", "infusion", "sirop", "liqueur", "macis"]
+  },
+  "ail_en_poudre": {
+   "any": ["ail en poudre", "poudre d ail", "ail semoule", "semoule d ail", "ail moulu", "ail deshydrate", "ail granule", "ail en poudre bio"],
+   "not": ["sel", "sel d ail", "sel a l ail", "frais", "tete", "gousse", "gousses", "melange", "epices a", "et persil", "persil", "et fines herbes", "fines herbes", "sauce"]
+  },
+  "tahini": {
+   "any": ["tahini", "tahin", "tahine", "creme de sesame", "puree de sesame", "pate de sesame", "tahini bio", "sesame paste"],
+   "not": ["houmous", "hummus", "sauce", "halva", "halwa", "biscuits", "graines de sesame", "graines", "huile de sesame", "huile", "noir", "dressing"]
+  },
+  "harissa": {
+   "any": ["harissa", "harissa en tube", "harissa du cap bon", "harissa tunisienne", "pate de piment harissa", "harissa bio", "harissa rose"],
+   "not": ["sauce", "mayonnaise", "ketchup", "epices", "melange", "chips", "houmous", "couscous", "merguez", "poulet", "olives", "huile", "cacahuetes"]
+  },
+  "miso": {
+   "any": ["miso", "pate miso", "pate de miso", "miso blanc", "miso rouge", "miso de riz", "miso d orge", "shiro miso"],
+   "not": ["soupe", "soupe miso", "instantanee", "bouillon", "sauce", "ramen", "nouilles", "kit", "vinaigrette", "dressing", "caramel", "aubergine", "poulet"]
+  },
+  "mayonnaise": {
+   "any": ["mayonnaise", "mayonnaise nature", "mayonnaise classique", "mayonnaise fine", "mayonnaise a la moutarde de dijon", "mayonnaise aux oeufs", "mayonnaise bio", "mayo"],
+   "not": ["allegee", "legere", "light", "vegetale", "vegan", "sans oeuf", "aromatisee", "au citron", "a l ail", "aioli", "truffe", "sriracha", "ketchup", "sauce burger"]
+  },
+  "ketchup": {
+   "any": ["ketchup", "tomato ketchup", "ketchup nature", "ketchup classique", "ketchup tomate", "ketchup bio", "heinz ketchup", "ketchup heinz"],
+   "not": ["allege", "sans sucres", "sans sucre", "epice", "piquant", "hot", "curry", "barbecue", "mayonnaise", "sauce burger", "moutarde", "vegan", "chips"]
+  },
+  "cornichons": {
+   "any": ["cornichons", "cornichon", "cornichons extra fins", "cornichons fins", "cornichons croquants", "cornichons au vinaigre", "cornichons aigre doux", "cornichons bio"],
+   "not": ["pickles", "malossol", "aigre doux geants", "gros", "concombre", "sauce", "tartare", "moutarde", "chips", "relish", "bocal vide"]
+  },
+  "sucre": {
+   "any": ["sucre en poudre", "sucre blanc", "sucre semoule", "sucre cristal", "sucre cristallise", "sucre fin", "sucre de canne", "sucre de betterave"],
+   "not": ["glace", "vanille", "vanille", "roux", "complet", "rapadura", "muscovado", "morceaux", "en morceaux", "de coco", "gelifiant", "confiture", "candi", "perle"]
+  },
+  "miel": {
+   "any": ["miel", "miel toutes fleurs", "miel de fleurs", "miel liquide", "miel cremeux", "miel d acacia", "miel de lavande", "miel bio"],
+   "not": ["moutarde", "sauce", "bonbons", "pain d epices", "the", "infusion", "sirop", "cereales", "yaourt", "gelee royale", "pollen", "propolis", "savon", "jambon"]
+  },
+  "chocolat_noir": {
+   "any": ["chocolat noir", "chocolat noir patissier", "chocolat patissier", "chocolat noir dessert", "chocolat noir 70", "chocolat noir 52", "chocolat noir a patisser", "chocolat noir bio"],
+   "not": ["au lait", "blanc", "noisettes", "amandes", "fourre", "fourres", "praline", "caramel", "orange", "menthe", "pepites", "cacao en poudre", "poudre", "tablette de lait"]
+  },
+  "flocons_avoine": {
+   "any": ["flocons d avoine", "flocon d avoine", "flocons avoine", "avoine flocons", "gros flocons d avoine", "petits flocons d avoine", "flocons d avoine bio", "porridge nature"],
+   "not": ["lait", "boisson", "biscuits", "cookies", "barre", "barres", "son d avoine", "farine", "chocolat", "fruits", "miel", "sucre", "instant", "gruau"]
+  },
+  "confiture": {
+   "any": ["confiture", "confiture de fraises", "confiture d abricots", "confiture de framboises", "confiture extra", "confiture bio", "confiture de fruits rouges", "confiture de fraise"],
+   "not": ["allegee", "sans sucres", "sans sucre", "gelee", "marmelade", "pate a tartiner", "compote", "de lait", "sucre gelifiant", "gelifiant", "bocal vide", "pot vide"]
+  },
+  "vanille_extrait": {
+   "any": ["extrait de vanille", "extrait de vanille liquide", "arome naturel de vanille", "vanille liquide", "extrait naturel de vanille", "extrait de vanille bio", "gousse de vanille", "gousses de vanille"],
+   "not": ["sucre", "sucre vanille", "sucre vanilline", "vanilline", "poudre", "the", "infusion", "sirop", "yaourt", "creme", "bougie", "parfum d ambiance", "arome artificiel"]
+  },
+  "cacao_poudre": {
+   "any": ["cacao en poudre", "cacao non sucre", "cacao maigre", "cacao pur", "poudre de cacao", "cacao amer", "cacao en poudre non sucre", "cacao bio"],
+   "not": ["chocolat en poudre", "chocolat chaud", "nesquik", "poulain", "banania", "sucre", "petit dejeuner", "instantane", "beurre de", "feves", "eclats", "nibs", "lait"]
+  },
+  "sirop_erable": {
+   "any": ["sirop d erable", "sirop d erable pur", "pur sirop d erable", "sirop d erable du canada", "sirop d erable ambre", "sirop d erable bio", "maple syrup"],
+   "not": ["arome", "saveur", "gout erable", "sirop de table", "pancake", "pancakes", "beurre", "sucre d erable", "sucre", "flocons", "bonbons", "the"]
+  },
+  "vin_blanc_cuisine": {
+   "any": ["vin blanc de cuisine", "vin blanc pour cuisine", "vin blanc cuisine", "vin blanc sec", "vin blanc sec de cuisine", "vin blanc pour cuisiner"],
+   "not": ["moelleux", "doux", "petillant", "mousseux", "champagne", "cremant", "liquoreux", "rose", "rouge", "vinaigre", "sauce", "fond", "fumet", "aromatise"]
+  },
+  "jus_citron": {
+   "any": ["jus de citron", "jus de citron jaune", "pur jus de citron", "jus de citron presse", "jus de citron bio", "citron presse", "pulco citron"],
+   "not": ["vert", "verts", "sirop", "boisson", "limonade", "citronnade", "eau", "concentre pour boisson", "nettoyant", "vaisselle", "gel", "cosmetique", "vinaigrette", "sauce"]
+  },
+  "petits_pois_surgeles": {
+   "any": ["petits pois surgeles", "petits pois surgele", "petits pois extra fins surgeles", "petits pois doux surgeles", "petits pois", "petits pois extra fins", "petits pois fins", "petits pois bio"],
+   "not": ["en boite", "conserve", "au naturel", "carottes", "et carottes", "cuisines", "a la francaise", "lardons", "jardiniere", "macedoine", "melange", "poelee", "puree"]
+  },
+  "epinards_surgeles": {
+   "any": ["epinards surgeles", "epinards haches surgeles", "epinards en branches surgeles", "epinards haches", "epinards en branches", "epinards en feuilles", "epinards branches"],
+   "not": ["frais", "pousses", "a la creme", "creme", "cuisines", "conserve", "en boite", "feuillete", "gratin", "galettes", "poelee", "melange", "ricotta"]
+  },
+  "haricots_verts_surgeles": {
+   "any": ["haricots verts surgeles", "haricots verts extra fins surgeles", "haricots verts fins surgeles", "haricots verts extra fins", "haricots verts tres fins", "haricots verts fins", "haricots verts surgele"],
+   "not": ["frais", "conserve", "en boite", "au naturel", "cuisines", "poelee", "a l ail", "persil", "beurre", "lardons", "melange", "jardiniere", "macedoine"]
+  },
+  "fruits_rouges_surgeles": {
+   "any": ["fruits rouges surgeles", "melange de fruits rouges surgeles", "fruits rouges surgele", "melange fruits rouges", "fruits rouges", "cocktail de fruits rouges", "fruits des bois surgeles", "fruits des bois"],
+   "not": ["confiture", "sirop", "coulis", "yaourt", "the", "infusion", "jus", "sorbet", "smoothie", "compote", "bonbons", "chocolat", "cereales", "frais"]
+  },
+  "legumes_wok_surgeles": {
+   "any": ["legumes pour wok", "legumes wok", "melange de legumes pour wok", "melange wok", "poelee wok", "legumes asiatiques surgeles", "melange asiatique surgele", "legumes pour wok surgeles"],
+   "not": ["cuisines", "en sauce", "nouilles", "riz", "poulet", "crevettes", "boeuf", "sauce", "kit", "sachet vapeur", "conserve", "en boite", "frais", "germes de soja"]
+  }
+ }
+}

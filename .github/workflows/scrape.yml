@@ -1,0 +1,61 @@
+# Relevé quotidien des prix réels (scraper/) → publication JSON statique sur la branche gh-pages.
+# L'app lit https://zilfa94.github.io/wsf-week-shop-food/prices/index.json (GitHub Pages, source : gh-pages / racine).
+# Un robot qui échoue n'efface pas son fichier précédent (keep_files) : l'app garde le dernier relevé daté.
+name: Relevé des prix
+
+on:
+  schedule:
+    - cron: '0 5 * * *' # 05:00 UTC chaque jour (07:00 Paris en été)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    defaults:
+      run:
+        working-directory: scraper
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: scraper/package-lock.json
+
+      - name: Dépendances
+        run: npm ci
+
+      - name: Vérifications
+        run: |
+          npm run typecheck
+          npm test
+
+      - name: Robots
+        run: npm run all -- --out ../prices
+
+      - name: Résumé
+        run: |
+          echo '### Relevés' >> "$GITHUB_STEP_SUMMARY"
+          node -e "const i=require('../prices/index.json');for(const f of i.files)console.log('- '+f.storeName+' : '+f.count+' relevés, '+f.ingredients+' ingrédients ('+f.scrapedAt+')')" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publication sur gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./prices
+          destination_dir: prices
+          keep_files: true
+          enable_jekyll: false
+          commit_message: 'Relevé des prix'
+          user_name: 'wsf-bot'
+          user_email: 'wsf-bot@users.noreply.github.com'
