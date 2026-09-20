@@ -64,3 +64,10 @@ export function seasonOf(iso: ISODate): Season {
 export function compareISO(a: ISODate, b: ISODate): number {
   return a < b ? -1 : a > b ? 1 : 0;
 }
+
+/** « 19 nov. » — jour et mois courts pour une date ISO, sans dépendre de la locale de l'appareil. */
+export function formatDayMonth(iso: ISODate): string {
+  const d = parseISO(iso);
+  const months = ['janv.', 'févr.', 'mars', 'avr.', 'mai', 'juin', 'juil.', 'août', 'sept.', 'oct.', 'nov.', 'déc.'];
+  return `${d.getDate()} ${months[d.getMonth()] ?? ''}`;
+}

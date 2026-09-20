@@ -39,9 +39,18 @@ export interface StoreQuote {
   readonly coverage: number;
 }
 
+/** Grammes par pièce : `conversions.piece` (ingrédient en g) ou l'inverse de `conversions.g` (ingrédient à la pièce). */
+function gramsPerPiece(ingredient: Ingredient): number | undefined {
+  if (ingredient.canonicalUnit === 'piece') {
+    const g = ingredient.conversions.g;
+    return g && g > 0 ? 1 / g : undefined;
+  }
+  return ingredient.conversions.piece;
+}
+
 /** Prix par unité canonique de l'ingrédient (€/g, €/ml ou €/pièce), ou `null` si la conversion n'est pas connue. */
 export function unitPriceCanonical(entry: PriceEntry, ingredient: Ingredient): number | null {
-  const perPiece = ingredient.conversions.piece;
+  const perPiece = gramsPerPiece(ingredient);
   switch (ingredient.canonicalUnit) {
     case 'g':
       if (entry.unit === 'kg') return entry.unitPrice / 1000;
@@ -59,7 +68,7 @@ export function unitPriceCanonical(entry: PriceEntry, ingredient: Ingredient): n
 
 /** Contenu d'un conditionnement du magasin en unité canonique de l'ingrédient, ou `null`. */
 export function packSizeCanonical(entry: PriceEntry, ingredient: Ingredient): number | null {
-  const perPiece = ingredient.conversions.piece;
+  const perPiece = gramsPerPiece(ingredient);
   switch (ingredient.canonicalUnit) {
     case 'g':
       if (entry.unit === 'kg') return entry.packSize * 1000;

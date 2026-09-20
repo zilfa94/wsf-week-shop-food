@@ -44,7 +44,7 @@ export function MealCard({ meal, recipe, showCalories = true, onPress, onLongPre
           <Chip label="Restes de la veille" icon="repeat" />
         ) : (
           <AppText variant="caption" color="textMuted" tabular>
-            {`⏱ ${minutes} min${showCalories && recipe ? ` · ${Math.round(recipe.nutritionPerServing.kcal)} kcal` : ''}${meal.servings > 0 ? ` · ${meal.servings} portions` : ''}`}
+            {`⏱ ${minutes} min${showCalories && recipe ? ` · ${Math.round(recipe.nutritionPerServing.kcal)} kcal` : ''}${meal.servings > 0 ? ` · ${meal.servings} portion${meal.servings > 1 ? 's' : ''}` : ''}`}
           </AppText>
         )}
       </View>

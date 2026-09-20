@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { AppText, Button, Card, EmptyState, Screen, SectionHeader } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { formatQuantity } from '@/core/units';
+import { formatDayMonth } from '@/core/date';
 import { useAppStore } from '@/store';
 import { INGREDIENT_INDEX, usePantryAlerts, useToday } from '@/store/hooks';
 
@@ -34,7 +35,7 @@ export default function PantryScreen() {
             <View style={styles.texts}>
               <AppText variant="bodyStrong">{ing?.name ?? p.ingredientId}</AppText>
               <AppText variant="caption" color={soon ? 'danger' : 'textMuted'} tabular>
-                {`${ing ? formatQuantity(p.quantity, ing.canonicalUnit, ing) : p.quantity}${p.expiresAt ? ` · ${soon ? 'périme le' : 'jusqu’au'} ${p.expiresAt}` : ''}`}
+                {`${ing ? formatQuantity(p.quantity, ing.canonicalUnit, ing) : p.quantity}${p.expiresAt ? ` · ${soon ? 'périme le' : 'jusqu’au'} ${formatDayMonth(p.expiresAt)}` : ''}`}
               </AppText>
             </View>
             <Button label="Retirer" variant="ghost" compact onPress={() => remove(p.ingredientId, p.addedAt)} />

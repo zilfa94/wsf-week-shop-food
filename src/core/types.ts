@@ -227,6 +227,8 @@ export interface Ingredient {
    * Facteurs spécifiques : 1 <unité> = n <canonicalUnit>. Ex. tomate `{ piece: 120 }`,
    * ail `{ clove: 5, piece: 40 }`, persil `{ bunch: 30, tbsp: 4 }`, farine `{ tbsp: 8, tsp: 3 }`.
    * kg/l/cl et tbsp/tsp (pour un ingrédient en ml) ont des valeurs par défaut dans `units.ts`.
+   * Pour un ingrédient compté à la pièce, `g: 1 / poidsMoyenEnGrammes` (citron `{ g: 1 / 110 }`) permet
+   * de comparer un prix au kilo (`prices.ts`) ; sans cette clé, un tel relevé est ignoré, jamais deviné.
    */
   readonly conversions: Partial<Readonly<Record<Unit, number>>>;
   /** Conditionnement par défaut. */
@@ -516,7 +518,9 @@ export interface WeekReport {
   readonly wasteScore: number;
   /** Restes qu'aucun repas ne réutilise. */
   readonly orphanLeftovers: readonly { readonly ingredientId: IngredientId; readonly quantity: number }[];
-  /** Économie estimée grâce aux ingrédients partagés entre plats (euros). */
+  /** Coût réel des courses de la semaine (euros, prix indicatifs). */
+  readonly spentEur: number;
+  /** Surcoût évité grâce aux ingrédients partagés entre plats : ce qu'aurait coûté un conditionnement par plat (euros). */
   readonly savedEur: number;
 }
 

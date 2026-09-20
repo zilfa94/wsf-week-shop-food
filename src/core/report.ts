@@ -26,7 +26,8 @@ export function sharedSavings(list: ShoppingList, ingredients: IngredientIndex):
   let saved = 0;
   for (const item of list.items) {
     const ing = ingredients.get(item.ingredientId);
-    if (!ing || ing.staple || ing.shelfLifeDays > REPORT_PERISHABLE_DAYS) continue;
+    // Rien d'acheté (garde-manger) = rien de partagé à l'achat.
+    if (!ing || ing.staple || ing.shelfLifeDays > REPORT_PERISHABLE_DAYS || item.packs === 0) continue;
     const meals = new Set(item.usedIn.map((u) => u.mealId));
     if (meals.size < 2) continue;
     const separate = item.usedIn.reduce((s, u) => s + roundToPackaging(item.packaging, u.quantity).packs, 0);
@@ -49,6 +50,7 @@ export function weekReport(args: WeekReportArgs): WeekReport {
     orphanLeftovers: list.leftovers
       .filter((l) => !l.reusedByMealId && (ingredients.get(l.ingredientId)?.shelfLifeDays ?? 0) <= REPORT_PERISHABLE_DAYS)
       .map((l) => ({ ingredientId: l.ingredientId, quantity: l.leftover })),
+    spentEur: list.totalPrice,
     savedEur: sharedSavings(list, ingredients),
   };
 }

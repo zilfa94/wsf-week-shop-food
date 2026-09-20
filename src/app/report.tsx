@@ -29,9 +29,14 @@ export default function ReportScreen() {
         <StatTile label="Anti-gaspi" value={`${report.wasteScore} %`} tone="success" />
         <StatTile label="Équilibre" value={`${report.balanceScore}/100`} />
       </View>
-      <Card tone="accent">
-        <AppText variant="bodyStrong" tabular>{`≈ ${formatPrice(report.savedEur)} économisés grâce aux ingrédients partagés entre plats.`}</AppText>
-      </Card>
+      {report.savedEur > 0 ? (
+        <Card tone="accent">
+          <AppText variant="bodyStrong" tabular>{`Courses de la semaine : ${formatPrice(report.spentEur)}.`}</AppText>
+          <AppText variant="caption" color="textMuted" tabular>
+            {`Sans partage des ingrédients entre plats (un conditionnement par plat), elles auraient coûté ≈ ${formatPrice(report.spentEur + report.savedEur)}.`}
+          </AppText>
+        </Card>
+      ) : null}
       <Card>
         <AppText variant="h2">Restes sans réemploi prévu</AppText>
         {report.orphanLeftovers.length === 0 ? (

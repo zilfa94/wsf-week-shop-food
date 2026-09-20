@@ -41,8 +41,12 @@ describe('conversions prix ↔ unité canonique', () => {
     expect(unitPriceCanonical(entry({ ingredientId: 'pates_penne', price: 1.99, unit: 'kg', packSize: 0.5 }), PASTA)).toBeCloseTo(0.00398, 5);
     // Tomate : canonique g, vendue à la pièce (120 g) : 0,50 €/pièce → 0,50/120 €/g.
     expect(unitPriceCanonical(entry({ ingredientId: 'tomate', price: 0.5, unit: 'piece', packSize: 1 }), TOMATO)).toBeCloseTo(0.5 / 120, 6);
-    // Œuf : canonique pièce, vendu au kg → conversion inconnue → null (jamais deviné).
+    // Œuf (fixture sans poids) : canonique pièce, vendu au kg → conversion inconnue → null (jamais deviné).
     expect(unitPriceCanonical(entry({ ingredientId: 'oeuf', price: 5, unit: 'kg', packSize: 1 }), EGG)).toBeNull();
+    // Citron avec poids moyen (110 g) : 500 g à 1,29 € → 4,545 citrons, 0,284 €/citron.
+    const lemon = { ...EGG, id: 'citron', conversions: { g: 1 / 110 } };
+    expect(unitPriceCanonical(entry({ ingredientId: 'citron', price: 1.29, unit: 'kg', packSize: 0.5 }), lemon)).toBeCloseTo(2.58 / 1000 * 110, 4);
+    expect(packSizeCanonical(entry({ ingredientId: 'citron', price: 1.29, unit: 'kg', packSize: 0.5 }), lemon)).toBeCloseTo(500 / 110, 3);
     // Lait : canonique ml, vendu au litre.
     expect(unitPriceCanonical(entry({ ingredientId: 'lait', price: 1.05, unit: 'l', packSize: 1 }), MILK)).toBeCloseTo(0.00105, 6);
     expect(unitPriceCanonical(entry({ ingredientId: 'lait', price: 1.05, unit: 'kg', packSize: 1 }), MILK)).toBeNull();

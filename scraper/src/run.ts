@@ -6,7 +6,7 @@
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { scrapeAuchan, type AuchanStore } from './auchan.ts';
+import { scrapeAuchan, type AuchanCategory, type AuchanStore } from './auchan.ts';
 import { scrapeLidl } from './lidl.ts';
 import type { PriceFile, Retailer, RulesConfig } from './types.ts';
 import { writeIndex, writePriceFile } from './write.ts';
@@ -23,7 +23,7 @@ const maxPages = flag('--max') ? Number(flag('--max')) : undefined;
 
 const rules = JSON.parse(readFileSync(resolve(here, '../config/ingredients.json'), 'utf8')) as RulesConfig;
 const stores = JSON.parse(readFileSync(resolve(here, '../config/stores.json'), 'utf8')) as { auchan?: AuchanStore[] };
-const auchanCategories = JSON.parse(readFileSync(resolve(here, '../config/auchan-categories.json'), 'utf8')) as { maxPages: number; categories: string[] };
+const auchanCategories = JSON.parse(readFileSync(resolve(here, '../config/auchan-categories.json'), 'utf8')) as { maxPages: number; categories: AuchanCategory[] };
 const log = (msg: string): void => console.log(msg);
 
 const robots: Record<string, () => Promise<PriceFile[]>> = {

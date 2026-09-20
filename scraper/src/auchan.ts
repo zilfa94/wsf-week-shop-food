@@ -24,10 +24,16 @@ export interface AuchanStore {
   search: { zipcode: string; city: string; latitude: number; longitude: number };
 }
 
+/** Rayon à parcourir ; `only` restreint les ingrédients relevables (une conserve de carottes n'est pas une carotte fraîche). */
+export interface AuchanCategory {
+  path: string;
+  only?: readonly string[];
+}
+
 export interface AuchanOptions {
   rules: RulesConfig;
   store: AuchanStore;
-  categories: readonly string[];
+  categories: readonly AuchanCategory[];
   maxPages?: number;
   now?: Date;
   log?: (msg: string) => void;
@@ -82,12 +88,12 @@ export function parseCards(html: string): AuchanCard[] {
   return cards;
 }
 
-/** Convertit une carte en relevés (un par ingrédient rattaché). */
-export function entriesFromCard(card: AuchanCard, rules: RulesConfig): PriceEntry[] {
+/** Convertit une carte en relevés (un par ingrédient rattaché, limité à `only` si le rayon en porte une). */
+export function entriesFromCard(card: AuchanCard, rules: RulesConfig, only?: readonly string[]): PriceEntry[] {
   if (!card.inStock || !(card.price > 0)) return [];
   const pack = card.packLabel ? parsePack(card.packLabel) : null;
   const base = card.unitPriceText ? parseUnitPrice(card.unitPriceText.replace(/\s*\/\s*(kg|l)\b/i, ' /$1')) : null;
-  const ids = matchIngredients(card.name, rules);
+  const ids = matchIngredients(card.name, rules).filter((id) => !only || only.includes(id));
   const out: PriceEntry[] = [];
   for (const ingredientId of ids) {
     const rule = rules.rules[ingredientId]!;
@@ -155,7 +161,7 @@ export async function scrapeAuchan(opts: AuchanOptions): Promise<PriceFile> {
   let pages = 0;
   for (const category of opts.categories) {
     for (let page = 1; page <= maxPages; page++) {
-      const url = `${ORIGIN}${category}${page > 1 ? `?page=${page}` : ''}`;
+      const url = `${ORIGIN}${category.path}${page > 1 ? `?page=${page}` : ''}`;
       let html: string | null;
       try {
         html = await fetchText(url, { headers });
@@ -169,7 +175,7 @@ export async function scrapeAuchan(opts: AuchanOptions): Promise<PriceFile> {
       if (cards.length === 0) break;
       let kept = 0;
       for (const card of cards) {
-        for (const entry of entriesFromCard(card, opts.rules)) {
+        for (const entry of entriesFromCard(card, opts.rules, category.only)) {
           const key = `${entry.ingredientId}|${entry.url}`;
           if (seen.has(key)) continue;
           seen.add(key);
@@ -177,7 +183,7 @@ export async function scrapeAuchan(opts: AuchanOptions): Promise<PriceFile> {
           kept++;
         }
       }
-      log(`  ${category.split('/').slice(-2, -1)[0]} p${page} : ${cards.length} produits, ${kept} relevés`);
+      log(`  ${category.path.split('/').slice(-2, -1)[0]} p${page} : ${cards.length} produits, ${kept} relevés`);
       // Dernière page atteinte quand le lien vers la suivante manque.
       if (!html.includes(`?page=${page + 1}"`)) break;
     }
