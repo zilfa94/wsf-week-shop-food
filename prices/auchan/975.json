@@ -1,10 +1,16 @@
 {
  "retailer": "auchan",
  "storeId": "975",
- "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
+ "storeName": "Auchan Drive Hypermarché KREMLIN BICETRE",
  "postalCode": "94270",
+ "serves": [
+  {
+   "postalCode": "94140",
+   "distanceKm": 4.7
+  }
+ ],
  "source": "drive",
- "scrapedAt": "2026-09-20T11:13:40.191Z",
+ "scrapedAt": "2026-09-20T16:31:14.962Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {

@@ -1,14 +1,37 @@
 {
- "generatedAt": "2026-09-20T11:15:26.429Z",
+ "generatedAt": "2026-09-20T16:34:31.292Z",
  "scraperVersion": "0.1.0",
  "files": [
   {
    "retailer": "auchan",
-   "storeId": "975",
-   "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
-   "postalCode": "94270",
+   "storeId": "6453",
+   "storeName": "Auchan Click&Collect Supermarché Maisons Alfort",
+   "postalCode": "94700",
+   "serves": [
+    {
+     "postalCode": "94140",
+     "distanceKm": 2
+    }
+   ],
    "source": "drive",
-   "scrapedAt": "2026-09-20T11:13:40.191Z",
+   "scrapedAt": "2026-09-20T16:33:03.006Z",
+   "path": "auchan/6453.json",
+   "count": 664,
+   "ingredients": 66
+  },
+  {
+   "retailer": "auchan",
+   "storeId": "975",
+   "storeName": "Auchan Drive Hypermarché KREMLIN BICETRE",
+   "postalCode": "94270",
+   "serves": [
+    {
+     "postalCode": "94140",
+     "distanceKm": 4.7
+    }
+   ],
+   "source": "drive",
+   "scrapedAt": "2026-09-20T16:31:14.962Z",
    "path": "auchan/975.json",
    "count": 1189,
    "ingredients": 64
@@ -19,7 +42,7 @@
    "storeName": "Lidl — offres en supermarché (France entière)",
    "postalCode": "",
    "source": "store",
-   "scrapedAt": "2026-09-20T11:12:05.980Z",
+   "scrapedAt": "2026-09-20T16:29:31.030Z",
    "path": "lidl/national.json",
    "count": 27,
    "ingredients": 18
