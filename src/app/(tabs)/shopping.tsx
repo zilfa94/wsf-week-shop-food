@@ -12,6 +12,7 @@ import { INGREDIENT_INDEX, useShoppingList, useToday } from '@/store/hooks';
 
 export default function ShoppingScreen() {
   const router = useRouter();
+  const hasOnboarded = useAppStore((s) => s.settings.hasOnboarded);
   const theme = useTheme();
   const today = useToday();
   const haptics = useHaptics();
@@ -26,7 +27,7 @@ export default function ShoppingScreen() {
   if (!plan || !list) {
     return (
       <Screen>
-        <EmptyState icon="cart-outline" title="Votre liste est vide" body="Composez d’abord votre semaine : la liste se calcule toute seule." cta={{ label: 'Composer ma semaine', onPress: () => router.push('/generating') }} />
+        <EmptyState icon="cart-outline" title="Votre liste est vide" body="Composez d’abord votre semaine : la liste se calcule toute seule." cta={{ label: 'Composer ma semaine', onPress: () => router.push(hasOnboarded ? '/generating' : '/onboarding') }} />
       </Screen>
     );
   }

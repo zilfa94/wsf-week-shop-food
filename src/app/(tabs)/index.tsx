@@ -27,6 +27,7 @@ function formatRange(weekStart: string): string {
 export default function WeekScreen() {
   const theme = useTheme();
   const router = useRouter();
+  const hasOnboarded = useAppStore((s) => s.settings.hasOnboarded);
   const today = useToday();
   const haptics = useHaptics();
   const plan = useAppStore((s) => s.currentPlan);
@@ -49,7 +50,7 @@ export default function WeekScreen() {
   if (!plan) {
     return (
       <Screen>
-        <EmptyState icon="calendar-outline" title="Aucune semaine planifiée" body="Composez 7 jours de vrais plats et la liste de courses qui va avec." cta={{ label: 'Composer ma semaine', onPress: () => router.push('/generating') }} />
+        <EmptyState icon="calendar-outline" title="Aucune semaine planifiée" body="Composez 7 jours de vrais plats et la liste de courses qui va avec." cta={{ label: 'Composer ma semaine', onPress: () => router.push(hasOnboarded ? '/generating' : '/onboarding') }} />
       </Screen>
     );
   }

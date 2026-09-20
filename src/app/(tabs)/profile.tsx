@@ -1,3 +1,4 @@
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DietPicker } from '@/components/profile/diet-picker';
@@ -22,6 +23,7 @@ export default function ProfileScreen() {
   const setProfile = useAppStore((s) => s.setProfile);
   const settings = useAppStore((s) => s.settings);
   const setSetting = useAppStore((s) => s.setSetting);
+  const router = useRouter();
   const resetAll = useAppStore((s) => s.resetAll);
   const [confirmReset, setConfirmReset] = useState(false);
   const toggleAllergen = (a: Allergen) =>
@@ -85,7 +87,10 @@ export default function ProfileScreen() {
         visible={confirmReset}
         title="Effacer toutes les données ?"
         message="Profil, semaine, courses et garde-manger seront supprimés."
-        actions={[{ label: 'Effacer', variant: 'danger', icon: 'trash', onPress: resetAll }]}
+        actions={[{ label: 'Effacer', variant: 'danger', icon: 'trash', onPress: () => {
+            resetAll();
+            router.replace('/onboarding');
+          } }]}
         onClose={() => setConfirmReset(false)}
       />
     </Screen>
