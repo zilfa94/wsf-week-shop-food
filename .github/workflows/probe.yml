@@ -9,6 +9,9 @@ on:
     branches: [main]
     paths: ['.github/workflows/probe.yml']
 
+permissions:
+  contents: write
+
 jobs:
   probe:
     runs-on: ubuntu-24.04
@@ -41,3 +44,16 @@ jobs:
             sleep 1
           done
           cat "$GITHUB_STEP_SUMMARY"
+          mkdir -p out && cp "$GITHUB_STEP_SUMMARY" out/latest.md && date -u +%FT%TZ > out/stamp.txt
+
+      - name: Publication du résultat (gh-pages/probe)
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./out
+          destination_dir: probe
+          keep_files: true
+          commit_message: 'Sonde enseignes'
+          user_name: 'wsf-bot'
+          user_email: 'wsf-bot@users.noreply.github.com'

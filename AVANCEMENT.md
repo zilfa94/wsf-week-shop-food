@@ -6,8 +6,8 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 12:07
-- Branche : `main` — dernier commit : 82db751 « Traite les retours du 2e test téléphone : rayons Auchan restreints, poids par pièce, bilan honnête, dates et pluriels » (2026-09-20)
+- Généré le : 2026-09-20 12:10
+- Branche : `main` — dernier commit : 06dbdba « Workflow de sonde : accès aux sites des enseignes depuis un runner GitHub » (2026-09-20)
 - Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 20 fichier(s) · tests 141 cas dans 18 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 16 · composants 19 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
