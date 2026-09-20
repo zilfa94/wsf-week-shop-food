@@ -2,34 +2,29 @@ import { Ionicons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, Chip, Screen, SegmentedControl, Stepper } from '@/components/ui';
+import { DietPicker } from '@/components/profile/diet-picker';
+import { MealPicker } from '@/components/profile/meal-picker';
+import { AppText, Button, Card, Chip, Screen, Stepper } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
-import { ALLERGEN_LABELS, DIET_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
-import type { Allergen, Diet, Goal, IngredientId } from '@/core/types';
+import { ALLERGEN_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
+import type { Allergen, Goal, IngredientId } from '@/core/types';
 import { INGREDIENTS } from '@/data';
 import { useTheme } from '@/hooks/use-theme';
 import { useAppStore } from '@/store';
 
-const DIETS: readonly Diet[] = ['omnivore', 'vegetarian', 'vegan', 'no_pork', 'pescatarian'];
 const GOALS: readonly { value: Goal; hint: string }[] = [
   { value: 'balance', hint: '≈ 2 000 kcal/j' },
   { value: 'weight_loss', hint: '≈ 1 700 kcal/j' },
   { value: 'muscle_gain', hint: '≈ 2 400 kcal/j, protéines ↑' },
   { value: 'budget', hint: 'Coût des courses minimisé' },
 ];
-const TIMES = [
-  { value: 15, label: '15 min' },
-  { value: 30, label: '30 min' },
-  { value: 45, label: '45 min' },
-  { value: 90, label: 'Peu importe' },
-];
 const DISLIKE_SUGGESTIONS: readonly IngredientId[] = [
-  'coriandre', 'champignon', 'aubergine', 'betterave', 'epinard', 'poisson_note', 'chou_fleur', 'olives', 'piment_en_poudre', 'celeri_branche', 'brocoli', 'moules',
+  'coriandre', 'champignon', 'aubergine', 'betterave', 'epinard', 'chou_fleur', 'olives', 'piment_en_poudre', 'celeri_branche', 'brocoli', 'moules', 'poivron',
 ].filter((id) => INGREDIENTS.some((i) => i.id === id));
 
-const STEPS = ['Bienvenue', 'Pour qui cuisinez-vous ?', 'Votre régime', 'Allergies et intolérances', 'Votre objectif', 'Temps en cuisine', 'Ce que vous n’aimez pas'];
+const STEPS = ['Bienvenue', 'Votre foyer', 'Votre régime', 'Allergies et intolérances', 'Votre objectif', 'Ce que vous n’aimez pas'];
 
-/** Onboarding en 6 étapes sur un seul écran (docs/SPEC.md § 1.2). */
+/** Onboarding en 5 étapes sur un seul écran (docs/SPEC.md § 1.2). Le temps de cuisine se règle dans le Profil. */
 export default function OnboardingScreen() {
   const theme = useTheme();
   const router = useRouter();
@@ -64,20 +59,14 @@ export default function OnboardingScreen() {
 
       {step === 1 && (
         <View style={styles.block}>
-          <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit={profile.persons > 1 ? 'pers.' : 'pers.'} />
-          <AppText color="textMuted">Les quantités et la liste de courses s’adaptent au nombre de personnes.</AppText>
+          <AppText variant="h2">Pour combien de personnes ?</AppText>
+          <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
+          <AppText variant="h2">Quels repas planifier ?</AppText>
+          <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
         </View>
       )}
 
-      {step === 2 && (
-        <View style={styles.block}>
-          {DIETS.map((d) => (
-            <Card key={d} tone={profile.diet === d ? 'accent' : 'surface'} onPress={() => setProfile({ diet: d })} accessibilityLabel={DIET_LABELS[d]}>
-              <AppText variant="bodyStrong">{DIET_LABELS[d]}</AppText>
-            </Card>
-          ))}
-        </View>
-      )}
+      {step === 2 && <DietPicker diet={profile.diet} onChange={(diet) => setProfile({ diet })} />}
 
       {step === 3 && (
         <View style={styles.block}>
@@ -105,19 +94,6 @@ export default function OnboardingScreen() {
       )}
 
       {step === 5 && (
-        <View style={styles.block}>
-          <AppText>En semaine, combien de temps maximum par repas ?</AppText>
-          <SegmentedControl options={TIMES} value={profile.maxCookMinWeekday} onChange={(maxCookMinWeekday) => setProfile({ maxCookMinWeekday })} />
-          <View style={styles.wrap}>
-            <Chip label="Le week-end je cuisine plus longtemps" selected={profile.maxCookMinWeekend > profile.maxCookMinWeekday} onPress={() => setProfile({ maxCookMinWeekend: profile.maxCookMinWeekend > profile.maxCookMinWeekday ? profile.maxCookMinWeekday : 90 })} />
-            <Chip label="Petit-déjeuner" selected={profile.includeBreakfast} onPress={() => setProfile({ includeBreakfast: !profile.includeBreakfast })} />
-            <Chip label="Collation" selected={profile.includeSnack} onPress={() => setProfile({ includeSnack: !profile.includeSnack })} />
-            <Chip label="Batch cooking (un dîner doublé pour le lendemain)" selected={profile.allowBatchCooking} onPress={() => setProfile({ allowBatchCooking: !profile.allowBatchCooking })} />
-          </View>
-        </View>
-      )}
-
-      {step === 6 && (
         <View style={styles.block}>
           <AppText>On évitera ces ingrédients :</AppText>
           <View style={styles.wrap}>

@@ -5,7 +5,7 @@
 import { DATASET } from '@/data';
 import { DEFAULT_PROFILE, DEFAULT_SETTINGS, type PersistedState } from './types';
 
-export const STORE_VERSION = 1;
+export const STORE_VERSION = 2;
 
 const RECIPE_IDS = new Set(DATASET.recipes.map((r) => r.id));
 
@@ -42,6 +42,8 @@ export function sanitizePersisted(raw: unknown): PersistedState {
 const MIGRATIONS: Readonly<Record<number, (state: Record<string, unknown>) => Record<string, unknown>>> = {
   // 0 → 1 : première forme persistée ; rien à transformer, l'assainissement suffit.
   0: (state) => state,
+  // 1 → 2 : `includeLunch` / `includeDinner` ajoutés au profil ; les défauts (vrai) sont posés par l'assainissement.
+  1: (state) => state,
 };
 
 export function migratePersisted(persisted: unknown, version: number): PersistedState {

@@ -3,6 +3,7 @@
  * = par personne ; tout est donc calculé par personne. Voir docs/SPEC.md § 4.2.
  */
 import type { IngredientIndex, RecipeIndex } from './dataset';
+import { mealTypesFor, type MealFlags } from './filter';
 import { NUTRITION_TOLERANCE, PLANNED_SHARE } from './params';
 import type {
   Activity,
@@ -57,14 +58,21 @@ export function bmrMifflinStJeor(body: BodyInfo): number {
   return body.sex === 'm' ? base + 5 : base - 161;
 }
 
-/** Parts de kcal par type de repas selon les créneaux activés. */
-export function mealShares(profile: Pick<UserProfile, 'includeBreakfast' | 'includeSnack'>): Record<MealType, number> {
-  const b = profile.includeBreakfast;
-  const s = profile.includeSnack;
-  if (b && s) return { breakfast: 0.25, lunch: 0.35, dinner: 0.3, snack: 0.1 };
-  if (b) return { breakfast: 0.25, lunch: 0.4, dinner: 0.35, snack: 0 };
-  if (s) return { breakfast: 0, lunch: 0.5, dinner: 0.4, snack: 0.1 };
-  return { breakfast: 0, lunch: 0.55, dinner: 0.45, snack: 0 };
+/** Poids de base d'un repas dans la journée (petit-déjeuner + déjeuner + dîner = 1). */
+const BASE_MEAL_WEIGHT: Readonly<Record<MealType, number>> = { breakfast: 0.25, lunch: 0.4, dinner: 0.35, snack: 0.1 };
+
+/** Parts de kcal par type de repas activé, normalisées pour sommer à 1. */
+export function mealShares(profile: MealFlags): Record<MealType, number> {
+  const active = mealTypesFor(profile);
+  const total = active.reduce((s, t) => s + BASE_MEAL_WEIGHT[t], 0);
+  const shares: Record<MealType, number> = { breakfast: 0, lunch: 0, dinner: 0, snack: 0 };
+  for (const t of active) shares[t] = Math.round((BASE_MEAL_WEIGHT[t] / total) * 1000) / 1000;
+  return shares;
+}
+
+/** Part de la journée couverte par les repas activés (1 pour petit-déjeuner + déjeuner + dîner). */
+export function mealCoverage(profile: MealFlags): number {
+  return Math.min(1, mealTypesFor(profile).reduce((s, t) => s + BASE_MEAL_WEIGHT[t], 0));
 }
 
 export function computeTarget(profile: UserProfile): NutritionTarget {
@@ -89,8 +97,8 @@ export function computeTarget(profile: UserProfile): NutritionTarget {
   return {
     kcal,
     protein,
-    plannedKcal: Math.round(kcal * PLANNED_SHARE),
-    plannedProtein: Math.round(protein * PLANNED_SHARE),
+    plannedKcal: Math.round(kcal * PLANNED_SHARE * mealCoverage(profile)),
+    plannedProtein: Math.round(protein * PLANNED_SHARE * mealCoverage(profile)),
     carbs: Math.round((kcal * split.c) / 4),
     fat: Math.round((kcal * split.f) / 9),
     perMeal,

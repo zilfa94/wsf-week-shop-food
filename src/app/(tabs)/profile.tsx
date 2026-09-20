@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { DietPicker } from '@/components/profile/diet-picker';
+import { MealPicker } from '@/components/profile/meal-picker';
 import { ActionSheet, AppText, Button, Card, Chip, Screen, SectionHeader, SegmentedControl, Stepper } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
-import { ALLERGEN_LABELS, DIET_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
-import type { Allergen, Diet, Goal } from '@/core/types';
+import { ALLERGEN_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
+import type { Allergen, Goal } from '@/core/types';
 import { useAppStore } from '@/store';
 
-const DIETS: readonly Diet[] = ['omnivore', 'vegetarian', 'vegan', 'no_pork', 'pescatarian'];
 const GOALS: readonly Goal[] = ['balance', 'weight_loss', 'muscle_gain', 'budget'];
 const THEMES = [
   { value: 'system' as const, label: 'Système' },
@@ -29,13 +30,11 @@ export default function ProfileScreen() {
     <Screen>
       <SectionHeader title="Foyer" />
       <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
+      <SectionHeader title="Repas planifiés" />
+      <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
 
       <SectionHeader title="Régime" />
-      <View style={styles.wrap}>
-        {DIETS.map((d) => (
-          <Chip key={d} label={DIET_LABELS[d]} variant="filter" selected={profile.diet === d} onPress={() => setProfile({ diet: d })} />
-        ))}
-      </View>
+      <DietPicker diet={profile.diet} onChange={(diet) => setProfile({ diet })} compact />
 
       <SectionHeader title="Allergies et intolérances" />
       <View style={styles.wrap}>
@@ -51,7 +50,7 @@ export default function ProfileScreen() {
         ))}
       </View>
 
-      <SectionHeader title="Temps en cuisine" subtitle="Maximum par repas en semaine" />
+      <SectionHeader title="Temps en cuisine" subtitle="Optionnel : maximum par repas en semaine (90 min le week-end)" />
       <SegmentedControl
         options={[
           { value: 15, label: '15 min' },
@@ -63,9 +62,7 @@ export default function ProfileScreen() {
         onChange={(maxCookMinWeekday) => setProfile({ maxCookMinWeekday })}
       />
       <View style={styles.wrap}>
-        <Chip label="Petit-déjeuner" selected={profile.includeBreakfast} onPress={() => setProfile({ includeBreakfast: !profile.includeBreakfast })} />
-        <Chip label="Collation" selected={profile.includeSnack} onPress={() => setProfile({ includeSnack: !profile.includeSnack })} />
-        <Chip label="Batch cooking" selected={profile.allowBatchCooking} onPress={() => setProfile({ allowBatchCooking: !profile.allowBatchCooking })} />
+        <Chip label="Batch cooking (un dîner doublé pour le lendemain)" selected={profile.allowBatchCooking} onPress={() => setProfile({ allowBatchCooking: !profile.allowBatchCooking })} />
         <Chip label="Sel, poivre, huile supposés présents" selected={profile.assumeStaples} onPress={() => setProfile({ assumeStaples: !profile.assumeStaples })} />
       </View>
 

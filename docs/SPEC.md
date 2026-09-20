@@ -45,8 +45,13 @@ Toutes les modales sont déclarées dans le `Stack` racine avec `presentation: '
 
 ### 1.4 Périmètre v1 / v2
 
+Retours du propriétaire après le premier test sur téléphone (2026-09-20) : onboarding réduit à 5 étapes (**Foyer** = personnes + repas à planifier parmi petit-déjeuner / déjeuner / dîner / collation, au moins un repas principal ; **Régime** = base omnivore / végétarien / végétalien / pescétarien + restriction « sans porc » ; l'étape « Temps en cuisine » disparaît de l'onboarding et reste un réglage optionnel du Profil).
+
 | v1 (à livrer) | v2 (reporté, pourquoi) |
 |---|---|
+| — | **Comparatif de prix par enseigne** (Leclerc, Auchan, Intermarché, Lidl, Carrefour…) et programme de courses au meilleur prix : demande explicite du propriétaire. **Incompatible en l'état avec la décision « 100 % hors-ligne, aucune dépendance réseau »** (CLAUDE.md § 1-2) et sans source de prix officielle (pas d'API publique chez les enseignes). Piste réaliste en deux temps : (a) v1.x hors-ligne : table de prix **par enseigne** embarquée dans les données (`Packaging.price` devient un prix par enseigne + prix médian), mise à jour à chaque version de l'app, avec un écran « Où acheter » (total par enseigne, panier le moins cher, ou répartition sur 2 magasins) ; (b) v2 : rafraîchissement des prix depuis une source ouverte (**Open Prices / Open Food Facts**, données participatives sous licence libre) via un téléchargement optionnel — ce qui rouvre la décision réseau et demande l'accord du propriétaire. |
+| — | **Mode cuisine guidé** : une étape par écran, minuteur intégré (`expo-notifications`, v2 déjà prévu). |
+| — | **Astuces budget** : bouton « Faire baisser le coût » proposant les swaps aux plus fortes économies (le core les calcule déjà : `suggestSwaps` trié par `deltaPrice`), y compris des options plus simples (sandwich, plat économique moins équilibré) avec affichage de l'impact sur le score d'équilibre ; filtres « Moins cher / Plus rapide / Avec mes restes » sur l'écran de swap. |
 | Tout le § 1.2 sauf colonne de droite | **Minuteur d'étape + notifications** (`expo-notifications`, permissions, limites Expo Go) |
 | Score anti-gaspi, restes prévisibles, swap à impact, batch cooking | **Import/export de profil**, partage texte de la liste (simple, mais après le reste) |
 | Mode magasin (sans `expo-keep-awake` : ajout possible en v1.1, justifié dans AVANCEMENT.md) | **Anneau SVG** (`react-native-svg`) : v1 utilise `MacroBar` + tuiles numériques |

@@ -39,6 +39,7 @@ describe('signaux', () => {
     expect(profileDrift(plan, { ...OMNIVORE_2, persons: 4, diet: 'vegan' })).toEqual(['persons', 'diet']);
     expect(profileDrift(plan, { ...OMNIVORE_2, allergens: ['milk'] })).toEqual(['allergens']);
     expect(profileDrift(plan, { ...OMNIVORE_2, dislikedIngredientIds: ['tomate'] })).toEqual(['dislikes']);
+    expect(profileDrift(plan, { ...OMNIVORE_2, includeLunch: false })).toEqual(['meals']);
   });
 
   it('incompatibleMeals liste les repas inéligibles au nouveau profil', () => {

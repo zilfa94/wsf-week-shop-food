@@ -37,6 +37,8 @@ const OMNIVORE: UserProfile = {
   maxCookMinWeekday: 30,
   maxCookMinWeekend: 90,
   includeBreakfast: true,
+  includeLunch: true,
+  includeDinner: true,
   includeSnack: true,
   allowBatchCooking: true,
   assumeStaples: true,

@@ -79,11 +79,21 @@ export function candidatesForSlot(
 }
 
 /** Créneaux demandés par le profil, jour par jour (lundi = 0). */
-export function slotsForProfile(profile: Pick<UserProfile, 'includeBreakfast' | 'includeSnack'>): MealSlot[] {
+export type MealFlags = Pick<UserProfile, 'includeBreakfast' | 'includeLunch' | 'includeDinner' | 'includeSnack'>;
+
+/** Types de repas activés dans l'ordre de la journée ; sans aucun repas principal, on retombe sur déjeuner + dîner. */
+export function mealTypesFor(profile: MealFlags): MealType[] {
   const types: MealType[] = [];
   if (profile.includeBreakfast) types.push('breakfast');
-  types.push('lunch', 'dinner');
+  if (profile.includeLunch) types.push('lunch');
+  if (profile.includeDinner) types.push('dinner');
   if (profile.includeSnack) types.push('snack');
+  if (!profile.includeBreakfast && !profile.includeLunch && !profile.includeDinner) types.unshift('lunch', 'dinner');
+  return types;
+}
+
+export function slotsForProfile(profile: MealFlags): MealSlot[] {
+  const types = mealTypesFor(profile);
   const slots: MealSlot[] = [];
   for (let day = 0; day < 7; day++) {
     for (const type of types) slots.push({ day: day as Weekday, type });

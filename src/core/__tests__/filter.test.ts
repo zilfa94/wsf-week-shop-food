@@ -100,8 +100,10 @@ describe('temps, saison, créneaux', () => {
 
   it('slotsForProfile : 7 × (pdj ? + déj + dîner + collation ?)', () => {
     expect(slotsForProfile(OMNIVORE_2)).toHaveLength(21);
-    expect(slotsForProfile({ includeBreakfast: false, includeSnack: false })).toHaveLength(14);
-    expect(slotsForProfile({ includeBreakfast: true, includeSnack: true })).toHaveLength(28);
+    expect(slotsForProfile({ includeBreakfast: false, includeLunch: true, includeDinner: true, includeSnack: false })).toHaveLength(14);
+    expect(slotsForProfile({ includeBreakfast: true, includeLunch: true, includeDinner: true, includeSnack: true })).toHaveLength(28);
+    expect(slotsForProfile({ includeBreakfast: false, includeLunch: false, includeDinner: true, includeSnack: false })).toHaveLength(7); // un seul repas par jour
+    expect(slotsForProfile({ includeBreakfast: false, includeLunch: false, includeDinner: false, includeSnack: false })).toHaveLength(14); // repli déjeuner + dîner
     expect(slotsForProfile(OMNIVORE_2)[0]).toEqual({ day: 0, type: 'breakfast' });
   });
 

@@ -307,7 +307,10 @@ export interface UserProfile {
   readonly maxCookMinWeekday: number;
   /** Temps max le week-end. */
   readonly maxCookMinWeekend: number;
+  /** Repas de la journée à planifier ; au moins un des trois doit être vrai (sinon déjeuner + dîner). */
   readonly includeBreakfast: boolean;
+  readonly includeLunch: boolean;
+  readonly includeDinner: boolean;
   readonly includeSnack: boolean;
   readonly allowBatchCooking: boolean;
   /** Ne pas lister sel, poivre, huile… (mais les rappeler dans `ShoppingList.staplesToCheck`). */

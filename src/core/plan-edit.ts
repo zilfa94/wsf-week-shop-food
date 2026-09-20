@@ -7,7 +7,7 @@ import { indexIngredients } from './dataset';
 import { isRecipeEligible } from './filter';
 import type { Dataset, ISODate, Meal, UserProfile, WeekPlan } from './types';
 
-export type ProfileDrift = 'persons' | 'diet' | 'allergens' | 'dislikes';
+export type ProfileDrift = 'persons' | 'diet' | 'allergens' | 'dislikes' | 'meals';
 
 export function mealById(plan: WeekPlan, mealId: string): Meal | undefined {
   return plan.meals.find((m) => m.id === mealId);
@@ -45,6 +45,14 @@ export function profileDrift(plan: WeekPlan, profile: UserProfile): ProfileDrift
   if (snap.diet !== profile.diet) out.push('diet');
   if (!sameSet(snap.allergens, profile.allergens)) out.push('allergens');
   if (!sameSet(snap.dislikedIngredientIds, profile.dislikedIngredientIds)) out.push('dislikes');
+  if (
+    snap.includeBreakfast !== profile.includeBreakfast ||
+    snap.includeLunch !== profile.includeLunch ||
+    snap.includeDinner !== profile.includeDinner ||
+    snap.includeSnack !== profile.includeSnack
+  ) {
+    out.push('meals');
+  }
   return out;
 }
 

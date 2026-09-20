@@ -161,6 +161,8 @@ export const OMNIVORE_2: UserProfile = {
   maxCookMinWeekday: 30,
   maxCookMinWeekend: 90,
   includeBreakfast: true,
+  includeLunch: true,
+  includeDinner: true,
   includeSnack: false,
   allowBatchCooking: true,
   assumeStaples: true,

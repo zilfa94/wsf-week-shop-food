@@ -73,7 +73,11 @@ describe('cibles', () => {
       expect(t.perMeal.breakfast === 0).toBe(!p.includeBreakfast);
       expect(t.perMeal.snack === 0).toBe(!p.includeSnack);
     }
-    expect(mealShares({ includeBreakfast: true, includeSnack: false })).toEqual({ breakfast: 0.25, lunch: 0.4, dinner: 0.35, snack: 0 });
+    expect(mealShares(OMNIVORE_2)).toEqual({ breakfast: 0.25, lunch: 0.4, dinner: 0.35, snack: 0 });
+    // un seul repas par jour : il porte toute la part planifiée, et la cible planifiée suit la couverture (35 % du jour)
+    const dinnerOnly = { ...OMNIVORE_2, includeBreakfast: false, includeLunch: false };
+    expect(mealShares(dinnerOnly)).toEqual({ breakfast: 0, lunch: 0, dinner: 1, snack: 0 });
+    expect(computeTarget(dinnerOnly).plannedKcal).toBe(Math.round(2000 * 0.72 * 0.35));
   });
 });
 

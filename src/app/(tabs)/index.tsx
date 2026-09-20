@@ -107,7 +107,11 @@ export default function WeekScreen() {
           <Card tone="accent">
             <AppText variant="bodyStrong">Votre profil a changé depuis la génération.</AppText>
             <AppText variant="caption" color="textMuted">
-              {incompatible > 0 ? `${incompatible} repas ne correspondent plus à votre régime ou vos allergies.` : 'Régénérez pour appliquer le nouveau nombre de personnes.'}
+              {incompatible > 0
+                ? `${incompatible} repas ne correspondent plus à votre régime ou vos allergies.`
+                : drift.includes('meals')
+                  ? 'Les repas à planifier ont changé : régénérez la semaine.'
+                  : 'Régénérez pour appliquer le nouveau nombre de personnes.'}
             </AppText>
             <Button label="Régénérer les repas non verrouillés" compact variant="secondary" onPress={() => router.push('/generating')} />
           </Card>

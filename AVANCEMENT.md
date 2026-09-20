@@ -6,10 +6,10 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 00:09
-- Branche : `main` — dernier commit : 8cb008d « Recalibre le score d'équilibre : les repas planifiés couvrent 72 % de la cible journalière » (2026-09-20)
-- Arbre de travail : 4 fichier(s) modifié(s) non commité(s)
-- Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 16 · store 6
+- Généré le : 2026-09-20 01:11
+- Branche : `main` — dernier commit : 46ee55e « Applique les patchs Expo (expo-doctor 21/21) et aligne AGENT.md sur le mode économe » (2026-09-20)
+- Arbre de travail : 18 fichier(s) modifié(s) non commité(s)
+- Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 18 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
 
@@ -29,7 +29,9 @@
 - **Écrans secondaires faits** (2026-09-20) : `item/[ingredientId]` (à acheter vs besoin réel, reste + réemploi, recettes concernées, choix du conditionnement, recettes pour le reste, « J'en ai déjà »), `pantry-add` (recherche locale sans accent, quantité par conditionnement, date limite déduite), `cook-with` (faisabilité en %, manquants), `report` (bilan : cuisinés, scores, économie sur les **périssables** partagés, restes périssables sans réemploi, semaine suivante), `store-mode` (un rayon par page, grande police, cochés en bas) ; Courses : ligne → article, article libre, bouton « Magasin », « Mettre les N articles cochés au garde-manger » ; Garde-manger : Ajouter, Cuisiner avec ce que j'ai ; Semaine : Bilan dans le menu. `report.ts` : `sharedSavings` et restes orphelins limités aux ingrédients ≤ 30 jours non staples (`REPORT_PERISHABLE_DAYS`). **Toutes les routes de SPEC § 1.3 existent.**
 - **Score d'équilibre recalibré** (2026-09-20) : `NutritionTarget.plannedKcal/plannedProtein` = 72 % de la cible (`PLANNED_SHARE`), utilisés par `dayScore` et `nutritionPenalty` ; sur le même plan réel le score passe de 17 à 73/100 (SPEC § 8).
 - `npx expo install --fix` appliqué (2026-09-20) : `expo-doctor` **21/21** ; `AGENT.md` aligné sur le mode économe.
-- **Ce qui manque pour livrer la v1** : test sur téléphone (Expo Go) jamais fait ; revue adversariale (SPEC § 7.4) ; icône / splash personnalisés.
+- **Premier test sur téléphone réussi** (propriétaire, Expo Go, 2026-09-20 — nécessite `npx expo login` sur le PC quand Expo Go est connecté à un compte). Retours appliqués : onboarding à 5 étapes (Foyer = personnes + repas à planifier via `MealPicker` ; Régime = base + « sans porc » via `DietPicker`, plus d'ambiguïté ; étape temps supprimée, réglage conservé dans le Profil), contrat `UserProfile.includeLunch/includeDinner` (un seul repas par jour possible ; `mealTypesFor`, `mealShares` normalisées, `mealCoverage` ajuste la cible planifiée ; `STORE_VERSION = 2`), dérive de profil « meals » signalée sur la Semaine.
+- **Pistes du propriétaire consignées dans SPEC § 1.4** : comparatif de prix par enseigne (⚠ conflit avec le principe hors-ligne — décision à prendre, piste Open Prices), mode cuisine guidé, astuces budget (swaps « moins cher », plats simples). À arbitrer avant de lancer.
+- **Ce qui manque pour livrer la v1** : revue adversariale (SPEC § 7.4) ; icône / splash personnalisés ; second test téléphone après ces changements (redémarrer `npx expo start --clear` : les paquets Expo ont été mis à jour).
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **`src/data/ingredients.ts`** fait : 150 ingrédients (agent Sonnet, validés par `src/data/__tests__/ingredients.test.ts`, 4 tests). Piège découvert : `expect(valeur, message)` est une syntaxe Vitest ; en Jest 29, accumuler les violations et faire `expect(problems).toEqual([])`.
 - **`src/data/` complet** : 7 fichiers `recipes-*.ts` (13 petits-déjeuners, 8 collations, 10 français, 10 méditerranéens, 8 asiatiques, 8 orientaux, 9 végé = **66 recettes**, rédigées par 3 agents Sonnet), `recipes.ts`, `index.ts` (`DATASET`, `DATASET_VERSION = '2026.09.1'`), `__tests__/dataset.test.ts` (7 invariants : ids/noms uniques, ingrédients existants et convertibles, champs cohérents, couverture par créneau omnivore et végétalien sans gluten, variété, périssables jamais utilisés une seule fois, génération réelle d'une semaine de 28 repas sans créneau vide). Démo réelle : 2 personnes, 41 articles, 110,80 €, score anti-gaspi 96, variété 0, génération 302 ms (paramètres par défaut — à mesurer sur téléphone, réduire `anneal.iterations` si besoin).
@@ -39,7 +41,7 @@
 - **En cours au moment de l'écriture** : rien ne tourne.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. Test sur téléphone (Expo Go) : mesurer la génération (réduire `anneal.iterations` si > 500 ms), vérifier modales, clavier, mode sombre, tailles de texte, appui long.
+1. Décision du propriétaire sur les pistes SPEC § 1.4 (prix par enseigne ↔ hors-ligne ; ordre entre astuces budget et mode cuisine guidé). Sans décision : commencer par les **astuces budget** (100 % hors-ligne, le core est prêt).
 2. Revue adversariale (SPEC § 7.4 : 1 vs 6 personnes, végétalien sans gluten, garde-manger périmé, swap de batch, cuisiné puis régénération, changement de profil, semaine terminée…) sous forme de tests supplémentaires ; icône / splash personnalisés.
 3. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 
@@ -82,7 +84,11 @@
 
 ## En cours
 
-- [ ] Test sur téléphone (Expo Go) — nécessite le propriétaire.
+- [x] Premier test sur téléphone (2026-09-20) : OK ; retours d'onboarding appliqués.
+
+## En cours
+
+- [ ] Arbitrage des pistes d'évolution (SPEC § 1.4), revue adversariale.
 
 ## À faire
 - [ ] Intégration finale (layout/onglets, `package.json`), `tsc`, `jest`, `expo-doctor`, `expo export`.
@@ -98,4 +104,4 @@
 - **2026-09-19** — Reprise (protocole CLAUDE.md § 0) : dépôt propre, typecheck vert, `npm test` rouge (aucun test). Le juge de synthèse `wf_4122c8d8-7cf` avait échoué sur quota sans rien produire ; propositions récupérées, relues et copiées dans `docs/conception/`. Workflow de synthèse `wf_204fbc5c-27c` lancé puis **arrêté** à la demande du propriétaire (quota 5 h à 50 %) : passage en **mode économe** (CLAUDE.md § 0.1), l'agent principal joue le juge lui-même. Contrat `src/core/types.ts` + `rng`/`date`/`units`/`packaging` + 30 tests ; `tsconfig.json` `types: ["jest"]`. Puis, avec la marge restante de quota : `labels.ts`, `params.ts` (+ `PlannerParamsOverride` dans le contrat), `dataset.ts`, `filter.ts` + fixtures recettes/profils, 47 tests. typecheck ✅ tests ✅. Arrêt à 79 % de la fenêtre 5 h.
 - **2026-09-19 (reprise, fenêtre fraîche)** — `docs/SPEC.md` rédigée par l'agent principal (phase 2 terminée) ; CLAUDE.md § 7 pointe désormais vers `docs/conception/`. `nutrition.ts` + 11 tests (58 au total). `needs.ts` + `planner.ts` + 12 tests (70) ; arbitrage `batchBonus` consigné dans SPEC § 8. `aisles.ts`, `leftovers.ts`, `shopping.ts` + 23 tests (93). `plan-edit.ts`, `swap.ts` + 12 tests (105). `report.ts` + baril `index.ts` (107) : **core terminé**. Phase données lancée : test d'intégrité des ingrédients + agent Sonnet pour `ingredients.ts` (150, commité). Recettes : 3 agents Sonnet en parallèle ; petits-déjeuners + collations livrés (20 recettes) ; les 2 autres coupés par le quota (fenêtre saturée à 3 agents + agent principal), relancés après réinitialisation avec une table compacte des ingrédients (règle « Budget des agents » ajoutée à CLAUDE.md § 0.1). 66 recettes assemblées, test d'intégrité vert après 3 retouches (saisons de 2 petits-déjeuners, ciboulette partagée, 13e petit-déjeuner végétalien sans gluten toutes saisons) ; 118 tests au total. Retouche végé (4 doublons remplacés). Store zustand complet + hooks + `jest.setup.ts` : 129 tests. Thème + 13 composants `ui/` + tests RNTL : 134 tests. Écrans v1 (10 routes) + `MealCard` ; `npx expo export --platform android` OK ; garde-fou de performance du planificateur assoupli à 1 s sous jest (bruit machine).
 - **2026-09-19 (soir)** — Test du parcours complet en web dans le navigateur intégré : 4 bugs corrigés (génération web, `Alert` muet → `ActionSheet`, `back()` sans historique, élision), undo du swap. Le planificateur, la liste et le swap se comportent comme prévu sur les vraies données.
-- **2026-09-20** — Écrans secondaires (article, ajout garde-manger, cuisiner avec ce que j'ai, bilan, mode magasin) + branchements dans Courses / Garde-manger / Semaine ; bilan recalibré sur les périssables. 16 routes, 134 tests. Implémentation v1 fonctionnellement complète. Score d'équilibre recalibré (`PLANNED_SHARE`). `expo install --fix` → `expo-doctor` 21/21 ; AGENT.md aligné.
+- **2026-09-20** — Écrans secondaires (article, ajout garde-manger, cuisiner avec ce que j'ai, bilan, mode magasin) + branchements dans Courses / Garde-manger / Semaine ; bilan recalibré sur les périssables. 16 routes, 134 tests. Implémentation v1 fonctionnellement complète. Score d'équilibre recalibré (`PLANNED_SHARE`). `expo install --fix` → `expo-doctor` 21/21 ; AGENT.md aligné. Premier test téléphone OK ; retours : onboarding 5 étapes, repas de la journée au choix (`includeLunch/includeDinner`, `STORE_VERSION 2`), régime base + sans porc ; pistes prix par enseigne / cuisine guidée / astuces budget consignées (SPEC § 1.4).
