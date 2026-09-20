@@ -7,6 +7,9 @@ on:
   schedule:
     - cron: '0 5 * * *' # 05:00 UTC chaque jour (07:00 Paris en été)
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scraper/**', '.github/workflows/scrape.yml'] # chaque évolution du scraper est validée par un vrai relevé
 
 permissions:
   contents: write

@@ -7,8 +7,8 @@
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
 - Généré le : 2026-09-20 06:13
-- Branche : `main` — dernier commit : e0c633d « AVANCEMENT : plan d'exécution du scraper de prix (dépôt GitHub, code postal, ordre des enseignes, format JSON, workflow) » (2026-09-20)
-- Arbre de travail : 20 fichier(s) modifié(s) non commité(s)
+- Branche : `main` — dernier commit : ebb0b57 « Ajoute le scraper de prix : socle, règles de rattachement, robot Lidl, workflow gh-pages » (2026-09-20)
+- Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 18 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
