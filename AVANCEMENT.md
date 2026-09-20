@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 08:03
-- Branche : `main` — dernier commit : cbdb351 « Après effacement des données, repasser par l'onboarding avant de composer une semaine » (2026-09-20)
-- Arbre de travail : 2 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-20 08:14
+- Branche : `main` — dernier commit : e92c3ca « Mode magasin : bouton Quitter permanent (le modal plein écran n'offrait aucune sortie avant le dernier rayon) » (2026-09-20)
+- Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 20 fichier(s) · tests 141 cas dans 18 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 16 · composants 19 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
@@ -42,6 +42,10 @@
 - **`src/store/` complet** (SPEC § 5) : `types.ts` (slices, `PersistedState`, défauts), `migrations.ts` (`STORE_VERSION = 1`, table de migrations, `sanitizePersisted` qui rejette un plan d'une autre `datasetVersion` ou avec une recette inconnue), `index.ts` (`useAppStore` = 5 slices + `persist` AsyncStorage, `partialize`, `merge` assainissant ; actions qui n'appellent que le core : générer/regénérer avec repas conservés, swap + undo, verrou, cuisiné avec décompte du garde-manger, portions, semaine suivante, cochage/pack/articles libres, « j'en ai déjà », entrée au garde-manger après courses, réglages, reset), `selectors.ts`, `hooks.ts` (`useHydrated`, `useToday` = seule horloge, `useShoppingList`, `useWeekNutrition`, `useDayNutrition`, `useSwapSuggestions`, `useCookWithPantry`, `usePantryAlerts`, `useWeekReport`, `useRecipeIngredientStatus`) ; `jest.setup.ts` (mocks AsyncStorage + haptics) référencé par `setupFilesAfterEnv` ; 11 tests sur le vrai jeu de données.
 - **Thème et composants de base faits** (SPEC § 6) : `src/constants/theme.ts` (palette clair/sombre typée `ThemeColors`, `Spacing`, `Radius`, `Typography`, `TouchTarget`), `src/hooks/use-theme.ts` (suit `settings.themeMode`), `src/hooks/use-haptics.ts` ; `src/components/ui/` : AppText, Screen, Card, Button, Chip, Checkbox, Stepper, SegmentedControl, SectionHeader, EmptyState, StatTile, MacroBar, Snackbar (+ baril) ; 5 tests RNTL (`src/components/__tests__/ui.test.tsx`). Pièges Jest consignés dans CLAUDE.md § 4.4 (RNTL 14 asynchrone, stub CSS).
 - **En cours au moment de l'écriture** : rien ne tourne.
+
+**Retours du 2ᵉ test téléphone (2026-09-20, 20 captures) — à traiter en premier à la reprise :**
+0. (Crédibilité) Robot Auchan : « carotte → AUCHAN Carottes extra-fines 265 g » est une conserve (rayon conserves-de-legumes). Ajouter dans `config/auchan-categories.json` un champ `only` par rayon (liste d'ingrédients autorisés : conserves → pois_chiches, haricots_rouges, tomates_pelees, concentre_tomate, mais_boite, thon_boite ; surgelés légumes → petits_pois_surgeles, epinards_surgeles, haricots_verts_surgeles, legumes_wok_surgeles ; fruits-coulis → fruits_rouges_surgeles ; poissons-nature (surgelés) → rien) et l'appliquer dans `entriesFromCard`. Vérifier aussi que le conditionnement le moins cher gagne (citron : 4 pièces 2,99 € affiché). Relancer, contrôler, pousser.
+0 bis. Bilan : « ≈ 52,40 € économisés » sur une semaine à 44 € se lit comme inventé → reformuler en « sans partage entre plats, la semaine aurait coûté ≈ X € au lieu de Y € » (X = coût pack-par-plat, Y = total réel) ou plafonner. Garde-manger : dates ISO (« 2026-11-19 ») → format français court. Libellés : « 1 portions » → « 1 portion », « 3 pain (baguette) » → « 3 baguettes » (namePlural), « 0,3 citron » → arrondi lisible.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
 1. **Prix réels par scraping (décidé le 2026-09-20, CLAUDE.md § 2, SPEC § 1.4).** Dépôt : `https://github.com/zilfa94/wsf-week-shop-food` (public, poussé le 2026-09-20). Code postal de référence : **94140** (Alfortville) ; l'app devra demander le **code postal** à l'onboarding (`AppSettings.postalCode`, étape Foyer) car les prix dépendent du magasin. Sondage d'accès : Leclerc ✅ (prix après choix du magasin), Auchan ✅ (idem), Lidl ✅ (chargement JS, prix nationaux sans choix de magasin), Carrefour ❌ (403 anti-bot), Intermarché à sonder. Plan d'exécution :
