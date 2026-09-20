@@ -1,0 +1,17 @@
+{
+ "generatedAt": "2026-09-20T05:09:28.921Z",
+ "scraperVersion": "0.1.0",
+ "files": [
+  {
+   "retailer": "lidl",
+   "storeId": "national",
+   "storeName": "Lidl — offres en supermarché (France entière)",
+   "postalCode": "",
+   "source": "store",
+   "scrapedAt": "2026-09-20T05:07:35.751Z",
+   "path": "lidl/national.json",
+   "count": 30,
+   "ingredients": 19
+  }
+ ]
+}
