@@ -54,6 +54,7 @@ export default function ShoppingScreen() {
         subtitle={`${done}/${toBuy.length} cochés · score anti-gaspi ${list.wasteScore} % · reste à risque ${formatPrice(list.totalLeftoverValue)}`}
         right={<Button label="Magasin" icon="storefront-outline" variant="secondary" compact onPress={() => router.push('/store-mode')} />}
       />
+      <Button label="Où acheter ? Comparer les prix relevés" icon="pricetags-outline" variant="secondary" compact onPress={() => router.push('/where-to-buy')} />
       {list.sections.map((section) => (
         <View key={section.aisle} style={styles.section}>
           <AppText variant="h2">{AISLE_LABELS[section.aisle]}</AppText>

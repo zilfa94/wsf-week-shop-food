@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DietPicker } from '@/components/profile/diet-picker';
 import { MealPicker } from '@/components/profile/meal-picker';
+import { PostalCodeField } from '@/components/profile/postal-code-field';
 import { ActionSheet, AppText, Button, Card, Chip, Screen, SectionHeader, SegmentedControl, Stepper } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { ALLERGEN_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
@@ -30,6 +31,7 @@ export default function ProfileScreen() {
     <Screen>
       <SectionHeader title="Foyer" />
       <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
+      <PostalCodeField value={settings.postalCode} onChange={(v) => setSetting('postalCode', v)} />
       <SectionHeader title="Repas planifiés" />
       <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
 
@@ -75,7 +77,7 @@ export default function ProfileScreen() {
 
       <Card tone="alt">
         <AppText variant="caption" color="textMuted">
-          Les prix sont indicatifs et varient selon le magasin. Les macros sont approximatives, par portion.
+          Les prix de la liste sont indicatifs ; « Où acheter » (onglet Courses) n’affiche que des prix réellement relevés, avec leur enseigne et leur date. Les macros sont approximatives, par portion.
         </AppText>
       </Card>
       <Button label="Effacer toutes les données" variant="danger" onPress={() => setConfirmReset(true)} />

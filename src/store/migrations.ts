@@ -5,7 +5,7 @@
 import { DATASET } from '@/data';
 import { DEFAULT_PROFILE, DEFAULT_SETTINGS, type PersistedState } from './types';
 
-export const STORE_VERSION = 2;
+export const STORE_VERSION = 3;
 
 const RECIPE_IDS = new Set(DATASET.recipes.map((r) => r.id));
 
@@ -44,6 +44,8 @@ const MIGRATIONS: Readonly<Record<number, (state: Record<string, unknown>) => Re
   0: (state) => state,
   // 1 → 2 : `includeLunch` / `includeDinner` ajoutés au profil ; les défauts (vrai) sont posés par l'assainissement.
   1: (state) => state,
+  // 2 → 3 : `settings.postalCode` ajouté (prix des magasins proches) ; défaut `''` posé par l'assainissement.
+  2: (state) => state,
 };
 
 export function migratePersisted(persisted: unknown, version: number): PersistedState {

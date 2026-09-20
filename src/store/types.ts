@@ -97,4 +97,5 @@ export const DEFAULT_SETTINGS: AppSettings = {
   hapticsEnabled: true,
   showCalories: true,
   weekStartDay: 0,
+  postalCode: '',
 };

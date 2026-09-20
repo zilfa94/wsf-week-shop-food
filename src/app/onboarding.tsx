@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { DietPicker } from '@/components/profile/diet-picker';
 import { MealPicker } from '@/components/profile/meal-picker';
+import { PostalCodeField } from '@/components/profile/postal-code-field';
 import { AppText, Button, Card, Chip, Screen, Stepper } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { ALLERGEN_LABELS, GOAL_LABELS, ONBOARDING_ALLERGENS } from '@/core/labels';
@@ -31,6 +32,8 @@ export default function OnboardingScreen() {
   const profile = useAppStore((s) => s.profile);
   const setProfile = useAppStore((s) => s.setProfile);
   const completeOnboarding = useAppStore((s) => s.completeOnboarding);
+  const postalCode = useAppStore((s) => s.settings.postalCode);
+  const setSetting = useAppStore((s) => s.setSetting);
   const [step, setStep] = useState(0);
   const last = STEPS.length - 1;
 
@@ -63,6 +66,8 @@ export default function OnboardingScreen() {
           <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
           <AppText variant="h2">Quels repas planifier ?</AppText>
           <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
+          <AppText variant="h2">Où faites-vous vos courses ?</AppText>
+          <PostalCodeField value={postalCode} onChange={(v) => setSetting('postalCode', v)} />
         </View>
       )}
 

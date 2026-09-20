@@ -567,4 +567,65 @@ export interface AppSettings {
   readonly showCalories: boolean;
   /** Jour de début de semaine / jour des courses. */
   readonly weekStartDay: Weekday;
+  /** Code postal du foyer (5 chiffres) pour les prix des magasins proches ; `''` = inconnu. */
+  readonly postalCode: string;
+}
+
+// ---------------------------------------------------------------------------
+// Prix réels (flux JSON produit par `scraper/`, contrat miroir de scraper/src/types.ts)
+// ---------------------------------------------------------------------------
+
+/** Où le prix a été observé : en rayon (offres en supermarché), sur le drive d'un magasin, sur le site marchand. */
+export type PriceSource = 'store' | 'drive' | 'site';
+export type PriceUnit = 'kg' | 'l' | 'piece';
+
+export interface PriceEntry {
+  readonly ingredientId: IngredientId;
+  readonly productName: string;
+  /** Prix TTC du conditionnement (euros). */
+  readonly price: number;
+  /** €/kg, €/l ou €/pièce. */
+  readonly unitPrice: number;
+  readonly unit: PriceUnit;
+  /** Contenu du conditionnement dans `unit`. */
+  readonly packSize: number;
+  readonly packLabel: string;
+  readonly url: string;
+  /** Période de validité annoncée (dates ISO), absente = prix courant au relevé. */
+  readonly validFrom?: string;
+  readonly validUntil?: string;
+  readonly promo?: boolean;
+}
+
+export interface PriceFile {
+  readonly retailer: string;
+  /** `national` quand l'enseigne publie un prix unique. */
+  readonly storeId: string;
+  readonly storeName: string;
+  /** Vide pour une portée nationale. */
+  readonly postalCode: string;
+  readonly source: PriceSource;
+  /** Instant du relevé (ISO 8601). */
+  readonly scrapedAt: string;
+  readonly scraperVersion: string;
+  readonly prices: readonly PriceEntry[];
+}
+
+export interface PriceIndexEntry {
+  readonly retailer: string;
+  readonly storeId: string;
+  readonly storeName: string;
+  readonly postalCode: string;
+  readonly source: PriceSource;
+  readonly scrapedAt: string;
+  /** Chemin relatif au dossier `prices/`. */
+  readonly path: string;
+  readonly count: number;
+  readonly ingredients: number;
+}
+
+export interface PriceIndex {
+  readonly generatedAt: string;
+  readonly scraperVersion: string;
+  readonly files: readonly PriceIndexEntry[];
 }
