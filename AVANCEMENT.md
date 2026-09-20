@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 01:11
-- Branche : `main` — dernier commit : 46ee55e « Applique les patchs Expo (expo-doctor 21/21) et aligne AGENT.md sur le mode économe » (2026-09-20)
-- Arbre de travail : 18 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-20 01:33
+- Branche : `main` — dernier commit : 2077859 « Applique les retours du test téléphone : repas de la journée au choix, régime base + sans porc, onboarding en 5 étapes » (2026-09-20)
+- Arbre de travail : 3 fichier(s) modifié(s) non commité(s)
 - Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 18 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
@@ -30,7 +30,7 @@
 - **Score d'équilibre recalibré** (2026-09-20) : `NutritionTarget.plannedKcal/plannedProtein` = 72 % de la cible (`PLANNED_SHARE`), utilisés par `dayScore` et `nutritionPenalty` ; sur le même plan réel le score passe de 17 à 73/100 (SPEC § 8).
 - `npx expo install --fix` appliqué (2026-09-20) : `expo-doctor` **21/21** ; `AGENT.md` aligné sur le mode économe.
 - **Premier test sur téléphone réussi** (propriétaire, Expo Go, 2026-09-20 — nécessite `npx expo login` sur le PC quand Expo Go est connecté à un compte). Retours appliqués : onboarding à 5 étapes (Foyer = personnes + repas à planifier via `MealPicker` ; Régime = base + « sans porc » via `DietPicker`, plus d'ambiguïté ; étape temps supprimée, réglage conservé dans le Profil), contrat `UserProfile.includeLunch/includeDinner` (un seul repas par jour possible ; `mealTypesFor`, `mealShares` normalisées, `mealCoverage` ajuste la cible planifiée ; `STORE_VERSION = 2`), dérive de profil « meals » signalée sur la Semaine.
-- **Pistes du propriétaire consignées dans SPEC § 1.4** : comparatif de prix par enseigne (⚠ conflit avec le principe hors-ligne — décision à prendre, piste Open Prices), mode cuisine guidé, astuces budget (swaps « moins cher », plats simples). À arbitrer avant de lancer.
+- **Pistes du propriétaire consignées dans SPEC § 1.4** : mode cuisine guidé, astuces budget (swaps « moins cher », plats simples). **Prix réels : décision prise le 2026-09-20 — scraping des sites drive avec backend gratuit (GitHub Actions + Pages)** ; le principe « 100 % hors-ligne » devient « hors-ligne + réseau optionnel pour les prix » (CLAUDE.md § 1-2 mis à jour). Sondage : Carrefour bloque (403 anti-bot), Auchan accessible.
 - **Ce qui manque pour livrer la v1** : revue adversariale (SPEC § 7.4) ; icône / splash personnalisés ; second test téléphone après ces changements (redémarrer `npx expo start --clear` : les paquets Expo ont été mis à jour).
 - **Constat de la reprise du 2026-09-19** : le juge de synthèse du workflow `wf_4122c8d8-7cf` a **échoué** (erreur 429 « weekly limit » le 17/09, aucune synthèse écrite) ; les 3 propositions brutes sont intactes dans son `journal.jsonl` (CLAUDE.md § 7). `npm test` est **rouge** (« No tests found », exit 1) : le test de fumée cité ci-dessous n'a jamais été commité — se corrige avec les premiers tests du module `types`/`units`. `npm run typecheck` est vert.
 - **`src/data/ingredients.ts`** fait : 150 ingrédients (agent Sonnet, validés par `src/data/__tests__/ingredients.test.ts`, 4 tests). Piège découvert : `expect(valeur, message)` est une syntaxe Vitest ; en Jest 29, accumuler les violations et faire `expect(problems).toEqual([])`.
@@ -41,7 +41,7 @@
 - **En cours au moment de l'écriture** : rien ne tourne.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. Décision du propriétaire sur les pistes SPEC § 1.4 (prix par enseigne ↔ hors-ligne ; ordre entre astuces budget et mode cuisine guidé). Sans décision : commencer par les **astuces budget** (100 % hors-ligne, le core est prêt).
+1. **Prix réels par scraping (décidé le 2026-09-20, CLAUDE.md § 2, SPEC § 1.4).** Attendu du propriétaire : ses magasins (ville + enseignes) et un dépôt GitHub (compte gratuit ; l'agent ne crée pas de compte). Puis : `scraper/` avec robot Auchan (Playwright), fichier `prices/<store>.json`, workflow GitHub Actions, `Ingredient.priceQueries`, service + core `prices.ts` + écran « Où acheter ».
 2. Revue adversariale (SPEC § 7.4 : 1 vs 6 personnes, végétalien sans gluten, garde-manger périmé, swap de batch, cuisiné puis régénération, changement de profil, semaine terminée…) sous forme de tests supplémentaires ; icône / splash personnalisés.
 3. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 

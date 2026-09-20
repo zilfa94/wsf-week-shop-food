@@ -26,7 +26,7 @@
 
 Application mobile **Android + iOS** (une seule base de code Expo / React Native / TypeScript). Elle propose un **programme nutritionnel sur 7 jours** (vrais plats variés et naturels) et génère la **liste de courses hebdomadaire** correspondante. Sa valeur principale : **organiser les courses pour éviter tout gaspillage** d'argent et de produits (agrégation, arrondi aux conditionnements réels, réutilisation des périssables entre repas, garde-manger, restes, swap de repas, rayons, budget).
 
-Interface et données **en français**. Application **100 % hors-ligne**, **aucun backend**, **aucune dépendance réseau**.
+Interface et données **en français**. L'application **fonctionne hors-ligne** (plan, liste, garde-manger, prix indicatifs) et, **depuis la décision du propriétaire du 2026-09-20**, actualise en option les **prix réels par magasin** depuis un flux JSON statique produit par un **scraper planifié** (`scraper/`, GitHub Actions → GitHub Pages). Pas de serveur applicatif, pas de base de données distante, pas de compte utilisateur.
 
 ---
 
@@ -41,6 +41,7 @@ Interface et données **en français**. Application **100 % hors-ligne**, **aucu
 | Logique métier | Fonctions **pures** dans `src/core/`, sans import React/RN, testées avec `jest` |
 | Données | Locales, typées, en français : `src/data/ingredients.ts`, `src/data/recipes*.ts` (≥ 60 recettes) |
 | Liste de courses | **Dérivée** du plan + garde-manger via sélecteur ; on ne persiste que l'état « coché » |
+| Prix réels (décision 2026-09-20) | Scraping des sites drive **par enseigne** dans `scraper/` (Node + Playwright, dépendances isolées de l'app), exécuté par GitHub Actions (cron), résultat publié en JSON statique sur GitHub Pages ; l'app le télécharge (`src/services/`), le met en cache et retombe sur `Packaging.price` si un prix manque. Chaque enseigne est un robot séparé : une enseigne qui bloque (ex. Carrefour, anti-bot) est simplement absente. Robots identifiés, cadence quotidienne, pas de proxies payants. |
 | Tests | `jest-expo` (preset), tests dans des dossiers `__tests__/` avec suffixe `.test.ts(x)` |
 | Icônes | `@expo/vector-icons` (Ionicons) |
 | Retour haptique | `expo-haptics` |
