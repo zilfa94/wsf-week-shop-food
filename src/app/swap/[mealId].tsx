@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Card, Chip, EmptyState, Screen } from '@/components/ui';
+import { AppText, Card, Chip, EmptyState, FoodImage, Screen } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { MEAL_TYPE_LABELS, WEEKDAY_LABELS } from '@/core/labels';
 import { useHaptics } from '@/hooks/use-haptics';
@@ -47,12 +47,16 @@ export default function SwapScreen() {
                 else router.replace('/(tabs)');
               }}
               accessibilityLabel={`Choisir ${recipe?.name ?? s.recipeId}`}
+              style={styles.row}
             >
-              <AppText variant="bodyStrong">{recipe?.name ?? s.recipeId}</AppText>
-              <View style={styles.wrap}>
-                {s.reasons.map((r) => (
-                  <Chip key={r} label={r} icon={r.startsWith('Utilise') ? 'repeat' : undefined} />
-                ))}
+              <FoodImage recipeId={s.recipeId} size={64} tile={s.reusedIngredientIds.length > 0 ? 'none' : 'soft'} />
+              <View style={styles.body}>
+                <AppText variant="bodyStrong">{recipe?.name ?? s.recipeId}</AppText>
+                <View style={styles.wrap}>
+                  {s.reasons.map((r) => (
+                    <Chip key={r} label={r} icon={r.startsWith('Utilise') ? 'repeat' : undefined} />
+                  ))}
+                </View>
               </View>
             </Card>
           );
@@ -63,5 +67,7 @@ export default function SwapScreen() {
 }
 
 const styles = StyleSheet.create({
+  row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
+  body: { flex: 1, gap: Spacing.sm },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
 });

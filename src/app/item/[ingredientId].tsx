@@ -1,6 +1,6 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, EmptyState, Screen, SectionHeader, SegmentedControl } from '@/components/ui';
+import { AppText, Button, Card, EmptyState, FoodImage, Screen, SectionHeader, SegmentedControl } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { AISLE_LABELS, MEAL_TYPE_LABELS, WEEKDAY_LABELS } from '@/core/labels';
 import { packagingsOf } from '@/core/packaging';
@@ -37,8 +37,13 @@ export default function ItemScreen() {
   return (
     <Screen>
       <Stack.Screen options={{ title: ing.name }} />
-      <AppText variant="display">{ing.name}</AppText>
-      <AppText color="textMuted">{AISLE_LABELS[ing.aisle]}</AppText>
+      <View style={styles.hero}>
+        <FoodImage ingredientId={ing.id} size={96} tile="accent" />
+        <View style={styles.heroText}>
+          <AppText variant="display">{ing.name}</AppText>
+          <AppText color="textMuted">{AISLE_LABELS[ing.aisle]}</AppText>
+        </View>
+      </View>
 
       <Card tone="alt">
         <AppText variant="bodyStrong" tabular>{`À acheter : ${item.packs > 0 ? item.label : 'rien'} · ${formatPrice(item.price)}`}</AppText>
@@ -105,6 +110,8 @@ export default function ItemScreen() {
 }
 
 const styles = StyleSheet.create({
+  hero: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
+  heroText: { flex: 1, gap: Spacing.xs },
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xs },
   rowWrap: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
   grow: { flex: 1 },

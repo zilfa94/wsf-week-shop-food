@@ -12,3 +12,5 @@ export { SegmentedControl, type SegmentedControlProps, type SegmentedOption } fr
 export { Snackbar, type SnackbarProps } from './snackbar';
 export { StatTile, type StatTileProps } from './stat-tile';
 export { Stepper, type StepperProps } from './stepper';
+export { FoodImage, foodImageKey, type FoodImageProps } from './food-image';
+export { TabBar, type TabBarProps } from './tab-bar';

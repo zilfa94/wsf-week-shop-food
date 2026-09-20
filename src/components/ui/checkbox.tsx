@@ -20,7 +20,7 @@ export function Checkbox({ checked, onToggle, accessibilityLabel }: CheckboxProp
       hitSlop={8}
       style={styles.target}
     >
-      <Ionicons name={checked ? 'checkmark-circle' : 'ellipse-outline'} size={28} color={checked ? theme.success : theme.textMuted} />
+      <Ionicons name={checked ? 'checkmark-circle' : 'ellipse-outline'} size={28} color={checked ? theme.primary : theme.textMuted} />
     </Pressable>
   );
 }

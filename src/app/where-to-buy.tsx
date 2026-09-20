@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useEffect, useMemo } from 'react';
 import { Linking, StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, EmptyState, Screen } from '@/components/ui';
+import { AppText, Button, Card, EmptyState, FoodImage, Screen } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { compareStores, priceAgeDays, PRICE_MAX_AGE_DAYS, sourceLabel, type StoreQuote } from '@/core/prices';
 import { formatNumber, formatPrice, ingredientName } from '@/core/units';
@@ -46,6 +46,7 @@ function StoreCard({ quote, today, toBuyCount }: { quote: StoreQuote; today: str
           const validity = formatValidity(line.entry.validFrom, line.entry.validUntil);
           return (
             <View key={`${line.ingredientId}-${line.entry.url}`} style={styles.line}>
+              <FoodImage ingredientId={line.ingredientId} size={40} />
               <View style={styles.lineText}>
                 <AppText variant="bodyStrong">{ing ? ingredientName(ing, 1) : line.ingredientId}</AppText>
                 <AppText variant="caption" color="textMuted">
@@ -144,7 +145,7 @@ export default function WhereToBuyScreen() {
 
 const styles = StyleSheet.create({
   lines: { gap: Spacing.sm },
-  line: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'flex-start', gap: Spacing.md },
+  line: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', gap: Spacing.sm },
   lineText: { flex: 1, gap: 2 },
   footer: { gap: Spacing.sm, alignItems: 'flex-start' },
 });

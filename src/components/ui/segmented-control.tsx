@@ -26,9 +26,9 @@ export function SegmentedControl<T extends string | number>({ options, value, on
             accessibilityRole="tab"
             accessibilityState={{ selected }}
             onPress={() => onChange(o.value)}
-            style={[styles.segment, selected ? { backgroundColor: theme.surface, borderColor: theme.border } : null]}
+            style={[styles.segment, selected ? { backgroundColor: theme.primary } : null]}
           >
-            <AppText variant={selected ? 'bodyStrong' : 'body'} color={selected ? 'primary' : 'textMuted'} numberOfLines={1}>
+            <AppText variant={selected ? 'bodyStrong' : 'body'} color={selected ? 'onPrimary' : 'textMuted'} numberOfLines={1}>
               {o.label}
             </AppText>
           </Pressable>
@@ -44,8 +44,6 @@ const styles = StyleSheet.create({
     flex: 1,
     minHeight: TouchTarget - 8,
     borderRadius: Radius.button - 4,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'center',
     paddingHorizontal: Spacing.sm,

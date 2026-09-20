@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
-import { AppText, Button, Card, Checkbox, EmptyState, Screen, SectionHeader } from '@/components/ui';
+import { AppText, Button, Card, Checkbox, EmptyState, FoodImage, Screen, SectionHeader } from '@/components/ui';
 import { Radius, Spacing, Typography } from '@/constants/theme';
 import { AISLE_LABELS, WEEKDAY_SHORT_LABELS } from '@/core/labels';
 import { formatPrice, formatQuantity } from '@/core/units';
@@ -53,9 +53,11 @@ export default function ShoppingScreen() {
       <SectionHeader
         title={`${toBuy.length} articles · ${formatPrice(list.totalPrice)}`}
         subtitle={`${done}/${toBuy.length} cochés · score anti-gaspi ${list.wasteScore} % · reste à risque ${formatPrice(list.totalLeftoverValue)}`}
-        right={<Button label="Magasin" icon="storefront-outline" variant="secondary" compact onPress={() => router.push('/store-mode')} />}
       />
-      <Button label="Où acheter ? Comparer les prix relevés" icon="pricetags-outline" variant="secondary" compact onPress={() => router.push('/where-to-buy')} />
+      <View style={styles.actions}>
+        <Button label="Où acheter ?" icon="pricetags-outline" compact onPress={() => router.push('/where-to-buy')} style={styles.action} />
+        <Button label="Mode magasin" icon="storefront-outline" variant="secondary" compact onPress={() => router.push('/store-mode')} style={styles.action} />
+      </View>
       {list.sections.map((section) => (
         <View key={section.aisle} style={styles.section}>
           <AppText variant="h2">{AISLE_LABELS[section.aisle]}</AppText>
@@ -73,8 +75,10 @@ export default function ShoppingScreen() {
                   }}
                   accessibilityLabel={`${ing.name}, ${item.label}, ${item.checked ? 'coché' : 'non coché'}`}
                 />
+                <FoodImage ingredientId={item.ingredientId} size={48} />
                 <View style={styles.texts}>
-                  <AppText variant="bodyStrong">{`${ing.name} — ${item.label}`}</AppText>
+                  <AppText variant="bodyStrong" numberOfLines={2}>{ing.name}</AppText>
+                  <AppText variant="caption" color="textMuted">{item.label}</AppText>
                   <AppText variant="caption" color="textMuted" tabular>
                     {`Besoin réel : ${formatQuantity(item.needed, ing.canonicalUnit, ing)}${item.fromPantry > 0 ? ` (dont ${formatQuantity(item.fromPantry, ing.canonicalUnit, ing)} du garde-manger)` : ''}${item.leftover > 0 ? ` · reste ~${formatQuantity(item.leftover, ing.canonicalUnit, ing)}` : ''}`}
                   </AppText>
@@ -141,8 +145,10 @@ export default function ShoppingScreen() {
 const styles = StyleSheet.create({
   section: { gap: Spacing.sm },
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.sm, paddingLeft: Spacing.xs },
+  actions: { flexDirection: 'row', gap: Spacing.sm },
+  action: { flex: 1 },
   checked: { opacity: 0.55 },
   texts: { flex: 1, gap: 2 },
   addRow: { flexDirection: 'row', gap: Spacing.sm, alignItems: 'center' },
-  input: { ...Typography.body, flex: 1, borderWidth: 1, borderRadius: Radius.button, paddingHorizontal: Spacing.lg, minHeight: 44 },
+  input: { ...Typography.body, flex: 1, borderWidth: 1, borderRadius: Radius.button, paddingHorizontal: Spacing.lg, minHeight: 48 },
 });

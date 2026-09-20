@@ -5,6 +5,7 @@ import { candidatesForSlot, isRecipeEligible, totalMinutes } from '../../core/fi
 import { generateWeekPlan } from '../../core/planner';
 import type { CarbKind, Cuisine, FoodClass, MealType, ProteinKind, RecipeTag, Season, UserProfile } from '../../core/types';
 import { toCanonical } from '../../core/units';
+import { FOOD_IMAGES, INGREDIENT_IMAGE, RECIPE_IMAGE } from '../food-images';
 import { DATASET, DATASET_VERSION } from '../index';
 import { INGREDIENTS } from '../ingredients';
 import { RECIPES } from '../recipes';
@@ -143,6 +144,16 @@ describe('recettes', () => {
     // un ingrédient jamais utilisé reste disponible pour le garde-manger ; utilisé une seule fois, son reste est orphelin
     const orphans = perishables.filter((i) => uses.get(i.id) === 1).map((i) => i.id);
     expect(orphans).toEqual([]);
+  });
+
+  it('chaque ingrédient et chaque recette ont une image PNG (scripts/food-images.py)', () => {
+    const problems: string[] = [];
+    for (const i of INGREDIENTS) if (!(INGREDIENT_IMAGE[i.id] && FOOD_IMAGES[INGREDIENT_IMAGE[i.id]!])) problems.push(`ingrédient sans image : ${i.id}`);
+    for (const r of RECIPES) if (!(RECIPE_IMAGE[r.id] && FOOD_IMAGES[RECIPE_IMAGE[r.id]!])) problems.push(`recette sans image : ${r.id}`);
+    for (const id of Object.keys(INGREDIENT_IMAGE)) if (!INDEX.has(id)) problems.push(`image d’un ingrédient inconnu : ${id}`);
+    const recipeIds = new Set(RECIPES.map((r) => r.id));
+    for (const id of Object.keys(RECIPE_IMAGE)) if (!recipeIds.has(id)) problems.push(`image d’une recette inconnue : ${id}`);
+    expect(problems).toEqual([]);
   });
 
   it('jeu de données assemblé et génération réelle sans créneau vide', () => {

@@ -21,7 +21,7 @@ export function Stepper({ value, min, max, step = 1, onChange, label, unit }: St
   const canInc = value + step <= max;
   const round = (n: number) => Math.round(n * 100) / 100;
   return (
-    <View style={[styles.row, { borderColor: theme.border, backgroundColor: theme.surface }]} accessibilityLabel={label}>
+    <View style={[styles.row, { backgroundColor: theme.primary }]} accessibilityLabel={label}>
       <Pressable
         accessibilityRole="button"
         accessibilityLabel="Diminuer"
@@ -30,9 +30,9 @@ export function Stepper({ value, min, max, step = 1, onChange, label, unit }: St
         onPress={() => onChange(round(value - step))}
         style={[styles.button, !canDec ? styles.disabled : null]}
       >
-        <Ionicons name="remove" size={22} color={theme.primary} />
+        <Ionicons name="remove" size={22} color={theme.onPrimary} />
       </Pressable>
-      <AppText variant="h2" tabular style={styles.value}>
+      <AppText variant="h2" tabular color="onPrimary" style={styles.value}>
         {`${String(value).replace('.', ',')}${unit ? ` ${unit}` : ''}`}
       </AppText>
       <Pressable
@@ -43,7 +43,7 @@ export function Stepper({ value, min, max, step = 1, onChange, label, unit }: St
         onPress={() => onChange(round(value + step))}
         style={[styles.button, !canInc ? styles.disabled : null]}
       >
-        <Ionicons name="add" size={22} color={theme.primary} />
+        <Ionicons name="add" size={22} color={theme.onPrimary} />
       </Pressable>
     </View>
   );
@@ -54,8 +54,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     alignSelf: 'flex-start',
-    borderWidth: 1,
-    borderRadius: Radius.button,
+    borderRadius: Radius.pill,
     paddingHorizontal: Spacing.xs,
   },
   button: { width: TouchTarget, height: TouchTarget, alignItems: 'center', justifyContent: 'center' },

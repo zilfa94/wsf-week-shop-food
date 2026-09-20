@@ -1,6 +1,6 @@
 import { useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, EmptyState, Screen, SectionHeader } from '@/components/ui';
+import { AppText, Button, Card, EmptyState, FoodImage, Screen, SectionHeader } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { formatQuantity } from '@/core/units';
 import { formatDayMonth } from '@/core/date';
@@ -32,6 +32,7 @@ export default function PantryScreen() {
         const soon = alerts.includes(p);
         return (
           <Card key={`${p.ingredientId}-${p.addedAt}`} style={styles.row}>
+            <FoodImage ingredientId={p.ingredientId} size={48} tile={soon ? 'accent' : 'soft'} />
             <View style={styles.texts}>
               <AppText variant="bodyStrong">{ing?.name ?? p.ingredientId}</AppText>
               <AppText variant="caption" color={soon ? 'danger' : 'textMuted'} tabular>

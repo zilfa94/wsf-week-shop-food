@@ -3,9 +3,9 @@ import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { MealCard } from '@/components/plan/meal-card';
-import { ActionSheet, AppText, Button, Card, EmptyState, Screen, Snackbar, StatTile, type SheetAction } from '@/components/ui';
+import { ActionSheet, AppText, Button, Card, EmptyState, FoodImage, Screen, Snackbar, StatTile, type SheetAction } from '@/components/ui';
 import { Radius, Spacing } from '@/constants/theme';
-import { addDays, parseISO } from '@/core/date';
+import { addDays, daysBetween, parseISO } from '@/core/date';
 import { MONTH_SHORT_LABELS, WEEKDAY_LABELS } from '@/core/labels';
 import { incompatibleMeals, isPlanExpired, profileDrift } from '@/core/plan-edit';
 import type { Weekday } from '@/core/types';
@@ -56,6 +56,9 @@ export default function WeekScreen() {
   }
 
   const cooked = plan.meals.filter((m) => m.cooked).length;
+  // Plat mis en avant : le dîner du jour (ou du premier jour si la semaine n'a pas commencé / est passée).
+  const todayIndex = Math.max(0, Math.min(6, daysBetween(plan.weekStart, today)));
+  const todaysDinner = plan.meals.find((m) => m.slot.day === todayIndex && m.slot.type === 'dinner') ?? plan.meals.find((m) => m.slot.day === todayIndex);
   const toBuy = list ? list.items.filter((i) => i.packs > 0).length : 0;
   const balance = nutrition ? Math.round(nutrition.reduce((s, d) => s + d.score, 0) / nutrition.length) : 0;
 
@@ -96,7 +99,13 @@ export default function WeekScreen() {
   return (
     <View style={styles.root}>
       <Screen bottomInset={72}>
-        <AppText variant="display">{formatRange(plan.weekStart)}</AppText>
+        <View style={styles.hero}>
+          <View style={styles.heroText}>
+            <AppText variant="display">Qu’est-ce qu’on mange ?</AppText>
+            <AppText color="textMuted">{formatRange(plan.weekStart)}</AppText>
+          </View>
+          <FoodImage recipeId={todaysDinner?.recipeId ?? plan.meals[0]?.recipeId} size={84} tile="accent" />
+        </View>
 
         {expired ? (
           <Card tone="accent">
@@ -181,6 +190,8 @@ export default function WeekScreen() {
 
 const styles = StyleSheet.create({
   root: { flex: 1 },
+  hero: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
+  heroText: { flex: 1, gap: Spacing.xs },
   tiles: { flexDirection: 'row', gap: Spacing.sm },
   day: { gap: Spacing.sm },
   dayHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', minHeight: 44 },

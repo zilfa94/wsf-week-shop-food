@@ -1,6 +1,8 @@
 /**
- * Design system (docs/SPEC.md § 6) : palette clair/sombre, espacements, rayons, typographie.
- * Police système ; chiffres tabulaires pour les quantités et les prix.
+ * Design system (docs/SPEC.md § 6, refonte du 2026-09-20 sur le modèle « Food Delivery App UI/UX » fourni
+ * par le propriétaire) : fond gris très clair, cartes blanches très arrondies à ombre douce, accent jaune,
+ * titres gras anthracite, photos de produits. Police système arrondie ; chiffres tabulaires pour les
+ * quantités et les prix. Le texte sur jaune est anthracite (le blanc du modèle n'est pas lisible).
  */
 
 import '@/global.css';
@@ -29,42 +31,42 @@ export interface ThemeColors {
 
 export const Colors: Readonly<Record<'light' | 'dark', ThemeColors>> = {
   light: {
-    bg: '#F7F8F3',
+    bg: '#F4F5F7',
     surface: '#FFFFFF',
-    surfaceAlt: '#EEF2E6',
-    primary: '#2F6B3A',
-    primarySoft: '#DCEBDD',
-    onPrimary: '#FFFFFF',
-    accent: '#E8843A',
-    accentSoft: '#FBE7D6',
-    text: '#1E241C',
-    textMuted: '#6B7366',
-    border: '#DDE2D5',
-    success: '#3E8E52',
-    warning: '#D9A400',
-    danger: '#C7423B',
-    protein: '#4E7CB8',
-    carbs: '#D9A400',
-    fat: '#B8654E',
+    surfaceAlt: '#EEEFF3',
+    primary: '#FFC529',
+    primarySoft: '#FFF3C9',
+    onPrimary: '#26231C',
+    accent: '#FF6B4A',
+    accentSoft: '#FFE9E2',
+    text: '#2B2B2E',
+    textMuted: '#8C8C93',
+    border: '#ECECF0',
+    success: '#2FB673',
+    warning: '#F5A623',
+    danger: '#F04E45',
+    protein: '#5B8DEF',
+    carbs: '#FFC529',
+    fat: '#FF8A5B',
   },
   dark: {
-    bg: '#121611',
-    surface: '#1B211A',
-    surfaceAlt: '#232B22',
-    primary: '#7FBF8A',
-    primarySoft: '#24402A',
-    onPrimary: '#0F1A11',
-    accent: '#F2A063',
-    accentSoft: '#4A2E1A',
-    text: '#EDF0E8',
-    textMuted: '#A2AA9C',
-    border: '#2E372C',
-    success: '#8CD09A',
-    warning: '#F0C64A',
-    danger: '#EE8079',
-    protein: '#7FA6D8',
-    carbs: '#F0C64A',
-    fat: '#D48C74',
+    bg: '#121214',
+    surface: '#1C1C20',
+    surfaceAlt: '#26262C',
+    primary: '#FFC529',
+    primarySoft: '#3D3211',
+    onPrimary: '#1F1C14',
+    accent: '#FF7A5C',
+    accentSoft: '#4A2A22',
+    text: '#F2F2F5',
+    textMuted: '#9A9AA3',
+    border: '#2C2C33',
+    success: '#4FD08A',
+    warning: '#FFC04D',
+    danger: '#FF7169',
+    protein: '#7FA6F0',
+    carbs: '#FFD166',
+    fat: '#FFA07A',
   },
 };
 
@@ -103,20 +105,42 @@ export const Spacing = {
 } as const;
 
 export const Radius = {
-  card: 12,
-  button: 14,
-  chip: 20,
+  card: 22,
+  button: 18,
+  chip: 14,
+  image: 18,
   sheet: 28,
+  pill: 999,
 } as const;
+
+/** Ombres douces du modèle (cartes posées sur le fond gris) ; `elevation` pour Android. */
+export const Shadow = {
+  card: {
+    shadowColor: '#1B1B33',
+    shadowOpacity: 0.06,
+    shadowRadius: 18,
+    shadowOffset: { width: 0, height: 8 },
+    elevation: 3,
+  },
+  float: {
+    shadowColor: '#E0A800',
+    shadowOpacity: 0.35,
+    shadowRadius: 14,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 6,
+  },
+} as const;
+
+const rounded = Fonts?.rounded;
 
 /** Tailles / interlignes ; les quantités et prix ajoutent `fontVariant: ['tabular-nums']`. */
 export const Typography = {
-  display: { fontSize: 28, lineHeight: 34, fontWeight: '600' as const },
-  h1: { fontSize: 22, lineHeight: 28, fontWeight: '600' as const },
-  h2: { fontSize: 18, lineHeight: 24, fontWeight: '600' as const },
-  body: { fontSize: 16, lineHeight: 24, fontWeight: '400' as const },
-  bodyStrong: { fontSize: 16, lineHeight: 24, fontWeight: '500' as const },
-  caption: { fontSize: 13, lineHeight: 18, fontWeight: '400' as const },
+  display: { fontFamily: rounded, fontSize: 30, lineHeight: 36, fontWeight: '800' as const },
+  h1: { fontFamily: rounded, fontSize: 24, lineHeight: 30, fontWeight: '700' as const },
+  h2: { fontFamily: rounded, fontSize: 18, lineHeight: 24, fontWeight: '700' as const },
+  body: { fontFamily: rounded, fontSize: 16, lineHeight: 24, fontWeight: '400' as const },
+  bodyStrong: { fontFamily: rounded, fontSize: 16, lineHeight: 24, fontWeight: '600' as const },
+  caption: { fontFamily: rounded, fontSize: 13, lineHeight: 18, fontWeight: '400' as const },
 } as const;
 
 export type TypographyVariant = keyof typeof Typography;

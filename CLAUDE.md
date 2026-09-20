@@ -36,7 +36,8 @@ Interface et données **en français**. L'application **fonctionne hors-ligne** 
 |---|---|
 | Framework | Expo SDK 57, React Native 0.86, React 19, TypeScript strict (`tsconfig.json` étend `expo/tsconfig.base`) |
 | Navigation | `expo-router`, racine des routes dans **`src/app/`** (pas `app/`), onglets classiques `Tabs` d'`expo-router` (pas les `NativeTabs` instables du template) |
-| Alias | `@/*` → `./src/*`, `@/assets/*` → `./assets/*` |
+| Alias | `@/*` → `./src/*`, `@/assets/*` → `./assets/*` (déclaré **avant** `@/*` dans `tsconfig.json` : jest-expo convertit les `paths` dans l'ordre, sinon `@/assets/…` est cherché dans `src/`) |
+| Design (refonte 2026-09-20) | Modèle « Food Delivery App UI/UX » du propriétaire : fond gris clair, cartes blanches arrondies à ombre douce, accent jaune `#FFC529` avec texte anthracite, barre d'onglets à bouton central « + » ; images PNG des produits = Fluent Emoji 3D (MIT) via `scripts/food-images.py`. Détail dans `docs/SPEC.md` § 6. |
 | État | `zustand` (v5) + persistance `@react-native-async-storage/async-storage` |
 | Logique métier | Fonctions **pures** dans `src/core/`, sans import React/RN, testées avec `jest` |
 | Données | Locales, typées, en français : `src/data/ingredients.ts`, `src/data/recipes*.ts` (≥ 60 recettes) |
@@ -63,9 +64,10 @@ WSF-Week Shop Food/
 ├── tsconfig.json       strict + alias
 ├── expo-env.d.ts       GÉNÉRÉ, gitignoré, requis par tsc (voir § 4.3)
 ├── scripts/docs.mjs    outillage doc : bloc auto d'AVANCEMENT.md, garde-fous, hooks (§ 8)
+├── scripts/food-images.py  télécharge/réduit les PNG des produits (Fluent Emoji 3D, MIT) et génère src/data/food-images.ts (Python 3 + Pillow, à relancer seulement pour un nouvel ingrédient / recette)
 ├── .githooks/          pre-commit (activé par `npm install` via le script `prepare`)
 ├── .claude/settings.json  hook Stop de Claude Code (§ 8) — settings.local.json est personnel, gitignoré
-├── assets/             icône, splash, favicon
+├── assets/             icône, splash, favicon ; images/food/ = PNG des produits et plats (versionnés, LICENSE.md)
 ├── scraper/            projet Node SÉPARÉ (prix réels) : src/ (robots, contrat PriceFile), config/ingredients.json, tests node:test — exclu du tsc et du jest de l'app
 ├── .github/workflows/scrape.yml  cron quotidien : scraper → JSON dans la branche gh-pages (prices/)
 └── src/
