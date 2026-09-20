@@ -6,9 +6,9 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 12:11
-- Branche : `main` — dernier commit : c20ee9e « Sonde enseignes : publie le résultat sur gh-pages/probe (lisible sans session GitHub) » (2026-09-20)
-- Arbre de travail : 2 fichier(s) modifié(s) non commité(s)
+- Généré le : 2026-09-20 12:29
+- Branche : `main` — dernier commit : 20e4294 « Sonde GitHub : Leclerc, Intermarché et Carrefour bloquent (Datadome) → enseignes fermées ; workflow sur actions v5 et ubuntu-24.04 » (2026-09-20)
+- Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 20 fichier(s) · tests 141 cas dans 18 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 16 · composants 19 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
 <!-- auto:end -->
@@ -106,7 +106,7 @@
 - [x] Scraper de prix : socle + robot Lidl + workflow GitHub Actions (2026-09-20).
 - [x] Scraper : robot Auchan (drive par code postal, pages de rayon) — 2026-09-20.
 - [x] Sonde Leclerc / Intermarché / Carrefour depuis GitHub : Datadome (403) → enseignes fermées (2026-09-20).
-- [ ] Sonder Open Prices (Open Food Facts) comme source communautaire pour les enseignes fermées.
+- [x] Sonde Open Prices (2026-09-20) : API ouverte (`/api/v1/locations`, `/api/v1/prices?location_id=`), 7 291 magasins dont 650 en 75/92/93/94 et 73 avec ≥ 100 prix ; très dense à Clichy (E.Leclerc 21 488 prix, à jour au 14/09) et Paris, **maigre dans le 94** (Carrefour Arcueil 1 070 prix mais 2025, Monoprix Arcueil 784, Bio C’Bon Vincennes 865). Les filtres géographiques de l’API ne répondent pas (postcode ignoré, `__like` ville → 0) : il faudrait paginer les 73 pages de magasins et filtrer localement. Verdict : source honnête (magasin + date par prix) mais couverture inégale → **robot Open Prices en v2**, présenté comme « prix relevé par la communauté le … chez X », avec un rayon en km plutôt que le département.
 - [x] App : code postal, `services/prices.ts`, `core/prices.ts`, écran « Où acheter » (2026-09-20).
 - [ ] Intégration finale (layout/onglets, `package.json`), `tsc`, `jest`, `expo-doctor`, `expo export`.
 - [ ] Revue adversariale (bugs, cas limites : allergies, végan, 1 vs 6 personnes, arrondis, unités mixtes).
