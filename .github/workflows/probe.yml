@@ -1,0 +1,43 @@
+# Sonde d'accès aux sites des enseignes depuis un runner GitHub (réseau différent du PC du propriétaire).
+# Résultat dans le résumé du run : code HTTP, taille, redirection, premiers octets. Manuel, ou à chaque
+# modification de ce fichier. Aucune donnée n'est publiée ; l'agent est identifié comme pour le scraper.
+name: Sonde enseignes
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/probe.yml']
+
+jobs:
+  probe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Sonde
+        env:
+          UA: 'WSF-WeekShopFood-Bot/0.1 (+https://github.com/zilfa94/wsf-week-shop-food)'
+        run: |
+          {
+            echo '### Sonde enseignes (runner GitHub)'
+            echo
+            echo '| URL | Code | Taille | Redirection | Début |'
+            echo '|---|---|---|---|---|'
+          } >> "$GITHUB_STEP_SUMMARY"
+          for u in \
+            https://www.leclercdrive.fr/ \
+            https://fd12-courses.leclercdrive.fr/ \
+            https://www.e.leclerc/ \
+            https://www.intermarche.com/ \
+            https://www.intermarche.com/robots.txt \
+            https://www.carrefour.fr/ \
+            https://www.auchan.fr/ \
+            https://www.lidl.fr/ ; do
+            out=$(curl -sS -m 25 -A "$UA" -o /tmp/body -w '%{http_code}|%{size_download}|%{redirect_url}' "$u" 2>/tmp/err || true)
+            err=$(head -c 120 /tmp/err | tr '|\n' ' ')
+            code=$(echo "$out" | cut -d'|' -f1); size=$(echo "$out" | cut -d'|' -f2); redir=$(echo "$out" | cut -d'|' -f3)
+            head=$(head -c 160 /tmp/body 2>/dev/null | tr -d '\r' | tr '\n|`' '   ' | sed 's/<[^>]*>//g' | cut -c1-90)
+            echo "| $u | ${code:-—} $err | ${size:-—} | ${redir:-—} | ${head:-—} |" >> "$GITHUB_STEP_SUMMARY"
+            sleep 1
+          done
+          cat "$GITHUB_STEP_SUMMARY"
