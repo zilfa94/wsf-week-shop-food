@@ -6,8 +6,8 @@
 ## État instantané (automatique)
 
 <!-- auto:start — généré par `npm run docs:status`, NE PAS ÉDITER À LA MAIN -->
-- Généré le : 2026-09-20 01:45
-- Branche : `main` — dernier commit : fb8969b « Consigne la décision « prix réels par scraping » (CLAUDE.md § 1-2, SPEC § 1.4, AVANCEMENT) » (2026-09-20)
+- Généré le : 2026-09-20 01:54
+- Branche : `main` — dernier commit : 8ef4348 « CLAUDE.md : règle de crédibilité des prix réels (aucun prix inventé, source et date affichées) et dépôt GitHub du propriétaire » (2026-09-20)
 - Arbre de travail : 1 fichier(s) modifié(s) non commité(s)
 - Code : core 19 fichier(s) · tests 134 cas dans 17 fichier(s) · données ≈ 66 recette(s), ≈ 150 ingrédient(s) · routes 15 · composants 18 · store 6
 - Vérification : non exécutée (`npm run docs:verify`)
@@ -41,7 +41,12 @@
 - **En cours au moment de l'écriture** : rien ne tourne.
 
 **Prochaine étape (dans l'ordre)** — mode économe (CLAUDE.md § 0.1), détail dans `docs/SPEC.md` § 7.2 :
-1. **Prix réels par scraping (décidé le 2026-09-20, CLAUDE.md § 2, SPEC § 1.4).** Attendu du propriétaire : ses magasins (ville + enseignes) et un dépôt GitHub (compte gratuit ; l'agent ne crée pas de compte). Puis : `scraper/` avec robot Auchan (Playwright), fichier `prices/<store>.json`, workflow GitHub Actions, `Ingredient.priceQueries`, service + core `prices.ts` + écran « Où acheter ».
+1. **Prix réels par scraping (décidé le 2026-09-20, CLAUDE.md § 2, SPEC § 1.4).** Dépôt : `https://github.com/zilfa94/wsf-week-shop-food` (public, poussé le 2026-09-20). Code postal de référence : **94140** (Alfortville) ; l'app devra demander le **code postal** à l'onboarding (`AppSettings.postalCode`, étape Foyer) car les prix dépendent du magasin. Sondage d'accès : Leclerc ✅ (prix après choix du magasin), Auchan ✅ (idem), Lidl ✅ (chargement JS, prix nationaux sans choix de magasin), Carrefour ❌ (403 anti-bot), Intermarché à sonder. Plan d'exécution :
+   1. `scraper/` = projet Node séparé (`scraper/package.json` : `playwright`, `typescript`, `tsx`) — dépendances isolées de l'app (règle 7 respectée : rien dans le bundle). Config `scraper/config/stores.json` (code postal → magasins par enseigne). Format de sortie `prices/<enseigne>/<storeId>.json` : `{ retailer, storeId, storeName, postalCode, source: 'drive'|'site', scrapedAt, prices: [{ ingredientId, productName, price, unitPrice, unit ('kg'|'l'|'piece'), packSize, url }] }` + `prices/index.json` (liste des fichiers, dates).
+   2. Requêtes par ingrédient : `scraper/config/queries.json` (`ingredientId` → termes de recherche + règles de choix : produit le moins cher au kilo parmi les résultats pertinents, marque distributeur d'abord) — à générer par un agent Sonnet à partir de `src/data/ingredients.ts`.
+   3. Robots dans l'ordre : **Lidl** (le plus simple, sans magasin) → **Leclerc** (choix du magasin par code postal) → **Auchan** → sonde Intermarché. Chaque robot : navigateur identifié (`User-Agent` WSF), 1 requête/s, capture d'écran en cas d'échec, sortie partielle acceptée (un ingrédient sans résultat = absent, jamais estimé).
+   4. `.github/workflows/scrape.yml` : cron quotidien 05:00 UTC + déclenchement manuel, `npx playwright install --with-deps chromium`, commit des JSON dans la branche `gh-pages` (GitHub Pages activé sur cette branche par le propriétaire dans Settings → Pages).
+   5. App : `src/services/prices.ts` (fetch de `https://zilfa94.github.io/wsf-week-shop-food/prices/index.json`, cache AsyncStorage, horodatage, hors-ligne = dernier cache) ; core `src/core/prices.ts` pur (prix par magasin pour la liste, total par magasin, enseignes disponibles, articles sans prix) ; écran « Où acheter » depuis Courses (enseignes disponibles, total et date par magasin, articles couverts / non couverts ; jamais de prix inventé).
 2. Revue adversariale (SPEC § 7.4 : 1 vs 6 personnes, végétalien sans gluten, garde-manger périmé, swap de batch, cuisiné puis régénération, changement de profil, semaine terminée…) sous forme de tests supplémentaires ; icône / splash personnalisés.
 3. Intégration (`_layout.tsx`, `(tabs)/_layout.tsx`, `package.json` : `npx expo install --fix` pour les 4 paquets en retard de patch signalés par `expo-doctor` le 19/09), `typecheck`, `test`, `expo-doctor`, `expo export`, test Expo Go, mise à jour de ce fichier, commit.
 
