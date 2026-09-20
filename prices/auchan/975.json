@@ -4,7 +4,7 @@
  "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
  "postalCode": "94270",
  "source": "drive",
- "scrapedAt": "2026-09-20T06:34:26.545Z",
+ "scrapedAt": "2026-09-20T10:57:36.839Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -129,28 +129,6 @@
    "promo": true
   },
   {
-   "ingredientId": "tomate",
-   "productName": "Tomates cocktail en grappes",
-   "price": 3.99,
-   "unitPrice": 7.98,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/tomates-cocktail-en-grappes/pr-C1348051",
-   "promo": true
-  },
-  {
-   "ingredientId": "tomates_cerises",
-   "productName": "Tomates cocktail en grappes",
-   "price": 3.99,
-   "unitPrice": 7.98,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/tomates-cocktail-en-grappes/pr-C1348051",
-   "promo": true
-  },
-  {
    "ingredientId": "tomates_cerises",
    "productName": "Tomates cerises DUO",
    "price": 2.99,
@@ -159,17 +137,6 @@
    "packSize": 0.25,
    "packLabel": "250g",
    "url": "https://www.auchan.fr/tomates-cerises-duo/pr-C1350081",
-   "promo": true
-  },
-  {
-   "ingredientId": "tomates_cerises",
-   "productName": "Tomates cerises mélangées",
-   "price": 2.99,
-   "unitPrice": 7.48,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/tomates-cerises-melangees/pr-C1350790",
    "promo": true
   },
   {
@@ -700,16 +667,6 @@
    "promo": true
   },
   {
-   "ingredientId": "epinard",
-   "productName": "AUCHAN Mélange de jeunes pousses épinard et laitue",
-   "price": 1.65,
-   "unitPrice": 13.2,
-   "unit": "kg",
-   "packSize": 0.125,
-   "packLabel": "125g",
-   "url": "https://www.auchan.fr/auchan-melange-de-jeunes-pousses-epinard-et-laitue/pr-C1198897"
-  },
-  {
    "ingredientId": "salade",
    "productName": "AUCHAN Mâche",
    "price": 1.53,
@@ -761,16 +718,6 @@
   },
   {
    "ingredientId": "salade",
-   "productName": "AUCHAN BIO Mâche",
-   "price": 1.91,
-   "unitPrice": 19.1,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/auchan-bio-mache/pr-C1197117"
-  },
-  {
-   "ingredientId": "salade",
    "productName": "FLORETTE Laitue",
    "price": 2.22,
    "unitPrice": 11.1,
@@ -778,16 +725,6 @@
    "packSize": 0.2,
    "packLabel": "200g",
    "url": "https://www.auchan.fr/florette-laitue/pr-C1197603"
-  },
-  {
-   "ingredientId": "salade",
-   "productName": "AUCHAN Mélange de mâche et roquette",
-   "price": 2.05,
-   "unitPrice": 11.71,
-   "unit": "kg",
-   "packSize": 0.175,
-   "packLabel": "175g",
-   "url": "https://www.auchan.fr/auchan-melange-de-mache-et-roquette/pr-C1195837"
   },
   {
    "ingredientId": "salade",
@@ -818,16 +755,6 @@
    "packSize": 0.07,
    "packLabel": "70g",
    "url": "https://www.auchan.fr/auchan-coeur-de-laitue/pr-C1196601"
-  },
-  {
-   "ingredientId": "salade",
-   "productName": "BONDUELLE Salade feuille de chêne croquante et savoureuse",
-   "price": 1.49,
-   "unitPrice": 14.9,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/bonduelle-salade-feuille-de-chene-croquante-et-savoureuse/pr-C1774013"
   },
   {
    "ingredientId": "salade",
@@ -938,26 +865,6 @@
    "packSize": 0.145,
    "packLabel": "145g",
    "url": "https://www.auchan.fr/bonduelle-roquette/pr-C1195336"
-  },
-  {
-   "ingredientId": "salade",
-   "productName": "FLORETTE Mâche maxi format",
-   "price": 3.47,
-   "unitPrice": 12.85,
-   "unit": "kg",
-   "packSize": 0.27,
-   "packLabel": "270g",
-   "url": "https://www.auchan.fr/florette-mache-maxi-format/pr-C1186218"
-  },
-  {
-   "ingredientId": "salade",
-   "productName": "AUCHAN Salades et crudités",
-   "price": 1.95,
-   "unitPrice": 13,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/auchan-salades-et-crudites/pr-C1787614"
   },
   {
    "ingredientId": "banane",
@@ -1103,17 +1010,6 @@
    "promo": true
   },
   {
-   "ingredientId": "citron",
-   "productName": "CULTIVONS LE BON Citrons jaunes non traités après récolte",
-   "price": 3.29,
-   "unitPrice": 6.58,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/cultivons-le-bon-citrons-jaunes-non-traites-apres-recolte/pr-C1407584",
-   "promo": true
-  },
-  {
    "ingredientId": "citron_vert",
    "productName": "Citrons verts bio",
    "price": 4.49,
@@ -1206,16 +1102,6 @@
   },
   {
    "ingredientId": "oeuf",
-   "productName": "C’EST QUI LE PATRON ?! Oeufs de poules élevées en plein air",
-   "price": 1.99,
-   "unitPrice": 0.33,
-   "unit": "piece",
-   "packSize": 6,
-   "packLabel": "6 pièces",
-   "url": "https://www.auchan.fr/c-est-qui-le-patron-oeufs-de-poules-elevees-en-plein-air/pr-C1170507"
-  },
-  {
-   "ingredientId": "oeuf",
    "productName": "AUCHAN Oeufs de poules élevées au sol",
    "price": 1.46,
    "unitPrice": 0.24,
@@ -1263,16 +1149,6 @@
    "packSize": 6,
    "packLabel": "6 pièces",
    "url": "https://www.auchan.fr/la-nouvelle-agriculture-oeufs-de-poules-elevees-en-plein-air/pr-C1168727"
-  },
-  {
-   "ingredientId": "oeuf",
-   "productName": "MATINES Oeufs de poules élevées en plein air",
-   "price": 3.73,
-   "unitPrice": 0.31,
-   "unit": "piece",
-   "packSize": 12,
-   "packLabel": "12 pièces",
-   "url": "https://www.auchan.fr/matines-oeufs-de-poules-elevees-en-plein-air/pr-C1158331"
   },
   {
    "ingredientId": "oeuf",
@@ -1383,16 +1259,6 @@
    "packSize": 6,
    "packLabel": "6 pièces",
    "url": "https://www.auchan.fr/loue-oeufs-fermiers-label-rouge/pr-C1535144"
-  },
-  {
-   "ingredientId": "oeuf",
-   "productName": "DOUCE FRANCE Oeufs de poules élevées en plein air",
-   "price": 2.04,
-   "unitPrice": 0.34,
-   "unit": "piece",
-   "packSize": 6,
-   "packLabel": "6 pièces",
-   "url": "https://www.auchan.fr/douce-france-oeufs-de-poules-elevees-en-plein-air/pr-C1168331"
   },
   {
    "ingredientId": "oeuf",
@@ -1904,16 +1770,6 @@
    "packSize": 1,
    "packLabel": "1l",
    "url": "https://www.auchan.fr/auchan-lait-frais-entier/pr-C1791903"
-  },
-  {
-   "ingredientId": "lait",
-   "productName": "LACTEL Lait entier bio",
-   "price": 1.48,
-   "unitPrice": 2.96,
-   "unit": "l",
-   "packSize": 0.5,
-   "packLabel": "50cl",
-   "url": "https://www.auchan.fr/lactel-lait-entier-bio/pr-C1176868"
   },
   {
    "ingredientId": "lait",
@@ -3623,16 +3479,6 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "VRAI Fromage blanc au lait de chèvre bio",
-   "price": 3.38,
-   "unitPrice": 8.45,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/vrai-fromage-blanc-au-lait-de-chevre-bio/pr-C1176096"
-  },
-  {
-   "ingredientId": "fromage_blanc",
    "productName": "RIANS Faisselle",
    "price": 2.38,
    "unitPrice": 4.76,
@@ -4739,16 +4585,6 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "AMBROSI Mozzarella cerise",
-   "price": 2.44,
-   "unitPrice": 16.27,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/ambrosi-mozzarella-cerise/pr-C1195114"
-  },
-  {
-   "ingredientId": "mozzarella",
    "productName": "CASA AZZURRA Mozzarella di latte di bufala",
    "price": 3.89,
    "unitPrice": 12.97,
@@ -5284,17 +5120,6 @@
   },
   {
    "ingredientId": "poulet_blanc",
-   "productName": "LYRE CULTIVONS LE BON Filets de poulet fermier bio Filière Responsable",
-   "price": 35.85,
-   "unitPrice": 119.5,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "300g",
-   "url": "https://www.auchan.fr/lyre-cultivons-le-bon-filets-de-poulet-fermier-bio-filiere-responsable/pr-C1196710",
-   "promo": true
-  },
-  {
-   "ingredientId": "poulet_blanc",
    "productName": "LE GAULOIS Filet de poulet blanc",
    "price": 9.89,
    "unitPrice": 13.74,
@@ -5500,17 +5325,6 @@
    "packSize": 0.36,
    "packLabel": "360g",
    "url": "https://www.auchan.fr/le-gaulois-pilons-de-poulet-blanc/pr-C1836120",
-   "promo": true
-  },
-  {
-   "ingredientId": "poulet_cuisse",
-   "productName": "REGHALAL Cuisses de poulet blanc halal",
-   "price": 14.2,
-   "unitPrice": 4.73,
-   "unit": "kg",
-   "packSize": 3,
-   "packLabel": "3kg",
-   "url": "https://www.auchan.fr/reghalal-cuisses-de-poulet-blanc-halal/pr-C1192276",
    "promo": true
   },
   {
@@ -5779,17 +5593,6 @@
   },
   {
    "ingredientId": "boeuf_hache",
-   "productName": "AUCHAN Cheveux d’ange pur bœuf 5%MG",
-   "price": 7.09,
-   "unitPrice": 20.26,
-   "unit": "kg",
-   "packSize": 0.35,
-   "packLabel": "350g",
-   "url": "https://www.auchan.fr/auchan-cheveux-d-ange-pur-boeuf-5-mg/pr-C1769671",
-   "promo": true
-  },
-  {
-   "ingredientId": "boeuf_hache",
    "productName": "AUCHAN Cheveux d’ange pur bœuf 15%MG",
    "price": 12.6,
    "unitPrice": 18,
@@ -5988,17 +5791,6 @@
   },
   {
    "ingredientId": "boeuf_hache",
-   "productName": "AUCHAN Steak hachés pur bœuf, façon bouchère 5%",
-   "price": 5.39,
-   "unitPrice": 21.56,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/auchan-steak-haches-pur-boeuf-facon-bouchere-5/pr-C1769673",
-   "promo": true
-  },
-  {
-   "ingredientId": "boeuf_hache",
    "productName": "AUCHAN Steaks hachés pur bœuf façon bouchère 15%MG",
    "price": 9.79,
    "unitPrice": 19.58,
@@ -6186,17 +5978,6 @@
   },
   {
    "ingredientId": "saucisse",
-   "productName": "AUCHAN BIO Chair à saucisse",
-   "price": 4.59,
-   "unitPrice": 17.65,
-   "unit": "kg",
-   "packSize": 0.26,
-   "packLabel": "260g",
-   "url": "https://www.auchan.fr/auchan-bio-chair-a-saucisse/pr-C1165035",
-   "promo": true
-  },
-  {
-   "ingredientId": "saucisse",
    "productName": "PRIX BAS Chair à saucisse pur porc",
    "price": 2.99,
    "unitPrice": 7.48,
@@ -6225,17 +6006,6 @@
    "packSize": 0.33,
    "packLabel": "330g",
    "url": "https://www.auchan.fr/la-nouvelle-agriculture-chipolatas-superieures/pr-C1181861",
-   "promo": true
-  },
-  {
-   "ingredientId": "saucisse",
-   "productName": "SOCOPA Chipolatas aux herbes façon charcutière",
-   "price": 4.55,
-   "unitPrice": 13.79,
-   "unit": "kg",
-   "packSize": 0.33,
-   "packLabel": "330g",
-   "url": "https://www.auchan.fr/socopa-chipolatas-aux-herbes-facon-charcutiere/pr-C1198881",
    "promo": true
   },
   {
@@ -6313,17 +6083,6 @@
    "packSize": 0.66,
    "packLabel": "660 g",
    "url": "https://www.auchan.fr/auchan-chipolatas-superieures-aux-herbes/pr-C1778885",
-   "promo": true
-  },
-  {
-   "ingredientId": "saucisse",
-   "productName": "LE PORC DE NOS VILLAGES CULTIVONS LE BON Saucisse à base de viandes fraiches de porcs Label Rouge",
-   "price": 4.85,
-   "unitPrice": 12.13,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "4 saucisses",
-   "url": "https://www.auchan.fr/le-porc-de-nos-villages-cultivons-le-bon-saucisse-a-base-de-viandes-fraiches-de-porcs-label-rouge/pr-C1196301",
    "promo": true
   },
   {
@@ -6593,17 +6352,6 @@
    "packSize": 0.75,
    "packLabel": "750g",
    "url": "https://www.auchan.fr/auchan-le-poissonnier-cultivons-le-bon-paves-de-saumon/pr-C1396467",
-   "promo": true
-  },
-  {
-   "ingredientId": "saumon",
-   "productName": "AUCHAN LE POISSONNIER CULTIVONS LE BON Pavé de saumon d’Ecosse sans arêtes",
-   "price": 6.99,
-   "unitPrice": 27.96,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/auchan-le-poissonnier-cultivons-le-bon-pave-de-saumon-d-ecosse-sans-aretes/pr-C1348162",
    "promo": true
   },
   {
@@ -7408,16 +7156,6 @@
    "packSize": 0.14,
    "packLabel": "140g",
    "url": "https://www.auchan.fr/madrange-le-jambon-blanc-sans-couenne/pr-C1865881"
-  },
-  {
-   "ingredientId": "jambon_blanc",
-   "productName": "HERTA Le Bon Paris jambon cuit sans nitrite -25% de sel",
-   "price": 5.05,
-   "unitPrice": 18.04,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/herta-le-bon-paris-jambon-cuit-sans-nitrite-25-de-sel/pr-C1837428"
   },
   {
    "ingredientId": "jambon_blanc",
@@ -8753,16 +8491,6 @@
   },
   {
    "ingredientId": "riz",
-   "productName": "AUCHAN CULTIVONS LE BON Riz complet cultivé en France",
-   "price": 1.8,
-   "unitPrice": 3.6,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-riz-complet-cultive-en-france/pr-C1756669"
-  },
-  {
-   "ingredientId": "riz",
    "productName": "AUCHAN BIO Riz complet",
    "price": 1.99,
    "unitPrice": 3.98,
@@ -8823,27 +8551,6 @@
    "url": "https://www.auchan.fr/happy-bio-riz-thai-semi-complet/pr-C1240108"
   },
   {
-   "ingredientId": "champignon",
-   "productName": "AUCHAN Riz au champignons",
-   "price": 1.36,
-   "unitPrice": 5.44,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/auchan-riz-au-champignons/pr-C1774105"
-  },
-  {
-   "ingredientId": "champignon",
-   "productName": "LUSTUCRU Riz aux champignons de Paris sans colorant ni conservateur",
-   "price": 1.19,
-   "unitPrice": 5.41,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/lustucru-riz-aux-champignons-de-paris-sans-colorant-ni-conservateur/pr-C1888739",
-   "promo": true
-  },
-  {
    "ingredientId": "riz",
    "productName": "TIPIAK Riz parfumé aux épices douces",
    "price": 1.31,
@@ -8882,1080 +8589,6 @@
    "packSize": 0.24,
    "packLabel": "240g",
    "url": "https://www.auchan.fr/tipiak-riz-parfume-a-la-provencale/pr-C1870605"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots vert extra croquants",
-   "price": 4.89,
-   "unitPrice": 5.56,
-   "unit": "kg",
-   "packSize": 0.88,
-   "packLabel": "2x440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-vert-extra-croquants/pr-C1567399"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra fins",
-   "price": 1.29,
-   "unitPrice": 2.93,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins/pr-C1240557"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra fins",
-   "price": 1.29,
-   "unitPrice": 2.93,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins/pr-C1240557"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra fins cueillis et rangés main en bocal",
-   "price": 2.6,
-   "unitPrice": 7.54,
-   "unit": "kg",
-   "packSize": 0.345,
-   "packLabel": "345g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main-en-bocal/pr-C1241526"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra fins cueillis et rangés main en bocal",
-   "price": 2.6,
-   "unitPrice": 7.54,
-   "unit": "kg",
-   "packSize": 0.345,
-   "packLabel": "345g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main-en-bocal/pr-C1241526"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra-fins",
-   "price": 0.91,
-   "unitPrice": 4.14,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins/pr-C1240556"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra-fins",
-   "price": 0.91,
-   "unitPrice": 4.14,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins/pr-C1240556"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra fins en bocal",
-   "price": 2.55,
-   "unitPrice": 3.86,
-   "unit": "kg",
-   "packSize": 0.66,
-   "packLabel": "660g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-en-bocal/pr-C1231450"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra fins en bocal",
-   "price": 2.55,
-   "unitPrice": 3.86,
-   "unit": "kg",
-   "packSize": 0.66,
-   "packLabel": "660g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-en-bocal/pr-C1231450"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts coupés extra-fins",
-   "price": 2.14,
-   "unitPrice": 6.48,
-   "unit": "kg",
-   "packSize": 0.33,
-   "packLabel": "3x110g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-coupes-extra-fins/pr-C1231118"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "POUCE Haricots verts",
-   "price": 1.09,
-   "unitPrice": 2.48,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800g",
-   "url": "https://www.auchan.fr/pouce-haricots-verts/pr-C1820769"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Haricots verts extra fins origine France",
-   "price": 1.96,
-   "unitPrice": 4.45,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-origine-france/pr-C1848289"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "D’AUCY Haricots verts extra fins origine France",
-   "price": 1.96,
-   "unitPrice": 4.45,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-origine-france/pr-C1848289"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis rangés mains",
-   "price": 4.54,
-   "unitPrice": 10.32,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "2x220g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-ranges-mains/pr-C1238491",
-   "promo": true
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis rangés mains",
-   "price": 4.54,
-   "unitPrice": 10.32,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "2x220g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-ranges-mains/pr-C1238491",
-   "promo": true
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 3.43,
-   "unitPrice": 8.79,
-   "unit": "kg",
-   "packSize": 0.39,
-   "packLabel": "390g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1229860"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 3.43,
-   "unitPrice": 8.79,
-   "unit": "kg",
-   "packSize": 0.39,
-   "packLabel": "390g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1229860"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "JARDIN BIO ETIC Haricots verts extra-fins coupés en bocal",
-   "price": 2.81,
-   "unitPrice": 7.81,
-   "unit": "kg",
-   "packSize": 0.36,
-   "packLabel": "360g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-verts-extra-fins-coupes-en-bocal/pr-C1225467"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "JARDIN BIO ETIC Haricots verts extra-fins coupés en bocal",
-   "price": 2.81,
-   "unitPrice": 7.81,
-   "unit": "kg",
-   "packSize": 0.36,
-   "packLabel": "360g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-verts-extra-fins-coupes-en-bocal/pr-C1225467"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Haricots verts extra fins 100% cultivés France",
-   "price": 1.1,
-   "unitPrice": 5,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-100-cultives-france/pr-C1224652"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "D’AUCY Haricots verts extra fins 100% cultivés France",
-   "price": 1.1,
-   "unitPrice": 5,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-100-cultives-france/pr-C1224652"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 2.08,
-   "unitPrice": 4.73,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1857890"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 2.08,
-   "unitPrice": 4.73,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1857890"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 1.34,
-   "unitPrice": 12.18,
-   "unit": "kg",
-   "packSize": 0.11,
-   "packLabel": "110g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1231679"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 1.34,
-   "unitPrice": 12.18,
-   "unit": "kg",
-   "packSize": 0.11,
-   "packLabel": "110g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1231679"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "CASSEGRAIN Haricots verts et haricots beurre",
-   "price": 4.55,
-   "unitPrice": 10.34,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "2x220g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-et-haricots-beurre/pr-C1222665",
-   "promo": true
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 2.28,
-   "unitPrice": 10.36,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1237640"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "CASSEGRAIN Haricots verts extra fins cueillis main",
-   "price": 2.28,
-   "unitPrice": 10.36,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/cassegrain-haricots-verts-extra-fins-cueillis-main/pr-C1237640"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN BIO Haricots verts extras fins cueillis et rangés main en bocal",
-   "price": 2.3,
-   "unitPrice": 12.78,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180g",
-   "url": "https://www.auchan.fr/auchan-bio-haricots-verts-extras-fins-cueillis-et-ranges-main-en-bocal/pr-C1226806"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN BIO Haricots verts extras fins cueillis et rangés main en bocal",
-   "price": 2.3,
-   "unitPrice": 12.78,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180g",
-   "url": "https://www.auchan.fr/auchan-bio-haricots-verts-extras-fins-cueillis-et-ranges-main-en-bocal/pr-C1226806"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN BIO Haricots verts extra-fins",
-   "price": 2.34,
-   "unitPrice": 5.32,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-bio-haricots-verts-extra-fins/pr-C1223912"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN BIO Haricots verts extra-fins",
-   "price": 2.34,
-   "unitPrice": 5.32,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-bio-haricots-verts-extra-fins/pr-C1223912"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Duo de haricots verts et beurre extra-fins origine France",
-   "price": 1.15,
-   "unitPrice": 5.23,
-   "unit": "kg",
-   "packSize": 0.225,
-   "packLabel": "225g",
-   "url": "https://www.auchan.fr/auchan-duo-de-haricots-verts-et-beurre-extra-fins-origine-france/pr-C1231191"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts extra croquants cuits à la vapeur",
-   "price": 2.49,
-   "unitPrice": 5.66,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-croquants-cuits-a-la-vapeur/pr-C1458654"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "JARDIN BIO ETIC Haricots verts extra fins rangés à la main sans sel ajouté bio en bocal",
-   "price": 4.33,
-   "unitPrice": 12.55,
-   "unit": "kg",
-   "packSize": 0.345,
-   "packLabel": "345g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-verts-extra-fins-ranges-a-la-main-sans-sel-ajoute-bio-en-bocal/pr-C1231942"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "JARDIN BIO ETIC Haricots verts extra fins rangés à la main sans sel ajouté bio en bocal",
-   "price": 4.33,
-   "unitPrice": 12.55,
-   "unit": "kg",
-   "packSize": 0.345,
-   "packLabel": "345g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-verts-extra-fins-ranges-a-la-main-sans-sel-ajoute-bio-en-bocal/pr-C1231942"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra-fins vapeur",
-   "price": 2.4,
-   "unitPrice": 5.27,
-   "unit": "kg",
-   "packSize": 0.455,
-   "packLabel": "455g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-vapeur/pr-C1340397"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra-fins vapeur",
-   "price": 2.4,
-   "unitPrice": 5.27,
-   "unit": "kg",
-   "packSize": 0.455,
-   "packLabel": "455g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-vapeur/pr-C1340397"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Haricots verts extra fins 100% cultivés France",
-   "price": 2.49,
-   "unitPrice": 7.55,
-   "unit": "kg",
-   "packSize": 0.33,
-   "packLabel": "3x110g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-100-cultives-france/pr-C1241449"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "D’AUCY Haricots verts extra fins 100% cultivés France",
-   "price": 2.49,
-   "unitPrice": 7.55,
-   "unit": "kg",
-   "packSize": 0.33,
-   "packLabel": "3x110g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-100-cultives-france/pr-C1241449"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts très fins",
-   "price": 1.22,
-   "unitPrice": 1.53,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-tres-fins/pr-C1241423"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts très fins",
-   "price": 1.22,
-   "unitPrice": 1.53,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-tres-fins/pr-C1241423"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Bien cultivés Haricots verts en bocal",
-   "price": 2.39,
-   "unitPrice": 8.24,
-   "unit": "kg",
-   "packSize": 0.29,
-   "packLabel": "290g",
-   "url": "https://www.auchan.fr/d-aucy-bien-cultives-haricots-verts-en-bocal/pr-C1444250",
-   "promo": true
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "POUCE Haricots verts fins",
-   "price": 1.09,
-   "unitPrice": 2.48,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/pouce-haricots-verts-fins/pr-C1229472"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "POUCE Haricots verts fins",
-   "price": 1.09,
-   "unitPrice": 2.48,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/pouce-haricots-verts-fins/pr-C1229472"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 4.12,
-   "unitPrice": 4.68,
-   "unit": "kg",
-   "packSize": 0.88,
-   "packLabel": "2x440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1865823"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 4.12,
-   "unitPrice": 4.68,
-   "unit": "kg",
-   "packSize": 0.88,
-   "packLabel": "2x440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1865823"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Haricots verts extra fins cueillis et rangés main en bocal",
-   "price": 1.75,
-   "unitPrice": 6.25,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-cueillis-et-ranges-main-en-bocal/pr-C1233552"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "D’AUCY Haricots verts extra fins cueillis et rangés main en bocal",
-   "price": 1.75,
-   "unitPrice": 6.25,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-cueillis-et-ranges-main-en-bocal/pr-C1233552"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts sans résidu de pesticides",
-   "price": 3.06,
-   "unitPrice": 6.95,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-sans-residu-de-pesticides/pr-C1713397"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "Haricots verts fins",
-   "price": 1.15,
-   "unitPrice": 2.61,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/haricots-verts-fins/pr-C1186627"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "Haricots verts fins",
-   "price": 1.15,
-   "unitPrice": 2.61,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/haricots-verts-fins/pr-C1186627"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Duo de haricots verts et haricots beurre 100% cultivés France",
-   "price": 2.44,
-   "unitPrice": 5.36,
-   "unit": "kg",
-   "packSize": 0.455,
-   "packLabel": "455g",
-   "url": "https://www.auchan.fr/d-aucy-duo-de-haricots-verts-et-haricots-beurre-100-cultives-france/pr-C1233554"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts extra croquants cuits à la vapeur",
-   "price": 1.76,
-   "unitPrice": 8,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-croquants-cuits-a-la-vapeur/pr-C1536088"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra fins cueillis et rangés main",
-   "price": 2.76,
-   "unitPrice": 6.27,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main/pr-C1241528"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra fins cueillis et rangés main",
-   "price": 2.76,
-   "unitPrice": 6.27,
-   "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "440g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main/pr-C1241528"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "D’AUCY Haricots verts extra fins sélection d’ailleurs en bocal",
-   "price": 2.68,
-   "unitPrice": 14.89,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-selection-d-ailleurs-en-bocal/pr-C1233553"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "D’AUCY Haricots verts extra fins sélection d’ailleurs en bocal",
-   "price": 2.68,
-   "unitPrice": 14.89,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-verts-extra-fins-selection-d-ailleurs-en-bocal/pr-C1233553"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "AUCHAN Haricots verts extra-fins cueillis et rangés main",
-   "price": 2.03,
-   "unitPrice": 9.23,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main/pr-C1241527"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "AUCHAN Haricots verts extra-fins cueillis et rangés main",
-   "price": 2.03,
-   "unitPrice": 9.23,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/auchan-haricots-verts-extra-fins-cueillis-et-ranges-main/pr-C1241527"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Duo d’haricots verts et haricots beurre extra fins",
-   "price": 2.53,
-   "unitPrice": 5.56,
-   "unit": "kg",
-   "packSize": 0.455,
-   "packLabel": "455g",
-   "url": "https://www.auchan.fr/bonduelle-duo-d-haricots-verts-et-haricots-beurre-extra-fins/pr-C1866604"
-  },
-  {
-   "ingredientId": "tomate",
-   "productName": "AUCHAN Haricots blancs à la tomate",
-   "price": 0.81,
-   "unitPrice": 2.03,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/auchan-haricots-blancs-a-la-tomate/pr-C1241416"
-  },
-  {
-   "ingredientId": "tomate",
-   "productName": "AUCHAN Haricots blancs préparés à la tomate",
-   "price": 1.16,
-   "unitPrice": 1.45,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800g",
-   "url": "https://www.auchan.fr/auchan-haricots-blancs-prepares-a-la-tomate/pr-C1229290"
-  },
-  {
-   "ingredientId": "tomate",
-   "productName": "POUCE Haricots blancs à la tomate",
-   "price": 0.95,
-   "unitPrice": 1.19,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800g",
-   "url": "https://www.auchan.fr/pouce-haricots-blancs-a-la-tomate/pr-C1711196"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "AUCHAN Haricots rouges",
-   "price": 1.46,
-   "unitPrice": 2.92,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1158229"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "AUCHAN Haricots rouges",
-   "price": 0.89,
-   "unitPrice": 3.56,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1158228"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "D’AUCY Haricots rouges",
-   "price": 1.36,
-   "unitPrice": 5.44,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-rouges/pr-C1310576"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "JARDIN BIO ETIC Haricots rouges à la sauge en bocal",
-   "price": 3.71,
-   "unitPrice": 9.39,
-   "unit": "kg",
-   "packSize": 0.395,
-   "packLabel": "395g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-rouges-a-la-sauge-en-bocal/pr-C1233508"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "AUCHAN Haricots rouges",
-   "price": 2.3,
-   "unitPrice": 6.13,
-   "unit": "kg",
-   "packSize": 0.375,
-   "packLabel": "3x125g",
-   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1162142"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "BONDUELLE Haricots rouges cuits dans très peu de jus",
-   "price": 1.35,
-   "unitPrice": 5.4,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-rouges-cuits-dans-tres-peu-de-jus/pr-C1163469"
-  },
-  {
-   "ingredientId": "haricots_rouges",
-   "productName": "D’AUCY Haricots rouges en conserve",
-   "price": 2.17,
-   "unitPrice": 4.34,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/d-aucy-haricots-rouges-en-conserve/pr-C1165502"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes très fin à l’étuvée",
-   "price": 1.47,
-   "unitPrice": 2.77,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-tres-fin-a-l-etuvee/pr-C1820773"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes extra-fins",
-   "price": 1.78,
-   "unitPrice": 4.56,
-   "unit": "kg",
-   "packSize": 0.39,
-   "packLabel": "3x130g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-extra-fins/pr-C1241427"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "CASSEGRAIN Petits pois carottes tendres et fondants",
-   "price": 2.03,
-   "unitPrice": 7.66,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/cassegrain-petits-pois-carottes-tendres-et-fondants/pr-C1237641"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "CASSEGRAIN Petits pois carottes tendres et fondants",
-   "price": 2.98,
-   "unitPrice": 6.41,
-   "unit": "kg",
-   "packSize": 0.465,
-   "packLabel": "465g",
-   "url": "https://www.auchan.fr/cassegrain-petits-pois-carottes-tendres-et-fondants/pr-C1240893"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN Petits pois à l’étuvée extra-fins",
-   "price": 1.06,
-   "unitPrice": 3.79,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-a-l-etuvee-extra-fins/pr-C1241434"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN Petits pois extra-fins",
-   "price": 1.68,
-   "unitPrice": 4,
-   "unit": "kg",
-   "packSize": 0.42,
-   "packLabel": "3x140g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-extra-fins/pr-C1241432"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "JARDIN BIO ETIC Petits pois très fins et carottes en bocal",
-   "price": 2.78,
-   "unitPrice": 6.62,
-   "unit": "kg",
-   "packSize": 0.42,
-   "packLabel": "420g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-petits-pois-tres-fins-et-carottes-en-bocal/pr-C1225436"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN BIO Petits pois sans sucres ajoutés",
-   "price": 1.52,
-   "unitPrice": 5.74,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/auchan-bio-petits-pois-sans-sucres-ajoutes/pr-C1226276"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "CASSEGRAIN Petits pois tendres et fondants",
-   "price": 1.43,
-   "unitPrice": 10.21,
-   "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/cassegrain-petits-pois-tendres-et-fondants/pr-C1166380"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "D’AUCY Carottes en rondelles 100% cultivées en France",
-   "price": 1.1,
-   "unitPrice": 4.58,
-   "unit": "kg",
-   "packSize": 0.24,
-   "packLabel": "240g",
-   "url": "https://www.auchan.fr/d-aucy-carottes-en-rondelles-100-cultivees-en-france/pr-C1241447"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes à l’étuvée extra-fins",
-   "price": 0.99,
-   "unitPrice": 3.67,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-a-l-etuvee-extra-fins/pr-C1241429"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "BONDUELLE Petits pois doux et carottes extra fondants",
-   "price": 4.69,
-   "unitPrice": 4.42,
-   "unit": "kg",
-   "packSize": 1.06,
-   "packLabel": "2x530g",
-   "url": "https://www.auchan.fr/bonduelle-petits-pois-doux-et-carottes-extra-fondants/pr-C1567400"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "POUCE Petits pois à l’étuvée très fins",
-   "price": 1.15,
-   "unitPrice": 2.05,
-   "unit": "kg",
-   "packSize": 0.56,
-   "packLabel": "560g",
-   "url": "https://www.auchan.fr/pouce-petits-pois-a-l-etuvee-tres-fins/pr-C1240344"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "D’AUCY Petits pois carottes extra fins 100% cultivés en France",
-   "price": 1.22,
-   "unitPrice": 4.6,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/d-aucy-petits-pois-carottes-extra-fins-100-cultives-en-france/pr-C1226404"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes à l’étuvée extra fins en bocal",
-   "price": 1.7,
-   "unitPrice": 4.05,
-   "unit": "kg",
-   "packSize": 0.42,
-   "packLabel": "420g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-a-l-etuvee-extra-fins-en-bocal/pr-C1235066"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes à l’étuvée extra-fins",
-   "price": 1.3,
-   "unitPrice": 2.45,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-a-l-etuvee-extra-fins/pr-C1241428"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Carottes extra-fines",
-   "price": 0.93,
-   "unitPrice": 2.33,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/auchan-carottes-extra-fines/pr-C1241009"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "D’AUCY Petits pois carottes extra fins 100% cultivés en France",
-   "price": 1.75,
-   "unitPrice": 3.3,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/d-aucy-petits-pois-carottes-extra-fins-100-cultives-en-france/pr-C1241450"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "D’AUCY Petits pois extra fins 100% cultivés en France",
-   "price": 1.83,
-   "unitPrice": 3.27,
-   "unit": "kg",
-   "packSize": 0.56,
-   "packLabel": "560g",
-   "url": "https://www.auchan.fr/d-aucy-petits-pois-extra-fins-100-cultives-en-france/pr-C1241451"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN Petits pois à l’étuvée extra-fins",
-   "price": 1.38,
-   "unitPrice": 2.46,
-   "unit": "kg",
-   "packSize": 0.56,
-   "packLabel": "560g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-a-l-etuvee-extra-fins/pr-C1241433"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN Petits pois extra fins à l’étuvée, en bocal",
-   "price": 1.52,
-   "unitPrice": 3.38,
-   "unit": "kg",
-   "packSize": 0.42,
-   "packLabel": "420g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-extra-fins-a-l-etuvee-en-bocal/pr-C1227926"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "JARDIN BIO ETIC Petits pois extra-fins en bocal",
-   "price": 3.55,
-   "unitPrice": 7.98,
-   "unit": "kg",
-   "packSize": 0.445,
-   "packLabel": "445g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-petits-pois-extra-fins-en-bocal/pr-C1226455"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "BONDUELLE Petits pois doux et carottes extra fondants cuits à la vapeur",
-   "price": 2.35,
-   "unitPrice": 4.43,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/bonduelle-petits-pois-doux-et-carottes-extra-fondants-cuits-a-la-vapeur/pr-C1458653"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "POUCE Petits pois et jeunes carottes à l’étuvée",
-   "price": 1.08,
-   "unitPrice": 2.04,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/pouce-petits-pois-et-jeunes-carottes-a-l-etuvee/pr-C1240269"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "CASSEGRAIN Petits pois carottes tendres et fondants",
-   "price": 1.3,
-   "unitPrice": 10,
-   "unit": "kg",
-   "packSize": 0.13,
-   "packLabel": "130g",
-   "url": "https://www.auchan.fr/cassegrain-petits-pois-carottes-tendres-et-fondants/pr-C1240891"
-  },
-  {
-   "ingredientId": "haricot_vert",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 1.3,
-   "unitPrice": 5.91,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1857894"
-  },
-  {
-   "ingredientId": "haricots_verts_surgeles",
-   "productName": "BONDUELLE Haricots verts extra fins",
-   "price": 1.3,
-   "unitPrice": 5.91,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/bonduelle-haricots-verts-extra-fins/pr-C1857894"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "BONDUELLE Petits pois carottes tendres et fondants",
-   "price": 1.97,
-   "unitPrice": 3.72,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/bonduelle-petits-pois-carottes-tendres-et-fondants/pr-C1857944"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "BONDUELLE Petits pois tendres & fondants cultivés en France",
-   "price": 4.93,
-   "unitPrice": 4.4,
-   "unit": "kg",
-   "packSize": 1.06,
-   "packLabel": "2x530g",
-   "url": "https://www.auchan.fr/bonduelle-petits-pois-tendres-fondants-cultives-en-france/pr-C1866045"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Carottes extra fines",
-   "price": 1.8,
-   "unitPrice": 3.4,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530g",
-   "url": "https://www.auchan.fr/auchan-carottes-extra-fines/pr-C1241010"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "AUCHAN Petits pois à la vapeur",
-   "price": 1.36,
-   "unitPrice": 5.13,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-a-la-vapeur/pr-C1340396"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "JARDIN BIO ETIC Petits pois et jeunes carottes en bocal",
-   "price": 2.56,
-   "unitPrice": 11.91,
-   "unit": "kg",
-   "packSize": 0.215,
-   "packLabel": "215g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-petits-pois-et-jeunes-carottes-en-bocal/pr-C1236852"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "JARDIN BIO ETIC Petits pois extra-fins sans sucres ajoutés en bocal",
-   "price": 2.46,
-   "unitPrice": 10.7,
-   "unit": "kg",
-   "packSize": 0.23,
-   "packLabel": "230g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-petits-pois-extra-fins-sans-sucres-ajoutes-en-bocal/pr-C1226978"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "AUCHAN Petits pois carottes vapeur",
-   "price": 1.52,
-   "unitPrice": 5.07,
-   "unit": "kg",
-   "packSize": 0.265,
-   "packLabel": "265g",
-   "url": "https://www.auchan.fr/auchan-petits-pois-carottes-vapeur/pr-C1340417"
-  },
-  {
-   "ingredientId": "petits_pois_surgeles",
-   "productName": "D’AUCY Petits pois bien cultivés en bocal",
-   "price": 2.11,
-   "unitPrice": 8.44,
-   "unit": "kg",
-   "packSize": 0.38,
-   "packLabel": "380g",
-   "url": "https://www.auchan.fr/d-aucy-petits-pois-bien-cultives-en-bocal/pr-C1444252"
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "D&L Petits pois carottes bien cultivés en bocal",
-   "price": 2.04,
-   "unitPrice": 8.16,
-   "unit": "kg",
-   "packSize": 0.38,
-   "packLabel": "380g",
-   "url": "https://www.auchan.fr/d-l-petits-pois-carottes-bien-cultives-en-bocal/pr-C1444251"
   },
   {
    "ingredientId": "thon_boite",
@@ -10623,16 +9256,6 @@
    "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel/pr-C1738839"
   },
   {
-   "ingredientId": "citron_vert",
-   "productName": "PETIT NAVIRE Et Hop! Effiloché de thon MSC au citron vert et basilic",
-   "price": 3.05,
-   "unitPrice": 23.46,
-   "unit": "kg",
-   "packSize": 0.13,
-   "packLabel": "130g",
-   "url": "https://www.auchan.fr/petit-navire-et-hop-effiloche-de-thon-msc-au-citron-vert-et-basilic/pr-C1832913"
-  },
-  {
    "ingredientId": "olives",
    "productName": "AUCHAN Olives vertes dénoyautées",
    "price": 1.27,
@@ -10773,16 +9396,6 @@
    "url": "https://www.auchan.fr/auchan-olives-noires-a-la-grecque/pr-C1226218"
   },
   {
-   "ingredientId": "poivron",
-   "productName": "AUCHAN Olives vertes Manzanilla farcies aux poivrons",
-   "price": 2.06,
-   "unitPrice": 13.73,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/auchan-olives-vertes-manzanilla-farcies-aux-poivrons/pr-C1225502"
-  },
-  {
    "ingredientId": "olives",
    "productName": "AUCHAN Olives noires en rondelles",
    "price": 1.43,
@@ -10791,16 +9404,6 @@
    "packSize": 0.105,
    "packLabel": "105g",
    "url": "https://www.auchan.fr/auchan-olives-noires-en-rondelles/pr-C1235045"
-  },
-  {
-   "ingredientId": "citron",
-   "productName": "AUCHAN Olives vertes à la farce de citron",
-   "price": 1.7,
-   "unitPrice": 11.33,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/auchan-olives-vertes-a-la-farce-de-citron/pr-C1231359"
   },
   {
    "ingredientId": "olives",
@@ -10843,16 +9446,6 @@
    "url": "https://www.auchan.fr/auchan-terroir-olives-noires-de-nyons/pr-C1810369"
   },
   {
-   "ingredientId": "ail",
-   "productName": "TRAMIER Olives apéro à l’ail dénoyautées",
-   "price": 2.7,
-   "unitPrice": 18,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/tramier-olives-apero-a-l-ail-denoyautees/pr-C1231777"
-  },
-  {
    "ingredientId": "olives",
    "productName": "POUCE Olives vertes entières",
    "price": 1.05,
@@ -10883,16 +9476,6 @@
    "url": "https://www.auchan.fr/pouce-olives-noires-a-la-grecque-sachet-refermable/pr-C1224978"
   },
   {
-   "ingredientId": "ail",
-   "productName": "LE BRIN D’OLIVIER Olives vertes dénoyautées ail basilic",
-   "price": 4.28,
-   "unitPrice": 12.23,
-   "unit": "kg",
-   "packSize": 0.73,
-   "packLabel": "730g",
-   "url": "https://www.auchan.fr/le-brin-d-olivier-olives-vertes-denoyautees-ail-basilic/pr-C1849594"
-  },
-  {
    "ingredientId": "olives",
    "productName": "POUCE Olives vertes entières",
    "price": 1.05,
@@ -10901,16 +9484,6 @@
    "packSize": 0.65,
    "packLabel": "650g",
    "url": "https://www.auchan.fr/pouce-olives-vertes-entieres/pr-C1224979"
-  },
-  {
-   "ingredientId": "poivron",
-   "productName": "POUCE Olives farcies aux poivrons",
-   "price": 1.05,
-   "unitPrice": 3.75,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/pouce-olives-farcies-aux-poivrons/pr-C1835697"
   },
   {
    "ingredientId": "olives",
@@ -10973,26 +9546,6 @@
    "url": "https://www.auchan.fr/tramier-olives-vertes-denoyautees-sans-residus-de-pesticides/pr-C1480762"
   },
   {
-   "ingredientId": "poivron",
-   "productName": "LE BRIN D’OLIVIER Olives vertes dénoyautées farcies poivrons piments manzanilla",
-   "price": 4.26,
-   "unitPrice": 12.17,
-   "unit": "kg",
-   "packSize": 0.73,
-   "packLabel": "730g",
-   "url": "https://www.auchan.fr/le-brin-d-olivier-olives-vertes-denoyautees-farcies-poivrons-piments-manzanilla/pr-C1849593"
-  },
-  {
-   "ingredientId": "poivron",
-   "productName": "LA CIOTA Olives à la farce de poivrons",
-   "price": 2.1,
-   "unitPrice": 17.5,
-   "unit": "kg",
-   "packSize": 0.12,
-   "packLabel": "120g",
-   "url": "https://www.auchan.fr/la-ciota-olives-a-la-farce-de-poivrons/pr-C1241108"
-  },
-  {
    "ingredientId": "olives",
    "productName": "LA CIOTA Olives à la farce de poivrons",
    "price": 2.1,
@@ -11043,16 +9596,6 @@
    "url": "https://www.auchan.fr/le-brin-d-olivier-olives-vertes-picholine/pr-C1408814"
   },
   {
-   "ingredientId": "citron",
-   "productName": "LA CIOTA Olives à la face de citron",
-   "price": 2.09,
-   "unitPrice": 17.42,
-   "unit": "kg",
-   "packSize": 0.12,
-   "packLabel": "120g",
-   "url": "https://www.auchan.fr/la-ciota-olives-a-la-face-de-citron/pr-C1241106"
-  },
-  {
    "ingredientId": "olives",
    "productName": "LA CIOTA Olives à la face de citron",
    "price": 2.09,
@@ -11093,26 +9636,6 @@
    "url": "https://www.auchan.fr/aicha-olives-vertes-cassees-piquantes/pr-C1225090"
   },
   {
-   "ingredientId": "poivron",
-   "productName": "TRAMIER Olives vertes bio farcies au poivron en bocal",
-   "price": 4.35,
-   "unitPrice": 29,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/tramier-olives-vertes-bio-farcies-au-poivron-en-bocal/pr-C1224493"
-  },
-  {
-   "ingredientId": "citron",
-   "productName": "TRAMIER Olives vertes Recettes du marché Marinade citron et thym",
-   "price": 3.13,
-   "unitPrice": 20.87,
-   "unit": "kg",
-   "packSize": 0.15,
-   "packLabel": "150g",
-   "url": "https://www.auchan.fr/tramier-olives-vertes-recettes-du-marche-marinade-citron-et-thym/pr-C1791860"
-  },
-  {
    "ingredientId": "olives",
    "productName": "TRAMIER Olives vertes Recettes du marché Marinade citron et thym",
    "price": 3.13,
@@ -11121,16 +9644,6 @@
    "packSize": 0.15,
    "packLabel": "150g",
    "url": "https://www.auchan.fr/tramier-olives-vertes-recettes-du-marche-marinade-citron-et-thym/pr-C1791860"
-  },
-  {
-   "ingredientId": "citron",
-   "productName": "MONTPERAL Olives vertes à la farce de citron",
-   "price": 1.57,
-   "unitPrice": 13.08,
-   "unit": "kg",
-   "packSize": 0.28,
-   "packLabel": "280g",
-   "url": "https://www.auchan.fr/montperal-olives-vertes-a-la-farce-de-citron/pr-C1229830"
   },
   {
    "ingredientId": "olives",
@@ -11151,16 +9664,6 @@
    "packSize": 0.22,
    "packLabel": "220g",
    "url": "https://www.auchan.fr/le-brin-d-olivier-olives-vertes-lucques/pr-C1824771"
-  },
-  {
-   "ingredientId": "piment_en_poudre",
-   "productName": "LA CIOTA Olives vertes à la farce de Piment d’Espelette",
-   "price": 2.09,
-   "unitPrice": 17.42,
-   "unit": "kg",
-   "packSize": 0.12,
-   "packLabel": "120g",
-   "url": "https://www.auchan.fr/la-ciota-olives-vertes-a-la-farce-de-piment-d-espelette/pr-C1227584"
   },
   {
    "ingredientId": "olives",
@@ -13307,135 +11810,384 @@
    "promo": true
   },
   {
-   "ingredientId": "saumon",
-   "productName": "Portions de saumon Atlantique avec peau",
-   "price": 4.95,
-   "unitPrice": 22.5,
+   "ingredientId": "mais_boite",
+   "productName": "AUCHAN BIO Maïs doux en grains sans sucres ajoutés",
+   "price": 1.7,
+   "unitPrice": 6.07,
    "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/portions-de-saumon-atlantique-avec-peau/pr-C1871874",
-   "promo": true
+   "packSize": 0.28,
+   "packLabel": "2x140g",
+   "url": "https://www.auchan.fr/auchan-bio-mais-doux-en-grains-sans-sucres-ajoutes/pr-C1223598"
   },
   {
-   "ingredientId": "thon_frais",
-   "productName": "Steak de thon Albacore",
-   "price": 8.5,
-   "unitPrice": 17,
+   "ingredientId": "mais_boite",
+   "productName": "POUCE Maïs doux en grains sous vide",
+   "price": 0.67,
+   "unitPrice": 2.35,
+   "unit": "kg",
+   "packSize": 0.285,
+   "packLabel": "285g",
+   "url": "https://www.auchan.fr/pouce-mais-doux-en-grains-sous-vide/pr-C1241095"
+  },
+  {
+   "ingredientId": "mais_boite",
+   "productName": "AUCHAN BIO Mais doux en grains sans sucres ajoutés",
+   "price": 1.2,
+   "unitPrice": 4.21,
+   "unit": "kg",
+   "packSize": 0.285,
+   "packLabel": "285g",
+   "url": "https://www.auchan.fr/auchan-bio-mais-doux-en-grains-sans-sucres-ajoutes/pr-C1226080"
+  },
+  {
+   "ingredientId": "mais_boite",
+   "productName": "AUCHAN BIO Maïs doux sans sucres ajoutés en bocal",
+   "price": 1.76,
+   "unitPrice": 7.65,
+   "unit": "kg",
+   "packSize": 0.23,
+   "packLabel": "230g",
+   "url": "https://www.auchan.fr/auchan-bio-mais-doux-sans-sucres-ajoutes-en-bocal/pr-C1234901"
+  },
+  {
+   "ingredientId": "mais_boite",
+   "productName": "JARDIN BIO ETIC Maïs doux croquant en bocal",
+   "price": 2.26,
+   "unitPrice": 9.83,
+   "unit": "kg",
+   "packSize": 0.23,
+   "packLabel": "230g",
+   "url": "https://www.auchan.fr/jardin-bio-etic-mais-doux-croquant-en-bocal/pr-C1227117"
+  },
+  {
+   "ingredientId": "mais_boite",
+   "productName": "GEANT VERT Maïs en grains sans sel",
+   "price": 2.88,
+   "unitPrice": 6.86,
+   "unit": "kg",
+   "packSize": 0.42,
+   "packLabel": "420g",
+   "url": "https://www.auchan.fr/geant-vert-mais-en-grains-sans-sel/pr-C1236644"
+  },
+  {
+   "ingredientId": "haricots_rouges",
+   "productName": "AUCHAN Haricots rouges",
+   "price": 1.46,
+   "unitPrice": 2.92,
    "unit": "kg",
    "packSize": 0.5,
    "packLabel": "500g",
-   "url": "https://www.auchan.fr/steak-de-thon-albacore/pr-C1628627"
+   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1158229"
   },
   {
-   "ingredientId": "saumon",
-   "productName": "POUCE Pavé de saumon sauvage sans arêtes",
-   "price": 3.9,
-   "unitPrice": 15.6,
+   "ingredientId": "haricots_rouges",
+   "productName": "AUCHAN Haricots rouges",
+   "price": 0.89,
+   "unitPrice": 3.56,
    "unit": "kg",
    "packSize": 0.25,
    "packLabel": "250g",
-   "url": "https://www.auchan.fr/pouce-pave-de-saumon-sauvage-sans-aretes/pr-C1176784"
+   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1158228"
   },
   {
-   "ingredientId": "thon_frais",
-   "productName": "Steak de thon germon sans arête poisson sauvage cru",
-   "price": 4.95,
-   "unitPrice": 19.8,
+   "ingredientId": "haricots_rouges",
+   "productName": "D’AUCY Haricots rouges",
+   "price": 1.36,
+   "unitPrice": 5.44,
    "unit": "kg",
    "packSize": 0.25,
    "packLabel": "250g",
-   "url": "https://www.auchan.fr/steak-de-thon-germon-sans-arete-poisson-sauvage-cru/pr-C1173484"
+   "url": "https://www.auchan.fr/d-aucy-haricots-rouges/pr-C1310576"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "Filets de cabillaud sans peau sans arête",
-   "price": 19.99,
-   "unitPrice": 19.99,
+   "ingredientId": "haricots_rouges",
+   "productName": "JARDIN BIO ETIC Haricots rouges à la sauge en bocal",
+   "price": 3.71,
+   "unitPrice": 9.39,
    "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1kg",
-   "url": "https://www.auchan.fr/filets-de-cabillaud-sans-peau-sans-arete/pr-C1174056"
+   "packSize": 0.395,
+   "packLabel": "395g",
+   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-rouges-a-la-sauge-en-bocal/pr-C1233508"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "FINDUS Dos de cabillaud sans arête MSC",
-   "price": 13.84,
-   "unitPrice": 31.45,
+   "ingredientId": "haricots_rouges",
+   "productName": "AUCHAN Haricots rouges",
+   "price": 2.3,
+   "unitPrice": 6.13,
    "unit": "kg",
-   "packSize": 0.44,
-   "packLabel": "4x110g",
-   "url": "https://www.auchan.fr/findus-dos-de-cabillaud-sans-arete-msc/pr-C1174412"
+   "packSize": 0.375,
+   "packLabel": "3x125g",
+   "url": "https://www.auchan.fr/auchan-haricots-rouges/pr-C1162142"
   },
   {
-   "ingredientId": "saumon",
-   "productName": "Pavés de saumon bio Atlantique avec peau sans arêtes",
-   "price": 8.99,
-   "unitPrice": 35.96,
+   "ingredientId": "haricots_rouges",
+   "productName": "D’AUCY Haricots rouges en conserve",
+   "price": 2.17,
+   "unitPrice": 4.34,
    "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/paves-de-saumon-bio-atlantique-avec-peau-sans-aretes/pr-C1174944"
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/d-aucy-haricots-rouges-en-conserve/pr-C1165502"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "COMPAGNIE DES PECHES CULTIVONS LE BON Dos de cabillaud sans arête",
-   "price": 18.9,
-   "unitPrice": 25.2,
+   "ingredientId": "tomates_pelees",
+   "productName": "JARDIN BIO ETIC Tomates pelées entières sans sel ajouté bio",
+   "price": 1.29,
+   "unitPrice": 5.38,
    "unit": "kg",
-   "packSize": 0.75,
-   "packLabel": "750g",
-   "url": "https://www.auchan.fr/compagnie-des-peches-cultivons-le-bon-dos-de-cabillaud-sans-arete/pr-C1714685"
+   "packSize": 0.24,
+   "packLabel": "240g",
+   "url": "https://www.auchan.fr/jardin-bio-etic-tomates-pelees-entieres-sans-sel-ajoute-bio/pr-C1601695"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "AUCHAN Filet de cabillaud",
-   "price": 16.99,
-   "unitPrice": 21.24,
+   "ingredientId": "tomates_pelees",
+   "productName": "MUTTI Tomates pelées zéro résidu de pesticides",
+   "price": 1.52,
+   "unitPrice": 5.85,
    "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800g",
-   "url": "https://www.auchan.fr/auchan-filet-de-cabillaud/pr-C1178329"
+   "packSize": 0.26,
+   "packLabel": "260g",
+   "url": "https://www.auchan.fr/mutti-tomates-pelees-zero-residu-de-pesticides/pr-C1788162"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "COMPAGNIE DES PECHES CULTIVONS LE BON Dos de cabillaud sauvage sans arête filière responsable",
-   "price": 12.9,
-   "unitPrice": 28.67,
+   "ingredientId": "tomates_pelees",
+   "productName": "D’AUCY Tomates pelées entières",
+   "price": 1.87,
+   "unitPrice": 3.93,
    "unit": "kg",
-   "packSize": 0.45,
-   "packLabel": "450g",
-   "url": "https://www.auchan.fr/compagnie-des-peches-cultivons-le-bon-dos-de-cabillaud-sauvage-sans-arete-filiere-responsable/pr-C1172317"
+   "packSize": 0.476,
+   "packLabel": "476g",
+   "url": "https://www.auchan.fr/d-aucy-tomates-pelees-entieres/pr-C1241446"
   },
   {
-   "ingredientId": "cabillaud",
-   "productName": "AUCHAN Filet de cabillaud",
-   "price": 12.9,
-   "unitPrice": 16.13,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800g",
-   "url": "https://www.auchan.fr/auchan-filet-de-cabillaud/pr-C1172790"
-  },
-  {
-   "ingredientId": "cabillaud",
-   "productName": "COMPAGNIE DES PECHES Filet de cabillaud avec peau",
-   "price": 8.9,
-   "unitPrice": 14.83,
-   "unit": "kg",
-   "packSize": 0.6,
-   "packLabel": "600g",
-   "url": "https://www.auchan.fr/compagnie-des-peches-filet-de-cabillaud-avec-peau/pr-C1837811"
-  },
-  {
-   "ingredientId": "saumon",
-   "productName": "Tranches de chair de saumon Atlantique",
-   "price": 6.9,
-   "unitPrice": 17.25,
+   "ingredientId": "tomates_pelees",
+   "productName": "AUCHAN Pulpe de tomates concassées",
+   "price": 1.28,
+   "unitPrice": 3.2,
    "unit": "kg",
    "packSize": 0.4,
    "packLabel": "400g",
-   "url": "https://www.auchan.fr/tranches-de-chair-de-saumon-atlantique/pr-C1831741"
+   "url": "https://www.auchan.fr/auchan-pulpe-de-tomates-concassees/pr-C1239117"
+  },
+  {
+   "ingredientId": "tomates_pelees",
+   "productName": "AUCHAN Pulpe de tomate en boîte",
+   "price": 2.16,
+   "unitPrice": 1.8,
+   "unit": "kg",
+   "packSize": 1.2,
+   "packLabel": "3x400g",
+   "url": "https://www.auchan.fr/auchan-pulpe-de-tomate-en-boite/pr-C1239118"
+  },
+  {
+   "ingredientId": "tomates_pelees",
+   "productName": "CIRIO Pulpe de tomates en dés",
+   "price": 1.16,
+   "unitPrice": 2.9,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/cirio-pulpe-de-tomates-en-des/pr-C1447547"
+  },
+  {
+   "ingredientId": "tomates_pelees",
+   "productName": "CIRIO Pulpe de tomates en dés de Toscane",
+   "price": 3.21,
+   "unitPrice": 2.68,
+   "unit": "kg",
+   "packSize": 1.2,
+   "packLabel": "3x400g",
+   "url": "https://www.auchan.fr/cirio-pulpe-de-tomates-en-des-de-toscane/pr-C1304448"
+  },
+  {
+   "ingredientId": "tomates_pelees",
+   "productName": "AUCHAN BIO Pulpe de tomates",
+   "price": 0.99,
+   "unitPrice": 2.48,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/auchan-bio-pulpe-de-tomates/pr-C1239306"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "AUCHAN Pois chiches",
+   "price": 0.79,
+   "unitPrice": 1.98,
+   "unit": "kg",
+   "packSize": 0.265,
+   "packLabel": "265g",
+   "url": "https://www.auchan.fr/auchan-pois-chiches/pr-C1240740"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "D’AUCY Le bio engagé pois chiches sans sel ajouté",
+   "price": 3.22,
+   "unitPrice": 9.47,
+   "unit": "kg",
+   "packSize": 0.34,
+   "packLabel": "340g",
+   "url": "https://www.auchan.fr/d-aucy-le-bio-engage-pois-chiches-sans-sel-ajoute/pr-C1223552"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "AUCHAN Pois chiches",
+   "price": 1.83,
+   "unitPrice": 3.05,
+   "unit": "kg",
+   "packSize": 0.375,
+   "packLabel": "3x125g",
+   "url": "https://www.auchan.fr/auchan-pois-chiches/pr-C1228811"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "D’AUCY Pois chiches cuisson vapeur",
+   "price": 1.86,
+   "unitPrice": 7.15,
+   "unit": "kg",
+   "packSize": 0.26,
+   "packLabel": "2x130g",
+   "url": "https://www.auchan.fr/d-aucy-pois-chiches-cuisson-vapeur/pr-C1306724"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "AUCHAN Pois chiches",
+   "price": 1.26,
+   "unitPrice": 2.38,
+   "unit": "kg",
+   "packSize": 0.53,
+   "packLabel": "530g",
+   "url": "https://www.auchan.fr/auchan-pois-chiches/pr-C1240739"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "SOUTHERN PRIDE Pois chiches",
+   "price": 0.99,
+   "unitPrice": 2.48,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/southern-pride-pois-chiches/pr-C1179536"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "COMPAL Pois chiches cuits",
+   "price": 2.19,
+   "unitPrice": 2.59,
+   "unit": "kg",
+   "packSize": 0.845,
+   "packLabel": "845g",
+   "url": "https://www.auchan.fr/compal-pois-chiches-cuits/pr-C1227044"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "BONDUELLE Pois chiches cuits dans très peu de jus",
+   "price": 1.39,
+   "unitPrice": 5.25,
+   "unit": "kg",
+   "packSize": 0.265,
+   "packLabel": "265g",
+   "url": "https://www.auchan.fr/bonduelle-pois-chiches-cuits-dans-tres-peu-de-jus/pr-C1235524"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "BONDUELLE Pois chiches façon couscous",
+   "price": 1.87,
+   "unitPrice": 4.68,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/bonduelle-pois-chiches-facon-couscous/pr-C1869030"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "BONDUELLE Pois chiches façon couscous",
+   "price": 3.22,
+   "unitPrice": 4.03,
+   "unit": "kg",
+   "packSize": 0.8,
+   "packLabel": "800g",
+   "url": "https://www.auchan.fr/bonduelle-pois-chiches-facon-couscous/pr-C1857901"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "JARDIN BIO ETIC Pois chiches au naturel en bocal",
+   "price": 2.57,
+   "unitPrice": 6.12,
+   "unit": "kg",
+   "packSize": 0.42,
+   "packLabel": "420g",
+   "url": "https://www.auchan.fr/jardin-bio-etic-pois-chiches-au-naturel-en-bocal/pr-C1426619"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "POUCE Pois chiches",
+   "price": 0.61,
+   "unitPrice": 2.3,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/pouce-pois-chiches/pr-C1832029"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "OLABE Pois chiches en bocal",
+   "price": 1.65,
+   "unitPrice": 4.13,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/olabe-pois-chiches-en-bocal/pr-C1229512"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "D’AUCY Pois chiches Bien cultivés sans conservateur en bocal",
+   "price": 2.14,
+   "unitPrice": 8.56,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/d-aucy-pois-chiches-bien-cultives-sans-conservateur-en-bocal/pr-C1422117"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "SAMIA Pois chiches gros calibre prêt à l’emploi",
+   "price": 2.02,
+   "unitPrice": 5.05,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/samia-pois-chiches-gros-calibre-pret-a-l-emploi/pr-C1226411"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "POTAGERS DE GASCOGNE Pois chiche bio",
+   "price": 2.18,
+   "unitPrice": 10.14,
+   "unit": "kg",
+   "packSize": 0.33,
+   "packLabel": "330g",
+   "url": "https://www.auchan.fr/potagers-de-gascogne-pois-chiche-bio/pr-C1600814"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "TARTINES & POTAGER Pois chiches bio",
+   "price": 2.94,
+   "unitPrice": 6.84,
+   "unit": "kg",
+   "packSize": 0.31,
+   "packLabel": "310g",
+   "url": "https://www.auchan.fr/tartines-potager-pois-chiches-bio/pr-C1233097"
+  },
+  {
+   "ingredientId": "pois_chiches",
+   "productName": "SAMIA Pois chiches gros calibre prêt à l’emploi",
+   "price": 3.11,
+   "unitPrice": 3.89,
+   "unit": "kg",
+   "packSize": 0.8,
+   "packLabel": "800g",
+   "url": "https://www.auchan.fr/samia-pois-chiches-gros-calibre-pret-a-l-emploi/pr-C1226410"
   }
  ]
 }
