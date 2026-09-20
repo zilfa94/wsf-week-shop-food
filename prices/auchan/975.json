@@ -4,7 +4,7 @@
  "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
  "postalCode": "94270",
  "source": "drive",
- "scrapedAt": "2026-09-20T10:57:36.839Z",
+ "scrapedAt": "2026-09-20T11:13:40.191Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -1930,16 +1930,6 @@
    "packSize": 0.25,
    "packLabel": "250g",
    "url": "https://www.auchan.fr/auchan-beurre-demi-sel-80-5-mg/pr-C1177951"
-  },
-  {
-   "ingredientId": "beurre",
-   "productName": "PAYSAN BRETON Beurre moulé demi-sel 80%MG",
-   "price": 3.37,
-   "unitPrice": 13.48,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/paysan-breton-beurre-moule-demi-sel-80-mg/pr-C1175011"
   },
   {
    "ingredientId": "beurre",

@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T10:59:20.029Z",
+ "generatedAt": "2026-09-20T11:15:26.429Z",
  "scraperVersion": "0.1.0",
  "files": [
   {
@@ -8,9 +8,9 @@
    "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
    "postalCode": "94270",
    "source": "drive",
-   "scrapedAt": "2026-09-20T10:57:36.839Z",
+   "scrapedAt": "2026-09-20T11:13:40.191Z",
    "path": "auchan/975.json",
-   "count": 1190,
+   "count": 1189,
    "ingredients": 64
   },
   {
@@ -19,7 +19,7 @@
    "storeName": "Lidl — offres en supermarché (France entière)",
    "postalCode": "",
    "source": "store",
-   "scrapedAt": "2026-09-20T10:56:03.486Z",
+   "scrapedAt": "2026-09-20T11:12:05.980Z",
    "path": "lidl/national.json",
    "count": 27,
    "ingredients": 18
