@@ -1,13 +1,7 @@
 {
-  "_doc": "Magasins suivis par le scraper, par enseigne. Les identifiants viennent des sites des enseignes (Auchan : `POST /journey/update` puis `GET /journey/locator/search`). Ajouter un magasin = ajouter une entrée ; l'app filtre par code postal (même département en repli).",
-  "auchan": [
-    {
-      "storeId": "975",
-      "storeName": "Auchan Drive Hypermarché Kremlin-Bicêtre",
-      "postalCode": "94270",
-      "sellerId": "0eff75ff-b966-4146-9457-dc82809a2a72",
-      "storeReference": "975",
-      "search": { "zipcode": "94140", "city": "Alfortville", "latitude": 48.805162, "longitude": 2.419711 }
-    }
-  ]
+  "auchan": {
+    "postalCodes": ["94140"],
+    "kinds": ["DRIVE", "PICKUP_POINT"],
+    "maxDistanceKm": 20
+  }
 }

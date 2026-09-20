@@ -33,6 +33,7 @@ export function writeIndex(outDir: string, now: Date = new Date()): PriceIndex {
       storeId: file.storeId,
       storeName: file.storeName,
       postalCode: file.postalCode,
+      ...(file.serves ? { serves: file.serves } : {}),
       source: file.source,
       scrapedAt: file.scrapedAt,
       path: relative(outDir, path).replace(/\\/g, '/'),

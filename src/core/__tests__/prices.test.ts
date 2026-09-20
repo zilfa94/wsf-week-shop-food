@@ -1,5 +1,5 @@
 import { indexIngredients } from '../dataset';
-import { bestLine, compareStores, fileMatchesPostalCode, isEntryValid, packSizeCanonical, priceAgeDays, quoteStore, unitPriceCanonical } from '../prices';
+import { bestLine, compareStores, fileMatchesPostalCode, isEntryValid, packSizeCanonical, priceAgeDays, quoteStore, selectFilesForPostalCode, servedDistanceKm, unitPriceCanonical } from '../prices';
 import { buildShoppingList } from '../shopping';
 import type { PriceEntry, PriceFile, ShoppingList } from '../types';
 import { makeMeal, makePlan } from './fixtures/plans';
@@ -141,6 +141,32 @@ describe('devis par magasin', () => {
     expect(quotes[0]!.uncovered).toContain('tomate');
     expect(quotes[0]!.uncovered).not.toContain('oeuf');
     expect(quotes[1]!.coveredCount).toBe(1);
+    expect(quotes[0]!.distanceKm).toBeUndefined();
+  });
+
+  it('un magasin qui dessert le code postal (le plus proche, avec sa distance) remplace le repli par département pour son enseigne', () => {
+    const l = list();
+    const prices = [entry({ ingredientId: 'pates_penne', price: 1.2, unit: 'kg', packSize: 0.5 })];
+    const national = file({ prices });
+    const nearest = file({ retailer: 'auchan', storeId: '6453', storeName: 'Auchan Click&Collect Maisons-Alfort', postalCode: '94700', source: 'drive', prices, serves: [{ postalCode: '94140', distanceKm: 2 }] });
+    const drive = file({ retailer: 'auchan', storeId: '975', storeName: 'Auchan Drive Kremlin-Bicêtre', postalCode: '94270', source: 'drive', prices, serves: [{ postalCode: '94140', distanceKm: 4.7 }] });
+    const farther = file({ retailer: 'auchan', storeId: '999', storeName: 'Auchan Drive Créteil', postalCode: '94000', source: 'drive', prices, serves: [{ postalCode: '94000', distanceKm: 1 }] });
+    const otherRetailer = file({ retailer: 'leclerc', storeId: 'creteil', storeName: 'Leclerc Drive Créteil', postalCode: '94000', source: 'drive', prices });
+
+    expect(selectFilesForPostalCode([national, nearest, drive, farther, otherRetailer], '94140').map((f) => f.storeId)).toEqual(['national', '6453', '975', 'creteil']);
+    // Sans magasin desservant explicitement 94000 chez Leclerc, le repli par département reste.
+    expect(selectFilesForPostalCode([national, farther, otherRetailer], '94140').map((f) => f.storeId)).toEqual(['national', '999', 'creteil']);
+    expect(selectFilesForPostalCode([national, nearest, drive], '').map((f) => f.storeId)).toEqual(['national']);
+    expect(servedDistanceKm(nearest, '94140')).toBe(2);
+    expect(servedDistanceKm(nearest, '94000')).toBeUndefined();
+
+    const quotes = compareStores(l, [national, nearest, drive, farther, otherRetailer], INGREDIENTS, '94140', WEEK);
+    expect(quotes.map((q) => [q.storeId, q.distanceKm])).toEqual([
+      ['6453', 2],
+      ['975', 4.7],
+      ['creteil', undefined],
+      ['national', undefined],
+    ]);
   });
 
   it('un article entièrement couvert par le garde-manger n’est pas devisé', () => {

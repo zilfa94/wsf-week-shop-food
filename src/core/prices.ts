@@ -25,6 +25,8 @@ export interface StoreQuote {
   readonly storeId: string;
   readonly storeName: string;
   readonly postalCode: string;
+  /** Distance depuis la commune de l'utilisateur, quand le robot a choisi ce magasin pour son code postal. */
+  readonly distanceKm?: number;
   readonly source: PriceFile['source'];
   readonly scrapedAt: string;
   readonly lines: readonly QuoteLine[];
@@ -144,11 +146,33 @@ export function quoteStore(list: ShoppingList, file: PriceFile, ingredients: Rea
   };
 }
 
-/** Un fichier concerne l'utilisateur s'il est national ou rattaché à son code postal (même département en repli). */
-export function fileMatchesPostalCode(file: PriceFile | { postalCode: string }, postalCode: string): boolean {
+/** Descripteur commun aux fichiers de prix et aux entrées d'index pour le rattachement géographique. */
+export type PriceScope = Pick<PriceFile, 'retailer' | 'postalCode' | 'serves'>;
+
+/** Distance du magasin quand le robot l'a choisi comme le plus proche pour ce code postal ; sinon `undefined`. */
+export function servedDistanceKm(file: PriceScope, postalCode: string): number | undefined {
+  return file.serves?.find((s) => s.postalCode === postalCode)?.distanceKm;
+}
+
+/**
+ * Un fichier concerne l'utilisateur s'il est national, s'il dessert son code postal (magasin le plus proche
+ * choisi par le robot) ou, en repli, s'il est dans son département.
+ */
+export function fileMatchesPostalCode(file: PriceScope, postalCode: string): boolean {
   if (!file.postalCode) return true;
   if (!postalCode) return false;
+  if (servedDistanceKm(file, postalCode) !== undefined) return true;
   return file.postalCode === postalCode || file.postalCode.slice(0, 2) === postalCode.slice(0, 2);
+}
+
+/**
+ * Fichiers à retenir pour un code postal : pour une enseigne qui a des magasins desservant explicitement
+ * ce code postal, seuls ceux-là ; sinon le repli par département. Les fichiers nationaux sont toujours gardés.
+ */
+export function selectFilesForPostalCode<T extends PriceScope>(files: readonly T[], postalCode: string): T[] {
+  const matching = files.filter((f) => fileMatchesPostalCode(f, postalCode));
+  const retailersServed = new Set(matching.filter((f) => servedDistanceKm(f, postalCode) !== undefined).map((f) => f.retailer));
+  return matching.filter((f) => !f.postalCode || !retailersServed.has(f.retailer) || servedDistanceKm(f, postalCode) !== undefined);
 }
 
 /**
@@ -162,9 +186,8 @@ export function compareStores(
   postalCode: string,
   weekStart: ISODate,
 ): StoreQuote[] {
-  return files
-    .filter((f) => fileMatchesPostalCode(f, postalCode))
-    .map((f) => quoteStore(list, f, ingredients, weekStart))
+  return selectFilesForPostalCode(files, postalCode)
+    .map((f) => ({ ...quoteStore(list, f, ingredients, weekStart), distanceKm: servedDistanceKm(f, postalCode) }))
     .filter((q) => q.coveredCount > 0)
     .sort((a, b) => b.coverage - a.coverage || a.total - b.total || a.storeName.localeCompare(b.storeName));
 }

@@ -35,6 +35,12 @@ export interface PriceEntry {
   promo?: boolean;
 }
 
+/** Code postal de la configuration pour lequel ce magasin est le plus proche de son type, et à quelle distance. */
+export interface ServedPostalCode {
+  postalCode: string;
+  distanceKm: number;
+}
+
 export interface PriceFile {
   retailer: Retailer;
   /** Identifiant stable du magasin, ou `national` quand l'enseigne publie un prix unique. */
@@ -43,6 +49,8 @@ export interface PriceFile {
   storeName: string;
   /** Code postal du magasin ; vide pour une portée nationale. */
   postalCode: string;
+  /** Codes postaux desservis (magasin le plus proche pour chacun) ; absent pour une portée nationale. */
+  serves?: ServedPostalCode[];
   source: PriceSource;
   /** Instant du relevé (ISO 8601). */
   scrapedAt: string;
@@ -56,6 +64,7 @@ export interface PriceIndexEntry {
   storeId: string;
   storeName: string;
   postalCode: string;
+  serves?: ServedPostalCode[];
   source: PriceSource;
   scrapedAt: string;
   /** Chemin relatif au dossier `prices/`. */

@@ -601,6 +601,12 @@ export interface PriceEntry {
   readonly promo?: boolean;
 }
 
+/** Code postal (liste du robot) pour lequel ce magasin est le plus proche de son type, et à quelle distance. */
+export interface ServedPostalCode {
+  readonly postalCode: string;
+  readonly distanceKm: number;
+}
+
 export interface PriceFile {
   readonly retailer: string;
   /** `national` quand l'enseigne publie un prix unique. */
@@ -608,6 +614,8 @@ export interface PriceFile {
   readonly storeName: string;
   /** Vide pour une portée nationale. */
   readonly postalCode: string;
+  /** Codes postaux desservis ; absent pour une portée nationale. */
+  readonly serves?: readonly ServedPostalCode[];
   readonly source: PriceSource;
   /** Instant du relevé (ISO 8601). */
   readonly scrapedAt: string;
@@ -620,6 +628,7 @@ export interface PriceIndexEntry {
   readonly storeId: string;
   readonly storeName: string;
   readonly postalCode: string;
+  readonly serves?: readonly ServedPostalCode[];
   readonly source: PriceSource;
   readonly scrapedAt: string;
   /** Chemin relatif au dossier `prices/`. */

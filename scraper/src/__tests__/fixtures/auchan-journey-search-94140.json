@@ -1,0 +1,595 @@
+{
+ "offeringContexts": [
+  {
+   "seller": {
+    "id": "0eff75ff-b966-4146-9457-dc82809a2a72",
+    "name": "Auchan Drive Hypermarché KREMLIN BICETRE",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "975"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "DRIVE",
+    "enabled": true,
+    "address": {
+     "zipcode": "94270",
+     "city": "LE KREMLIN-BICÊTRE"
+    },
+    "distance": {
+     "value": 4.32,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "0b4dc85e-2353-4a2b-b43a-9695d51ae12b",
+    "name": "Auchan Drive Supermarché Saint Maur des Fossés",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6192"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "DRIVE",
+    "enabled": true,
+    "address": {
+     "zipcode": "94100",
+     "city": "SAINT-MAUR-DES-FOSSÉS"
+    },
+    "distance": {
+     "value": 5.87,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "ec72b16b-1273-4af4-a4cc-724cd21a1133",
+    "name": "Auchan Lockers Fontenay",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "491"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "LOCKERS",
+    "enabled": true,
+    "address": {
+     "zipcode": "94120",
+     "city": "FONTENAY-SOUS-BOIS"
+    },
+    "distance": {
+     "value": 7.29,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "3888584d-325e-4c51-bded-4c71db843639",
+    "name": "Auchan Click&Collect Supermarché Maisons Alfort",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6453"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94700",
+     "city": "MAISONS-ALFORT"
+    },
+    "distance": {
+     "value": 1.08,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "cbce4f86-6b77-4bae-95cc-fc1ecf674274",
+    "name": "Auchan Click&Collect Supermarché Maisons Alfort 2",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6174"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94700",
+     "city": "MAISONS-ALFORT"
+    },
+    "distance": {
+     "value": 1.68,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "95d6ceb4-f74e-484b-931d-c69386547978",
+    "name": "Auchan Click&Collect Supermarché Vitry-Sur-Seine",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6203"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94400",
+     "city": "VITRY-SUR-SEINE"
+    },
+    "distance": {
+     "value": 3.04,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "c231b7c4-6192-4034-bc9d-cf738bc0a5b0",
+    "name": "Auchan Click&Collect Supermarché Créteil",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6157"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94000",
+     "city": "CRÉTEIL"
+    },
+    "distance": {
+     "value": 3.38,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "2bddc476-bdd4-40cc-9b76-cf411ea7af82",
+    "name": "Auchan Click&Collect Supermarché Ivry Sur Seine",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6163"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94200",
+     "city": "IVRY-SUR-SEINE"
+    },
+    "distance": {
+     "value": 3.62,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "3e7a152b-c160-49ed-a78c-ac647593bc84",
+    "name": "Auchan Supermarché Click&Collect Reuilly-Paris",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6185"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75012",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 4.39,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "ee4e9e54-5556-47af-b0f7-ea75ad3715be",
+    "name": "Auchan Click&Collect Supermarché Paris Lagny",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6182"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75020",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 4.9,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "b407d03a-fd8b-4bd3-8391-43ad60ff8114",
+    "name": "Auchan Click&Collect Supermarché PARIS AVRON",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6147"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75020",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 5.4,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "335887d0-e9cf-4d3c-8cad-a6648ac1153b",
+    "name": "Auchan Click&Collect Supermarché Tolbiac-Paris",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6197"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75013",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 5.82,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "bd347d18-207a-42be-8bf5-7f099c0a4744",
+    "name": "Auchan Click&Collect Hypermarché BAGNOLET",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "973"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "93170",
+     "city": "BAGNOLET"
+    },
+    "distance": {
+     "value": 6.72,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "244070ea-8553-4d35-9c37-dd6c2321eb88",
+    "name": "Auchan Click&Collect Supermarché Montrouge",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6179"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "92120",
+     "city": "MONTROUGE"
+    },
+    "distance": {
+     "value": 6.96,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "bd21c2f5-e8e1-4e4f-a659-6b85d09173ef",
+    "name": "Auchan Click&Collect Supermarché Bagneux Lucie Aubrac",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6236"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "92200",
+     "city": "BAGNEUX"
+    },
+    "distance": {
+     "value": 7.47,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "2c2d5acd-4739-4681-ba19-86584da5a1dd",
+    "name": "Auchan Click&Collect Supermarché MONTROUGE 2",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6511"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "92120",
+     "city": "MONTROUGE"
+    },
+    "distance": {
+     "value": 7.73,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "7c3eba93-c68d-421a-bfa7-3145f9aa11d3",
+    "name": "Auchan Click&Collect Supermarché Limeil Brevannes",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6171"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "94450",
+     "city": "LIMEIL-BRÉVANNES"
+    },
+    "distance": {
+     "value": 7.92,
+     "unit": "km"
+    },
+    "metadata": {}
+   }
+  },
+  {
+   "seller": {
+    "id": "900c7972-584d-417b-b13d-3a6d5ee94c70",
+    "name": "Auchan Click&Collect Supermarché Paris Brune",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6011"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75014",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 8.01,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "3cf7be7a-d4f9-4777-850a-116adebfd155",
+    "name": "Auchan Click&Collect Supermarché PARIS ALESIA",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6024"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "75014",
+     "city": "PARIS"
+    },
+    "distance": {
+     "value": 8.12,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "de28f4d3-3963-46d9-8d28-51dea6ad680f",
+    "name": "Auchan Click&Collect Supermarché Romainville",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6186"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "93230",
+     "city": "ROMAINVILLE"
+    },
+    "distance": {
+     "value": 8.45,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "true"
+    }
+   }
+  },
+  {
+   "seller": {
+    "id": "31abb561-aacb-4573-8a3c-13e1b6b41335",
+    "name": "Auchan Click&Collect Supermarché Montreuil Sous Bois",
+    "type": "GROCERY",
+    "storeReference": {
+     "id": "6178"
+    }
+   },
+   "channels": [
+    "PICK_UP"
+   ],
+   "closed": false,
+   "pointOfService": {
+    "type": "PICKUP_POINT",
+    "enabled": true,
+    "address": {
+     "zipcode": "93100",
+     "city": "MONTREUIL"
+    },
+    "distance": {
+     "value": 8.53,
+     "unit": "km"
+    },
+    "metadata": {
+     "availableInLark": "false"
+    }
+   }
+  }
+ ]
+}

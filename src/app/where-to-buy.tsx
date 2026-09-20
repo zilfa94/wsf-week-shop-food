@@ -4,7 +4,7 @@ import { Linking, StyleSheet, View } from 'react-native';
 import { AppText, Button, Card, EmptyState, Screen } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { compareStores, priceAgeDays, PRICE_MAX_AGE_DAYS, sourceLabel, type StoreQuote } from '@/core/prices';
-import { formatPrice, ingredientName } from '@/core/units';
+import { formatNumber, formatPrice, ingredientName } from '@/core/units';
 import { usePriceStore } from '@/services/prices';
 import { useAppStore } from '@/store';
 import { INGREDIENT_INDEX, useShoppingList, useToday } from '@/store/hooks';
@@ -28,11 +28,13 @@ function StoreCard({ quote, today, toBuyCount }: { quote: StoreQuote; today: str
   const age = priceAgeDays(quote.scrapedAt, today);
   const stale = age > PRICE_MAX_AGE_DAYS;
   const scope = quote.postalCode ? `${quote.storeName} (${quote.postalCode})` : quote.storeName;
+  // Distance connue seulement quand le robot a choisi ce magasin comme le plus proche du code postal de l'utilisateur.
+  const distance = quote.distanceKm !== undefined ? ` · à ${formatNumber(quote.distanceKm, 1)} km` : '';
   return (
     <Card>
       <AppText variant="h2">{scope}</AppText>
       <AppText variant="caption" color={stale ? 'danger' : 'textMuted'}>
-        {`${sourceLabel(quote.source)} · relevé le ${formatDate(quote.scrapedAt)}${stale ? ' (ancien)' : ''}`}
+        {`${sourceLabel(quote.source)}${distance} · relevé le ${formatDate(quote.scrapedAt)}${stale ? ' (ancien)' : ''}`}
       </AppText>
       <AppText variant="bodyStrong" tabular>{`${formatPrice(quote.total)} pour ${quote.coveredCount} article${quote.coveredCount > 1 ? 's' : ''} sur ${toBuyCount}`}</AppText>
       {quote.indicativeTotal > 0 ? (
@@ -87,8 +89,8 @@ export default function WhereToBuyScreen() {
   const refresh = usePriceStore((s) => s.refresh);
 
   useEffect(() => {
-    void hydrate().then(() => refresh());
-  }, [hydrate, refresh]);
+    void hydrate().then(() => refresh(postalCode));
+  }, [hydrate, refresh, postalCode]);
 
   const quotes = useMemo(
     () => (list && plan && cache ? compareStores(list, cache.files, INGREDIENT_INDEX, postalCode, plan.weekStart) : []),
@@ -120,7 +122,7 @@ export default function WhereToBuyScreen() {
       {error && !cache ? (
         <Card tone="alt">
           <AppText variant="bodyStrong">{error}</AppText>
-          <Button label="Réessayer" icon="refresh" compact variant="secondary" onPress={() => refresh(true)} />
+          <Button label="Réessayer" icon="refresh" compact variant="secondary" onPress={() => refresh(postalCode, true)} />
         </Card>
       ) : null}
       {cache && quotes.length === 0 ? (
@@ -132,7 +134,7 @@ export default function WhereToBuyScreen() {
       {cache ? (
         <View style={styles.footer}>
           <AppText variant="caption" color="textMuted">{`Relevés téléchargés le ${formatDate(cache.fetchedAt)}${error ? ` · ${error}` : ''}`}</AppText>
-          <Button label="Actualiser" icon="refresh" variant="ghost" compact loading={loading} onPress={() => refresh(true)} />
+          <Button label="Actualiser" icon="refresh" variant="ghost" compact loading={loading} onPress={() => refresh(postalCode, true)} />
           {!postalCode ? <Button label="Indiquer mon code postal" icon="location-outline" variant="secondary" compact onPress={() => router.push('/(tabs)/profile')} /> : null}
         </View>
       ) : null}

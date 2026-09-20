@@ -1,27 +1,147 @@
 /**
- * Robot Auchan — prix drive du magasin choisi par code postal (config/stores.json).
+ * Robot Auchan — prix drive / click & collect des magasins les plus proches des codes postaux configurés
+ * (config/stores.json).
  *
- * 1. `POST /journey/update` sélectionne le drive (formulaire à clés pointées) et renvoie un « journey » ;
+ * 0. Chaque code postal est géocodé (geocode.ts) puis `GET /journey/search` liste les points de retrait
+ *    autour de la commune, avec leur distance : on retient le plus proche de chaque type demandé
+ *    (drive d'hypermarché, click & collect de supermarché), à condition qu'il soit vendu sur auchan.fr.
+ * 1. `POST /journey/update` sélectionne le magasin (formulaire à clés pointées) et renvoie un « journey » ;
  *    son id se renvoie ensuite en cookie `lark-journey` (c'est le JS du site qui pose ce cookie, pas le serveur).
  * 2. `robots.txt` interdit `/recherche*` : on parcourt les **pages de rayon** (config/auchan-categories.json),
  *    autorisées, paginées par `?page=N`. Chaque carte `<article itemtype=schema.org/Product>` est rendue côté serveur.
  * 3. Rattachement aux ingrédients par les règles communes (match.ts) ; rien n'est deviné.
  */
+import { geocodePostalCode, type Place } from './geocode.ts';
 import { fetchBytes, fetchText, USER_AGENT } from './http.ts';
 import { matchIngredients } from './match.ts';
-import type { PriceEntry, PriceFile, RulesConfig } from './types.ts';
+import type { PriceEntry, PriceFile, RulesConfig, ServedPostalCode } from './types.ts';
 import { SCRAPER_VERSION } from './types.ts';
 import { parsePack, parseUnitPrice, round2 } from './units.ts';
 
 const ORIGIN = 'https://www.auchan.fr';
 
+/** Types de points de retrait d'auchan.fr retenus : drive (hypermarché) et click & collect (supermarché). */
+export type AuchanKind = 'DRIVE' | 'PICKUP_POINT';
+export const AUCHAN_KINDS: readonly AuchanKind[] = ['DRIVE', 'PICKUP_POINT'];
+
 export interface AuchanStore {
   storeId: string;
   storeName: string;
   postalCode: string;
+  kind: AuchanKind;
   sellerId: string;
   storeReference: string;
-  search: { zipcode: string; city: string; latitude: number; longitude: number };
+  /** Commune de recherche (celle du premier code postal desservi) à renvoyer au site lors de la sélection. */
+  search: Place;
+  serves: ServedPostalCode[];
+}
+
+/** Bloc `auchan` de config/stores.json. */
+export interface AuchanConfig {
+  postalCodes: string[];
+  kinds?: AuchanKind[];
+  /** Au-delà, un code postal n'a pas de magasin de ce type (rien n'est affiché plutôt qu'un magasin lointain). */
+  maxDistanceKm?: number;
+}
+
+/** Fragment utile d'un `offeringContext` renvoyé par `GET /journey/search`. */
+interface OfferingContext {
+  seller?: { id?: string; name?: string; type?: string; storeReference?: { id?: string } };
+  channels?: string[];
+  closed?: boolean;
+  pointOfService?: {
+    type?: string;
+    enabled?: boolean;
+    address?: { zipcode?: string; city?: string };
+    distance?: { value?: number; unit?: string };
+    metadata?: { availableInLark?: string };
+  };
+}
+
+/** Le point de retrait le plus proche de chaque type demandé, parmi ceux vendus sur auchan.fr. Pur, testé. */
+export function nearestStores(contexts: readonly OfferingContext[], place: Place, kinds: readonly AuchanKind[], maxDistanceKm: number): AuchanStore[] {
+  const out: AuchanStore[] = [];
+  for (const kind of kinds) {
+    let best: { ctx: OfferingContext; km: number } | null = null;
+    for (const ctx of contexts) {
+      const pos = ctx.pointOfService;
+      const km = pos?.distance?.value;
+      if (
+        ctx.seller?.type !== 'GROCERY' ||
+        !ctx.channels?.includes('PICK_UP') ||
+        ctx.closed === true ||
+        pos?.enabled === false ||
+        pos?.type !== kind ||
+        pos.metadata?.availableInLark !== 'true' ||
+        typeof km !== 'number' ||
+        km > maxDistanceKm ||
+        !ctx.seller.id ||
+        !ctx.seller.name ||
+        !ctx.seller.storeReference?.id
+      ) {
+        continue;
+      }
+      if (!best || km < best.km) best = { ctx, km };
+    }
+    if (!best) continue;
+    const seller = best.ctx.seller!;
+    out.push({
+      storeId: seller.storeReference!.id!,
+      storeName: seller.name!.replace(/\s+/g, ' ').trim(),
+      postalCode: best.ctx.pointOfService?.address?.zipcode ?? '',
+      kind,
+      sellerId: seller.id!,
+      storeReference: seller.storeReference!.id!,
+      search: place,
+      serves: [{ postalCode: place.postalCode, distanceKm: Math.round(best.km * 10) / 10 }],
+    });
+  }
+  return out;
+}
+
+/** Liste des points de retrait autour d'une commune (mêmes paramètres que le sélecteur de magasin du site). */
+export async function searchStores(place: Place): Promise<OfferingContext[]> {
+  const query = new URLSearchParams({
+    'address.zipcode': place.postalCode,
+    'address.city': place.city,
+    'address.country': 'France',
+    'location.latitude': String(place.latitude),
+    'location.longitude': String(place.longitude),
+    accuracy: 'MUNICIPALITY',
+    channels: 'PICK_UP',
+    sellerType: 'GROCERY',
+    hasProductReferences: 'true',
+  });
+  const body = await fetchText(`${ORIGIN}/journey/search?${query}`, { headers: { Accept: 'application/json', 'X-Requested-With': 'XMLHttpRequest' } });
+  if (!body) throw new Error('Auchan journey/search : 404');
+  const contexts = (JSON.parse(body) as { offeringContexts?: OfferingContext[] }).offeringContexts;
+  return Array.isArray(contexts) ? contexts : [];
+}
+
+/**
+ * Résout les magasins à relever pour la configuration : un magasin desservant plusieurs codes postaux
+ * n'est relevé qu'une fois (ses `serves` sont fusionnés). Un code postal introuvable est signalé et ignoré.
+ */
+export async function resolveAuchanStores(config: AuchanConfig, log: (msg: string) => void = () => {}): Promise<AuchanStore[]> {
+  const kinds = config.kinds ?? AUCHAN_KINDS;
+  const maxDistanceKm = config.maxDistanceKm ?? 20;
+  const byId = new Map<string, AuchanStore>();
+  for (const postalCode of config.postalCodes) {
+    const place = await geocodePostalCode(postalCode);
+    if (!place) {
+      log(`Auchan : code postal ${postalCode} introuvable (géocodage)`);
+      continue;
+    }
+    const stores = nearestStores(await searchStores(place), place, kinds, maxDistanceKm);
+    if (stores.length === 0) log(`Auchan : aucun point de retrait à moins de ${maxDistanceKm} km de ${place.city} (${postalCode})`);
+    for (const store of stores) {
+      const existing = byId.get(store.storeId);
+      if (existing) existing.serves.push(...store.serves);
+      else byId.set(store.storeId, store);
+      log(`Auchan : ${postalCode} ${place.city} → ${store.storeName} (${store.postalCode}, ${store.serves[0]!.distanceKm} km)`);
+    }
+  }
+  return [...byId.values()];
 }
 
 /** Rayon à parcourir ; `only` restreint les ingrédients relevables (une conserve de carottes n'est pas une carotte fraîche). */
@@ -127,7 +247,7 @@ export async function selectStore(store: AuchanStore): Promise<string> {
     'offeringContext.channels[0]': 'PICK_UP',
     'offeringContext.storeReference': store.storeReference,
     'offeringContext.availableInLark': 'true',
-    'address.zipcode': store.search.zipcode,
+    'address.zipcode': store.search.postalCode,
     'address.city': store.search.city,
     'address.country': 'France',
     'location.latitude': String(store.search.latitude),
@@ -195,6 +315,7 @@ export async function scrapeAuchan(opts: AuchanOptions): Promise<PriceFile> {
     storeId: opts.store.storeId,
     storeName: opts.store.storeName,
     postalCode: opts.store.postalCode,
+    serves: opts.store.serves,
     source: 'drive',
     scrapedAt: now.toISOString(),
     scraperVersion: SCRAPER_VERSION,

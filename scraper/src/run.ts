@@ -6,7 +6,7 @@
 import { readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { scrapeAuchan, type AuchanCategory, type AuchanStore } from './auchan.ts';
+import { resolveAuchanStores, scrapeAuchan, type AuchanCategory, type AuchanConfig } from './auchan.ts';
 import { scrapeLidl } from './lidl.ts';
 import type { PriceFile, Retailer, RulesConfig } from './types.ts';
 import { writeIndex, writePriceFile } from './write.ts';
@@ -22,7 +22,7 @@ const outDir = resolve(here, '..', flag('--out') ?? '../prices');
 const maxPages = flag('--max') ? Number(flag('--max')) : undefined;
 
 const rules = JSON.parse(readFileSync(resolve(here, '../config/ingredients.json'), 'utf8')) as RulesConfig;
-const stores = JSON.parse(readFileSync(resolve(here, '../config/stores.json'), 'utf8')) as { auchan?: AuchanStore[] };
+const stores = JSON.parse(readFileSync(resolve(here, '../config/stores.json'), 'utf8')) as { auchan?: AuchanConfig };
 const auchanCategories = JSON.parse(readFileSync(resolve(here, '../config/auchan-categories.json'), 'utf8')) as { maxPages: number; categories: AuchanCategory[] };
 const log = (msg: string): void => console.log(msg);
 
@@ -30,9 +30,17 @@ const robots: Record<string, () => Promise<PriceFile[]>> = {
   lidl: async () => [await scrapeLidl({ rules, log, ...(maxPages !== undefined ? { maxPages } : {}) })],
   auchan: async () => {
     const files: PriceFile[] = [];
-    for (const store of stores.auchan ?? []) {
-      files.push(await scrapeAuchan({ rules, store, categories: auchanCategories.categories, maxPages: maxPages ?? auchanCategories.maxPages, log }));
+    const resolved = stores.auchan ? await resolveAuchanStores(stores.auchan, log) : [];
+    if (resolved.length === 0) throw new Error('aucun magasin résolu (config/stores.json)');
+    for (const store of resolved) {
+      // Un magasin en échec n'empêche pas les suivants ; le fichier de la veille reste publié (keep_files).
+      try {
+        files.push(await scrapeAuchan({ rules, store, categories: auchanCategories.categories, maxPages: maxPages ?? auchanCategories.maxPages, log }));
+      } catch (err) {
+        console.error(`✗ auchan ${store.storeName} : ${(err as Error).message}`);
+      }
     }
+    if (files.length === 0) throw new Error('aucun magasin relevé');
     return files;
   },
 };
