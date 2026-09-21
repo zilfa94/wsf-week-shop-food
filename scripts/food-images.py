@@ -111,6 +111,24 @@ RECIPES: dict[str, str] = {
     "bourguignon_lentilles_legumes": "pot_of_food", "soupe_courge_butternut_lait_coco_pain": "bowl_with_spoon",
     "curry_legumes_epinards_lait_coco": "curry_rice", "poelee_courge_champignons_poireau_quinoa": "shallow_pan",
     "wok_legumes_croquants_nouilles_riz": "steaming_bowl",
+    # deuxième série par famille (2026-09-21)
+    "dinde_chasseur_riz": "pot_of_food", "filet_porc_normande_pommes_de_terre": "shallow_pan",
+    "gratin_courgettes_chevre": "shallow_pan", "sardines_grillees_salade_tomates_basilic": "fish",
+    "oeufs_cocotte_creme_epinards_comte": "cooking", "daube_boeuf_provencale_pommes_de_terre": "pot_of_food",
+    "poelee_pois_chiches_provencale": "shallow_pan", "moules_mariniere_pommes_de_terre_sautees": "pot_of_food",
+    "crevettes_ail_citron_riz": "shallow_pan", "dinde_milanaise_spaghetti": "spaghetti",
+    "salade_pates_tomates_cerises_mozzarella": "spaghetti", "chorizo_poivrons_tomate_riz": "shallow_pan",
+    "moules_tomate_vin_blanc_pommes_de_terre": "pot_of_food", "salade_pois_chiches_concombre_feta_menthe": "green_salad",
+    "riz_pilaf_carottes_petits_pois_olives": "cooked_rice", "poivrons_pois_chiches_mijotes_catalane": "pot_of_food",
+    "bibimbap_boeuf_carotte_epinard": "cooked_rice", "riz_vinaigre_saumon_avocat_concombre": "cooked_rice",
+    "soupe_epicee_crevettes_champignons": "steaming_bowl", "curry_chou_fleur_pomme_terre_petits_pois": "curry_rice",
+    "rajma_curry_haricots_rouges_riz": "curry_rice", "oeufs_brouilles_epices_tomate_oignon": "cooking",
+    "bun_ga_vermicelles_riz_menthe_concombre": "steaming_bowl", "porc_saute_bulgogi_gingembre_riz": "shallow_pan",
+    "poulet_mijote_olives_citron": "pot_of_food", "chakchouka_poivrons_oeufs": "cooking",
+    "salade_mechouia_tunisienne": "green_salad", "poulet_libanais_sauce_ail_citron": "poultry_leg",
+    "cabillaud_sauce_tomate_poivrons": "fish", "lentilles_corail_epicees_riz": "curry_rice",
+    "loubia_haricots_rouges_boeuf": "pot_of_food", "pois_chiches_epinards_marocaine": "shallow_pan",
+    "taboule_libanais_persil_menthe": "green_salad", "crevettes_chermoula_riz": "cooked_rice",
 }
 
 LICENSE = """# Images des produits et des plats

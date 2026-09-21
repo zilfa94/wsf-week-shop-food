@@ -6,7 +6,7 @@
  *
  * Les structures `PlanContext` / `PlanState` sont internes (Map/Set) ; seul `WeekPlan` sort du module.
  */
-import { isOutsidePreferences, profileFamilies } from './cuisines';
+import { cuisineFamily, isOutsidePreferences, profileFamilies } from './cuisines';
 import { seasonOf } from './date';
 import type { IngredientIndex, RecipeIndex } from './dataset';
 import { indexIngredients, indexRecipes } from './dataset';
@@ -285,7 +285,8 @@ export function varietyPenalty(st: PlanState, ctx: PlanContext): number {
     cuisineCount.set(r.cuisine, (cuisineCount.get(r.cuisine) ?? 0) + 1);
   }
   for (const n of proteinCount.values()) if (n > 3) p += (n - 3) * 1.2;
-  for (const n of cuisineCount.values()) if (n > 4) p += (n - 4) * 0.8;
+  // trop de plats d'une même cuisine, sauf si l'utilisateur la préfère (il l'a demandée)
+  for (const [cuisine, n] of cuisineCount) if (n > 4 && !ctx.preferredFamilies.has(cuisineFamily(cuisine as Cuisine))) p += (n - 4) * 0.8;
   // cuisines préférées : un déjeuner / dîner hors préférences n'apparaît que faute de mieux
   if (ctx.preferredFamilies.size > 0) {
     for (const r of mains) if (isOutsidePreferences(r, ctx.preferredFamilies)) p += ctx.params.cuisinePenalty;

@@ -11,9 +11,10 @@ export const DEFAULT_PLANNER_PARAMS: PlannerParams = {
   greedyTopK: 3,
   maxBatchPerWeek: 2,
   batchBonus: 2,
-  // Pondérée par `weights.variety` (1,5) : un plat hors cuisines préférées « coûte » 3 € d'équivalent variété,
-  // plus qu'une répétition de protéine (1,5) mais moins qu'un créneau vide : il n'apparaît que faute de mieux.
-  cuisinePenalty: 2,
+  // Pondérée par `weights.variety` (1,5) : un plat hors cuisines préférées « coûte » 6 € d'équivalent variété —
+  // plus que le gaspillage qu'il pourrait éviter en réutilisant un reste, moins qu'un créneau vide : il n'apparaît
+  // que faute de plat préféré éligible (temps de cuisine, unicité dans la semaine).
+  cuisinePenalty: 4,
 };
 
 /** Poids budget appliqué uniquement pour l'objectif `budget`. */

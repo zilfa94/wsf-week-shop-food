@@ -181,10 +181,13 @@ describe('recettes', () => {
         .meals.filter((m) => m.slot.type === 'lunch' || m.slot.type === 'dinner')
         .map((m) => cuisineFamily(recipeById.get(m.recipeId)!.cuisine));
 
-    // Asiatique seule (10 plats + 2 indiens pour 14 créneaux) : tous les plats de la famille servent, le reste complète.
+    // Asiatique seule (20 plats) : la semaine entière reste dans la famille.
     const asian = mainsOf({ ...OMNIVORE, preferredCuisines: ['asian'] }, 3);
-    expect(asian.filter((c) => c === 'asian').length).toBeGreaterThanOrEqual(10);
-    // Française + méditerranéenne (24 plats) : la semaine entière reste dans les préférences.
+    expect(asian.filter((c) => c === 'asian').length).toBeGreaterThanOrEqual(13);
+    // Orientale seule (17 plats depuis la deuxième série) : la semaine est presque entièrement orientale.
+    const oriental = mainsOf({ ...OMNIVORE, preferredCuisines: ['oriental'] }, 6);
+    expect(oriental.filter((c) => c === 'oriental').length).toBeGreaterThanOrEqual(12);
+    // Française + méditerranéenne (40 plats) : la semaine entière reste dans les préférences.
     const frMed = mainsOf({ ...OMNIVORE, preferredCuisines: ['french', 'mediterranean'] }, 4);
     expect(frMed.every((c) => c === 'french' || c === 'mediterranean')).toBe(true);
     // Sans préférence, la variété impose un mélange de familles.
