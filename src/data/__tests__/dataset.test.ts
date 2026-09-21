@@ -1,5 +1,6 @@
 /** Invariants du jeu de données complet (docs/SPEC.md § 3.4). */
 import { AISLE_ORDER } from '../../core/aisles';
+import { CUISINE_MIN_MAIN_RECIPES, cuisineFamily, selectableCuisines } from '../../core/cuisines';
 import { indexIngredients } from '../../core/dataset';
 import { candidatesForSlot, isRecipeEligible, totalMinutes } from '../../core/filter';
 import { generateWeekPlan } from '../../core/planner';
@@ -34,6 +35,7 @@ const OMNIVORE: UserProfile = {
   diet: 'omnivore',
   allergens: [],
   dislikedIngredientIds: [],
+  preferredCuisines: [],
   goal: 'balance',
   maxCookMinWeekday: 30,
   maxCookMinWeekend: 90,
@@ -166,5 +168,26 @@ describe('recettes', () => {
     expect(plan.meals).toHaveLength(28);
     const vegan = generateWeekPlan({ dataset: DATASET, profile: { ...VEGAN_GF, includeSnack: false }, pantry: [], weekStart: '2026-09-14', today: '2026-09-12', seed: 2, params: { anneal: { iterations: 500 } } });
     expect(vegan.unfilled.length).toBeLessThanOrEqual(4);
+  });
+
+  it('cuisines préférées : 4 familles proposées, et une préférence oriente vraiment les déjeuners / dîners', () => {
+    const choices = selectableCuisines(RECIPES);
+    expect(choices.map((c) => c.cuisine).sort()).toEqual(['asian', 'french', 'mediterranean', 'oriental']);
+    for (const c of choices) expect(c.count).toBeGreaterThanOrEqual(CUISINE_MIN_MAIN_RECIPES);
+
+    const recipeById = new Map(RECIPES.map((r) => [r.id, r]));
+    const mainsOf = (profile: UserProfile, seed: number) =>
+      generateWeekPlan({ dataset: DATASET, profile, pantry: [], weekStart: '2026-09-14', today: '2026-09-12', seed, params: { anneal: { iterations: 800 } } })
+        .meals.filter((m) => m.slot.type === 'lunch' || m.slot.type === 'dinner')
+        .map((m) => cuisineFamily(recipeById.get(m.recipeId)!.cuisine));
+
+    // Asiatique seule (10 plats + 2 indiens pour 14 créneaux) : tous les plats de la famille servent, le reste complète.
+    const asian = mainsOf({ ...OMNIVORE, preferredCuisines: ['asian'] }, 3);
+    expect(asian.filter((c) => c === 'asian').length).toBeGreaterThanOrEqual(10);
+    // Française + méditerranéenne (24 plats) : la semaine entière reste dans les préférences.
+    const frMed = mainsOf({ ...OMNIVORE, preferredCuisines: ['french', 'mediterranean'] }, 4);
+    expect(frMed.every((c) => c === 'french' || c === 'mediterranean')).toBe(true);
+    // Sans préférence, la variété impose un mélange de familles.
+    expect(new Set(mainsOf(OMNIVORE, 5)).size).toBeGreaterThanOrEqual(3);
   });
 });

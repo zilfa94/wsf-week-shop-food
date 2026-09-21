@@ -6,6 +6,7 @@
  *
  * Les structures `PlanContext` / `PlanState` sont internes (Map/Set) ; seul `WeekPlan` sort du module.
  */
+import { isOutsidePreferences, profileFamilies } from './cuisines';
 import { seasonOf } from './date';
 import type { IngredientIndex, RecipeIndex } from './dataset';
 import { indexIngredients, indexRecipes } from './dataset';
@@ -17,6 +18,7 @@ import { BUDGET_GOAL_WEIGHT, resolvePlannerParams } from './params';
 import { mulberry32, randomInt, type Rng } from './rng';
 import type {
   CostBreakdown,
+  Cuisine,
   GenerateInput,
   Ingredient,
   IngredientId,
@@ -55,6 +57,8 @@ export interface PlanContext {
   readonly season: Season;
   /** `BUDGET_GOAL_WEIGHT` si l'objectif est `budget`, sinon 0. */
   readonly budgetWeight: number;
+  /** Familles de cuisines préférées (vide = pas de préférence), voir `cuisines.ts`. */
+  readonly preferredFamilies: ReadonlySet<Cuisine>;
 }
 
 export interface PlanState {
@@ -136,6 +140,7 @@ export function buildPlanContext(input: GenerateInput): PlanContext {
     params,
     season,
     budgetWeight: profile.goal === 'budget' ? BUDGET_GOAL_WEIGHT : 0,
+    preferredFamilies: profileFamilies(profile),
   };
 }
 
@@ -281,6 +286,10 @@ export function varietyPenalty(st: PlanState, ctx: PlanContext): number {
   }
   for (const n of proteinCount.values()) if (n > 3) p += (n - 3) * 1.2;
   for (const n of cuisineCount.values()) if (n > 4) p += (n - 4) * 0.8;
+  // cuisines préférées : un déjeuner / dîner hors préférences n'apparaît que faute de mieux
+  if (ctx.preferredFamilies.size > 0) {
+    for (const r of mains) if (isOutsidePreferences(r, ctx.preferredFamilies)) p += ctx.params.cuisinePenalty;
+  }
   // petits-déjeuners et collations : répétitions tolérées mais pénalisées
   for (const type of ['breakfast', 'snack'] as const) {
     const count = new Map<string, number>();

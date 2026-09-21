@@ -80,6 +80,7 @@ export const DEFAULT_PROFILE: UserProfile = {
   diet: 'omnivore',
   allergens: [],
   dislikedIngredientIds: [],
+  preferredCuisines: [],
   goal: 'balance',
   maxCookMinWeekday: 30,
   maxCookMinWeekend: 90,

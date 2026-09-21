@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
+import { CuisinePicker } from '@/components/profile/cuisine-picker';
 import { DietPicker } from '@/components/profile/diet-picker';
 import { MealPicker } from '@/components/profile/meal-picker';
 import { PostalCodeField } from '@/components/profile/postal-code-field';
@@ -22,7 +23,7 @@ const DISLIKE_SUGGESTIONS: readonly IngredientId[] = [
   'coriandre', 'champignon', 'aubergine', 'betterave', 'epinard', 'chou_fleur', 'olives', 'piment_en_poudre', 'celeri_branche', 'brocoli', 'moules', 'poivron',
 ].filter((id) => INGREDIENTS.some((i) => i.id === id));
 
-const STEPS = ['Bienvenue', 'Votre foyer', 'Votre régime', 'Allergies et intolérances', 'Votre objectif', 'Ce que vous n’aimez pas'];
+const STEPS = ['Bienvenue', 'Votre foyer', 'Votre régime', 'Vos cuisines préférées', 'Allergies et intolérances', 'Votre objectif', 'Ce que vous n’aimez pas'];
 
 /** Onboarding en 5 étapes sur un seul écran (docs/SPEC.md § 1.2). Le temps de cuisine se règle dans le Profil. */
 export default function OnboardingScreen() {
@@ -78,6 +79,13 @@ export default function OnboardingScreen() {
 
       {step === 3 && (
         <View style={styles.block}>
+          <AppText color="textMuted">Choisissez ce que vous aimez manger : la semaine sera composée d’abord avec ces cuisines.</AppText>
+          <CuisinePicker value={profile.preferredCuisines} onChange={(preferredCuisines) => setProfile({ preferredCuisines })} />
+        </View>
+      )}
+
+      {step === 4 && (
+        <View style={styles.block}>
           <View style={styles.wrap}>
             <Chip label="Aucune" selected={profile.allergens.length === 0} onPress={() => setProfile({ allergens: [] })} />
             {ONBOARDING_ALLERGENS.map((a: Allergen) => (
@@ -88,7 +96,7 @@ export default function OnboardingScreen() {
         </View>
       )}
 
-      {step === 4 && (
+      {step === 5 && (
         <View style={styles.block}>
           {GOALS.map((g) => (
             <Card key={g.value} tone={profile.goal === g.value ? 'accent' : 'surface'} onPress={() => setProfile({ goal: g.value })} accessibilityLabel={GOAL_LABELS[g.value]}>
@@ -101,7 +109,7 @@ export default function OnboardingScreen() {
         </View>
       )}
 
-      {step === 5 && (
+      {step === 6 && (
         <View style={styles.block}>
           <AppText>On évitera ces ingrédients :</AppText>
           <View style={styles.wrap}>

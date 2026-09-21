@@ -11,6 +11,9 @@ export const DEFAULT_PLANNER_PARAMS: PlannerParams = {
   greedyTopK: 3,
   maxBatchPerWeek: 2,
   batchBonus: 2,
+  // Pondérée par `weights.variety` (1,5) : un plat hors cuisines préférées « coûte » 3 € d'équivalent variété,
+  // plus qu'une répétition de protéine (1,5) mais moins qu'un créneau vide : il n'apparaît que faute de mieux.
+  cuisinePenalty: 2,
 };
 
 /** Poids budget appliqué uniquement pour l'objectif `budget`. */
@@ -25,6 +28,7 @@ export function resolvePlannerParams(partial?: PlannerParamsOverride): PlannerPa
     greedyTopK: partial.greedyTopK ?? DEFAULT_PLANNER_PARAMS.greedyTopK,
     maxBatchPerWeek: partial.maxBatchPerWeek ?? DEFAULT_PLANNER_PARAMS.maxBatchPerWeek,
     batchBonus: partial.batchBonus ?? DEFAULT_PLANNER_PARAMS.batchBonus,
+    cuisinePenalty: partial.cuisinePenalty ?? DEFAULT_PLANNER_PARAMS.cuisinePenalty,
   };
 }
 

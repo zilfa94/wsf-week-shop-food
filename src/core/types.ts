@@ -304,6 +304,13 @@ export interface UserProfile {
   readonly diet: Diet;
   readonly allergens: readonly Allergen[];
   readonly dislikedIngredientIds: readonly IngredientId[];
+  /**
+   * Cuisines que l'utilisateur aime (familles de `core/cuisines.ts`) ; `[]` = pas de préférence.
+   * Préférence forte et non exclusion : les déjeuners / dîners d'autres cuisines restent possibles
+   * quand les cuisines choisies ne suffisent pas à varier la semaine (pénalité `PlannerParams.cuisinePenalty`).
+   * Sans effet sur les petits-déjeuners et collations.
+   */
+  readonly preferredCuisines: readonly Cuisine[];
   readonly goal: Goal;
   /** Temps max (préparation + cuisson) d'une recette en semaine (lundi → vendredi). */
   readonly maxCookMinWeekday: number;
@@ -536,6 +543,8 @@ export interface PlannerParams {
   readonly maxBatchPerWeek: number;
   /** Valeur (échelle euro) d'une session de cuisine économisée : un batch est accepté si son surcoût reste sous ce bonus. */
   readonly batchBonus: number;
+  /** Pénalité de variété par déjeuner / dîner hors des cuisines préférées (quand l'utilisateur en a choisi). */
+  readonly cuisinePenalty: number;
 }
 
 /** Surcharge partielle (en profondeur) des paramètres du planificateur. */
@@ -545,6 +554,7 @@ export interface PlannerParamsOverride {
   readonly greedyTopK?: number;
   readonly maxBatchPerWeek?: number;
   readonly batchBonus?: number;
+  readonly cuisinePenalty?: number;
 }
 
 export interface GenerateInput {

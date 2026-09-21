@@ -121,7 +121,9 @@ export default function WeekScreen() {
                 ? `${incompatible} repas ne correspondent plus à votre régime ou vos allergies.`
                 : drift.includes('meals')
                   ? 'Les repas à planifier ont changé : régénérez la semaine.'
-                  : 'Régénérez pour appliquer le nouveau nombre de personnes.'}
+                  : drift.includes('cuisines')
+                    ? 'Vos cuisines préférées ont changé : régénérez pour en tenir compte.'
+                    : 'Régénérez pour appliquer le nouveau nombre de personnes.'}
             </AppText>
             <Button label="Régénérer les repas non verrouillés" compact variant="secondary" onPress={() => router.push('/generating')} />
           </Card>

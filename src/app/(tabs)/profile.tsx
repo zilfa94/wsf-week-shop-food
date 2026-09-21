@@ -1,6 +1,7 @@
 import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { CuisinePicker } from '@/components/profile/cuisine-picker';
 import { DietPicker } from '@/components/profile/diet-picker';
 import { MealPicker } from '@/components/profile/meal-picker';
 import { PostalCodeField } from '@/components/profile/postal-code-field';
@@ -39,6 +40,9 @@ export default function ProfileScreen() {
 
       <SectionHeader title="Régime" />
       <DietPicker diet={profile.diet} onChange={(diet) => setProfile({ diet })} compact />
+
+      <SectionHeader title="Cuisines préférées" subtitle="La semaine est composée d’abord avec ces cuisines" />
+      <CuisinePicker value={profile.preferredCuisines} onChange={(preferredCuisines) => setProfile({ preferredCuisines })} />
 
       <SectionHeader title="Allergies et intolérances" />
       <View style={styles.wrap}>

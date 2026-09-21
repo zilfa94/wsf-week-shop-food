@@ -3,6 +3,7 @@
  * virtuel (les articles cochés sont acquis) et chaque alternative est évaluée par ses nouveaux
  * achats et sa variation de coût. Voir docs/SPEC.md § 4.5.
  */
+import { isOutsidePreferences } from './cuisines';
 import { totalMinutes } from './filter';
 import {
   applyAssign,
@@ -135,6 +136,7 @@ export function suggestSwaps(args: SwapArgs): SwapSuggestion[] {
     else if (deltaItems < 0) reasons.push(`−${-deltaItems} article${deltaItems < -1 ? 's' : ''} · ${signed(deltaPrice)}`);
     else if (Math.abs(deltaPrice) < 0.005) reasons.push('Aucun achat supplémentaire');
     else reasons.push(signed(deltaPrice));
+    if (isOutsidePreferences(recipe, ctx.preferredFamilies)) reasons.push('Hors de vos cuisines préférées');
     if (currentRecipe) {
       const dt = totalMinutes(recipe) - totalMinutes(currentRecipe);
       if (dt < 0) reasons.push(`Plus rapide (${-dt} min de moins)`);

@@ -157,6 +157,7 @@ export const OMNIVORE_2: UserProfile = {
   diet: 'omnivore',
   allergens: [],
   dislikedIngredientIds: [],
+  preferredCuisines: [],
   goal: 'balance',
   maxCookMinWeekday: 30,
   maxCookMinWeekend: 90,
