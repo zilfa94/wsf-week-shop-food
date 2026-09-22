@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-09-21T10:17:12.989Z",
+ "scrapedAt": "2026-09-22T09:32:38.966Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -34,13 +34,13 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "ITALIAMO Huile d'olive vierge extra Terra di",
+   "productName": "DELUXE Huile d'olive vierge extra Terra di",
    "price": 6.99,
    "unitPrice": 13.98,
    "unit": "l",
    "packSize": 0.5,
    "packLabel": "500 mL",
-   "url": "https://www.lidl.fr/p/italiamo-huile-d-olive-vierge-extra-terra-di/p11008211",
+   "url": "https://www.lidl.fr/p/deluxe-huile-d-olive-vierge-extra-terra-di/p11008211",
    "validFrom": "2026-09-17",
    "promo": true,
    "validUntil": "2026-09-23"
