@@ -52,6 +52,7 @@ export default function TabsLayout() {
               ]
             : []),
           { label: 'Ajouter au garde-manger', icon: 'add-circle-outline' as const, onPress: () => router.push('/pantry-add') },
+          { label: 'Ajouter un ticket de caisse', icon: 'receipt-outline' as const, onPress: () => router.push('/receipt') },
           { label: 'Cuisiner avec ce que j’ai', icon: 'restaurant-outline' as const, onPress: () => router.push('/cook-with') },
           ...(hasPlan ? [{ label: 'Bilan de la semaine', icon: 'stats-chart-outline' as const, onPress: () => router.push('/report') }] : []),
         ]}

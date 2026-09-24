@@ -44,6 +44,7 @@ export default function RootLayout() {
           <Stack.Screen name="swap/[mealId]" options={{ presentation: 'modal', title: 'Remplacer le repas' }} />
           <Stack.Screen name="item/[ingredientId]" options={{ presentation: 'modal', title: 'Article' }} />
           <Stack.Screen name="pantry-add" options={{ presentation: 'modal', title: 'Ajouter au garde-manger' }} />
+          <Stack.Screen name="receipt" options={{ presentation: 'modal', title: '' }} />
           <Stack.Screen name="cook-with" options={{ title: '' }} />
           <Stack.Screen name="report" options={{ presentation: 'modal', title: 'Bilan' }} />
           <Stack.Screen name="where-to-buy" options={{ title: '' }} />

@@ -27,7 +27,10 @@ export default function PantryScreen() {
     <Screen safeTop>
       <AppText variant="display">Garde-manger</AppText>
       <SectionHeader title={`${pantry.length} ligne${pantry.length > 1 ? 's' : ''} en stock`} subtitle={alerts.length > 0 ? `${alerts.length} à consommer rapidement` : undefined} right={<Button label="Ajouter" icon="add" compact onPress={() => router.push('/pantry-add')} />} />
-      <Button label="Cuisiner avec ce que j’ai" icon="restaurant-outline" variant="secondary" onPress={() => router.push('/cook-with')} />
+      <View style={styles.actions}>
+        <Button label="Ticket de caisse" icon="receipt-outline" variant="secondary" compact onPress={() => router.push('/receipt')} style={styles.action} />
+        <Button label="Cuisiner avec ça" icon="restaurant-outline" variant="secondary" compact onPress={() => router.push('/cook-with')} style={styles.action} />
+      </View>
       {pantry.map((p) => {
         const ing = INGREDIENT_INDEX.get(p.ingredientId);
         const soon = alerts.includes(p);
@@ -50,5 +53,7 @@ export default function PantryScreen() {
 
 const styles = StyleSheet.create({
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  actions: { flexDirection: 'row', gap: Spacing.sm },
+  action: { flex: 1 },
   texts: { flex: 1, gap: 2 },
 });
