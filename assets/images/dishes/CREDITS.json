@@ -489,11 +489,8 @@
     "url": "https://www.pexels.com/photo/person-holding-cooked-dish-on-gray-stainless-steel-bowl-2998934/"
   },
   "risotto_champignons_parmesan": {
-    "id": 8864543,
-    "photographer": "Vinícius Caricatte",
-    "query": "mushroom risotto",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/cooked-food-on-white-ceramic-plate-8864543/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque ajoutait un steak absent de la recette.",
+    "source": "owner"
   },
   "riz_pilaf_carottes_petits_pois_olives": {
     "id": 14286683,
