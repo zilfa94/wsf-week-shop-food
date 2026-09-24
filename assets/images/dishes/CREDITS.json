@@ -592,11 +592,8 @@
     "url": "https://www.pexels.com/photo/sliced-strawberries-in-the-bowl-7937023/"
   },
   "smoothie_orange_banane_coco": {
-    "id": 20300401,
-    "photographer": "Melissa Ayala",
-    "query": "smoothie glass orange fruit",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/selective-focus-of-orange-juice-20300401/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait un bocal de jus d'orange.",
+    "source": "owner"
   },
   "soupe_courge_butternut_lait_coco_pain": {
     "id": 5605543,
