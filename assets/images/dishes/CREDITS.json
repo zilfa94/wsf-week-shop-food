@@ -408,11 +408,8 @@
     "url": "https://www.pexels.com/photo/delicious-cooked-rice-with-assorted-stewed-vegetables-7189415/"
   },
   "pomme_tahini": {
-    "id": 11405133,
-    "photographer": "Denis Liendo ✅",
-    "query": "apple slices nut butter",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/bread-with-peanut-butter-and-apples-11405133/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait des toasts au beurre de cacahuète.",
+    "source": "owner"
   },
   "porc_saute_bulgogi_gingembre_riz": {
     "id": 12973148,
