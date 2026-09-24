@@ -10,7 +10,7 @@
   }
  ],
  "source": "drive",
- "scrapedAt": "2026-09-23T09:41:08.230Z",
+ "scrapedAt": "2026-09-24T09:41:28.227Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -103,17 +103,6 @@
   },
   {
    "ingredientId": "oignon",
-   "productName": "Oignons rouges",
-   "price": 2.69,
-   "unitPrice": 5.38,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/oignons-rouges/pr-C1350876",
-   "promo": true
-  },
-  {
-   "ingredientId": "oignon",
    "productName": "AUCHAN BIO Oignons",
    "price": 3.09,
    "unitPrice": 3.09,
@@ -132,17 +121,6 @@
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/oignons-jaunes/pr-C1350448",
-   "promo": true
-  },
-  {
-   "ingredientId": "oignon",
-   "productName": "AUCHAN BIO Oignons rouges",
-   "price": 3.09,
-   "unitPrice": 6.18,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-bio-oignons-rouges/pr-C1469658",
    "promo": true
   },
   {
@@ -180,6 +158,17 @@
   },
   {
    "ingredientId": "echalote",
+   "productName": "Echalote longue traditionnelle C’est qui le patron",
+   "price": 2.33,
+   "unitPrice": 9.32,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/echalote-longue-traditionnelle-c-est-qui-le-patron/pr-C1848352",
+   "promo": true
+  },
+  {
+   "ingredientId": "echalote",
    "productName": "AUCHAN BIO Echalotes demi-longues traditionnelles",
    "price": 1.89,
    "unitPrice": 7.56,
@@ -190,14 +179,25 @@
    "promo": true
   },
   {
-   "ingredientId": "echalote",
-   "productName": "Echalote longue traditionnelle C’est qui le patron",
-   "price": 2.33,
-   "unitPrice": 9.32,
+   "ingredientId": "oignon",
+   "productName": "Oignons rouges",
+   "price": 2.69,
+   "unitPrice": 5.38,
    "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/echalote-longue-traditionnelle-c-est-qui-le-patron/pr-C1848352",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/oignons-rouges/pr-C1350876",
+   "promo": true
+  },
+  {
+   "ingredientId": "oignon",
+   "productName": "AUCHAN BIO Oignons rouges",
+   "price": 3.09,
+   "unitPrice": 6.18,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/auchan-bio-oignons-rouges/pr-C1469658",
    "promo": true
   },
   {
@@ -235,17 +235,6 @@
   },
   {
    "ingredientId": "pomme_de_terre",
-   "productName": "AUCHAN Pommes de terre rouges de consommation à chair ferme salade vapeur sautées raclette",
-   "price": 3.69,
-   "unitPrice": 1.48,
-   "unit": "kg",
-   "packSize": 2.5,
-   "packLabel": "2,5kg",
-   "url": "https://www.auchan.fr/auchan-pommes-de-terre-rouges-de-consommation-a-chair-ferme-salade-vapeur-sautees-raclette/pr-C1348260",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme_de_terre",
    "productName": "Pommes de terre de consommation rouges à chair ferme micro-ondable",
    "price": 1,
    "unitPrice": 2,
@@ -267,6 +256,17 @@
    "promo": true
   },
   {
+   "ingredientId": "pomme_de_terre",
+   "productName": "AUCHAN Pommes de terre rouges de consommation à chair ferme salade vapeur sautées raclette",
+   "price": 3.69,
+   "unitPrice": 1.48,
+   "unit": "kg",
+   "packSize": 2.5,
+   "packLabel": "2,5kg",
+   "url": "https://www.auchan.fr/auchan-pommes-de-terre-rouges-de-consommation-a-chair-ferme-salade-vapeur-sautees-raclette/pr-C1348260",
+   "promo": true
+  },
+  {
    "ingredientId": "courgette",
    "productName": "Courgettes prix bas",
    "price": 2.29,
@@ -275,6 +275,17 @@
    "packSize": 1,
    "packLabel": "1 kg",
    "url": "https://www.auchan.fr/courgettes-prix-bas/pr-C1350169",
+   "promo": true
+  },
+  {
+   "ingredientId": "courgette",
+   "productName": "AUCHAN BIO Courgettes",
+   "price": 5.29,
+   "unitPrice": 7.05,
+   "unit": "kg",
+   "packSize": 0.75,
+   "packLabel": "750g",
+   "url": "https://www.auchan.fr/auchan-bio-courgettes/pr-C1627836",
    "promo": true
   },
   {
@@ -292,9 +303,9 @@
    "ingredientId": "poivron",
    "productName": "AUCHAN BIO Poivrons panachés",
    "price": 3.79,
-   "unitPrice": 9.48,
-   "unit": "kg",
-   "packSize": 0.4,
+   "unitPrice": 1.9,
+   "unit": "piece",
+   "packSize": 2,
    "packLabel": "2 pièces",
    "url": "https://www.auchan.fr/auchan-bio-poivrons-panaches/pr-C1348023",
    "promo": true
@@ -313,8 +324,8 @@
   {
    "ingredientId": "aubergine",
    "productName": "AUCHAN BIO Aubergines",
-   "price": 3.49,
-   "unitPrice": 6.98,
+   "price": 2.49,
+   "unitPrice": 4.98,
    "unit": "kg",
    "packSize": 0.5,
    "packLabel": "500g",
@@ -345,6 +356,17 @@
   },
   {
    "ingredientId": "carotte",
+   "productName": "AUCHAN BIO Carotte",
+   "price": 2.29,
+   "unitPrice": 2.29,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 Kg",
+   "url": "https://www.auchan.fr/auchan-bio-carotte/pr-C1709142",
+   "promo": true
+  },
+  {
+   "ingredientId": "carotte",
    "productName": "Carottes zéro résidu de pesticides",
    "price": 2.49,
    "unitPrice": 3.32,
@@ -366,14 +388,14 @@
    "promo": true
   },
   {
-   "ingredientId": "champignon",
-   "productName": "Champignons blancs pieds coupés",
-   "price": 3.89,
-   "unitPrice": 7.78,
+   "ingredientId": "carotte",
+   "productName": "AUCHAN Carottes",
+   "price": 3.69,
+   "unitPrice": 2.46,
    "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/champignons-blancs-pieds-coupes/pr-C1348179",
+   "packSize": 1.5,
+   "packLabel": "1,5kg",
+   "url": "https://www.auchan.fr/auchan-carottes/pr-C1521014",
    "promo": true
   },
   {
@@ -385,6 +407,17 @@
    "packSize": 0.25,
    "packLabel": "250g",
    "url": "https://www.auchan.fr/champignons-blancs-pieds-entiers-prix-bas/pr-C1498104",
+   "promo": true
+  },
+  {
+   "ingredientId": "champignon",
+   "productName": "Champignons blancs pieds coupés",
+   "price": 3.89,
+   "unitPrice": 7.78,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/champignons-blancs-pieds-coupes/pr-C1348179",
    "promo": true
   },
   {
@@ -542,16 +575,6 @@
   },
   {
    "ingredientId": "salade",
-   "productName": "AUCHAN Cœur de laitue",
-   "price": 0.94,
-   "unitPrice": 13.43,
-   "unit": "kg",
-   "packSize": 0.07,
-   "packLabel": "70g",
-   "url": "https://www.auchan.fr/auchan-coeur-de-laitue/pr-C1196601"
-  },
-  {
-   "ingredientId": "salade",
    "productName": "AUCHAN Mélange de mâche et roquette",
    "price": 2.11,
    "unitPrice": 12.06,
@@ -559,6 +582,16 @@
    "packSize": 0.175,
    "packLabel": "175g",
    "url": "https://www.auchan.fr/auchan-melange-de-mache-et-roquette/pr-C1195837"
+  },
+  {
+   "ingredientId": "salade",
+   "productName": "AUCHAN Cœur de laitue",
+   "price": 0.94,
+   "unitPrice": 13.43,
+   "unit": "kg",
+   "packSize": 0.07,
+   "packLabel": "70g",
+   "url": "https://www.auchan.fr/auchan-coeur-de-laitue/pr-C1196601"
   },
   {
    "ingredientId": "salade",
@@ -671,8 +704,8 @@
   {
    "ingredientId": "citron_vert",
    "productName": "Citrons verts",
-   "price": 2.95,
-   "unitPrice": 5.9,
+   "price": 3.19,
+   "unitPrice": 6.38,
    "unit": "kg",
    "packSize": 0.5,
    "packLabel": "500g",
@@ -682,13 +715,23 @@
   {
    "ingredientId": "citron_vert",
    "productName": "Citrons verts bio",
-   "price": 4.89,
-   "unitPrice": 9.78,
+   "price": 4.39,
+   "unitPrice": 8.78,
    "unit": "kg",
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/citrons-verts-bio/pr-C1350393",
    "promo": true
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "AUCHAN SOLIDAIRES BIO CULTIVONS LE BON Oeufs de poules élevées en plein air",
+   "price": 2.28,
+   "unitPrice": 0.38,
+   "unit": "piece",
+   "packSize": 6,
+   "packLabel": "6 pièces",
+   "url": "https://www.auchan.fr/auchan-solidaires-bio-cultivons-le-bon-oeufs-de-poules-elevees-en-plein-air/pr-C1170600"
   },
   {
    "ingredientId": "oeuf",
@@ -699,6 +742,16 @@
    "packSize": 6,
    "packLabel": "6 pièces",
    "url": "https://www.auchan.fr/auchan-oeufs-de-poules-elevees-en-plein-air/pr-C1163510"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "AUCHAN Oeufs de poules élevées au sol",
+   "price": 2.89,
+   "unitPrice": 0.24,
+   "unit": "piece",
+   "packSize": 12,
+   "packLabel": "12 pièces",
+   "url": "https://www.auchan.fr/auchan-oeufs-de-poules-elevees-au-sol/pr-C1608699"
   },
   {
    "ingredientId": "oeuf",
@@ -722,6 +775,16 @@
   },
   {
    "ingredientId": "oeuf",
+   "productName": "LOUE Oeufs de poules élevées en plein air bio",
+   "price": 6,
+   "unitPrice": 0.6,
+   "unit": "piece",
+   "packSize": 10,
+   "packLabel": "10 pièces",
+   "url": "https://www.auchan.fr/loue-oeufs-de-poules-elevees-en-plein-air-bio/pr-C1177853"
+  },
+  {
+   "ingredientId": "oeuf",
    "productName": "L’OEUF DE NOS VILLAGES Oeufs de poules élevées en plein air",
    "price": 2.12,
    "unitPrice": 0.35,
@@ -729,6 +792,16 @@
    "packSize": 6,
    "packLabel": "6 pièces",
    "url": "https://www.auchan.fr/l-oeuf-de-nos-villages-oeufs-de-poules-elevees-en-plein-air/pr-C1177119"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "C’EST QUI LE PATRON ?! Oeufs de poules élevées en plein air",
+   "price": 1.99,
+   "unitPrice": 0.33,
+   "unit": "piece",
+   "packSize": 6,
+   "packLabel": "6 pièces",
+   "url": "https://www.auchan.fr/c-est-qui-le-patron-oeufs-de-poules-elevees-en-plein-air/pr-C1170507"
   },
   {
    "ingredientId": "oeuf",
@@ -752,13 +825,13 @@
   },
   {
    "ingredientId": "oeuf",
-   "productName": "MATINES Oeufs de poules",
-   "price": 2.88,
-   "unitPrice": 0.24,
+   "productName": "AUCHAN Oeufs de poules élevées en plein air sans antibiotique",
+   "price": 3.67,
+   "unitPrice": 0.31,
    "unit": "piece",
    "packSize": 12,
    "packLabel": "12 pièces",
-   "url": "https://www.auchan.fr/matines-oeufs-de-poules/pr-C1177553"
+   "url": "https://www.auchan.fr/auchan-oeufs-de-poules-elevees-en-plein-air-sans-antibiotique/pr-C1347637"
   },
   {
    "ingredientId": "oeuf",
@@ -772,6 +845,36 @@
   },
   {
    "ingredientId": "oeuf",
+   "productName": "MATINES Oeufs de poules",
+   "price": 2.88,
+   "unitPrice": 0.24,
+   "unit": "piece",
+   "packSize": 12,
+   "packLabel": "12 pièces",
+   "url": "https://www.auchan.fr/matines-oeufs-de-poules/pr-C1177553"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Oeufs de poules élevées en plein air",
+   "price": 2.34,
+   "unitPrice": 0.39,
+   "unit": "piece",
+   "packSize": 6,
+   "packLabel": "6 pièces",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-oeufs-de-poules-elevees-en-plein-air/pr-C1735059"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "LA NOUVELLE AGRICULTURE Oeufs de poules élevées en plein air",
+   "price": 1.97,
+   "unitPrice": 0.33,
+   "unit": "piece",
+   "packSize": 6,
+   "packLabel": "6 pièces",
+   "url": "https://www.auchan.fr/la-nouvelle-agriculture-oeufs-de-poules-elevees-en-plein-air/pr-C1168727"
+  },
+  {
+   "ingredientId": "oeuf",
    "productName": "PLEINE FORME Oeufs de poules élevées en plein air",
    "price": 4.8,
    "unitPrice": 0.24,
@@ -782,13 +885,23 @@
   },
   {
    "ingredientId": "oeuf",
-   "productName": "LUSTUCRU SELECTION Oeufs de poules élevées en plein air gros calibre",
-   "price": 4.17,
-   "unitPrice": 0.35,
+   "productName": "COCORETTE Oeufs de poules élevées en plein air",
+   "price": 3.63,
+   "unitPrice": 0.3,
    "unit": "piece",
    "packSize": 12,
    "packLabel": "12 pièces",
-   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-elevees-en-plein-air-gros-calibre/pr-C1835462"
+   "url": "https://www.auchan.fr/cocorette-oeufs-de-poules-elevees-en-plein-air/pr-C1176904"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "AUCHAN SOLIDAIRES BIO CULTIVONS LE BON Oeufs de poules élevées en plein air",
+   "price": 2.07,
+   "unitPrice": 0.52,
+   "unit": "piece",
+   "packSize": 4,
+   "packLabel": "4 pièces",
+   "url": "https://www.auchan.fr/auchan-solidaires-bio-cultivons-le-bon-oeufs-de-poules-elevees-en-plein-air/pr-C1170599"
   },
   {
    "ingredientId": "oeuf",
@@ -812,13 +925,13 @@
   },
   {
    "ingredientId": "oeuf",
-   "productName": "LUSTUCRU SELECTION Oeufs de poules élevées en plein air gros calibre",
-   "price": 2.26,
-   "unitPrice": 0.38,
+   "productName": "LA POULE AU VERT Oeufs frais de poule élevées en cage",
+   "price": 4.68,
+   "unitPrice": 0.23,
    "unit": "piece",
-   "packSize": 6,
-   "packLabel": "6 pièces",
-   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-elevees-en-plein-air-gros-calibre/pr-C1835465"
+   "packSize": 20,
+   "packLabel": "20 pièces",
+   "url": "https://www.auchan.fr/la-poule-au-vert-oeufs-frais-de-poule-elevees-en-cage/pr-C1848115"
   },
   {
    "ingredientId": "oeuf",
@@ -832,23 +945,23 @@
   },
   {
    "ingredientId": "oeuf",
-   "productName": "LA POULE AU VERT Oeufs frais de poule élevées en cage",
-   "price": 4.68,
-   "unitPrice": 0.23,
-   "unit": "piece",
-   "packSize": 20,
-   "packLabel": "20 pièces",
-   "url": "https://www.auchan.fr/la-poule-au-vert-oeufs-frais-de-poule-elevees-en-cage/pr-C1848115"
-  },
-  {
-   "ingredientId": "oeuf",
-   "productName": "Oeufs de plein air",
-   "price": 1.9,
-   "unitPrice": 0.32,
+   "productName": "LUSTUCRU SELECTION Oeufs de poules élevées en plein air gros calibre",
+   "price": 2.26,
+   "unitPrice": 0.38,
    "unit": "piece",
    "packSize": 6,
    "packLabel": "6 pièces",
-   "url": "https://www.auchan.fr/oeufs-de-plein-air/pr-C1843158"
+   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-elevees-en-plein-air-gros-calibre/pr-C1835465"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "LUSTUCRU SELECTION Oeufs de poules élevées au sol gros calibre datés du jour de ponte",
+   "price": 3.65,
+   "unitPrice": 0.3,
+   "unit": "piece",
+   "packSize": 12,
+   "packLabel": "12 pièces",
+   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-elevees-au-sol-gros-calibre-dates-du-jour-de-ponte/pr-C1835461"
   },
   {
    "ingredientId": "oeuf",
@@ -859,6 +972,46 @@
    "packSize": 6,
    "packLabel": "6 pièces",
    "url": "https://www.auchan.fr/pleine-forme-oeufs-de-poules-elevees-en-plein-air/pr-C1165709"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "MATINES Oeufs de poules",
+   "price": 6.23,
+   "unitPrice": 0.21,
+   "unit": "piece",
+   "packSize": 30,
+   "packLabel": "30 pièces",
+   "url": "https://www.auchan.fr/matines-oeufs-de-poules/pr-C1485463"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "LUSTUCRU SELECTION Oeufs de poules de gros calibre élevées au sol",
+   "price": 2.15,
+   "unitPrice": 0.36,
+   "unit": "piece",
+   "packSize": 6,
+   "packLabel": "6 pièces",
+   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-de-gros-calibre-elevees-au-sol/pr-C1835464"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "LUSTUCRU SELECTION Oeufs de poules élevées en plein air gros calibre",
+   "price": 4.17,
+   "unitPrice": 0.35,
+   "unit": "piece",
+   "packSize": 12,
+   "packLabel": "12 pièces",
+   "url": "https://www.auchan.fr/lustucru-selection-oeufs-de-poules-elevees-en-plein-air-gros-calibre/pr-C1835462"
+  },
+  {
+   "ingredientId": "oeuf",
+   "productName": "BREIZH ON EGG Oeufs de poules élevées en plein air",
+   "price": 7.09,
+   "unitPrice": 0.35,
+   "unit": "piece",
+   "packSize": 20,
+   "packLabel": "20 pièces",
+   "url": "https://www.auchan.fr/breizh-on-egg-oeufs-de-poules-elevees-en-plein-air/pr-C1171589"
   },
   {
    "ingredientId": "oeuf",
@@ -900,6 +1053,16 @@
    "packSize": 0.25,
    "packLabel": "25cl",
    "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-lait-demi-ecreme-equitable-uht/pr-C1170532"
+  },
+  {
+   "ingredientId": "lait",
+   "productName": "AUCHAN SOLIDAIRES BIO CULTIVONS LE BON Lait demi-écrémé UHT",
+   "price": 6.86,
+   "unitPrice": 1.14,
+   "unit": "l",
+   "packSize": 6,
+   "packLabel": "6x1L",
+   "url": "https://www.auchan.fr/auchan-solidaires-bio-cultivons-le-bon-lait-demi-ecreme-uht/pr-C1306935"
   },
   {
    "ingredientId": "lait",
@@ -963,6 +1126,16 @@
   },
   {
    "ingredientId": "lait",
+   "productName": "AUCHAN SOLIDAIRES CULTIVONS LE BON Lait demi-écrémé UHT",
+   "price": 7.05,
+   "unitPrice": 1.18,
+   "unit": "l",
+   "packSize": 6,
+   "packLabel": "6x1L",
+   "url": "https://www.auchan.fr/auchan-solidaires-cultivons-le-bon-lait-demi-ecreme-uht/pr-C1170543"
+  },
+  {
+   "ingredientId": "lait",
    "productName": "LACTEL Lait demi-écrémé UHT",
    "price": 6.18,
    "unitPrice": 2.06,
@@ -973,13 +1146,13 @@
   },
   {
    "ingredientId": "lait",
-   "productName": "AUCHAN SOLIDAIRES CULTIVONS LE BON Lait demi-écrémé UHT",
-   "price": 7.05,
-   "unitPrice": 1.18,
+   "productName": "AUCHAN Lait demi-écrémé UHT",
+   "price": 1.06,
+   "unitPrice": 1.06,
    "unit": "l",
-   "packSize": 6,
-   "packLabel": "6x1L",
-   "url": "https://www.auchan.fr/auchan-solidaires-cultivons-le-bon-lait-demi-ecreme-uht/pr-C1170543"
+   "packSize": 1,
+   "packLabel": "1L",
+   "url": "https://www.auchan.fr/auchan-lait-demi-ecreme-uht/pr-C1177790"
   },
   {
    "ingredientId": "lait",
@@ -1063,16 +1236,6 @@
   },
   {
    "ingredientId": "lait",
-   "productName": "AUCHAN BIO CULTIVONS LE BON Lait demi-écrémé UHT",
-   "price": 0.93,
-   "unitPrice": 1.86,
-   "unit": "l",
-   "packSize": 0.5,
-   "packLabel": "50 cl",
-   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-lait-demi-ecreme-uht/pr-C1170533"
-  },
-  {
-   "ingredientId": "lait",
    "productName": "CANDIA Viva Lait demi-écrémé UHT vitaminé",
    "price": 1.46,
    "unitPrice": 1.46,
@@ -1080,6 +1243,16 @@
    "packSize": 1,
    "packLabel": "1L",
    "url": "https://www.auchan.fr/candia-viva-lait-demi-ecreme-uht-vitamine/pr-C1177792"
+  },
+  {
+   "ingredientId": "lait",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Lait demi-écrémé UHT",
+   "price": 0.93,
+   "unitPrice": 1.86,
+   "unit": "l",
+   "packSize": 0.5,
+   "packLabel": "50 cl",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-lait-demi-ecreme-uht/pr-C1170533"
   },
   {
    "ingredientId": "lait",
@@ -1133,16 +1306,6 @@
   },
   {
    "ingredientId": "lait",
-   "productName": "CANDIA Grandlait Lait demi-écrémé UHT bio",
-   "price": 5.12,
-   "unitPrice": 2.56,
-   "unit": "l",
-   "packSize": 2,
-   "packLabel": "4x50cl",
-   "url": "https://www.auchan.fr/candia-grandlait-lait-demi-ecreme-uht-bio/pr-C1176893"
-  },
-  {
-   "ingredientId": "lait",
    "productName": "LACTEL Lait demi-écrémé bio UHT",
    "price": 1.12,
    "unitPrice": 2.24,
@@ -1153,13 +1316,13 @@
   },
   {
    "ingredientId": "lait",
-   "productName": "FAIRE FRANCE Lait demi-écrémé stérilisé UHT",
-   "price": 4.56,
-   "unitPrice": 1.52,
+   "productName": "CANDIA Grandlait Lait demi-écrémé UHT bio",
+   "price": 5.12,
+   "unitPrice": 2.56,
    "unit": "l",
-   "packSize": 3,
-   "packLabel": "6x50cl",
-   "url": "https://www.auchan.fr/faire-france-lait-demi-ecreme-sterilise-uht/pr-C1316767"
+   "packSize": 2,
+   "packLabel": "4x50cl",
+   "url": "https://www.auchan.fr/candia-grandlait-lait-demi-ecreme-uht-bio/pr-C1176893"
   },
   {
    "ingredientId": "lait",
@@ -1443,13 +1606,14 @@
   },
   {
    "ingredientId": "beurre",
-   "productName": "ELLE & VIRE Mini-beurre doux gastronomique 82%MG",
-   "price": 3.15,
-   "unitPrice": 15.75,
+   "productName": "AUCHAN Beurre doux 82.5%MG",
+   "price": 4.5,
+   "unitPrice": 9,
    "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "20x12,5g",
-   "url": "https://www.auchan.fr/elle-vire-mini-beurre-doux-gastronomique-82-mg/pr-C1177993"
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/auchan-beurre-doux-82-5-mg/pr-C1171748",
+   "promo": true
   },
   {
    "ingredientId": "beurre",
@@ -1463,6 +1627,16 @@
   },
   {
    "ingredientId": "beurre",
+   "productName": "ELLE & VIRE Mini-beurre doux gastronomique 82%MG",
+   "price": 3.15,
+   "unitPrice": 15.75,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "20x12,5g",
+   "url": "https://www.auchan.fr/elle-vire-mini-beurre-doux-gastronomique-82-mg/pr-C1177993"
+  },
+  {
+   "ingredientId": "beurre",
    "productName": "PAYSAN BRETON Beurre moulé demi-sel 80%MG",
    "price": 6.39,
    "unitPrice": 12.78,
@@ -1470,27 +1644,6 @@
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/paysan-breton-beurre-moule-demi-sel-80-mg/pr-C1174924"
-  },
-  {
-   "ingredientId": "beurre",
-   "productName": "AUCHAN Beurre doux 82.5%MG",
-   "price": 4.5,
-   "unitPrice": 9,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-beurre-doux-82-5-mg/pr-C1171748",
-   "promo": true
-  },
-  {
-   "ingredientId": "beurre",
-   "productName": "AUCHAN BIO Beurre moulé demi-sel 81%MG bio",
-   "price": 3.11,
-   "unitPrice": 12.44,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/auchan-bio-beurre-moule-demi-sel-81-mg-bio/pr-C1170453"
   },
   {
    "ingredientId": "beurre",
@@ -1504,13 +1657,13 @@
   },
   {
    "ingredientId": "beurre",
-   "productName": "PRESIDENT Beurre gastronomique demi-sel 80%MG",
-   "price": 3.2,
-   "unitPrice": 12.8,
+   "productName": "AUCHAN BIO Beurre moulé demi-sel 81%MG bio",
+   "price": 3.11,
+   "unitPrice": 12.44,
    "unit": "kg",
    "packSize": 0.25,
    "packLabel": "250g",
-   "url": "https://www.auchan.fr/president-beurre-gastronomique-demi-sel-80-mg/pr-C1174998"
+   "url": "https://www.auchan.fr/auchan-bio-beurre-moule-demi-sel-81-mg-bio/pr-C1170453"
   },
   {
    "ingredientId": "beurre",
@@ -1521,6 +1674,16 @@
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/paysan-breton-beurre-moule-doux-82-mg/pr-C1174925"
+  },
+  {
+   "ingredientId": "beurre",
+   "productName": "PRESIDENT Beurre gastronomique demi-sel 80%MG",
+   "price": 3.2,
+   "unitPrice": 12.8,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/president-beurre-gastronomique-demi-sel-80-mg/pr-C1174998"
   },
   {
    "ingredientId": "beurre",
@@ -1634,16 +1797,6 @@
   },
   {
    "ingredientId": "beurre",
-   "productName": "LEGALL Beurre de baratte doux 82%MG",
-   "price": 3.04,
-   "unitPrice": 12.16,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/legall-beurre-de-baratte-doux-82-mg/pr-C1177700"
-  },
-  {
-   "ingredientId": "beurre",
    "productName": "PRESIDENT Beurre tendre doux 82%MG",
    "price": 2.1,
    "unitPrice": 16.8,
@@ -1754,16 +1907,6 @@
   },
   {
    "ingredientId": "creme_liquide",
-   "productName": "AUCHAN Crème fluide légère 12% MG UHT",
-   "price": 2.52,
-   "unitPrice": 5.04,
-   "unit": "l",
-   "packSize": 0.5,
-   "packLabel": "2x25cl",
-   "url": "https://www.auchan.fr/auchan-creme-fluide-legere-12-mg-uht/pr-C1177013"
-  },
-  {
-   "ingredientId": "creme_liquide",
    "productName": "AUCHAN BIO CULTIVONS LE BON Crème fluide légère 15% MG UHT",
    "price": 3.99,
    "unitPrice": 6.65,
@@ -1771,6 +1914,16 @@
    "packSize": 0.6,
    "packLabel": "3x20cl",
    "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-creme-fluide-legere-15-mg-uht/pr-C1307666"
+  },
+  {
+   "ingredientId": "creme_liquide",
+   "productName": "AUCHAN Crème fluide légère 12% MG UHT",
+   "price": 2.52,
+   "unitPrice": 5.04,
+   "unit": "l",
+   "packSize": 0.5,
+   "packLabel": "2x25cl",
+   "url": "https://www.auchan.fr/auchan-creme-fluide-legere-12-mg-uht/pr-C1177013"
   },
   {
    "ingredientId": "creme_liquide",
@@ -1791,6 +1944,16 @@
    "packSize": 0.6,
    "packLabel": "3x20cl",
    "url": "https://www.auchan.fr/auchan-creme-fluide-4-mg/pr-C1848154"
+  },
+  {
+   "ingredientId": "creme_liquide",
+   "productName": "ELLE & VIRE Crème fluide entière 30%MG UHT",
+   "price": 5.67,
+   "unitPrice": 5.67,
+   "unit": "l",
+   "packSize": 1,
+   "packLabel": "1L",
+   "url": "https://www.auchan.fr/elle-vire-creme-fluide-entiere-30-mg-uht/pr-C1178090"
   },
   {
    "ingredientId": "creme_liquide",
@@ -1864,16 +2027,6 @@
    "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-creme-fluide-entiere-30-mg-bio/pr-C1307665"
   },
   {
-   "ingredientId": "creme_liquide",
-   "productName": "ELLE & VIRE Crème fluide entière 30%MG UHT",
-   "price": 5.67,
-   "unitPrice": 5.67,
-   "unit": "l",
-   "packSize": 1,
-   "packLabel": "1L",
-   "url": "https://www.auchan.fr/elle-vire-creme-fluide-entiere-30-mg-uht/pr-C1178090"
-  },
-  {
    "ingredientId": "fromage_blanc",
    "productName": "DANONE Cottage cheese fromage blanc à tartiner ou à cuisiner",
    "price": 4.37,
@@ -1885,16 +2038,6 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "AUCHAN Fromage blanc 3.7% MG",
-   "price": 1.92,
-   "unitPrice": 2.4,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "8x100g",
-   "url": "https://www.auchan.fr/auchan-fromage-blanc-3-7-mg/pr-C1170405"
-  },
-  {
-   "ingredientId": "fromage_blanc",
    "productName": "VRAI Fromage blanc au lait de brebis bio",
    "price": 2.64,
    "unitPrice": 6.6,
@@ -1902,6 +2045,16 @@
    "packSize": 0.4,
    "packLabel": "400g",
    "url": "https://www.auchan.fr/vrai-fromage-blanc-au-lait-de-brebis-bio/pr-C1176558"
+  },
+  {
+   "ingredientId": "fromage_blanc",
+   "productName": "AUCHAN Fromage blanc 3.7% MG",
+   "price": 1.92,
+   "unitPrice": 2.4,
+   "unit": "kg",
+   "packSize": 0.8,
+   "packLabel": "8x100g",
+   "url": "https://www.auchan.fr/auchan-fromage-blanc-3-7-mg/pr-C1170405"
   },
   {
    "ingredientId": "fromage_blanc",
@@ -1945,6 +2098,16 @@
   },
   {
    "ingredientId": "fromage_blanc",
+   "productName": "JOCKEY Fromage blanc stracciatella",
+   "price": 2.26,
+   "unitPrice": 4.71,
+   "unit": "kg",
+   "packSize": 0.48,
+   "packLabel": "4x120g",
+   "url": "https://www.auchan.fr/jockey-fromage-blanc-stracciatella/pr-C1176527"
+  },
+  {
+   "ingredientId": "fromage_blanc",
    "productName": "FJORD Yaourt fromage blanc nature",
    "price": 3.61,
    "unitPrice": 3.61,
@@ -1962,16 +2125,6 @@
    "packSize": 0.8,
    "packLabel": "8x100g",
    "url": "https://www.auchan.fr/auchan-fromage-blanc-0-nature/pr-C1866093"
-  },
-  {
-   "ingredientId": "fromage_blanc",
-   "productName": "JOCKEY Fromage blanc stracciatella",
-   "price": 2.26,
-   "unitPrice": 4.71,
-   "unit": "kg",
-   "packSize": 0.48,
-   "packLabel": "4x120g",
-   "url": "https://www.auchan.fr/jockey-fromage-blanc-stracciatella/pr-C1176527"
   },
   {
    "ingredientId": "fromage_blanc",
@@ -2055,16 +2208,6 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "AUCHAN Spécialité laitière Stracciatella au fromage blanc",
-   "price": 1.94,
-   "unitPrice": 4.04,
-   "unit": "kg",
-   "packSize": 0.48,
-   "packLabel": "4x120g",
-   "url": "https://www.auchan.fr/auchan-specialite-laitiere-stracciatella-au-fromage-blanc/pr-C1816764"
-  },
-  {
-   "ingredientId": "fromage_blanc",
    "productName": "JOCKEY Fromage blanc nature 3% MG",
    "price": 2.95,
    "unitPrice": 3.69,
@@ -2072,6 +2215,16 @@
    "packSize": 0.8,
    "packLabel": "8x100g",
    "url": "https://www.auchan.fr/jockey-fromage-blanc-nature-3-mg/pr-C1174776"
+  },
+  {
+   "ingredientId": "fromage_blanc",
+   "productName": "AUCHAN Spécialité laitière Stracciatella au fromage blanc",
+   "price": 1.94,
+   "unitPrice": 4.04,
+   "unit": "kg",
+   "packSize": 0.48,
+   "packLabel": "4x120g",
+   "url": "https://www.auchan.fr/auchan-specialite-laitiere-stracciatella-au-fromage-blanc/pr-C1816764"
   },
   {
    "ingredientId": "lait",
@@ -2095,6 +2248,16 @@
   },
   {
    "ingredientId": "fromage_blanc",
+   "productName": "ALSACE LAIT Fromage blanc nature",
+   "price": 3.6,
+   "unitPrice": 3.6,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1kg",
+   "url": "https://www.auchan.fr/alsace-lait-fromage-blanc-nature/pr-C1178072"
+  },
+  {
+   "ingredientId": "fromage_blanc",
    "productName": "RIANS Mini faisselle fromage blanc de campagne",
    "price": 2.4,
    "unitPrice": 6,
@@ -2115,6 +2278,16 @@
   },
   {
    "ingredientId": "fromage_blanc",
+   "productName": "LAITERIE LES FAYES Fromage blanc des Limousins 3,2%MG",
+   "price": 7.66,
+   "unitPrice": 5.11,
+   "unit": "kg",
+   "packSize": 1.5,
+   "packLabel": "1,5kg",
+   "url": "https://www.auchan.fr/laiterie-les-fayes-fromage-blanc-des-limousins-3-2-mg/pr-C1171356"
+  },
+  {
+   "ingredientId": "fromage_blanc",
    "productName": "AUCHAN BIO Fromage frais nature",
    "price": 3.8,
    "unitPrice": 5.28,
@@ -2122,16 +2295,6 @@
    "packSize": 0.72,
    "packLabel": "12x60g",
    "url": "https://www.auchan.fr/auchan-bio-fromage-frais-nature/pr-C1310704"
-  },
-  {
-   "ingredientId": "fromage_blanc",
-   "productName": "AUCHAN Faisselle 4,5% MG",
-   "price": 2.6,
-   "unitPrice": 2.6,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1kg",
-   "url": "https://www.auchan.fr/auchan-faisselle-4-5-mg/pr-C1397652"
   },
   {
    "ingredientId": "fromage_blanc",
@@ -2145,13 +2308,13 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "LAITERIE LES FAYES Fromage blanc des Limousins 3,2%MG",
-   "price": 3.27,
-   "unitPrice": 4.36,
+   "productName": "AUCHAN Faisselle 4,5% MG",
+   "price": 2.6,
+   "unitPrice": 2.6,
    "unit": "kg",
-   "packSize": 0.75,
-   "packLabel": "750g",
-   "url": "https://www.auchan.fr/laiterie-les-fayes-fromage-blanc-des-limousins-3-2-mg/pr-C1171358"
+   "packSize": 1,
+   "packLabel": "1kg",
+   "url": "https://www.auchan.fr/auchan-faisselle-4-5-mg/pr-C1397652"
   },
   {
    "ingredientId": "fromage_blanc",
@@ -2162,6 +2325,16 @@
    "packSize": 1,
    "packLabel": "1kg",
    "url": "https://www.auchan.fr/auchan-fromage-blanc-7-8-mg/pr-C1178079"
+  },
+  {
+   "ingredientId": "fromage_blanc",
+   "productName": "LAITERIE LES FAYES Fromage blanc des Limousins 3,2%MG",
+   "price": 3.27,
+   "unitPrice": 4.36,
+   "unit": "kg",
+   "packSize": 0.75,
+   "packLabel": "750g",
+   "url": "https://www.auchan.fr/laiterie-les-fayes-fromage-blanc-des-limousins-3-2-mg/pr-C1171358"
   },
   {
    "ingredientId": "fromage_blanc",
@@ -2205,36 +2378,6 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "VRAI Fromage blanc au lait de chèvre bio",
-   "price": 3.33,
-   "unitPrice": 8.33,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/vrai-fromage-blanc-au-lait-de-chevre-bio/pr-C1176096"
-  },
-  {
-   "ingredientId": "fromage_blanc",
-   "productName": "ALSACE LAIT Fromage blanc nature",
-   "price": 3.6,
-   "unitPrice": 3.6,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1kg",
-   "url": "https://www.auchan.fr/alsace-lait-fromage-blanc-nature/pr-C1178072"
-  },
-  {
-   "ingredientId": "fromage_blanc",
-   "productName": "LAITERIE LES FAYES Fromage blanc des Limousins 3,2%MG",
-   "price": 7.66,
-   "unitPrice": 5.11,
-   "unit": "kg",
-   "packSize": 1.5,
-   "packLabel": "1,5kg",
-   "url": "https://www.auchan.fr/laiterie-les-fayes-fromage-blanc-des-limousins-3-2-mg/pr-C1171356"
-  },
-  {
-   "ingredientId": "fromage_blanc",
    "productName": "DANONE Protéiné Fromage blanc nature 0% MG",
    "price": 3.35,
    "unitPrice": 4.19,
@@ -2245,13 +2388,23 @@
   },
   {
    "ingredientId": "fromage_blanc",
-   "productName": "LAITERIE LES FAYES Fromage blanc des Limousins 0%MG",
-   "price": 4.73,
-   "unitPrice": 3.15,
+   "productName": "VRAI Fromage blanc au lait de chèvre bio",
+   "price": 3.33,
+   "unitPrice": 8.33,
    "unit": "kg",
-   "packSize": 1.5,
-   "packLabel": "1.5KG",
-   "url": "https://www.auchan.fr/laiterie-les-fayes-fromage-blanc-des-limousins-0-mg/pr-C1301099"
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/vrai-fromage-blanc-au-lait-de-chevre-bio/pr-C1176096"
+  },
+  {
+   "ingredientId": "fromage_blanc",
+   "productName": "CALIN Extra - Fromage blanc nature 0% MG",
+   "price": 2.54,
+   "unitPrice": 3.18,
+   "unit": "kg",
+   "packSize": 0.8,
+   "packLabel": "8x100g",
+   "url": "https://www.auchan.fr/calin-extra-fromage-blanc-nature-0-mg/pr-C1367233"
   },
   {
    "ingredientId": "yaourt",
@@ -2528,6 +2681,16 @@
   },
   {
    "ingredientId": "parmesan",
+   "productName": "AUCHAN BIO Parmigiano reggiano râpé AOP",
+   "price": 1.73,
+   "unitPrice": 34.6,
+   "unit": "kg",
+   "packSize": 0.05,
+   "packLabel": "50g",
+   "url": "https://www.auchan.fr/auchan-bio-parmigiano-reggiano-rape-aop/pr-C1197953"
+  },
+  {
+   "ingredientId": "parmesan",
    "productName": "GALBANI Parmigiano reggiano râpé fin AOP",
    "price": 1.96,
    "unitPrice": 32.67,
@@ -2575,26 +2738,6 @@
    "packSize": 0.15,
    "packLabel": "150g",
    "url": "https://www.auchan.fr/galbani-mozzarella-rapee/pr-C1198911"
-  },
-  {
-   "ingredientId": "parmesan",
-   "productName": "AUCHAN BIO Parmigiano reggiano râpé AOP",
-   "price": 1.73,
-   "unitPrice": 34.6,
-   "unit": "kg",
-   "packSize": 0.05,
-   "packLabel": "50g",
-   "url": "https://www.auchan.fr/auchan-bio-parmigiano-reggiano-rape-aop/pr-C1197953"
-  },
-  {
-   "ingredientId": "emmental_rape",
-   "productName": "ENTREMONT Emmental français râpé extra fin",
-   "price": 5.8,
-   "unitPrice": 11.6,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/entremont-emmental-francais-rape-extra-fin/pr-C1197118"
   },
   {
    "ingredientId": "mozzarella",
@@ -2658,16 +2801,6 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "POUCE Mozzarella",
-   "price": 0.71,
-   "unitPrice": 5.68,
-   "unit": "kg",
-   "packSize": 0.125,
-   "packLabel": "125g",
-   "url": "https://www.auchan.fr/pouce-mozzarella/pr-C1199466"
-  },
-  {
-   "ingredientId": "mozzarella",
    "productName": "AUCHAN Mozzarella",
    "price": 2.99,
    "unitPrice": 7.97,
@@ -2675,6 +2808,16 @@
    "packSize": 0.375,
    "packLabel": "375g",
    "url": "https://www.auchan.fr/auchan-mozzarella/pr-C1845936"
+  },
+  {
+   "ingredientId": "mozzarella",
+   "productName": "POUCE Mozzarella",
+   "price": 0.71,
+   "unitPrice": 5.68,
+   "unit": "kg",
+   "packSize": 0.125,
+   "packLabel": "125g",
+   "url": "https://www.auchan.fr/pouce-mozzarella/pr-C1199466"
   },
   {
    "ingredientId": "mozzarella",
@@ -2869,17 +3012,6 @@
   },
   {
    "ingredientId": "camembert",
-   "productName": "Camembert au lait de Bufflonne",
-   "price": 6.59,
-   "unitPrice": 26.36,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/camembert-au-lait-de-bufflonne/pr-C1373184",
-   "promo": true
-  },
-  {
-   "ingredientId": "camembert",
    "productName": "AUCHAN Camembert caractère à pâte molle",
    "price": 1.81,
    "unitPrice": 7.24,
@@ -3002,16 +3134,6 @@
   },
   {
    "ingredientId": "lait",
-   "productName": "PAVE D AFFINOIS Fromage à pâte molle au lait de vache pasteurisé",
-   "price": 2.79,
-   "unitPrice": 13.95,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200g",
-   "url": "https://www.auchan.fr/pave-d-affinois-fromage-a-pate-molle-au-lait-de-vache-pasteurise/pr-C1194890"
-  },
-  {
-   "ingredientId": "lait",
    "productName": "L’ORTOLAN Fromage à pâte molle au lait de vache pasteurisé",
    "price": 2.69,
    "unitPrice": 10.76,
@@ -3019,6 +3141,16 @@
    "packSize": 0.25,
    "packLabel": "250g",
    "url": "https://www.auchan.fr/l-ortolan-fromage-a-pate-molle-au-lait-de-vache-pasteurise/pr-C1200102"
+  },
+  {
+   "ingredientId": "lait",
+   "productName": "PAVE D AFFINOIS Fromage à pâte molle au lait de vache pasteurisé",
+   "price": 2.79,
+   "unitPrice": 13.95,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200g",
+   "url": "https://www.auchan.fr/pave-d-affinois-fromage-a-pate-molle-au-lait-de-vache-pasteurise/pr-C1194890"
   },
   {
    "ingredientId": "chevre_frais",
@@ -3173,6 +3305,17 @@
    "promo": true
   },
   {
+   "ingredientId": "dinde_escalope",
+   "productName": "Escalopes de dinde",
+   "price": 6.15,
+   "unitPrice": 12.3,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/escalopes-de-dinde/pr-C1846831",
+   "promo": true
+  },
+  {
    "ingredientId": "boeuf_bourguignon",
    "productName": "Bourguignon ** de boeuf",
    "price": 10.9,
@@ -3262,6 +3405,28 @@
   },
   {
    "ingredientId": "boeuf_hache",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Haché Vrac Pur Bœuf 5% MG Bio",
+   "price": 8.69,
+   "unitPrice": 24.83,
+   "unit": "kg",
+   "packSize": 0.35,
+   "packLabel": "350g",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-hache-vrac-pur-boeuf-5-mg-bio/pr-C1197739",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
+   "productName": "CHARAL Haché pur bœuf 5%mg",
+   "price": 10.69,
+   "unitPrice": 21.38,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/charal-hache-pur-boeuf-5-mg/pr-C1180738",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
    "productName": "AUCHAN Steaks hachés pur bœuf façon bouchère 5%MG",
    "price": 9.99,
    "unitPrice": 19.98,
@@ -3273,6 +3438,17 @@
   },
   {
    "ingredientId": "boeuf_hache",
+   "productName": "AUCHAN Steak hachés pur bœuf, façon bouchère 5%",
+   "price": 5.39,
+   "unitPrice": 21.56,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/auchan-steak-haches-pur-boeuf-facon-bouchere-5/pr-C1769673",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
    "productName": "AUCHAN Steaks hachés pur bœuf 15%MG",
    "price": 3.89,
    "unitPrice": 19.45,
@@ -3280,6 +3456,17 @@
    "packSize": 0.2,
    "packLabel": "200g",
    "url": "https://www.auchan.fr/auchan-steaks-haches-pur-boeuf-15-mg/pr-C1769667",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
+   "productName": "AUCHAN Steaks hachés pur bœuf façon bouchère 15% MG",
+   "price": 4.99,
+   "unitPrice": 19.96,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/auchan-steaks-haches-pur-boeuf-facon-bouchere-15-mg/pr-C1769670",
    "promo": true
   },
   {
@@ -3306,6 +3493,17 @@
   },
   {
    "ingredientId": "boeuf_hache",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Steaks hachés Pur boeuf 5% mg",
+   "price": 6.69,
+   "unitPrice": 26.76,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-steaks-haches-pur-boeuf-5-mg/pr-C1197737",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
    "productName": "AUCHAN MMM! Steaks hachés Charolais 12%mg",
    "price": 5.49,
    "unitPrice": 21.96,
@@ -3317,13 +3515,13 @@
   },
   {
    "ingredientId": "boeuf_hache",
-   "productName": "AUCHAN Steak haché pur boeuf 15%mg",
-   "price": 7.59,
-   "unitPrice": 18.98,
+   "productName": "AL QASSAB Steak haché frais halal 100% pur bœuf 15% mg",
+   "price": 4.29,
+   "unitPrice": 21.45,
    "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "4x100g",
-   "url": "https://www.auchan.fr/auchan-steak-hache-pur-boeuf-15-mg/pr-C1883062",
+   "packSize": 0.2,
+   "packLabel": "200g",
+   "url": "https://www.auchan.fr/al-qassab-steak-hache-frais-halal-100-pur-boeuf-15-mg/pr-C1543913",
    "promo": true
   },
   {
@@ -3368,17 +3566,6 @@
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/auchan-chair-a-saucisse-superieur-pur-porc/pr-C1781690",
-   "promo": true
-  },
-  {
-   "ingredientId": "boeuf_hache",
-   "productName": "CHARAL Haché pur bœuf 5%mg",
-   "price": 10.69,
-   "unitPrice": 21.38,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/charal-hache-pur-boeuf-5-mg/pr-C1180738",
    "promo": true
   },
   {
@@ -3438,6 +3625,17 @@
   },
   {
    "ingredientId": "saucisse",
+   "productName": "PRIX BAS Chipolatas",
+   "price": 2.45,
+   "unitPrice": 7.42,
+   "unit": "kg",
+   "packSize": 0.33,
+   "packLabel": "330g",
+   "url": "https://www.auchan.fr/prix-bas-chipolatas/pr-C1777624",
+   "promo": true
+  },
+  {
+   "ingredientId": "saucisse",
    "productName": "AUCHAN Véritables merguez",
    "price": 5.19,
    "unitPrice": 15.73,
@@ -3445,6 +3643,17 @@
    "packSize": 0.33,
    "packLabel": "330g",
    "url": "https://www.auchan.fr/auchan-veritables-merguez/pr-C1778888",
+   "promo": true
+  },
+  {
+   "ingredientId": "saucisse",
+   "productName": "PRIX BAS Merguez pur bœuf",
+   "price": 3.79,
+   "unitPrice": 11.48,
+   "unit": "kg",
+   "packSize": 0.33,
+   "packLabel": "330g",
+   "url": "https://www.auchan.fr/prix-bas-merguez-pur-boeuf/pr-C1778898",
    "promo": true
   },
   {
@@ -3514,17 +3723,6 @@
   },
   {
    "ingredientId": "saumon",
-   "productName": "Pavés de saumon de Norvège",
-   "price": 9.69,
-   "unitPrice": 19.38,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/paves-de-saumon-de-norvege/pr-C1858246",
-   "promo": true
-  },
-  {
-   "ingredientId": "saumon",
    "productName": "AUCHAN LE POISSONNIER CULTIVONS LE BON Pavé de saumon d’Ecosse sans arêtes",
    "price": 6.99,
    "unitPrice": 27.96,
@@ -3554,17 +3752,6 @@
    "packSize": 0.3,
    "packLabel": "300g",
    "url": "https://www.auchan.fr/auchan-le-poissonnier-filet-de-cabillaud-sans-arete/pr-C1349773",
-   "promo": true
-  },
-  {
-   "ingredientId": "cabillaud",
-   "productName": "Filet de cabillaud",
-   "price": 4.75,
-   "unitPrice": 23.75,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200g",
-   "url": "https://www.auchan.fr/filet-de-cabillaud/pr-C1380411",
    "promo": true
   },
   {
@@ -3612,17 +3799,6 @@
   },
   {
    "ingredientId": "crevette",
-   "productName": "AUCHAN LE POISSONNIER Queues de crevettes sans sulfite",
-   "price": 4.99,
-   "unitPrice": 22.68,
-   "unit": "kg",
-   "packSize": 0.22,
-   "packLabel": "220g",
-   "url": "https://www.auchan.fr/auchan-le-poissonnier-queues-de-crevettes-sans-sulfite/pr-C1749921",
-   "promo": true
-  },
-  {
-   "ingredientId": "crevette",
    "productName": "AUCHAN LE POISSONNIER Crevettes entières cuites réfrigérées",
    "price": 9.99,
    "unitPrice": 13.32,
@@ -3655,17 +3831,6 @@
    "promo": true
   },
   {
-   "ingredientId": "moules",
-   "productName": "Moules de Bouchot élevées en France 2l",
-   "price": 6.99,
-   "unitPrice": 4.99,
-   "unit": "kg",
-   "packSize": 1.4,
-   "packLabel": "1,4 kg",
-   "url": "https://www.auchan.fr/moules-de-bouchot-elevees-en-france-2l/pr-C1350768",
-   "promo": true
-  },
-  {
    "ingredientId": "jambon_blanc",
    "productName": "AUCHAN LE CHARCUTIER Jambon supérieur cuit au torchon",
    "price": 4.89,
@@ -3674,6 +3839,17 @@
    "packSize": 0.24,
    "packLabel": "240g",
    "url": "https://www.auchan.fr/auchan-le-charcutier-jambon-superieur-cuit-au-torchon/pr-C1349281",
+   "promo": true
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "AUCHAN LE CHARCUTIER Jambon supérieur avec couenne",
+   "price": 4.89,
+   "unitPrice": 20.38,
+   "unit": "kg",
+   "packSize": 0.24,
+   "packLabel": "240g",
+   "url": "https://www.auchan.fr/auchan-le-charcutier-jambon-superieur-avec-couenne/pr-C1348726",
    "promo": true
   },
   {
@@ -3700,6 +3876,17 @@
   },
   {
    "ingredientId": "jambon_blanc",
+   "productName": "AUCHAN LE CHARCUTIER Jambon cuit supérieur avec couenne",
+   "price": 2.75,
+   "unitPrice": 22.92,
+   "unit": "kg",
+   "packSize": 0.12,
+   "packLabel": "120g",
+   "url": "https://www.auchan.fr/auchan-le-charcutier-jambon-cuit-superieur-avec-couenne/pr-C1348621",
+   "promo": true
+  },
+  {
+   "ingredientId": "jambon_blanc",
    "productName": "AUCHAN LE CHARCUTIER Jambon cuit dégraissé réduit en sel",
    "price": 2.85,
    "unitPrice": 23.75,
@@ -3718,6 +3905,17 @@
    "packSize": 0.16,
    "packLabel": "160g",
    "url": "https://www.auchan.fr/auchan-jambon-superieur-sans-couenne/pr-C1610253",
+   "promo": true
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "AUCHAN Jambon supérieur avec couenne",
+   "price": 2,
+   "unitPrice": 12.5,
+   "unit": "kg",
+   "packSize": 0.16,
+   "packLabel": "160g",
+   "url": "https://www.auchan.fr/auchan-jambon-superieur-avec-couenne/pr-C1219389",
    "promo": true
   },
   {
@@ -3832,6 +4030,16 @@
   },
   {
    "ingredientId": "jambon_blanc",
+   "productName": "AUCHAN Jambon de Paris réduit en sel",
+   "price": 2.44,
+   "unitPrice": 13.56,
+   "unit": "kg",
+   "packSize": 0.18,
+   "packLabel": "180g",
+   "url": "https://www.auchan.fr/auchan-jambon-de-paris-reduit-en-sel/pr-C1219437"
+  },
+  {
+   "ingredientId": "jambon_blanc",
    "productName": "AUCHAN Jambon supérieur sans couenne",
    "price": 1.4,
    "unitPrice": 17.5,
@@ -3852,16 +4060,6 @@
   },
   {
    "ingredientId": "jambon_blanc",
-   "productName": "AUCHAN Jambon de Paris réduit en sel",
-   "price": 2.44,
-   "unitPrice": 13.56,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180g",
-   "url": "https://www.auchan.fr/auchan-jambon-de-paris-reduit-en-sel/pr-C1219437"
-  },
-  {
-   "ingredientId": "jambon_blanc",
    "productName": "AUCHAN Jambon supérieur sans couenne",
    "price": 4.88,
    "unitPrice": 15.25,
@@ -3869,6 +4067,16 @@
    "packSize": 0.32,
    "packLabel": "320g",
    "url": "https://www.auchan.fr/auchan-jambon-superieur-sans-couenne/pr-C1610552"
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "AUCHAN Jambon blanc supérieur avec couenne",
+   "price": 1.55,
+   "unitPrice": 19.38,
+   "unit": "kg",
+   "packSize": 0.08,
+   "packLabel": "80g",
+   "url": "https://www.auchan.fr/auchan-jambon-blanc-superieur-avec-couenne/pr-C1219390"
   },
   {
    "ingredientId": "jambon_blanc",
@@ -3992,6 +4200,16 @@
   },
   {
    "ingredientId": "jambon_blanc",
+   "productName": "POUCE Jambon supérieur dégraissé sans couenne",
+   "price": 3.36,
+   "unitPrice": 8.4,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400g",
+   "url": "https://www.auchan.fr/pouce-jambon-superieur-degraisse-sans-couenne/pr-C1839764"
+  },
+  {
+   "ingredientId": "jambon_blanc",
    "productName": "HERTA Le Bon Paris Jambon cuit à l’étouffée sans nitrite",
    "price": 2.13,
    "unitPrice": 30.43,
@@ -3999,16 +4217,6 @@
    "packSize": 0.07,
    "packLabel": "70g",
    "url": "https://www.auchan.fr/herta-le-bon-paris-jambon-cuit-a-l-etouffee-sans-nitrite/pr-C1570889"
-  },
-  {
-   "ingredientId": "jambon_blanc",
-   "productName": "HERTA Le Bon Paris Jambon cuit à l’étouffée réduit en sel",
-   "price": 1.72,
-   "unitPrice": 24.57,
-   "unit": "kg",
-   "packSize": 0.07,
-   "packLabel": "70g",
-   "url": "https://www.auchan.fr/herta-le-bon-paris-jambon-cuit-a-l-etouffee-reduit-en-sel/pr-C1570871"
   },
   {
    "ingredientId": "jambon_blanc",
@@ -4022,13 +4230,13 @@
   },
   {
    "ingredientId": "jambon_blanc",
-   "productName": "POUCE Jambon supérieur dégraissé sans couenne",
-   "price": 3.36,
-   "unitPrice": 8.4,
+   "productName": "HERTA Le Bon Paris Jambon cuit à l’étouffée réduit en sel",
+   "price": 1.72,
+   "unitPrice": 24.57,
    "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/pouce-jambon-superieur-degraisse-sans-couenne/pr-C1839764"
+   "packSize": 0.07,
+   "packLabel": "70g",
+   "url": "https://www.auchan.fr/herta-le-bon-paris-jambon-cuit-a-l-etouffee-reduit-en-sel/pr-C1570871"
   },
   {
    "ingredientId": "jambon_blanc",
@@ -4039,6 +4247,16 @@
    "packSize": 0.16,
    "packLabel": "2x80g",
    "url": "https://www.auchan.fr/fleury-michon-jambon-cuit-a-poeler-conservation-sans-nitrites/pr-C1201878"
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "HERTA Le Bon Paris Jambon réduit en sel sans nitrite",
+   "price": 3.11,
+   "unitPrice": 22.21,
+   "unit": "kg",
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/herta-le-bon-paris-jambon-reduit-en-sel-sans-nitrite/pr-C1570887"
   },
   {
    "ingredientId": "lardons",
@@ -4104,16 +4322,6 @@
   },
   {
    "ingredientId": "lardons",
-   "productName": "POUCE Lardons nature",
-   "price": 1.19,
-   "unitPrice": 5.95,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200g",
-   "url": "https://www.auchan.fr/pouce-lardons-nature/pr-C1204907"
-  },
-  {
-   "ingredientId": "lardons",
    "productName": "HERTA Lardons nature sans nitrite",
    "price": 1.99,
    "unitPrice": 13.27,
@@ -4154,13 +4362,13 @@
   },
   {
    "ingredientId": "lardons",
-   "productName": "AUCHAN Lardons fumés",
-   "price": 5.04,
-   "unitPrice": 10.08,
+   "productName": "POUCE Lardons fumé",
+   "price": 1.09,
+   "unitPrice": 7.79,
    "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-lardons-fumes/pr-C1846577"
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/pouce-lardons-fume/pr-C1837169"
   },
   {
    "ingredientId": "lardons",
@@ -4174,13 +4382,13 @@
   },
   {
    "ingredientId": "lardons",
-   "productName": "POUCE Lardons fumé",
-   "price": 1.09,
-   "unitPrice": 7.79,
+   "productName": "AUCHAN Lardons fumés",
+   "price": 5.04,
+   "unitPrice": 10.08,
    "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/pouce-lardons-fume/pr-C1837169"
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/auchan-lardons-fumes/pr-C1846577"
   },
   {
    "ingredientId": "lardons",
@@ -4191,6 +4399,16 @@
    "packSize": 0.14,
    "packLabel": "140g",
    "url": "https://www.auchan.fr/pouce-lardons-nature/pr-C1837166"
+  },
+  {
+   "ingredientId": "lardons",
+   "productName": "POUCE Lardons nature",
+   "price": 1.19,
+   "unitPrice": 5.95,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200g",
+   "url": "https://www.auchan.fr/pouce-lardons-nature/pr-C1204907"
   },
   {
    "ingredientId": "chorizo",
@@ -4254,6 +4472,16 @@
    "packSize": 0.2,
    "packLabel": "200g",
    "url": "https://www.auchan.fr/cesar-moroni-chorizo-fort-pur-porc/pr-C1221095"
+  },
+  {
+   "ingredientId": "chorizo",
+   "productName": "MORONI Chorizo doux",
+   "price": 2.59,
+   "unitPrice": 25.9,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/moroni-chorizo-doux/pr-C1219005"
   },
   {
    "ingredientId": "chorizo",
@@ -4328,6 +4556,16 @@
    "url": "https://www.auchan.fr/espuna-chorizo-vela-en-tranches/pr-C1159693"
   },
   {
+   "ingredientId": "chorizo",
+   "productName": "AUCHAN Chorizo doux entier",
+   "price": 2.17,
+   "unitPrice": 9.64,
+   "unit": "kg",
+   "packSize": 0.225,
+   "packLabel": "225g",
+   "url": "https://www.auchan.fr/auchan-chorizo-doux-entier/pr-C1839732"
+  },
+  {
    "ingredientId": "riz_basmati",
    "productName": "AUCHAN Riz basmati prêt en 11 min",
    "price": 2.88,
@@ -4369,16 +4607,6 @@
   },
   {
    "ingredientId": "riz_basmati",
-   "productName": "AUCHAN BIO Riz basmati complet bio",
-   "price": 2.11,
-   "unitPrice": 4.22,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500g",
-   "url": "https://www.auchan.fr/auchan-bio-riz-basmati-complet-bio/pr-C1675904"
-  },
-  {
-   "ingredientId": "riz_basmati",
    "productName": "TAUREAU AILE Riz basmati du Penjab",
    "price": 3.99,
    "unitPrice": 3.99,
@@ -4386,6 +4614,16 @@
    "packSize": 1,
    "packLabel": "1kg",
    "url": "https://www.auchan.fr/taureau-aile-riz-basmati-du-penjab/pr-C1827318"
+  },
+  {
+   "ingredientId": "riz_basmati",
+   "productName": "AUCHAN BIO Riz basmati complet bio",
+   "price": 2.11,
+   "unitPrice": 4.22,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500g",
+   "url": "https://www.auchan.fr/auchan-bio-riz-basmati-complet-bio/pr-C1675904"
   },
   {
    "ingredientId": "riz_basmati",
@@ -4408,16 +4646,6 @@
    "url": "https://www.auchan.fr/auchan-riz-basmati/pr-C1862675"
   },
   {
-   "ingredientId": "riz_basmati",
-   "productName": "LUSTUCRU Riz basmati en sachet cuisson prêt en 10min",
-   "price": 2.61,
-   "unitPrice": 5.8,
-   "unit": "kg",
-   "packSize": 0.45,
-   "packLabel": "450g",
-   "url": "https://www.auchan.fr/lustucru-riz-basmati-en-sachet-cuisson-pret-en-10min/pr-C1823592"
-  },
-  {
    "ingredientId": "riz",
    "productName": "ZAINAB Riz long Basmati de qualité supérieure",
    "price": 4.19,
@@ -4436,6 +4664,16 @@
    "packSize": 1,
    "packLabel": "1kg",
    "url": "https://www.auchan.fr/zainab-riz-long-basmati-de-qualite-superieure/pr-C1713495"
+  },
+  {
+   "ingredientId": "riz_basmati",
+   "productName": "LUSTUCRU Riz basmati en sachet cuisson prêt en 10min",
+   "price": 2.61,
+   "unitPrice": 5.8,
+   "unit": "kg",
+   "packSize": 0.45,
+   "packLabel": "450g",
+   "url": "https://www.auchan.fr/lustucru-riz-basmati-en-sachet-cuisson-pret-en-10min/pr-C1823592"
   },
   {
    "ingredientId": "riz_basmati",
@@ -4506,16 +4744,6 @@
    "packSize": 1,
    "packLabel": "1kg",
    "url": "https://www.auchan.fr/auchan-riz-long-grain-incollable/pr-C1240700"
-  },
-  {
-   "ingredientId": "riz",
-   "productName": "LUSTUCRU Riz long grain incollable sachets cuisson prêt en 10min",
-   "price": 2.47,
-   "unitPrice": 2.74,
-   "unit": "kg",
-   "packSize": 0.9,
-   "packLabel": "900g",
-   "url": "https://www.auchan.fr/lustucru-riz-long-grain-incollable-sachets-cuisson-pret-en-10min/pr-C1624713"
   },
   {
    "ingredientId": "riz",
@@ -4778,16 +5006,6 @@
    "url": "https://www.auchan.fr/auchan-melange-riz-complet-riz-rouge-quinoa-pret-en-10-min/pr-C1230136"
   },
   {
-   "ingredientId": "nouilles_riz",
-   "productName": "WEI MING Nouilles de riz cuisson rapide 3 min",
-   "price": 3,
-   "unitPrice": 7.5,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400g",
-   "url": "https://www.auchan.fr/wei-ming-nouilles-de-riz-cuisson-rapide-3-min/pr-C1231307"
-  },
-  {
    "ingredientId": "riz",
    "productName": "AUCHAN Riz thaï",
    "price": 2.09,
@@ -4961,16 +5179,6 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "AUCHAN CULTIVONS LE BON thon albacore en tranches au naturel",
-   "price": 2.05,
-   "unitPrice": 14.64,
-   "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-thon-albacore-en-tranches-au-naturel/pr-C1241077"
-  },
-  {
-   "ingredientId": "thon_boite",
    "productName": "AUCHAN Thon entier à l’huile de tournesol",
    "price": 1.81,
    "unitPrice": 11.31,
@@ -4981,6 +5189,16 @@
   },
   {
    "ingredientId": "thon_boite",
+   "productName": "AUCHAN CULTIVONS LE BON thon albacore en tranches au naturel",
+   "price": 2.05,
+   "unitPrice": 14.64,
+   "unit": "kg",
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-thon-albacore-en-tranches-au-naturel/pr-C1241077"
+  },
+  {
+   "ingredientId": "thon_boite",
    "productName": "PETIT NAVIRE Thon albacore entier au naturel",
    "price": 3.19,
    "unitPrice": 17.15,
@@ -4988,16 +5206,6 @@
    "packSize": 0.186,
    "packLabel": "2x93g",
    "url": "https://www.auchan.fr/petit-navire-thon-albacore-entier-au-naturel/pr-C1236404"
-  },
-  {
-   "ingredientId": "thon_boite",
-   "productName": "AUCHAN Thon entier à l’huile de tournesol",
-   "price": 2.7,
-   "unitPrice": 11.25,
-   "unit": "kg",
-   "packSize": 0.24,
-   "packLabel": "3x80g",
-   "url": "https://www.auchan.fr/auchan-thon-entier-a-l-huile-de-tournesol/pr-C1241212"
   },
   {
    "ingredientId": "thon_boite",
@@ -5012,14 +5220,13 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "RIO MARE Thon entier avec un filet d’huile d’olive MSC",
-   "price": 5.24,
-   "unitPrice": 26.87,
+   "productName": "AUCHAN Thon entier à l’huile de tournesol",
+   "price": 2.7,
+   "unitPrice": 11.25,
    "unit": "kg",
-   "packSize": 0.195,
-   "packLabel": "3x65g",
-   "url": "https://www.auchan.fr/rio-mare-thon-entier-avec-un-filet-d-huile-d-olive-msc/pr-C1782757",
-   "promo": true
+   "packSize": 0.24,
+   "packLabel": "3x80g",
+   "url": "https://www.auchan.fr/auchan-thon-entier-a-l-huile-de-tournesol/pr-C1241212"
   },
   {
    "ingredientId": "thon_boite",
@@ -5124,16 +5331,6 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "PETIT NAVIRE Thon entier au naturel",
-   "price": 2.39,
-   "unitPrice": 17.07,
-   "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel/pr-C1236489"
-  },
-  {
-   "ingredientId": "thon_boite",
    "productName": "PETIT NAVIRE Thon entier à l’huile d’olive vierge extra MSC",
    "price": 3.93,
    "unitPrice": 24.56,
@@ -5144,13 +5341,13 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "PETIT NAVIRE Thon entier au naturel déjà égoutté MSC",
-   "price": 1.99,
-   "unitPrice": 16.58,
+   "productName": "PETIT NAVIRE Thon entier au naturel",
+   "price": 2.39,
+   "unitPrice": 17.07,
    "unit": "kg",
-   "packSize": 0.12,
-   "packLabel": "120g",
-   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel-deja-egoutte-msc/pr-C1869589"
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel/pr-C1236489"
   },
   {
    "ingredientId": "thon_boite",
@@ -5164,16 +5361,6 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "AUCHAN Thon albacore à l’huile d’olive vierge extra",
-   "price": 2.61,
-   "unitPrice": 16.31,
-   "unit": "kg",
-   "packSize": 0.16,
-   "packLabel": "160g",
-   "url": "https://www.auchan.fr/auchan-thon-albacore-a-l-huile-d-olive-vierge-extra/pr-C1800865"
-  },
-  {
-   "ingredientId": "thon_boite",
    "productName": "AUCHAN Thon albacore MSC à l’huile d olive vierge extra bio",
    "price": 4.15,
    "unitPrice": 39.9,
@@ -5184,6 +5371,26 @@
   },
   {
    "ingredientId": "thon_boite",
+   "productName": "PETIT NAVIRE Thon entier au naturel déjà égoutté MSC",
+   "price": 1.99,
+   "unitPrice": 16.58,
+   "unit": "kg",
+   "packSize": 0.12,
+   "packLabel": "120g",
+   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel-deja-egoutte-msc/pr-C1869589"
+  },
+  {
+   "ingredientId": "thon_boite",
+   "productName": "AUCHAN Thon albacore à l’huile d’olive vierge extra",
+   "price": 2.61,
+   "unitPrice": 16.31,
+   "unit": "kg",
+   "packSize": 0.16,
+   "packLabel": "160g",
+   "url": "https://www.auchan.fr/auchan-thon-albacore-a-l-huile-d-olive-vierge-extra/pr-C1800865"
+  },
+  {
+   "ingredientId": "thon_boite",
    "productName": "PETIT NAVIRE Morceaux de thon au naturel",
    "price": 2.37,
    "unitPrice": 21.16,
@@ -5191,26 +5398,6 @@
    "packSize": 0.112,
    "packLabel": "112g",
    "url": "https://www.auchan.fr/petit-navire-morceaux-de-thon-au-naturel/pr-C1422206"
-  },
-  {
-   "ingredientId": "thon_boite",
-   "productName": "UN PECHEUR SACHANT PECHER Thon entier au naturel",
-   "price": 2.4,
-   "unitPrice": 17.14,
-   "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/un-pecheur-sachant-pecher-thon-entier-au-naturel/pr-C1831717"
-  },
-  {
-   "ingredientId": "thon_boite",
-   "productName": "PETIT NAVIRE Thon entier au naturel",
-   "price": 1.87,
-   "unitPrice": 20.11,
-   "unit": "kg",
-   "packSize": 0.093,
-   "packLabel": "93g",
-   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel/pr-C1236488"
   },
   {
    "ingredientId": "thon_boite",
@@ -5245,12 +5432,12 @@
   {
    "ingredientId": "thon_boite",
    "productName": "UN PECHEUR SACHANT PECHER Thon entier au naturel",
-   "price": 1.88,
-   "unitPrice": 20.22,
+   "price": 2.4,
+   "unitPrice": 17.14,
    "unit": "kg",
-   "packSize": 0.093,
-   "packLabel": "93g",
-   "url": "https://www.auchan.fr/un-pecheur-sachant-pecher-thon-entier-au-naturel/pr-C1831719"
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/un-pecheur-sachant-pecher-thon-entier-au-naturel/pr-C1831717"
   },
   {
    "ingredientId": "thon_boite",
@@ -5274,13 +5461,23 @@
   },
   {
    "ingredientId": "thon_boite",
-   "productName": "PETIT NAVIRE Thon germon blanc au naturel",
-   "price": 4.16,
-   "unitPrice": 29.71,
+   "productName": "PETIT NAVIRE Thon entier au naturel",
+   "price": 1.87,
+   "unitPrice": 20.11,
    "unit": "kg",
-   "packSize": 0.14,
-   "packLabel": "140g",
-   "url": "https://www.auchan.fr/petit-navire-thon-germon-blanc-au-naturel/pr-C1240846"
+   "packSize": 0.093,
+   "packLabel": "93g",
+   "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel/pr-C1236488"
+  },
+  {
+   "ingredientId": "thon_boite",
+   "productName": "UN PECHEUR SACHANT PECHER Thon entier au naturel",
+   "price": 1.88,
+   "unitPrice": 20.22,
+   "unit": "kg",
+   "packSize": 0.093,
+   "packLabel": "93g",
+   "url": "https://www.auchan.fr/un-pecheur-sachant-pecher-thon-entier-au-naturel/pr-C1831719"
   },
   {
    "ingredientId": "thon_boite",
@@ -5291,6 +5488,16 @@
    "packSize": 0.112,
    "packLabel": "112g",
    "url": "https://www.auchan.fr/petit-navire-thon-entier-au-naturel-msc/pr-C1235688"
+  },
+  {
+   "ingredientId": "thon_boite",
+   "productName": "PETIT NAVIRE Thon germon blanc au naturel",
+   "price": 4.16,
+   "unitPrice": 29.71,
+   "unit": "kg",
+   "packSize": 0.14,
+   "packLabel": "140g",
+   "url": "https://www.auchan.fr/petit-navire-thon-germon-blanc-au-naturel/pr-C1240846"
   },
   {
    "ingredientId": "thon_boite",
@@ -5394,13 +5601,13 @@
   },
   {
    "ingredientId": "olives",
-   "productName": "POUCE Olives vertes dénoyautées",
-   "price": 2.02,
-   "unitPrice": 6.31,
+   "productName": "TRAMIER Olives vertes dénoyautées natures -25% de sel",
+   "price": 2.61,
+   "unitPrice": 16.31,
    "unit": "kg",
-   "packSize": 0.32,
-   "packLabel": "320g",
-   "url": "https://www.auchan.fr/pouce-olives-vertes-denoyautees/pr-C1230364"
+   "packSize": 0.16,
+   "packLabel": "160g",
+   "url": "https://www.auchan.fr/tramier-olives-vertes-denoyautees-natures-25-de-sel/pr-C1229177"
   },
   {
    "ingredientId": "olives",
@@ -5414,16 +5621,6 @@
   },
   {
    "ingredientId": "olives",
-   "productName": "TRAMIER Olives vertes dénoyautées natures -25% de sel",
-   "price": 2.61,
-   "unitPrice": 16.31,
-   "unit": "kg",
-   "packSize": 0.16,
-   "packLabel": "160g",
-   "url": "https://www.auchan.fr/tramier-olives-vertes-denoyautees-natures-25-de-sel/pr-C1229177"
-  },
-  {
-   "ingredientId": "olives",
    "productName": "AUCHAN BIO Olives vertes dénoyautées en bocal",
    "price": 3.29,
    "unitPrice": 20.56,
@@ -5431,16 +5628,6 @@
    "packSize": 0.16,
    "packLabel": "160g",
    "url": "https://www.auchan.fr/auchan-bio-olives-vertes-denoyautees-en-bocal/pr-C1223605"
-  },
-  {
-   "ingredientId": "olives",
-   "productName": "AUCHAN Olives cocktail",
-   "price": 1.88,
-   "unitPrice": 9.4,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200g",
-   "url": "https://www.auchan.fr/auchan-olives-cocktail/pr-C1226219"
   },
   {
    "ingredientId": "olives",
@@ -5464,6 +5651,16 @@
   },
   {
    "ingredientId": "olives",
+   "productName": "AUCHAN Olives cocktail",
+   "price": 1.88,
+   "unitPrice": 9.4,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200g",
+   "url": "https://www.auchan.fr/auchan-olives-cocktail/pr-C1226219"
+  },
+  {
+   "ingredientId": "olives",
    "productName": "POUCE Olives vertes entières",
    "price": 1.1,
    "unitPrice": 3.93,
@@ -5484,16 +5681,6 @@
   },
   {
    "ingredientId": "olives",
-   "productName": "POUCE Olives vertes entières",
-   "price": 1.24,
-   "unitPrice": 3.1,
-   "unit": "kg",
-   "packSize": 0.65,
-   "packLabel": "650g",
-   "url": "https://www.auchan.fr/pouce-olives-vertes-entieres/pr-C1224979"
-  },
-  {
-   "ingredientId": "olives",
    "productName": "POUCE Olives noires à la grecque sachet refermable",
    "price": 2.38,
    "unitPrice": 5.95,
@@ -5501,6 +5688,16 @@
    "packSize": 0.4,
    "packLabel": "400g",
    "url": "https://www.auchan.fr/pouce-olives-noires-a-la-grecque-sachet-refermable/pr-C1224978"
+  },
+  {
+   "ingredientId": "olives",
+   "productName": "POUCE Olives vertes entières",
+   "price": 1.24,
+   "unitPrice": 3.1,
+   "unit": "kg",
+   "packSize": 0.65,
+   "packLabel": "650g",
+   "url": "https://www.auchan.fr/pouce-olives-vertes-entieres/pr-C1224979"
   },
   {
    "ingredientId": "olives",
@@ -5644,16 +5841,6 @@
   },
   {
    "ingredientId": "cornichons",
-   "productName": "POUCE Cornichons aigre-doux",
-   "price": 1.73,
-   "unitPrice": 4.81,
-   "unit": "kg",
-   "packSize": 0.36,
-   "packLabel": "360G",
-   "url": "https://www.auchan.fr/pouce-cornichons-aigre-doux/pr-C1825001"
-  },
-  {
-   "ingredientId": "cornichons",
    "productName": "AUCHAN Cornichons extra fins aigres doux",
    "price": 1.71,
    "unitPrice": 9.24,
@@ -5661,6 +5848,16 @@
    "packSize": 0.185,
    "packLabel": "185g",
    "url": "https://www.auchan.fr/auchan-cornichons-extra-fins-aigres-doux/pr-C1457644"
+  },
+  {
+   "ingredientId": "cornichons",
+   "productName": "POUCE Cornichons aigre-doux",
+   "price": 1.73,
+   "unitPrice": 4.81,
+   "unit": "kg",
+   "packSize": 0.36,
+   "packLabel": "360G",
+   "url": "https://www.auchan.fr/pouce-cornichons-aigre-doux/pr-C1825001"
   },
   {
    "ingredientId": "cornichons",
@@ -5734,13 +5931,13 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "AUCHAN Huile d’olive vierge extra origine Espagne",
-   "price": 5.3,
-   "unitPrice": 10.6,
+   "productName": "TERRA DELYSSA Huile d’olive vierge extra de Tunisie",
+   "price": 8.68,
+   "unitPrice": 11.57,
    "unit": "l",
-   "packSize": 0.5,
-   "packLabel": "50cl",
-   "url": "https://www.auchan.fr/auchan-huile-d-olive-vierge-extra-origine-espagne/pr-C1230160"
+   "packSize": 0.75,
+   "packLabel": "75cl",
+   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-de-tunisie/pr-C1714985"
   },
   {
    "ingredientId": "huile_olive",
@@ -5751,6 +5948,16 @@
    "packSize": 0.75,
    "packLabel": "75cl",
    "url": "https://www.auchan.fr/carapelli-huile-d-olive-vierge-extra-classico/pr-C1303721"
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "AUCHAN Huile d’olive vierge extra origine Espagne",
+   "price": 5.3,
+   "unitPrice": 10.6,
+   "unit": "l",
+   "packSize": 0.5,
+   "packLabel": "50cl",
+   "url": "https://www.auchan.fr/auchan-huile-d-olive-vierge-extra-origine-espagne/pr-C1230160"
   },
   {
    "ingredientId": "huile_olive",
@@ -5774,16 +5981,6 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "TERRA DELYSSA Huile d’olive vierge extra de Tunisie",
-   "price": 8.68,
-   "unitPrice": 11.57,
-   "unit": "l",
-   "packSize": 0.75,
-   "packLabel": "75cl",
-   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-de-tunisie/pr-C1714985"
-  },
-  {
-   "ingredientId": "huile_olive",
    "productName": "TERRA DELYSSA Huile d’olive de Tunisie vierge extra",
    "price": 15.33,
    "unitPrice": 10.22,
@@ -5791,6 +5988,16 @@
    "packSize": 1.5,
    "packLabel": "1,5l",
    "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-de-tunisie-vierge-extra/pr-C1234842"
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "TERRA DELYSSA Huile d’olive vierge extra de Tunisie bio",
+   "price": 11.54,
+   "unitPrice": 15.39,
+   "unit": "l",
+   "packSize": 0.75,
+   "packLabel": "75cl",
+   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-de-tunisie-bio/pr-C1804146"
   },
   {
    "ingredientId": "huile_olive",
@@ -5804,13 +6011,13 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "TERRA DELYSSA Huile d’olive vierge extra de Tunisie bio",
-   "price": 11.54,
-   "unitPrice": 15.39,
+   "productName": "CARAPELLI Huile d’olive en spray pour cuisson à haute température",
+   "price": 4.63,
+   "unitPrice": 23.15,
    "unit": "l",
-   "packSize": 0.75,
-   "packLabel": "75cl",
-   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-de-tunisie-bio/pr-C1804146"
+   "packSize": 0.2,
+   "packLabel": "200ml",
+   "url": "https://www.auchan.fr/carapelli-huile-d-olive-en-spray-pour-cuisson-a-haute-temperature/pr-C1850254"
   },
   {
    "ingredientId": "huile_olive",
@@ -5874,16 +6081,6 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "AUCHAN Huile d’olive vierge extra origine Grèce",
-   "price": 8.6,
-   "unitPrice": 17.2,
-   "unit": "l",
-   "packSize": 0.5,
-   "packLabel": "50cl",
-   "url": "https://www.auchan.fr/auchan-huile-d-olive-vierge-extra-origine-grece/pr-C1239176"
-  },
-  {
-   "ingredientId": "huile_olive",
    "productName": "CARAPELLI Vivace huile d’olive vierge extra",
    "price": 12.65,
    "unitPrice": 16.87,
@@ -5891,6 +6088,16 @@
    "packSize": 0.75,
    "packLabel": "75cl",
    "url": "https://www.auchan.fr/carapelli-vivace-huile-d-olive-vierge-extra/pr-C1303724"
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "AUCHAN Huile d’olive vierge extra origine Grèce",
+   "price": 8.6,
+   "unitPrice": 17.2,
+   "unit": "l",
+   "packSize": 0.5,
+   "packLabel": "50cl",
+   "url": "https://www.auchan.fr/auchan-huile-d-olive-vierge-extra-origine-grece/pr-C1239176"
   },
   {
    "ingredientId": "huile_olive",
@@ -5924,16 +6131,6 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "TRAMIER Huile d’olive vierge extra bio",
-   "price": 11.58,
-   "unitPrice": 15.44,
-   "unit": "l",
-   "packSize": 0.75,
-   "packLabel": "75cl",
-   "url": "https://www.auchan.fr/tramier-huile-d-olive-vierge-extra-bio/pr-C1231771"
-  },
-  {
-   "ingredientId": "huile_olive",
    "productName": "SITIA Huile d’olive vierge extra AOP",
    "price": 12.59,
    "unitPrice": 16.79,
@@ -5941,6 +6138,16 @@
    "packSize": 0.75,
    "packLabel": "75cl",
    "url": "https://www.auchan.fr/sitia-huile-d-olive-vierge-extra-aop/pr-C1805222"
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "TRAMIER Huile d’olive vierge extra bio",
+   "price": 11.58,
+   "unitPrice": 15.44,
+   "unit": "l",
+   "packSize": 0.75,
+   "packLabel": "75cl",
+   "url": "https://www.auchan.fr/tramier-huile-d-olive-vierge-extra-bio/pr-C1231771"
   },
   {
    "ingredientId": "huile_olive",
@@ -5954,6 +6161,16 @@
   },
   {
    "ingredientId": "huile_olive",
+   "productName": "TRAMIER Huile d’olive vierge extra",
+   "price": 8.98,
+   "unitPrice": 11.97,
+   "unit": "l",
+   "packSize": 0.75,
+   "packLabel": "75cl",
+   "url": "https://www.auchan.fr/tramier-huile-d-olive-vierge-extra/pr-C1231455"
+  },
+  {
+   "ingredientId": "huile_olive",
    "productName": "SOLEOU Huile d’olive vierge extra bio fruitée",
    "price": 12.38,
    "unitPrice": 16.51,
@@ -5964,16 +6181,6 @@
   },
   {
    "ingredientId": "huile_olive",
-   "productName": "TERRA DELYSSA Huile d’Olive Vierge Extra bio non filtrée",
-   "price": 12.5,
-   "unitPrice": 16.67,
-   "unit": "l",
-   "packSize": 0.75,
-   "packLabel": "75cl",
-   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-bio-non-filtree/pr-C1276783"
-  },
-  {
-   "ingredientId": "huile_olive",
    "productName": "CARAPELLI Huile olive extra vierge classico",
    "price": 4.49,
    "unitPrice": 17.96,
@@ -5981,6 +6188,16 @@
    "packSize": 0.25,
    "packLabel": "25cl",
    "url": "https://www.auchan.fr/carapelli-huile-olive-extra-vierge-classico/pr-C1303725"
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "TERRA DELYSSA Huile d’Olive Vierge Extra bio non filtrée",
+   "price": 12.5,
+   "unitPrice": 16.67,
+   "unit": "l",
+   "packSize": 0.75,
+   "packLabel": "75cl",
+   "url": "https://www.auchan.fr/terra-delyssa-huile-d-olive-vierge-extra-bio-non-filtree/pr-C1276783"
   },
   {
    "ingredientId": "huile_olive",
@@ -6011,26 +6228,6 @@
    "packSize": 0.475,
    "packLabel": "47,5cl",
    "url": "https://www.auchan.fr/puget-huile-d-olive-vierge-extra-cuisson-et-assaisonnement-flacon-souple/pr-C1229966"
-  },
-  {
-   "ingredientId": "huile_olive",
-   "productName": "CARAPELLI Huile d’olive en spray pour cuisson à haute température",
-   "price": 4.63,
-   "unitPrice": 23.15,
-   "unit": "l",
-   "packSize": 0.2,
-   "packLabel": "200ml",
-   "url": "https://www.auchan.fr/carapelli-huile-d-olive-en-spray-pour-cuisson-a-haute-temperature/pr-C1850254"
-  },
-  {
-   "ingredientId": "huile_olive",
-   "productName": "TRAMIER Huile d’olive vierge extra",
-   "price": 8.98,
-   "unitPrice": 11.97,
-   "unit": "l",
-   "packSize": 0.75,
-   "packLabel": "75cl",
-   "url": "https://www.auchan.fr/tramier-huile-d-olive-vierge-extra/pr-C1231455"
   },
   {
    "ingredientId": "huile_tournesol",
@@ -6094,16 +6291,6 @@
   },
   {
    "ingredientId": "ketchup",
-   "productName": "HEINZ Tomato ketchup flacon souple",
-   "price": 1.24,
-   "unitPrice": 4.96,
-   "unit": "kg",
-   "packSize": 0.25,
-   "packLabel": "250g",
-   "url": "https://www.auchan.fr/heinz-tomato-ketchup-flacon-souple/pr-C1226783"
-  },
-  {
-   "ingredientId": "ketchup",
    "productName": "AUCHAN Ketchup nature flacon souple",
    "price": 1.38,
    "unitPrice": 2.46,
@@ -6111,6 +6298,16 @@
    "packSize": 0.56,
    "packLabel": "560g",
    "url": "https://www.auchan.fr/auchan-ketchup-nature-flacon-souple/pr-C1236772"
+  },
+  {
+   "ingredientId": "ketchup",
+   "productName": "HEINZ Tomato ketchup flacon souple",
+   "price": 1.24,
+   "unitPrice": 4.96,
+   "unit": "kg",
+   "packSize": 0.25,
+   "packLabel": "250g",
+   "url": "https://www.auchan.fr/heinz-tomato-ketchup-flacon-souple/pr-C1226783"
   },
   {
    "ingredientId": "ketchup",
@@ -6141,6 +6338,16 @@
    "packSize": 0.467,
    "packLabel": "467g",
    "url": "https://www.auchan.fr/amora-ketchup-5-ingredients-flacon-souple/pr-C1421825"
+  },
+  {
+   "ingredientId": "ketchup",
+   "productName": "AUCHAN Ketchup nature flacon souple",
+   "price": 1.05,
+   "unitPrice": 3.09,
+   "unit": "kg",
+   "packSize": 0.34,
+   "packLabel": "340g",
+   "url": "https://www.auchan.fr/auchan-ketchup-nature-flacon-souple/pr-C1236901"
   },
   {
    "ingredientId": "ketchup",
@@ -6314,6 +6521,16 @@
   },
   {
    "ingredientId": "chocolat_noir",
+   "productName": "AUCHAN CULTIVONS LE BON Tablette de chocolat noir pâtissier corsé 64% cacao",
+   "price": 2.3,
+   "unitPrice": 11.5,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200g",
+   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-tablette-de-chocolat-noir-patissier-corse-64-cacao/pr-C1242228"
+  },
+  {
+   "ingredientId": "chocolat_noir",
    "productName": "ETHIQUABLE Tablette de chocolat noir bio 70% cacao Pérou grand cru",
    "price": 3.14,
    "unitPrice": 31.4,
@@ -6384,23 +6601,14 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "LINDT Excellence tablette de chocolat noir dégustation puissant 85% cacao",
-   "price": 3.14,
-   "unitPrice": 31.4,
+   "productName": "POULAIN 1848 Tablette de chocolat noir fine et gourmande",
+   "price": 1.99,
+   "unitPrice": 19.9,
    "unit": "kg",
    "packSize": 0.1,
    "packLabel": "100g",
-   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-degustation-puissant-85-cacao/pr-C1247990"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "POULAIN Tablette de chocolat noir extra",
-   "price": 3.83,
-   "unitPrice": 12.77,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "3x100g",
-   "url": "https://www.auchan.fr/poulain-tablette-de-chocolat-noir-extra/pr-C1792211"
+   "url": "https://www.auchan.fr/poulain-1848-tablette-de-chocolat-noir-fine-et-gourmande/pr-C1849141",
+   "promo": true
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6411,6 +6619,36 @@
    "packSize": 0.1,
    "packLabel": "100g",
    "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-85-bio-de-madagascar/pr-C1245156"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "LINDT Excellence tablette de chocolat noir dégustation puissant 85% cacao",
+   "price": 3.14,
+   "unitPrice": 31.4,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-degustation-puissant-85-cacao/pr-C1247990"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "COTE D’OR L’Original Tablette de chocolat noir",
+   "price": 4.82,
+   "unitPrice": 16.07,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "3x100g",
+   "url": "https://www.auchan.fr/cote-d-or-l-original-tablette-de-chocolat-noir/pr-C1248200"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "POULAIN Tablette de chocolat noir extra",
+   "price": 3.83,
+   "unitPrice": 12.77,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "3x100g",
+   "url": "https://www.auchan.fr/poulain-tablette-de-chocolat-noir-extra/pr-C1792211"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6475,6 +6713,36 @@
   },
   {
    "ingredientId": "chocolat_noir",
+   "productName": "LINDT Excellence Tablette de chocolat noir dégustation aux graines de sésame grillé",
+   "price": 3.1,
+   "unitPrice": 31,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-degustation-aux-graines-de-sesame-grille/pr-C1246152"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "AUCHAN CULTIVONS LE BON Tablette de chocolat noir extra fin",
+   "price": 3.03,
+   "unitPrice": 10.1,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "3x100g",
+   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-tablette-de-chocolat-noir-extra-fin/pr-C1571838"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "ETHIQUABLE Tablette de chocolat noir bio 80% cacao Equateur grand cru",
+   "price": 3.2,
+   "unitPrice": 32,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-80-cacao-equateur-grand-cru/pr-C209859"
+  },
+  {
+   "ingredientId": "chocolat_noir",
    "productName": "ALTER ECO Tablette de chocolat noir bio et équitable Pérou 85% cacao",
    "price": 3.56,
    "unitPrice": 35.6,
@@ -6495,16 +6763,6 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir bio 80% cacao Equateur grand cru",
-   "price": 3.2,
-   "unitPrice": 32,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-80-cacao-equateur-grand-cru/pr-C209859"
-  },
-  {
-   "ingredientId": "chocolat_noir",
    "productName": "POUCE Tablette de chocolat noir",
    "price": 3.97,
    "unitPrice": 7.94,
@@ -6512,16 +6770,6 @@
    "packSize": 0.5,
    "packLabel": "5x100g",
    "url": "https://www.auchan.fr/pouce-tablette-de-chocolat-noir/pr-C1340889"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "LINDT Excellence tablette de chocolat noir délicat 85% cacao",
-   "price": 3.41,
-   "unitPrice": 34.1,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-delicat-85-cacao/pr-C1252224"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6535,23 +6783,23 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "AUCHAN BIO CULTIVONS LE BON Tablette de chocolat noir 80% pur beurre de cacao d’Equateur bio",
-   "price": 2.71,
-   "unitPrice": 27.1,
+   "productName": "LINDT Excellence tablette de chocolat noir délicat 85% cacao",
+   "price": 3.41,
+   "unitPrice": 34.1,
    "unit": "kg",
    "packSize": 0.1,
    "packLabel": "100g",
-   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-tablette-de-chocolat-noir-80-pur-beurre-de-cacao-d-equateur-bio/pr-C1630306"
+   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-delicat-85-cacao/pr-C1252224"
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "AUCHAN Tablette de chocolat noir absolu dégustation 90% cacao",
-   "price": 2.5,
-   "unitPrice": 25,
+   "productName": "ETHIQUABLE Tablette de chocolat noir onctueux bio du Nicaragua et gianduja",
+   "price": 3.56,
+   "unitPrice": 35.6,
    "unit": "kg",
    "packSize": 0.1,
    "packLabel": "100g",
-   "url": "https://www.auchan.fr/auchan-tablette-de-chocolat-noir-absolu-degustation-90-cacao/pr-C1242257"
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-onctueux-bio-du-nicaragua-et-gianduja/pr-C1256368"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6565,13 +6813,23 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir onctueux bio du Nicaragua et gianduja",
-   "price": 3.56,
-   "unitPrice": 35.6,
+   "productName": "AUCHAN Tablette de chocolat noir absolu dégustation 90% cacao",
+   "price": 2.5,
+   "unitPrice": 25,
    "unit": "kg",
    "packSize": 0.1,
    "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-onctueux-bio-du-nicaragua-et-gianduja/pr-C1256368"
+   "url": "https://www.auchan.fr/auchan-tablette-de-chocolat-noir-absolu-degustation-90-cacao/pr-C1242257"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Tablette de chocolat noir 80% pur beurre de cacao d’Equateur bio",
+   "price": 2.71,
+   "unitPrice": 27.1,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-tablette-de-chocolat-noir-80-pur-beurre-de-cacao-d-equateur-bio/pr-C1630306"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6635,26 +6893,6 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "COTE D’OR Tablette de chocolat noir L’Original",
-   "price": 1.84,
-   "unitPrice": 18.4,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/cote-d-or-tablette-de-chocolat-noir-l-original/pr-C1669709"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "AUCHAN BIO CULTIVONS LE BON Tablette de chocolat noir 76% Sao Tome boisé et épicé",
-   "price": 2.05,
-   "unitPrice": 20.5,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-tablette-de-chocolat-noir-76-sao-tome-boise-et-epice/pr-C1827457"
-  },
-  {
-   "ingredientId": "chocolat_noir",
    "productName": "LINDT L’Authentique Tablette de chocolat noir extra fondant",
    "price": 5.93,
    "unitPrice": 19.77,
@@ -6662,6 +6900,26 @@
    "packSize": 0.3,
    "packLabel": "3x100g",
    "url": "https://www.auchan.fr/lindt-l-authentique-tablette-de-chocolat-noir-extra-fondant/pr-C1573822"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "LINDT Excellence tablette de chocolat noir 70% cacao café du Nicaragua",
+   "price": 3.66,
+   "unitPrice": 36.6,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-70-cacao-cafe-du-nicaragua/pr-C1855949"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "COTE D’OR Tablette de chocolat noir L’Original",
+   "price": 1.84,
+   "unitPrice": 18.4,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/cote-d-or-tablette-de-chocolat-noir-l-original/pr-C1669709"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6685,6 +6943,16 @@
   },
   {
    "ingredientId": "chocolat_noir",
+   "productName": "AUCHAN BIO CULTIVONS LE BON Tablette de chocolat noir 76% Sao Tome boisé et épicé",
+   "price": 2.05,
+   "unitPrice": 20.5,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/auchan-bio-cultivons-le-bon-tablette-de-chocolat-noir-76-sao-tome-boise-et-epice/pr-C1827457"
+  },
+  {
+   "ingredientId": "chocolat_noir",
    "productName": "GERBLE Tablette de chocolat noir sans sucres ajoutés",
    "price": 2.68,
    "unitPrice": 33.5,
@@ -6692,26 +6960,6 @@
    "packSize": 0.08,
    "packLabel": "80g",
    "url": "https://www.auchan.fr/gerble-tablette-de-chocolat-noir-sans-sucres-ajoutes/pr-C1259410"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "LINDT Excellence tablette de chocolat noir 70% cacao café du Nicaragua",
-   "price": 3.66,
-   "unitPrice": 36.6,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-70-cacao-cafe-du-nicaragua/pr-C1855949"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir bio 65% cacao au quinoa Equateur Côte d’Ivoire",
-   "price": 3.24,
-   "unitPrice": 32.4,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-65-cacao-au-quinoa-equateur-cote-d-ivoire/pr-C1247093"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6725,6 +6973,26 @@
   },
   {
    "ingredientId": "chocolat_noir",
+   "productName": "ETHIQUABLE Tablette de chocolat noir bio 65% cacao au quinoa Equateur Côte d’Ivoire",
+   "price": 3.24,
+   "unitPrice": 32.4,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-65-cacao-au-quinoa-equateur-cote-d-ivoire/pr-C1247093"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "ETHIQUABLE Tablette de chocolat noir bio Togo grand cru Akebou 76% cacao boisé et notes de fruits secs",
+   "price": 3.41,
+   "unitPrice": 34.1,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-togo-grand-cru-akebou-76-cacao-boise-et-notes-de-fruits-secs/pr-C1710380"
+  },
+  {
+   "ingredientId": "chocolat_noir",
    "productName": "LINDT Tablette de chocolat noir profond pur cacao",
    "price": 3.2,
    "unitPrice": 64,
@@ -6732,16 +7000,6 @@
    "packSize": 0.05,
    "packLabel": "50g",
    "url": "https://www.auchan.fr/lindt-tablette-de-chocolat-noir-profond-pur-cacao/pr-C1257080"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "LINDT Excellence Tablette de chocolat noir pailleté dentelle",
-   "price": 3.31,
-   "unitPrice": 33.1,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-paillete-dentelle/pr-C1597945"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6766,16 +7024,6 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir bio 77% d’Inde grand cru Kerala fruité et épicé",
-   "price": 3.31,
-   "unitPrice": 33.1,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-77-d-inde-grand-cru-kerala-fruite-et-epice/pr-C1820689"
-  },
-  {
-   "ingredientId": "chocolat_noir",
    "productName": "ETHIQUABLE Tablette de chocolat noir bio 78% cacao Guatemala grand cru Alta Verapaz",
    "price": 3.77,
    "unitPrice": 37.7,
@@ -6783,6 +7031,26 @@
    "packSize": 0.1,
    "packLabel": "100g",
    "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-78-cacao-guatemala-grand-cru-alta-verapaz/pr-C1243155"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "LINDT Excellence Tablette de chocolat noir pailleté dentelle",
+   "price": 3.31,
+   "unitPrice": 33.1,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-paillete-dentelle/pr-C1597945"
+  },
+  {
+   "ingredientId": "chocolat_noir",
+   "productName": "ETHIQUABLE Tablette de chocolat noir bio 77% d’Inde grand cru Kerala fruité et épicé",
+   "price": 3.31,
+   "unitPrice": 33.1,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100g",
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-77-d-inde-grand-cru-kerala-fruite-et-epice/pr-C1820689"
   },
   {
    "ingredientId": "citron_vert",
@@ -6877,13 +7145,13 @@
   },
   {
    "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir bio Togo grand cru Akebou 76% cacao boisé et notes de fruits secs",
-   "price": 3.41,
-   "unitPrice": 34.1,
+   "productName": "ETHIQUABLE Tablette de chocolat noir bio et gingembre confit",
+   "price": 3.24,
+   "unitPrice": 32.4,
    "unit": "kg",
    "packSize": 0.1,
    "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-togo-grand-cru-akebou-76-cacao-boise-et-notes-de-fruits-secs/pr-C1710380"
+   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-et-gingembre-confit/pr-C1250081"
   },
   {
    "ingredientId": "chocolat_noir",
@@ -6904,67 +7172,6 @@
    "packSize": 0.1,
    "packLabel": "100g",
    "url": "https://www.auchan.fr/auchan-tablette-de-chocolat-noir-au-citron/pr-C1631863"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "ETHIQUABLE Tablette de chocolat noir bio et gingembre confit",
-   "price": 3.24,
-   "unitPrice": 32.4,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/ethiquable-tablette-de-chocolat-noir-bio-et-gingembre-confit/pr-C1250081"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "AUCHAN CULTIVONS LE BON Tablette de chocolat noir pâtissier corsé 64% cacao",
-   "price": 2.3,
-   "unitPrice": 11.5,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200g",
-   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-tablette-de-chocolat-noir-patissier-corse-64-cacao/pr-C1242228"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "POULAIN 1848 Tablette de chocolat noir fine et gourmande",
-   "price": 1.99,
-   "unitPrice": 19.9,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/poulain-1848-tablette-de-chocolat-noir-fine-et-gourmande/pr-C1849141",
-   "promo": true
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "COTE D’OR L’Original Tablette de chocolat noir",
-   "price": 4.82,
-   "unitPrice": 16.07,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "3x100g",
-   "url": "https://www.auchan.fr/cote-d-or-l-original-tablette-de-chocolat-noir/pr-C1248200"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "AUCHAN CULTIVONS LE BON Tablette de chocolat noir extra fin",
-   "price": 3.03,
-   "unitPrice": 10.1,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "3x100g",
-   "url": "https://www.auchan.fr/auchan-cultivons-le-bon-tablette-de-chocolat-noir-extra-fin/pr-C1571838"
-  },
-  {
-   "ingredientId": "chocolat_noir",
-   "productName": "LINDT Excellence Tablette de chocolat noir dégustation aux graines de sésame grillé",
-   "price": 3.1,
-   "unitPrice": 31,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100g",
-   "url": "https://www.auchan.fr/lindt-excellence-tablette-de-chocolat-noir-degustation-aux-graines-de-sesame-grille/pr-C1246152"
   },
   {
    "ingredientId": "mais_boite",
@@ -7048,16 +7255,6 @@
   },
   {
    "ingredientId": "haricots_rouges",
-   "productName": "JARDIN BIO ETIC Haricots rouges à la sauge en bocal",
-   "price": 3.97,
-   "unitPrice": 10.05,
-   "unit": "kg",
-   "packSize": 0.395,
-   "packLabel": "395g",
-   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-rouges-a-la-sauge-en-bocal/pr-C1233508"
-  },
-  {
-   "ingredientId": "haricots_rouges",
    "productName": "D’AUCY Haricots rouges en conserve",
    "price": 2.31,
    "unitPrice": 4.62,
@@ -7065,6 +7262,16 @@
    "packSize": 0.5,
    "packLabel": "500g",
    "url": "https://www.auchan.fr/d-aucy-haricots-rouges-en-conserve/pr-C1165502"
+  },
+  {
+   "ingredientId": "haricots_rouges",
+   "productName": "JARDIN BIO ETIC Haricots rouges à la sauge en bocal",
+   "price": 3.97,
+   "unitPrice": 10.05,
+   "unit": "kg",
+   "packSize": 0.395,
+   "packLabel": "395g",
+   "url": "https://www.auchan.fr/jardin-bio-etic-haricots-rouges-a-la-sauge-en-bocal/pr-C1233508"
   },
   {
    "ingredientId": "haricots_rouges",
@@ -7085,6 +7292,16 @@
    "packSize": 0.24,
    "packLabel": "240g",
    "url": "https://www.auchan.fr/jardin-bio-etic-tomates-pelees-entieres-sans-sel-ajoute-bio/pr-C1601695"
+  },
+  {
+   "ingredientId": "tomates_pelees",
+   "productName": "MUTTI Tomates pelées zéro résidu de pesticides",
+   "price": 1.57,
+   "unitPrice": 6.04,
+   "unit": "kg",
+   "packSize": 0.26,
+   "packLabel": "260g",
+   "url": "https://www.auchan.fr/mutti-tomates-pelees-zero-residu-de-pesticides/pr-C1788162"
   },
   {
    "ingredientId": "tomates_pelees",
@@ -7125,16 +7342,6 @@
    "packSize": 0.4,
    "packLabel": "400g",
    "url": "https://www.auchan.fr/auchan-bio-pulpe-de-tomates/pr-C1239306"
-  },
-  {
-   "ingredientId": "tomates_pelees",
-   "productName": "MUTTI Tomates pelées zéro résidu de pesticides",
-   "price": 1.57,
-   "unitPrice": 6.04,
-   "unit": "kg",
-   "packSize": 0.26,
-   "packLabel": "260g",
-   "url": "https://www.auchan.fr/mutti-tomates-pelees-zero-residu-de-pesticides/pr-C1788162"
   },
   {
    "ingredientId": "pois_chiches",
