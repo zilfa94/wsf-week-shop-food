@@ -7,7 +7,12 @@
     "icon": "./assets/images/icon.png",
     "scheme": "wsf",
     "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.zilfa94.wsf",
+      "supportsTablet": false
+    },
     "android": {
+      "package": "com.zilfa94.wsf",
       "adaptiveIcon": {
         "backgroundColor": "#FFC529",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
