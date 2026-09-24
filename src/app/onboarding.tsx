@@ -23,9 +23,18 @@ const DISLIKE_SUGGESTIONS: readonly IngredientId[] = [
   'coriandre', 'champignon', 'aubergine', 'betterave', 'epinard', 'chou_fleur', 'olives', 'piment_en_poudre', 'celeri_branche', 'brocoli', 'moules', 'poivron',
 ].filter((id) => INGREDIENTS.some((i) => i.id === id));
 
-const STEPS = ['Bienvenue', 'Votre foyer', 'Votre régime', 'Vos cuisines préférées', 'Allergies et intolérances', 'Votre objectif', 'Ce que vous n’aimez pas'];
+/** Titre et raison de chaque étape : l'utilisateur doit savoir à quoi sert ce qu'on lui demande. */
+const STEPS: readonly { title: string; hint?: string }[] = [
+  { title: 'Bienvenue' },
+  { title: 'Votre foyer', hint: 'Pour ajuster les quantités, les conditionnements et le budget.' },
+  { title: 'Votre régime', hint: 'Les recettes incompatibles ne vous seront jamais proposées.' },
+  { title: 'Vos cuisines préférées', hint: 'La semaine sera composée d’abord avec les cuisines que vous choisissez.' },
+  { title: 'Allergies et intolérances', hint: 'Rien de ce que vous cochez n’entrera dans vos repas.' },
+  { title: 'Votre objectif', hint: 'Il règle les calories visées et l’importance donnée au prix.' },
+  { title: 'Ce que vous n’aimez pas', hint: 'Ces ingrédients seront évités dans toutes les recettes.' },
+];
 
-/** Onboarding en 5 étapes sur un seul écran (docs/SPEC.md § 1.2). Le temps de cuisine se règle dans le Profil. */
+/** Onboarding en 7 étapes sur un seul écran (docs/SPEC.md § 1.2). Le temps de cuisine se règle dans le Profil. */
 export default function OnboardingScreen() {
   const theme = useTheme();
   const router = useRouter();
@@ -36,6 +45,7 @@ export default function OnboardingScreen() {
   const setSetting = useAppStore((s) => s.setSetting);
   const [step, setStep] = useState(0);
   const last = STEPS.length - 1;
+  const current = STEPS[step]!;
 
   const toggle = <T,>(list: readonly T[], value: T): T[] => (list.includes(value) ? list.filter((v) => v !== value) : [...list, value]);
   const finish = () => {
@@ -44,13 +54,18 @@ export default function OnboardingScreen() {
   };
 
   return (
-    <Screen>
-      <View style={styles.progress} accessibilityLabel={`Étape ${step + 1} sur ${STEPS.length}`}>
-        {STEPS.map((_, i) => (
-          <View key={i} style={[styles.dot, { backgroundColor: i <= step ? theme.primary : theme.border }]} />
-        ))}
+    // `safeTop` : cet écran n'a pas d'en-tête de navigation, il doit écarter lui-même la barre d'état.
+    <Screen safeTop>
+      <View style={styles.head}>
+        <View style={styles.progress} accessibilityLabel={`Étape ${step + 1} sur ${STEPS.length}`}>
+          {STEPS.map((s, i) => (
+            <View key={s.title} style={[styles.dot, { backgroundColor: i <= step ? theme.primary : theme.border }]} />
+          ))}
+        </View>
+        <AppText variant="caption" color="textMuted" tabular>{`Étape ${step + 1} sur ${STEPS.length}`}</AppText>
+        <AppText variant="display">{current.title}</AppText>
+        {current.hint ? <AppText color="textMuted">{current.hint}</AppText> : null}
       </View>
-      <AppText variant="display">{STEPS[step]}</AppText>
 
       {step === 0 && (
         <View style={styles.welcome}>
@@ -66,34 +81,35 @@ export default function OnboardingScreen() {
 
       {step === 1 && (
         <View style={styles.block}>
-          <AppText variant="h2">Pour combien de personnes ?</AppText>
-          <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
-          <AppText variant="h2">Quels repas planifier ?</AppText>
-          <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
-          <AppText variant="h2">Où faites-vous vos courses ?</AppText>
-          <PostalCodeField value={postalCode} onChange={(v) => setSetting('postalCode', v)} />
+          <Card>
+            <AppText variant="h2">Pour combien de personnes ?</AppText>
+            <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
+          </Card>
+          <Card>
+            <AppText variant="h2">Quels repas planifier ?</AppText>
+            <MealPicker value={profile} onChange={(patch) => setProfile(patch)} />
+          </Card>
+          <Card>
+            <AppText variant="h2">Où faites-vous vos courses ?</AppText>
+            <PostalCodeField value={postalCode} onChange={(v) => setSetting('postalCode', v)} />
+          </Card>
         </View>
       )}
 
       {step === 2 && <DietPicker diet={profile.diet} onChange={(diet) => setProfile({ diet })} />}
 
-      {step === 3 && (
-        <View style={styles.block}>
-          <AppText color="textMuted">Choisissez ce que vous aimez manger : la semaine sera composée d’abord avec ces cuisines.</AppText>
-          <CuisinePicker value={profile.preferredCuisines} onChange={(preferredCuisines) => setProfile({ preferredCuisines })} />
-        </View>
-      )}
+      {step === 3 && <CuisinePicker value={profile.preferredCuisines} onChange={(preferredCuisines) => setProfile({ preferredCuisines })} />}
 
       {step === 4 && (
-        <View style={styles.block}>
+        <Card style={styles.block}>
           <View style={styles.wrap}>
-            <Chip label="Aucune" selected={profile.allergens.length === 0} onPress={() => setProfile({ allergens: [] })} />
+            <Chip label="Aucune" variant="filter" selected={profile.allergens.length === 0} onPress={() => setProfile({ allergens: [] })} />
             {ONBOARDING_ALLERGENS.map((a: Allergen) => (
               <Chip key={a} label={ALLERGEN_LABELS[a]} variant="allergen" selected={profile.allergens.includes(a)} onPress={() => setProfile({ allergens: toggle(profile.allergens, a) })} />
             ))}
           </View>
-          <AppText color="textMuted">Les recettes contenant ces allergènes seront exclues ; un ingrédient facultatif sera simplement retiré.</AppText>
-        </View>
+          <AppText variant="caption" color="textMuted">Une recette qui contient l’un d’eux est écartée ; s’il n’y est qu’en option, il est simplement retiré.</AppText>
+        </Card>
       )}
 
       {step === 5 && (
@@ -111,7 +127,6 @@ export default function OnboardingScreen() {
 
       {step === 6 && (
         <View style={styles.block}>
-          <AppText>On évitera ces ingrédients :</AppText>
           <View style={styles.wrap}>
             {DISLIKE_SUGGESTIONS.map((id) => {
               const selected = profile.dislikedIngredientIds.includes(id);
@@ -133,29 +148,38 @@ export default function OnboardingScreen() {
               );
             })}
           </View>
-          <AppText color="textMuted">Vous pourrez en ajouter d’autres depuis l’onglet Profil.</AppText>
+          <AppText variant="caption" color="textMuted">Vous pourrez en ajouter d’autres depuis l’onglet Profil.</AppText>
         </View>
       )}
 
-      <View style={styles.actions}>
-        {step > 0 ? <Button label="Retour" variant="ghost" onPress={() => setStep(step - 1)} /> : <View />}
-        <Button label={step === 0 ? 'Commencer' : step === last ? 'Composer ma semaine' : 'Continuer'} onPress={() => (step === last ? finish() : setStep(step + 1))} icon={step === last ? 'sparkles' : undefined} style={styles.grow} />
+      {/* Les actions restent en bas de l'écran, quelle que soit la hauteur de l'étape.
+          L'accueil, lui, occupe déjà tout l'espace libre et se centre. */}
+      {step > 0 ? <View style={styles.spacer} /> : null}
+      <View style={styles.footer}>
+        <View style={styles.actions}>
+          {step > 0 ? <Button label="Retour" variant="ghost" onPress={() => setStep(step - 1)} /> : null}
+          <Button label={step === 0 ? 'Commencer' : step === last ? 'Composer ma semaine' : 'Continuer'} onPress={() => (step === last ? finish() : setStep(step + 1))} icon={step === last ? 'sparkles' : undefined} style={styles.grow} />
+        </View>
+        {step >= 2 && step < last ? <Button label="Passer les étapes restantes" variant="ghost" compact onPress={finish} style={styles.skip} /> : null}
       </View>
-      {step >= 2 && step < last ? <Button label="Passer les étapes restantes" variant="ghost" compact onPress={finish} /> : null}
     </Screen>
   );
 }
 
 const styles = StyleSheet.create({
+  head: { gap: Spacing.sm },
   progress: { flexDirection: 'row', gap: Spacing.sm },
   dot: { flex: 1, height: 4, borderRadius: 2 },
   block: { gap: Spacing.md },
-  welcome: { gap: Spacing.lg, alignItems: 'center', paddingVertical: Spacing.lg },
+  welcome: { flex: 1, gap: Spacing.lg, alignItems: 'center', justifyContent: 'center', paddingVertical: Spacing.lg },
   dishes: { flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'center' },
   dishSide: { marginLeft: -Spacing.xl, marginBottom: Spacing.sm },
   center: { textAlign: 'center' },
   grow: { flex: 1 },
   pick: { width: 96, alignItems: 'center', gap: Spacing.xs, padding: Spacing.sm, borderRadius: Radius.image },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
-  actions: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: Spacing.lg, gap: Spacing.md },
+  spacer: { flex: 1, minHeight: Spacing.lg },
+  footer: { gap: Spacing.sm },
+  actions: { flexDirection: 'row', alignItems: 'center', gap: Spacing.md },
+  skip: { alignSelf: 'center' },
 });

@@ -10,12 +10,21 @@ export interface ScreenProps extends ViewProps {
   readonly scroll?: boolean;
   /** Marge basse supplémentaire (barre d'onglets, bouton flottant). */
   readonly bottomInset?: number;
+  /**
+   * Écarter la barre d'état / l'encoche : obligatoire pour un écran **sans en-tête de navigation**
+   * (`headerShown: false`), sinon le contenu passe sous l'heure et le réseau. Les écrans à en-tête
+   * n'en ont pas besoin, le navigateur s'en charge.
+   */
+  readonly safeTop?: boolean;
 }
 
-export function Screen({ children, scroll = true, bottomInset = 0, style, ...rest }: ScreenProps) {
+export function Screen({ children, scroll = true, bottomInset = 0, safeTop = false, style, ...rest }: ScreenProps) {
   const theme = useTheme();
   const insets = useSafeAreaInsets();
-  const padding = { paddingBottom: Spacing.xl + bottomInset + insets.bottom };
+  const padding = {
+    paddingTop: Spacing.lg + (safeTop ? insets.top : 0),
+    paddingBottom: Spacing.xl + bottomInset + insets.bottom,
+  };
   if (!scroll) {
     return (
       <View {...rest} style={[styles.root, { backgroundColor: theme.bg }, style]}>
@@ -43,7 +52,6 @@ const styles = StyleSheet.create({
     maxWidth: MaxContentWidth,
     alignSelf: 'center',
     paddingHorizontal: Spacing.lg,
-    paddingTop: Spacing.lg,
     gap: Spacing.lg,
   },
 });

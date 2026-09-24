@@ -49,7 +49,7 @@ export default function WeekScreen() {
 
   if (!plan) {
     return (
-      <Screen>
+      <Screen safeTop>
         <EmptyState icon="calendar-outline" title="Aucune semaine planifiée" body="Composez 7 jours de vrais plats et la liste de courses qui va avec." cta={{ label: 'Composer ma semaine', onPress: () => router.push(hasOnboarded ? '/generating' : '/onboarding') }} />
       </Screen>
     );
@@ -98,7 +98,7 @@ export default function WeekScreen() {
 
   return (
     <View style={styles.root}>
-      <Screen bottomInset={72}>
+      <Screen safeTop bottomInset={72}>
         <View style={styles.hero}>
           <View style={styles.heroText}>
             <AppText variant="display">Qu’est-ce qu’on mange ?</AppText>

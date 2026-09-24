@@ -28,10 +28,9 @@ export default function TabsLayout() {
           <TabBar {...props} icons={ICONS} badges={{ shopping: remaining > 0 ? remaining : undefined }} centerLabel="Actions rapides" onCenterPress={() => setSheetOpen(true)} />
         )}
         screenOptions={{
-          headerStyle: { backgroundColor: theme.bg },
-          headerTintColor: theme.text,
-          headerTitleStyle: { fontWeight: '700' },
-          headerShadowVisible: false,
+          // Pas d'en-tête natif : chaque onglet porte son propre grand titre (modèle de design),
+          // et `Screen safeTop` écarte la barre d'état.
+          headerShown: false,
           sceneStyle: { backgroundColor: theme.bg },
         }}
       >

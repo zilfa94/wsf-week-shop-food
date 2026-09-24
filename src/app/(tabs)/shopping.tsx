@@ -26,7 +26,7 @@ export default function ShoppingScreen() {
 
   if (!plan || !list) {
     return (
-      <Screen>
+      <Screen safeTop>
         <EmptyState icon="cart-outline" title="Votre liste est vide" body="Composez d’abord votre semaine : la liste se calcule toute seule." cta={{ label: 'Composer ma semaine', onPress: () => router.push(hasOnboarded ? '/generating' : '/onboarding') }} />
       </Screen>
     );
@@ -42,14 +42,15 @@ export default function ShoppingScreen() {
   };
   if (toBuy.length === 0 && list.manualItems.length === 0) {
     return (
-      <Screen>
+      <Screen safeTop>
         <EmptyState icon="checkmark-done-circle-outline" title="Vous avez déjà tout !" body="Rien à acheter cette semaine : le garde-manger couvre tous les repas." />
       </Screen>
     );
   }
 
   return (
-    <Screen>
+    <Screen safeTop>
+      <AppText variant="display">Liste de courses</AppText>
       <SectionHeader
         title={`${toBuy.length} articles · ${formatPrice(list.totalPrice)}`}
         subtitle={`${done}/${toBuy.length} cochés · score anti-gaspi ${list.wasteScore} % · reste à risque ${formatPrice(list.totalLeftoverValue)}`}

@@ -31,7 +31,8 @@ export default function ProfileScreen() {
     setProfile({ allergens: profile.allergens.includes(a) ? profile.allergens.filter((x) => x !== a) : [...profile.allergens, a] });
 
   return (
-    <Screen>
+    <Screen safeTop>
+      <AppText variant="display">Profil</AppText>
       <SectionHeader title="Foyer" />
       <Stepper value={profile.persons} min={1} max={8} onChange={(persons) => setProfile({ persons })} label={`${profile.persons} personnes`} unit="pers." />
       <PostalCodeField value={settings.postalCode} onChange={(v) => setSetting('postalCode', v)} />
