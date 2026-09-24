@@ -31,7 +31,8 @@ export default function RecipeScreen() {
 
   return (
     <Screen>
-      <Stack.Screen options={{ title: recipe.name }} />
+      {/* En-tête réduit à la flèche de retour : le nom du plat est le grand titre du contenu. */}
+      <Stack.Screen options={{ title: '' }} />
       {/* Photo réelle du plat si on en a une, illustration 3D sinon. */}
       <DishPhoto recipeId={recipe.id} height={200} caption style={styles.hero} />
       <AppText variant="display">{recipe.name}</AppText>

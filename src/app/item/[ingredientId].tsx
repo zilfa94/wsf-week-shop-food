@@ -36,7 +36,7 @@ export default function ItemScreen() {
 
   return (
     <Screen>
-      <Stack.Screen options={{ title: ing.name }} />
+      <Stack.Screen options={{ title: '' }} />
       <View style={styles.hero}>
         <FoodImage ingredientId={ing.id} size={96} tile="accent" />
         <View style={styles.heroText}>

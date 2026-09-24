@@ -39,14 +39,14 @@ export default function RootLayout() {
           <Stack.Screen name="onboarding" options={{ headerShown: false }} />
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="generating" options={{ presentation: 'modal', headerShown: false, gestureEnabled: false }} />
-          <Stack.Screen name="day/[day]" options={{ title: 'Journée' }} />
+          <Stack.Screen name="day/[day]" options={{ title: '' }} />
           <Stack.Screen name="recipe/[id]" options={{ title: 'Recette' }} />
           <Stack.Screen name="swap/[mealId]" options={{ presentation: 'modal', title: 'Remplacer le repas' }} />
           <Stack.Screen name="item/[ingredientId]" options={{ presentation: 'modal', title: 'Article' }} />
           <Stack.Screen name="pantry-add" options={{ presentation: 'modal', title: 'Ajouter au garde-manger' }} />
-          <Stack.Screen name="cook-with" options={{ title: 'Cuisiner avec ce que j’ai' }} />
+          <Stack.Screen name="cook-with" options={{ title: '' }} />
           <Stack.Screen name="report" options={{ presentation: 'modal', title: 'Bilan' }} />
-          <Stack.Screen name="where-to-buy" options={{ title: 'Où acheter' }} />
+          <Stack.Screen name="where-to-buy" options={{ title: '' }} />
           <Stack.Screen name="store-mode" options={{ presentation: 'fullScreenModal', title: 'Mode magasin' }} />
         </Stack>
       </SafeAreaProvider>
