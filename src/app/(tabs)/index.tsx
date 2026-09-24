@@ -3,7 +3,7 @@ import { useRouter } from 'expo-router';
 import { useMemo, useState } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
 import { MealCard } from '@/components/plan/meal-card';
-import { ActionSheet, AppText, Button, Card, EmptyState, FoodImage, Screen, Snackbar, StatTile, type SheetAction } from '@/components/ui';
+import { ActionSheet, AppText, Button, Card, DishPhoto, EmptyState, Screen, Snackbar, StatTile, type SheetAction } from '@/components/ui';
 import { Radius, Spacing } from '@/constants/theme';
 import { addDays, daysBetween, parseISO } from '@/core/date';
 import { MONTH_SHORT_LABELS, WEEKDAY_LABELS } from '@/core/labels';
@@ -104,7 +104,7 @@ export default function WeekScreen() {
             <AppText variant="display">Qu’est-ce qu’on mange ?</AppText>
             <AppText color="textMuted">{formatRange(plan.weekStart)}</AppText>
           </View>
-          <FoodImage recipeId={todaysDinner?.recipeId ?? plan.meals[0]?.recipeId} size={84} tile="accent" />
+          <DishPhoto recipeId={todaysDinner?.recipeId ?? plan.meals[0]?.recipeId ?? ''} square={84} fallbackTile="accent" />
         </View>
 
         {expired ? (
@@ -138,8 +138,8 @@ export default function WeekScreen() {
         ) : null}
 
         <View style={styles.tiles}>
-          <StatTile label="Budget estimé" value={list ? formatPrice(list.totalPrice) : '—'} hint={`pour ${profile.persons} pers.`} />
-          <StatTile label="À acheter" value={String(toBuy)} hint="articles" />
+          <StatTile label="Budget estimé" value={list ? formatPrice(list.totalPrice) : '—'} hint={`pour ${profile.persons} pers.`} tone="info" />
+          <StatTile label="À acheter" value={String(toBuy)} hint="articles" tone="accent" />
           <StatTile label="Anti-gaspi" value={list ? `${list.wasteScore} %` : '—'} hint={`équilibre ${balance}/100`} tone="success" />
         </View>
         <AppText variant="caption" color="textMuted">{`${cooked}/${plan.meals.length} repas cuisinés`}</AppText>

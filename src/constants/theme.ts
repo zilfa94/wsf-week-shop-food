@@ -18,6 +18,10 @@ export interface ThemeColors {
   readonly onPrimary: string;
   readonly accent: string;
   readonly accentSoft: string;
+  /** Fond teinté d'une information positive (score anti-gaspi, économie réalisée). */
+  readonly successSoft: string;
+  /** Fond teinté d'un chiffre neutre (budget, compteurs) : évite la grisaille des cartes toutes identiques. */
+  readonly infoSoft: string;
   readonly text: string;
   readonly textMuted: string;
   readonly border: string;
@@ -39,6 +43,8 @@ export const Colors: Readonly<Record<'light' | 'dark', ThemeColors>> = {
     onPrimary: '#26231C',
     accent: '#FF6B4A',
     accentSoft: '#FFE9E2',
+    successSoft: '#E1F6EA',
+    infoSoft: '#E7EEFC',
     text: '#2B2B2E',
     textMuted: '#8C8C93',
     border: '#ECECF0',
@@ -50,17 +56,21 @@ export const Colors: Readonly<Record<'light' | 'dark', ThemeColors>> = {
     fat: '#FF8A5B',
   },
   dark: {
-    bg: '#121214',
-    surface: '#1C1C20',
-    surfaceAlt: '#26262C',
+    // Surfaces volontairement plus claires que le fond : sur un thème sombre, des cartes trop proches
+    // du noir donnent un écran terne et illisible (retour du propriétaire, 2026-09-24).
+    bg: '#0F0F12',
+    surface: '#1E1E26',
+    surfaceAlt: '#282833',
     primary: '#FFC529',
-    primarySoft: '#3D3211',
+    primarySoft: '#42371A',
     onPrimary: '#1F1C14',
-    accent: '#FF7A5C',
-    accentSoft: '#4A2A22',
-    text: '#F2F2F5',
-    textMuted: '#9A9AA3',
-    border: '#2C2C33',
+    accent: '#FF8566',
+    accentSoft: '#5A382E',
+    successSoft: '#1B3E2E',
+    infoSoft: '#22304C',
+    text: '#F4F4F8',
+    textMuted: '#A3A3AE',
+    border: '#35353F',
     success: '#4FD08A',
     warning: '#FFC04D',
     danger: '#FF7169',

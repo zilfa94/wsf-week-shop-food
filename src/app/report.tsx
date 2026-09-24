@@ -25,9 +25,9 @@ export default function ReportScreen() {
     <Screen>
       <AppText variant="display">Bilan de la semaine</AppText>
       <View style={styles.tiles}>
-        <StatTile label="Repas cuisinés" value={`${report.cookedMeals}/${report.totalMeals}`} />
+        <StatTile label="Repas cuisinés" value={`${report.cookedMeals}/${report.totalMeals}`} tone="info" />
         <StatTile label="Anti-gaspi" value={`${report.wasteScore} %`} tone="success" />
-        <StatTile label="Équilibre" value={`${report.balanceScore}/100`} />
+        <StatTile label="Équilibre" value={`${report.balanceScore}/100`} tone="accent" />
       </View>
       {report.savedEur > 0 ? (
         <Card tone="accent">

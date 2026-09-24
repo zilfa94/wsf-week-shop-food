@@ -1,6 +1,6 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Card, Chip, EmptyState, FoodImage, Screen } from '@/components/ui';
+import { AppText, Card, Chip, DishPhoto, EmptyState, Screen } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { MEAL_TYPE_LABELS, WEEKDAY_LABELS } from '@/core/labels';
 import { useHaptics } from '@/hooks/use-haptics';
@@ -49,7 +49,7 @@ export default function SwapScreen() {
               accessibilityLabel={`Choisir ${recipe?.name ?? s.recipeId}`}
               style={styles.row}
             >
-              <FoodImage recipeId={s.recipeId} size={64} tile={s.reusedIngredientIds.length > 0 ? 'none' : 'soft'} />
+              <DishPhoto recipeId={s.recipeId} square={64} fallbackTile={s.reusedIngredientIds.length > 0 ? 'none' : 'soft'} />
               <View style={styles.body}>
                 <AppText variant="bodyStrong">{recipe?.name ?? s.recipeId}</AppText>
                 <View style={styles.wrap}>

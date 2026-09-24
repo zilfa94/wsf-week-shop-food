@@ -2,6 +2,7 @@ import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
 import { AppText, Button, Card, Checkbox, EmptyState, FoodImage, Screen, SectionHeader } from '@/components/ui';
+import { AISLE_COLORS } from '@/constants/aisle-colors';
 import { Radius, Spacing, Typography } from '@/constants/theme';
 import { AISLE_LABELS, WEEKDAY_SHORT_LABELS } from '@/core/labels';
 import { formatPrice, formatQuantity } from '@/core/units';
@@ -61,7 +62,10 @@ export default function ShoppingScreen() {
       </View>
       {list.sections.map((section) => (
         <View key={section.aisle} style={styles.section}>
-          <AppText variant="h2">{AISLE_LABELS[section.aisle]}</AppText>
+          <View style={styles.sectionHead}>
+            <View style={[styles.aisleDot, { backgroundColor: AISLE_COLORS[section.aisle] }]} />
+            <AppText variant="h2">{AISLE_LABELS[section.aisle]}</AppText>
+          </View>
           {section.items.map((item) => {
             const ing = INGREDIENT_INDEX.get(item.ingredientId)!;
             const leftover = list.leftovers.find((l) => l.ingredientId === item.ingredientId);
@@ -145,6 +149,8 @@ export default function ShoppingScreen() {
 
 const styles = StyleSheet.create({
   section: { gap: Spacing.sm },
+  sectionHead: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm },
+  aisleDot: { width: 10, height: 10, borderRadius: 5 },
   row: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.sm, paddingLeft: Spacing.xs },
   actions: { flexDirection: 'row', gap: Spacing.sm },
   action: { flex: 1 },

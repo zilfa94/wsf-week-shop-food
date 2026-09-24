@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Card, Chip, FoodImage } from '@/components/ui';
+import { AppText, Card, Chip, DishPhoto } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { MEAL_TYPE_LABELS } from '@/core/labels';
 import type { Meal, Recipe } from '@/core/types';
@@ -27,7 +27,8 @@ export function MealCard({ meal, recipe, showCalories = true, onPress, onLongPre
       accessibilityLabel={`${MEAL_TYPE_LABELS[meal.slot.type]} : ${name}${status ? `, ${status}` : ''}`}
       style={[styles.card, meal.cooked ? styles.cooked : null]}
     >
-      <FoodImage recipeId={meal.recipeId} size={68} tile={meal.leftoverOf ? 'accent' : 'soft'} />
+      {/* Photo du plat si elle existe, illustration 3D sinon. */}
+      <DishPhoto recipeId={meal.recipeId} square={68} fallbackTile={meal.leftoverOf ? 'accent' : 'soft'} />
       <View style={styles.body}>
         <View style={styles.header}>
           <AppText variant="caption" color="textMuted">

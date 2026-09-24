@@ -7,12 +7,15 @@ export interface StatTileProps {
   readonly label: string;
   readonly value: string;
   readonly hint?: string;
-  readonly tone?: 'default' | 'accent' | 'success';
+  /** Teinte de fond : chaque chiffre porte sa couleur, sinon la rangée de tuiles paraît terne. */
+  readonly tone?: 'default' | 'accent' | 'success' | 'info';
 }
+
+const TONES = { accent: 'accentSoft', success: 'successSoft', info: 'infoSoft', default: 'surface' } as const;
 
 export function StatTile({ label, value, hint, tone = 'default' }: StatTileProps) {
   const theme = useTheme();
-  const background = tone === 'accent' ? theme.accentSoft : tone === 'success' ? theme.primarySoft : theme.surface;
+  const background = theme[TONES[tone]];
   return (
     <View style={[styles.tile, tone === 'default' ? Shadow.card : null, { backgroundColor: background }]} accessibilityLabel={`${label} : ${value}${hint ? `, ${hint}` : ''}`}>
       <AppText variant="caption" color="textMuted">
