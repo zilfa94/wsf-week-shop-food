@@ -345,11 +345,8 @@
     "url": "https://www.pexels.com/photo/delicious-japanese-omurice-with-mushroom-sauce-37332245/"
   },
   "orange_chocolat_noir": {
-    "id": 6167333,
-    "photographer": "Vie Studio",
-    "query": "dark chocolate pieces",
-    "rank": 1,
-    "url": "https://www.pexels.com/photo/brown-chocolate-bar-on-white-background-6167333/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait des tablettes sans orange.",
+    "source": "owner"
   },
   "overnight_oats_banane_coco": {
     "id": 5150202,
