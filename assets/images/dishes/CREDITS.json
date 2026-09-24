@@ -20,13 +20,6 @@
     "rank": 0,
     "url": "https://www.pexels.com/photo/cooked-food-on-black-ceramic-bowl-5773967/"
   },
-  "biscottes_confiture": {
-    "id": 7509692,
-    "photographer": "Richi Tejada",
-    "query": "toast with jam",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/white-bread-in-the-plate-7509692/"
-  },
   "blanquette_poulet_riz": {
     "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait une assiette d'avocat.",
     "source": "owner"
@@ -65,6 +58,13 @@
     "query": "chicken skewers bulgur",
     "rank": 0,
     "url": "https://www.pexels.com/photo/chicken-skewer-with-vegetables-and-tomato-barley-15388077/"
+  },
+  "bruschetta_tomate_basilic": {
+    "id": 11789787,
+    "photographer": "Mateusz Feliksik",
+    "query": "bruschetta tomato basil",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/photo-of-chopped-tomatoes-on-top-of-toasted-bread-11789787/"
   },
   "bun_ga_vermicelles_riz_menthe_concombre": {
     "id": 2116090,
@@ -119,12 +119,26 @@
     "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait une feijoada.",
     "source": "owner"
   },
+  "compote_pommes_cannelle": {
+    "id": 7839801,
+    "photographer": "Dimitris Chatzoulis",
+    "query": "apple sauce bowl cinnamon",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/sliced-apple-on-bowl-7839801/"
+  },
   "couscous_pois_chiches_legumes": {
     "id": 36984667,
     "photographer": "abdellatif jellab",
     "query": "vegetable couscous",
     "rank": 0,
     "url": "https://www.pexels.com/photo/traditional-moroccan-vegetable-tagine-36984667/"
+  },
+  "crepes_sucrees": {
+    "id": 1439319,
+    "photographer": "Eli Verenich",
+    "query": "crepes plate sugar",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/pan-cakes-served-on-white-ceramic-plate-1439319/"
   },
   "crevettes_ail_citron_riz": {
     "id": 4629337,
@@ -486,6 +500,13 @@
     "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque ajoutait un steak absent de la recette.",
     "source": "owner"
   },
+  "riz_au_lait_vanille": {
+    "id": 33088376,
+    "photographer": "Gundula Vogel",
+    "query": "rice pudding bowl",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/delicious-rice-porridge-with-fresh-berries-33088376/"
+  },
   "riz_pilaf_carottes_petits_pois_olives": {
     "id": 14286683,
     "photographer": "Nadin Sh",
@@ -506,6 +527,13 @@
     "query": "salmon avocado rice bowl",
     "rank": 0,
     "url": "https://www.pexels.com/photo/close-up-photo-of-cooked-food-on-black-ceramic-bowl-8481855/"
+  },
+  "salade_fruits_frais": {
+    "id": 11783272,
+    "photographer": "Connor Scott McManus",
+    "query": "fresh fruit salad bowl",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/bowl-with-fruits-on-table-11783272/"
   },
   "salade_grecque_feta": {
     "id": 724669,
@@ -654,6 +682,13 @@
     "query": "cheese toast honey",
     "rank": 0,
     "url": "https://www.pexels.com/photo/breads-with-toppings-on-a-white-tray-5589042/"
+  },
+  "tzatziki_batonnets_legumes": {
+    "id": 2452060,
+    "photographer": "Gül Işık",
+    "query": "tzatziki dip vegetables",
+    "rank": 0,
+    "url": "https://www.pexels.com/photo/photo-of-assorted-foods-on-white-plates-2452060/"
   },
   "wok_legumes_croquants_nouilles_riz": {
     "id": 2456435,
