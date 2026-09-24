@@ -441,11 +441,8 @@
     "url": "https://www.pexels.com/photo/sliced-bananas-in-white-ceramic-bowl-6050721/"
   },
   "porridge_pomme_cannelle_vegan": {
-    "id": 373941,
-    "photographer": "Burst",
-    "query": "oatmeal bowl apple",
-    "rank": 1,
-    "url": "https://www.pexels.com/photo/shallow-focus-photo-of-spoon-373941/"
+    "note": "Photo fournie par le propriétaire le 2026-09-24 ; remplace la photo Pexels, jugée fausse.",
+    "source": "owner"
   },
   "poulet_basquaise": {
     "id": 9324621,

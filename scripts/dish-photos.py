@@ -6,6 +6,9 @@ obligatoire (on la garde quand même dans CREDITS.json), interdiction de revendr
 quelles. Une photo de banque illustre **un** plat de ce type, pas le résultat exact de notre recette :
 l'app l'affiche avec la mention « photo d'illustration ».
 
+Une photo peut aussi être **fournie par le propriétaire** : la déposer sous `assets/images/dishes/<id>.jpg`
+et marquer `{"source": "owner"}` dans `CREDITS.json` la protège de tout écrasement par ce script.
+
 Chaque recette a une **requête écrite à la main** (en anglais : l'index de Pexels est anglophone).
 Le rang de la photo retenue est mémorisé dans `scripts/dish-photo-picks.json` : pour remplacer une
 photo qui ne convient pas, il suffit d'incrémenter son rang et de relancer.
@@ -222,7 +225,13 @@ def fetch_missing(key: str, only: list[str] | None) -> None:
     picks: dict[str, int] = load(PICKS, {})
     credits: dict[str, dict] = load(CREDITS, {})
     OUT.mkdir(parents=True, exist_ok=True)
+    # Une photo fournie par le propriétaire (`source: owner` dans CREDITS.json) n'est jamais écrasée :
+    # pour en changer, supprimer son fichier .jpg d'abord.
+    owned = {r for r, c in credits.items() if c.get("source") == "owner"}
     todo = [r for r in QUERIES if (only and r in only) or (not only and not (OUT / f"{r}.jpg").exists())]
+    for r in [r for r in todo if r in owned]:
+        print(f"  = {r} : photo fournie par le propriétaire, conservée")
+    todo = [r for r in todo if r not in owned]
     if not todo:
         print("Toutes les photos sont déjà là (--redo <id> pour en changer une).")
         return
