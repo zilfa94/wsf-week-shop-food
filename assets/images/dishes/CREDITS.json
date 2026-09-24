@@ -197,11 +197,8 @@
     "url": "https://www.pexels.com/photo/fried-chicken-in-a-bowl-12916881/"
   },
   "dinde_milanaise_spaghetti": {
-    "id": 34636425,
-    "photographer": "Novkov Visuals",
-    "query": "breaded cutlet spaghetti",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/crispy-schnitzel-with-fresh-salad-on-plate-34636425/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait une escalope panée sans spaghetti.",
+    "source": "owner"
   },
   "energy_balls_avoine_cacao": {
     "id": 27850074,
