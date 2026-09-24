@@ -139,7 +139,7 @@ export default function WeekScreen() {
 
         <View style={styles.tiles}>
           <StatTile label="Budget estimé" value={list ? formatPrice(list.totalPrice) : '—'} hint={`pour ${profile.persons} pers.`} tone="info" />
-          <StatTile label="À acheter" value={String(toBuy)} hint="articles" tone="accent" />
+          <StatTile label="À acheter" value={String(toBuy)} hint="articles" />
           <StatTile label="Anti-gaspi" value={list ? `${list.wasteScore} %` : '—'} hint={`équilibre ${balance}/100`} tone="success" />
         </View>
         <AppText variant="caption" color="textMuted">{`${cooked}/${plan.meals.length} repas cuisinés`}</AppText>

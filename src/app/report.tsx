@@ -27,7 +27,7 @@ export default function ReportScreen() {
       <View style={styles.tiles}>
         <StatTile label="Repas cuisinés" value={`${report.cookedMeals}/${report.totalMeals}`} tone="info" />
         <StatTile label="Anti-gaspi" value={`${report.wasteScore} %`} tone="success" />
-        <StatTile label="Équilibre" value={`${report.balanceScore}/100`} tone="accent" />
+        <StatTile label="Équilibre" value={`${report.balanceScore}/100`} />
       </View>
       {report.savedEur > 0 ? (
         <Card tone="accent">

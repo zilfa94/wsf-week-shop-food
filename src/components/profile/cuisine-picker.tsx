@@ -1,21 +1,20 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useMemo } from 'react';
 import { Pressable, StyleSheet, View } from 'react-native';
-import { AppText, Chip, FoodImage } from '@/components/ui';
+import { AppText, Chip, DishPhoto } from '@/components/ui';
 import { Radius, Shadow, Spacing } from '@/constants/theme';
 import { CUISINE_FAMILY_HINTS, cuisineFamily, selectableCuisines } from '@/core/cuisines';
 import { CUISINE_LABELS } from '@/core/labels';
 import type { Cuisine } from '@/core/types';
 import { RECIPES } from '@/data/recipes';
-import type { FoodImageKey } from '@/data/food-images';
 import { useTheme, useThemeName } from '@/hooks/use-theme';
 
-/** Plat emblématique de chaque famille pour l'illustrer (images de `assets/images/food/`). */
-const CUISINE_IMAGE: Readonly<Partial<Record<Cuisine, FoodImageKey>>> = {
-  french: 'pot_of_food',
-  mediterranean: 'spaghetti',
-  asian: 'steaming_bowl',
-  oriental: 'falafel',
+/** Plat emblématique de chaque famille : sa photo illustre la tuile (repli sur l'illustration 3D). */
+const CUISINE_RECIPE: Readonly<Partial<Record<Cuisine, string>>> = {
+  french: 'boeuf_bourguignon',
+  mediterranean: 'pates_tomate_mozzarella_basilic',
+  asian: 'pad_thai_vegetarien_nouilles_riz_oeuf',
+  oriental: 'tajine_agneau_carottes_pommes_de_terre',
 };
 
 export interface CuisinePickerProps {
@@ -54,7 +53,7 @@ export function CuisinePicker({ value, onChange }: CuisinePickerProps) {
               ]}
             >
               <View style={styles.tileHeader}>
-                <FoodImage imageKey={CUISINE_IMAGE[cuisine]} size={52} tile="none" />
+                <DishPhoto recipeId={CUISINE_RECIPE[cuisine] ?? ''} square={52} fallbackTile="none" />
                 {on ? <Ionicons name="checkmark-circle" size={22} color={theme.onPrimary} /> : null}
               </View>
               <AppText variant="bodyStrong" color={on ? 'onPrimary' : 'text'}>
