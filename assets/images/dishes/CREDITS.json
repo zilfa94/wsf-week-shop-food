@@ -215,11 +215,8 @@
     "url": "https://www.pexels.com/photo/falafel-and-hummus-on-plate-4046770/"
   },
   "filet_porc_normande_pommes_de_terre": {
-    "id": 12149700,
-    "photographer": "Sylwester Ficek",
-    "query": "pork fillet cream sauce",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/food-with-cooked-foot-and-asparagus-12149700/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait un tournedos sans sauce.",
+    "source": "owner"
   },
   "galettes_lentilles_corail_epinards_tahini": {
     "id": 8934919,
