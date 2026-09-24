@@ -518,11 +518,8 @@
     "url": "https://www.pexels.com/photo/vegetable-slices-on-brown-ceramic-bowl-724669/"
   },
   "salade_mechouia_tunisienne": {
-    "id": 8250374,
-    "photographer": "Julia Filirovska",
-    "query": "grilled pepper salad",
-    "rank": 0,
-    "url": "https://www.pexels.com/photo/yellow-and-red-bell-peppers-in-stainless-steel-tray-8250374/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait des poivrons grillés avec des frites.",
+    "source": "owner"
   },
   "salade_pates_tomates_cerises_mozzarella": {
     "id": 34636452,
