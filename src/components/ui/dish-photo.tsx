@@ -11,7 +11,11 @@ export interface DishPhotoProps {
   readonly height?: number;
   /** Vignette carrée de ce côté (pt) : cartes de repas, propositions de remplacement. */
   readonly square?: number;
-  /** Mention « photo d'illustration » : obligatoire sur la fiche recette, superflue sur une vignette. */
+  /**
+   * Mention « image d'illustration » : obligatoire sur la fiche recette, superflue sur une vignette.
+   * Le mot « image » et non « photo » : certaines sont des photos de banque, d'autres sont générées
+   * par une IA (voir `CREDITS.json`) — l'app ne promet donc pas une photographie.
+   */
   readonly caption?: boolean;
   /** Pastille de l'illustration 3D quand aucune photo n'existe encore. */
   readonly fallbackTile?: FoodImageProps['tile'];
@@ -42,7 +46,7 @@ export function DishPhoto({ recipeId, height = 200, square, caption = false, fal
       <Image source={photo} style={[styles.photo, { height, backgroundColor: theme.surfaceAlt }]} resizeMode="cover" accessibilityIgnoresInvertColors />
       {caption ? (
         <AppText variant="caption" color="textMuted">
-          Photo d’illustration : le plat peut différer de votre préparation.
+          Image d’illustration : le plat peut différer de votre préparation.
         </AppText>
       ) : null}
     </View>

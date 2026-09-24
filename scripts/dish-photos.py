@@ -6,8 +6,9 @@ obligatoire (on la garde quand même dans CREDITS.json), interdiction de revendr
 quelles. Une photo de banque illustre **un** plat de ce type, pas le résultat exact de notre recette :
 l'app l'affiche avec la mention « photo d'illustration ».
 
-Une photo peut aussi être **fournie par le propriétaire** : la déposer sous `assets/images/dishes/<id>.jpg`
-et marquer `{"source": "owner"}` dans `CREDITS.json` la protège de tout écrasement par ce script.
+Une image peut aussi être **fournie par le propriétaire** (sa propre photo, ou une image générée par une IA) :
+la déposer sous `assets/images/dishes/<id>.jpg` et marquer `{"source": "owner"}` dans `CREDITS.json` la protège
+de tout écrasement par ce script. L'app parle d'« image d'illustration » et non de « photo » pour cette raison.
 
 Chaque recette a une **requête écrite à la main** (en anglais : l'index de Pexels est anglophone).
 Le rang de la photo retenue est mémorisé dans `scripts/dish-photo-picks.json` : pour remplacer une
