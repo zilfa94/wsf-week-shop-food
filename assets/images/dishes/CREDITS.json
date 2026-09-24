@@ -119,11 +119,8 @@
     "url": "https://www.pexels.com/photo/hearty-mexican-chili-with-tortilla-and-avocado-32667184/"
   },
   "chorizo_poivrons_tomate_riz": {
-    "id": 34195319,
-    "photographer": "José Roberto Oliveira",
-    "query": "chorizo rice dish",
-    "rank": 1,
-    "url": "https://www.pexels.com/photo/authentic-brazilian-feijoada-with-orange-and-greens-34195319/"
+    "note": "Image générée par une IA, fournie par le propriétaire le 2026-09-24 ; la photo de banque montrait une feijoada.",
+    "source": "owner"
   },
   "couscous_pois_chiches_legumes": {
     "id": 36984667,
