@@ -14,3 +14,4 @@ export { StatTile, type StatTileProps } from './stat-tile';
 export { Stepper, type StepperProps } from './stepper';
 export { FoodImage, foodImageKey, type FoodImageProps } from './food-image';
 export { TabBar, type TabBarProps } from './tab-bar';
+export { DishPhoto, type DishPhotoProps } from './dish-photo';

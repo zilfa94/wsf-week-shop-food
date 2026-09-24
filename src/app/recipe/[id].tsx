@@ -1,6 +1,6 @@
 import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { AppText, Button, Card, Chip, EmptyState, FoodImage, MacroBar, Screen, SectionHeader } from '@/components/ui';
+import { AppText, Button, Card, Chip, DishPhoto, EmptyState, FoodImage, MacroBar, Screen, SectionHeader } from '@/components/ui';
 import { Spacing } from '@/constants/theme';
 import { CUISINE_LABELS, RECIPE_TAG_LABELS, unitLabel } from '@/core/labels';
 import { formatNumber } from '@/core/units';
@@ -32,8 +32,8 @@ export default function RecipeScreen() {
   return (
     <Screen>
       <Stack.Screen options={{ title: recipe.name }} />
-      {/* Grande image du plat, détourée sur le fond, comme la fiche produit du modèle. */}
-      <FoodImage recipeId={recipe.id} size={200} tile="none" style={styles.hero} />
+      {/* Photo réelle du plat si on en a une, illustration 3D sinon. */}
+      <DishPhoto recipeId={recipe.id} height={200} caption style={styles.hero} />
       <AppText variant="display">{recipe.name}</AppText>
       {recipe.description ? <AppText color="textMuted">{recipe.description}</AppText> : null}
       <View style={styles.wrap}>
@@ -86,7 +86,7 @@ export default function RecipeScreen() {
 }
 
 const styles = StyleSheet.create({
-  hero: { alignSelf: 'center' },
+  hero: { marginBottom: Spacing.xs },
   wrap: { flexDirection: 'row', flexWrap: 'wrap', gap: Spacing.sm },
   ingredient: { flexDirection: 'row', alignItems: 'center', gap: Spacing.sm, paddingVertical: Spacing.xs },
   grow: { flex: 1 },

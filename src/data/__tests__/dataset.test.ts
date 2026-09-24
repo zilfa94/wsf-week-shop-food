@@ -6,6 +6,7 @@ import { candidatesForSlot, isRecipeEligible, totalMinutes } from '../../core/fi
 import { generateWeekPlan } from '../../core/planner';
 import type { CarbKind, Cuisine, FoodClass, MealType, ProteinKind, RecipeTag, Season, UserProfile } from '../../core/types';
 import { toCanonical } from '../../core/units';
+import { DISH_PHOTOS } from '../dish-photos';
 import { FOOD_IMAGES, INGREDIENT_IMAGE, RECIPE_IMAGE } from '../food-images';
 import { DATASET, DATASET_VERSION } from '../index';
 import { INGREDIENTS } from '../ingredients';
@@ -155,6 +156,9 @@ describe('recettes', () => {
     for (const id of Object.keys(INGREDIENT_IMAGE)) if (!INDEX.has(id)) problems.push(`image d’un ingrédient inconnu : ${id}`);
     const recipeIds = new Set(RECIPES.map((r) => r.id));
     for (const id of Object.keys(RECIPE_IMAGE)) if (!recipeIds.has(id)) problems.push(`image d’une recette inconnue : ${id}`);
+    // Les photos réelles sont facultatives (elles arrivent par lots), mais ne doivent pas survivre
+    // à la recette qu'elles illustraient.
+    for (const id of Object.keys(DISH_PHOTOS)) if (!recipeIds.has(id)) problems.push(`photo d’une recette inconnue : ${id}`);
     expect(problems).toEqual([]);
   });
 
