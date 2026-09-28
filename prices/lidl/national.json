@@ -4,18 +4,18 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-09-27T10:16:19.042Z",
+ "scrapedAt": "2026-09-28T11:19:09.049Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
    "ingredientId": "thon_boite",
-   "productName": "SOL&MAR Thon à l'huile de tournesol MSC",
+   "productName": "NIXE Thon à l'huile de tournesol MSC",
    "price": 5.49,
    "unitPrice": 7.32,
    "unit": "kg",
    "packSize": 0.75,
    "packLabel": "750 g (PNE)",
-   "url": "https://www.lidl.fr/p/sol-mar-thon-a-l-huile-de-tournesol-msc/p11000015",
+   "url": "https://www.lidl.fr/p/nixe-thon-a-l-huile-de-tournesol-msc/p11000015",
    "validFrom": "2026-09-24",
    "promo": true
   },
@@ -47,7 +47,7 @@
   },
   {
    "ingredientId": "saucisse",
-   "productName": "Toque du Chef Couscous poulet merguez",
+   "productName": "TOQUE DU CHEF Couscous poulet merguez",
    "price": 3.14,
    "unitPrice": 3.2,
    "unit": "kg",
@@ -96,19 +96,6 @@
    "validUntil": "2026-09-30"
   },
   {
-   "ingredientId": "avocat",
-   "productName": "Avocat",
-   "price": 0.65,
-   "unitPrice": 0.65,
-   "unit": "piece",
-   "packSize": 1,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/avocat/p11150914",
-   "validFrom": "2026-09-10",
-   "promo": true,
-   "validUntil": "2026-09-30"
-  },
-  {
    "ingredientId": "chorizo",
    "productName": "SOL&MAR Chorizo Vela",
    "price": 5.49,
@@ -146,7 +133,7 @@
   },
   {
    "ingredientId": "porc_echine",
-   "productName": "L'étal du Boucher, - 12 côtes de porc",
+   "productName": "L'ÉTAL DU BOUCHER, - 12 côtes de porc",
    "price": 11.99,
    "unitPrice": 5.71,
    "unit": "kg",
@@ -159,7 +146,7 @@
   },
   {
    "ingredientId": "dinde_escalope",
-   "productName": "L'Etal du Volailler Escalopes de dinde",
+   "productName": "L'ETAL DU VOLAILLER Escalopes de dinde",
    "price": 9.99,
    "unitPrice": 9.99,
    "unit": "kg",
@@ -172,7 +159,7 @@
   },
   {
    "ingredientId": "poulet_blanc",
-   "productName": "L'étal du Volailler Medaillons de filet de poulet",
+   "productName": "L'ÉTAL DU VOLAILLER Medaillons de filet de poulet",
    "price": 7.99,
    "unitPrice": 9.99,
    "unit": "kg",
@@ -185,7 +172,7 @@
   },
   {
    "ingredientId": "poulet_blanc",
-   "productName": "L'étal du Volailler Fines escalopes de poulet",
+   "productName": "L'ÉTAL DU VOLAILLER Fines escalopes de poulet",
    "price": 9.99,
    "unitPrice": 9.99,
    "unit": "kg",
@@ -198,7 +185,7 @@
   },
   {
    "ingredientId": "poulet_blanc",
-   "productName": "L'étal du Volailler Émincés de filet de poulet",
+   "productName": "L'ÉTAL DU VOLAILLER Émincés de filet de poulet",
    "price": 4.49,
    "unitPrice": 8.98,
    "unit": "kg",
@@ -211,7 +198,7 @@
   },
   {
    "ingredientId": "dinde_escalope",
-   "productName": "L'étal du Volailler Escalopes de dinde",
+   "productName": "L'ÉTAL DU VOLAILLER Escalopes de dinde",
    "price": 9.99,
    "unitPrice": 9.99,
    "unit": "kg",
@@ -263,7 +250,7 @@
   },
   {
    "ingredientId": "lardons",
-   "productName": "Saint Alby Allumettes fumées",
+   "productName": "SAINT ALBY Allumettes fumées",
    "price": 1.18,
    "unitPrice": 7.18,
    "unit": "kg",
@@ -276,7 +263,7 @@
   },
   {
    "ingredientId": "poulet_cuisse",
-   "productName": "L'étal du Volailler Hauts de cuisse de poulet",
+   "productName": "L'ÉTAL DU VOLAILLER Hauts de cuisse de poulet",
    "price": 6.99,
    "unitPrice": 3.5,
    "unit": "kg",
@@ -289,7 +276,7 @@
   },
   {
    "ingredientId": "poulet_cuisse",
-   "productName": "L'étal du Volailler Pilons de poulet",
+   "productName": "L'ÉTAL DU VOLAILLER Pilons de poulet",
    "price": 5.25,
    "unitPrice": 3.5,
    "unit": "kg",
@@ -315,7 +302,7 @@
   },
   {
    "ingredientId": "saucisse",
-   "productName": "L'étal du Boucher 8 saucisses de Toulouse",
+   "productName": "L'ÉTAL DU BOUCHER 8 saucisses de Toulouse",
    "price": 5.69,
    "unitPrice": 5.69,
    "unit": "kg",
