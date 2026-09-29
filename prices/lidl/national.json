@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-09-28T11:19:09.049Z",
+ "scrapedAt": "2026-09-29T10:58:06.724Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -81,19 +81,6 @@
    "url": "https://www.lidl.fr/p/maribel-pate-de-sesame-bio/p11150059",
    "validFrom": "2026-10-01",
    "promo": true
-  },
-  {
-   "ingredientId": "croissant",
-   "productName": "- Croissant pur beurre",
-   "price": 0.38,
-   "unitPrice": 8.49,
-   "unit": "kg",
-   "packSize": 0.045,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
   },
   {
    "ingredientId": "chorizo",
