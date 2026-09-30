@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-09-29T10:58:06.724Z",
+ "scrapedAt": "2026-09-30T10:48:20.484Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -198,7 +198,7 @@
   },
   {
    "ingredientId": "boeuf_hache",
-   "productName": "L'étal du Boucher 2 steaks hachés charolais",
+   "productName": "L'ÉTAL DU BOUCHER 2 steaks hachés charolais",
    "price": 3.99,
    "unitPrice": 19.36,
    "unit": "kg",
