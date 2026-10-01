@@ -4,21 +4,9 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-09-30T10:48:20.484Z",
+ "scrapedAt": "2026-10-01T11:14:50.713Z",
  "scraperVersion": "0.1.0",
  "prices": [
-  {
-   "ingredientId": "thon_boite",
-   "productName": "NIXE Thon à l'huile de tournesol MSC",
-   "price": 5.49,
-   "unitPrice": 7.32,
-   "unit": "kg",
-   "packSize": 0.75,
-   "packLabel": "750 g (PNE)",
-   "url": "https://www.lidl.fr/p/nixe-thon-a-l-huile-de-tournesol-msc/p11000015",
-   "validFrom": "2026-09-24",
-   "promo": true
-  },
   {
    "ingredientId": "pain",
    "productName": "Baguette croustille",
@@ -28,6 +16,19 @@
    "packSize": 0.333,
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
+   "validFrom": "2026-10-01",
+   "promo": true,
+   "validUntil": "2026-10-07"
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "QUALITÉ SUISSE Pomme de terre à chair ferme",
+   "price": 2.29,
+   "unitPrice": 0.92,
+   "unit": "kg",
+   "packSize": 2.5,
+   "packLabel": "Le filet de 2,5 kg",
+   "url": "https://www.lidl.fr/p/qualite-suisse-pomme-de-terre-a-chair-ferme/p11029598",
    "validFrom": "2026-10-01",
    "promo": true,
    "validUntil": "2026-10-07"
@@ -59,18 +60,6 @@
    "validUntil": "2026-10-07"
   },
   {
-   "ingredientId": "sauce_tomate",
-   "productName": "BARESA Sauce tomate",
-   "price": 0.95,
-   "unitPrice": 1.7,
-   "unit": "kg",
-   "packSize": 0.56,
-   "packLabel": "560 g",
-   "url": "https://www.lidl.fr/p/baresa-sauce-tomate/p11138869",
-   "validFrom": "2026-09-24",
-   "promo": true
-  },
-  {
    "ingredientId": "tahini",
    "productName": "MARIBEL Pâte de sésame Bio",
    "price": 3.49,
@@ -83,28 +72,17 @@
    "promo": true
   },
   {
-   "ingredientId": "chorizo",
-   "productName": "SOL&MAR Chorizo Vela",
-   "price": 5.49,
-   "unitPrice": 13.73,
+   "ingredientId": "pomme",
+   "productName": "Pomme Pink Lady® 6 fruits",
+   "price": 1.97,
+   "unitPrice": 2.19,
    "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/sol-mar-chorizo-vela/p11219303",
-   "validFrom": "2026-09-24",
-   "promo": true
-  },
-  {
-   "ingredientId": "chorizo",
-   "productName": "Spécialité espagnole de chorizo",
-   "price": 2.79,
-   "unitPrice": 7.42,
-   "unit": "kg",
-   "packSize": 0.376,
-   "packLabel": "376 g",
-   "url": "https://www.lidl.fr/p/specialite-espagnole-de-chorizo/p11254428",
-   "validFrom": "2026-09-24",
-   "promo": true
+   "packSize": 0.9,
+   "packLabel": "La barquette de 900 g",
+   "url": "https://www.lidl.fr/p/pomme-pink-lady-6-fruits/p11150812",
+   "validFrom": "2026-10-01",
+   "promo": true,
+   "validUntil": "2026-10-07"
   },
   {
    "ingredientId": "mascarpone",
@@ -130,32 +108,6 @@
    "validFrom": "2026-10-01",
    "promo": true,
    "validUntil": "2026-10-07"
-  },
-  {
-   "ingredientId": "dinde_escalope",
-   "productName": "L'ETAL DU VOLAILLER Escalopes de dinde",
-   "price": 9.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-escalopes-de-dinde/p11340828",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
-  },
-  {
-   "ingredientId": "poulet_blanc",
-   "productName": "L'ÉTAL DU VOLAILLER Medaillons de filet de poulet",
-   "price": 7.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800 g",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-medaillons-de-filet-de-poulet/p11355192",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
   },
   {
    "ingredientId": "poulet_blanc",
@@ -184,45 +136,6 @@
    "validUntil": "2026-10-07"
   },
   {
-   "ingredientId": "dinde_escalope",
-   "productName": "L'ÉTAL DU VOLAILLER Escalopes de dinde",
-   "price": 9.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-escalopes-de-dinde/p11441557",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
-  },
-  {
-   "ingredientId": "boeuf_hache",
-   "productName": "L'ÉTAL DU BOUCHER 2 steaks hachés charolais",
-   "price": 3.99,
-   "unitPrice": 19.36,
-   "unit": "kg",
-   "packSize": 0.206,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-2-steaks-haches-charolais/p11442363",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
-  },
-  {
-   "ingredientId": "crevette",
-   "productName": "- Crevettes",
-   "price": 3.99,
-   "unitPrice": 21,
-   "unit": "kg",
-   "packSize": 0.19,
-   "packLabel": "190 g",
-   "url": "https://www.lidl.fr/p/crevettes/p11442754",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
-  },
-  {
    "ingredientId": "crevette",
    "productName": "- Crevettes",
    "price": 6.99,
@@ -234,19 +147,6 @@
    "validFrom": "2026-10-01",
    "promo": true,
    "validUntil": "2026-10-07"
-  },
-  {
-   "ingredientId": "lardons",
-   "productName": "SAINT ALBY Allumettes fumées",
-   "price": 1.18,
-   "unitPrice": 7.18,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "2 x 100 g",
-   "url": "https://www.lidl.fr/p/saint-alby-allumettes-fumees/p11448025",
-   "validFrom": "2026-09-24",
-   "promo": true,
-   "validUntil": "2026-09-30"
   },
   {
    "ingredientId": "poulet_cuisse",
