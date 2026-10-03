@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-02T10:47:20.569Z",
+ "scrapedAt": "2026-10-03T10:07:17.966Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -399,13 +399,13 @@
   },
   {
    "ingredientId": "porc_echine",
-   "productName": "4 Côtes de porc échine",
+   "productName": "L'ÉTAL DU BOUCHER 4 Côtes de porc échine",
    "price": 4.99,
    "unitPrice": 7.13,
    "unit": "kg",
    "packSize": 0.7,
    "packLabel": "700 g",
-   "url": "https://www.lidl.fr/p/4-cotes-de-porc-echine/p11970835",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-4-cotes-de-porc-echine/p11970835",
    "validFrom": "2026-10-08",
    "promo": true,
    "validUntil": "2026-10-14"
