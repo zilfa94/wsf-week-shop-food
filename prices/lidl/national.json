@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-03T10:07:17.966Z",
+ "scrapedAt": "2026-10-04T10:48:08.679Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -109,13 +109,13 @@
   },
   {
    "ingredientId": "croissant",
-   "productName": "- Croissant pur beurre",
+   "productName": "MANO DUONA Croissant pur beurre",
    "price": 0.38,
    "unitPrice": 7.08,
    "unit": "kg",
    "packSize": 0.054,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
+   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
    "validFrom": "2026-10-08",
    "promo": true,
    "validUntil": "2026-10-14"
