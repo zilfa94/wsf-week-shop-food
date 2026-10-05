@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-04T10:48:08.679Z",
+ "scrapedAt": "2026-10-05T11:55:20.073Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -40,19 +40,6 @@
    "packSize": 0.333,
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
-   "validFrom": "2026-10-01",
-   "promo": true,
-   "validUntil": "2026-10-07"
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "QUALITÉ SUISSE Pomme de terre à chair ferme",
-   "price": 2.29,
-   "unitPrice": 0.92,
-   "unit": "kg",
-   "packSize": 2.5,
-   "packLabel": "Le filet de 2,5 kg",
-   "url": "https://www.lidl.fr/p/qualite-suisse-pomme-de-terre-a-chair-ferme/p11029598",
    "validFrom": "2026-10-01",
    "promo": true,
    "validUntil": "2026-10-07"
@@ -119,19 +106,6 @@
    "validFrom": "2026-10-08",
    "promo": true,
    "validUntil": "2026-10-14"
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Pomme Pink Lady® 6 fruits",
-   "price": 1.97,
-   "unitPrice": 2.19,
-   "unit": "kg",
-   "packSize": 0.9,
-   "packLabel": "La barquette de 900 g",
-   "url": "https://www.lidl.fr/p/pomme-pink-lady-6-fruits/p11150812",
-   "validFrom": "2026-10-01",
-   "promo": true,
-   "validUntil": "2026-10-07"
   },
   {
    "ingredientId": "huile_olive",
