@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-08T11:40:42.637Z",
+ "scrapedAt": "2026-10-09T11:33:59.377Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -18,6 +18,19 @@
    "url": "https://www.lidl.fr/p/mcennedy-saucisses-pour-hot-dog/p11000328",
    "validFrom": "2026-10-08",
    "promo": true
+  },
+  {
+   "ingredientId": "saucisse",
+   "productName": "DULANO Saucisses porc en bocal",
+   "price": 2.99,
+   "unitPrice": 8.31,
+   "unit": "kg",
+   "packSize": 0.36,
+   "packLabel": "8 x 45 g",
+   "url": "https://www.lidl.fr/p/dulano-saucisses-porc-en-bocal/p11000861",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "poulet_blanc",
@@ -42,6 +55,19 @@
    "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
    "validFrom": "2026-10-15",
    "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "Pommes de terre Halloween",
+   "price": 1.15,
+   "unitPrice": 2.56,
+   "unit": "kg",
+   "packSize": 0.45,
+   "packLabel": "450 g",
+   "url": "https://www.lidl.fr/p/pommes-de-terre-halloween/p11026365",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "pomme_de_terre",
@@ -78,6 +104,32 @@
    "url": "https://www.lidl.fr/p/mcennedy-poitrine-de-porc-fumee-au-miel/p11034154",
    "validFrom": "2026-10-08",
    "promo": true
+  },
+  {
+   "ingredientId": "mascarpone",
+   "productName": "ITALIAMO Mascarpone",
+   "price": 3.07,
+   "unitPrice": 6.14,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/italiamo-mascarpone/p11143991",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
+  },
+  {
+   "ingredientId": "pates",
+   "productName": "HALLOWEEN Pâtes tricolores",
+   "price": 0.85,
+   "unitPrice": 2.14,
+   "unit": "kg",
+   "packSize": 0.397,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/halloween-pates-tricolores/p11145199",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "croissant",
@@ -155,6 +207,19 @@
    "validUntil": "2026-10-21"
   },
   {
+   "ingredientId": "parmesan",
+   "productName": "MILBONA Parmigiano Reggiano",
+   "price": 1.98,
+   "unitPrice": 19.8,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100 g",
+   "url": "https://www.lidl.fr/p/milbona-parmigiano-reggiano/p11349437",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
+  },
+  {
    "ingredientId": "pomme_de_terre",
    "productName": "DUCDECOEUR Pommes de terre à la Sarladaise",
    "price": 2.39,
@@ -205,6 +270,19 @@
    "promo": true
   },
   {
+   "ingredientId": "porc_echine",
+   "productName": "SAINT ALBY Rôti de porc",
+   "price": 1.48,
+   "unitPrice": 8.22,
+   "unit": "kg",
+   "packSize": 0.18,
+   "packLabel": "180 g",
+   "url": "https://www.lidl.fr/p/saint-alby-roti-de-porc/p11449375",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
+  },
+  {
    "ingredientId": "crevette",
    "productName": "- Gambas",
    "price": 8.99,
@@ -231,6 +309,18 @@
    "validUntil": "2026-10-21"
   },
   {
+   "ingredientId": "pain",
+   "productName": "- Baguette pavot",
+   "price": 0.59,
+   "unitPrice": 2.12,
+   "unit": "kg",
+   "packSize": 0.278,
+   "packLabel": "L’unité",
+   "url": "https://www.lidl.fr/p/baguette-pavot/p11502128",
+   "validFrom": "2026-10-15",
+   "promo": true
+  },
+  {
    "ingredientId": "curry_poudre",
    "productName": "L'ÉTAL DU BOUCHER Émincés de porc au curry",
    "price": 2.79,
@@ -244,6 +334,18 @@
    "validUntil": "2026-10-14"
   },
   {
+   "ingredientId": "pates",
+   "productName": "Tagliatelle poulet",
+   "price": 5.89,
+   "unitPrice": 9.82,
+   "unit": "kg",
+   "packSize": 0.6,
+   "packLabel": "600 g",
+   "url": "https://www.lidl.fr/p/tagliatelle-poulet/p11502692",
+   "validFrom": "2026-10-15",
+   "promo": true
+  },
+  {
    "ingredientId": "boeuf_hache",
    "productName": "L'ÉTAL DU BOUCHER Steaks hachés",
    "price": 13.99,
@@ -254,6 +356,31 @@
    "url": "https://www.lidl.fr/p/l-etal-du-boucher-steaks-haches/p11502755",
    "validFrom": "2026-10-15",
    "promo": true
+  },
+  {
+   "ingredientId": "spaghetti",
+   "productName": "Spaghetti",
+   "price": 2.99,
+   "unitPrice": 1.66,
+   "unit": "kg",
+   "packSize": 1.8,
+   "packLabel": "3 x 600 g",
+   "url": "https://www.lidl.fr/p/spaghetti/p11503940",
+   "validFrom": "2026-10-15",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "TOQUE DU CHEF Gnocchi aux pommes de terre",
+   "price": 0.87,
+   "unitPrice": 2.29,
+   "unit": "kg",
+   "packSize": 0.38,
+   "packLabel": "380 g",
+   "url": "https://www.lidl.fr/p/toque-du-chef-gnocchi-aux-pommes-de-terre/p11525014",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "epinard",
@@ -292,6 +419,19 @@
    "promo": true
   },
   {
+   "ingredientId": "chorizo",
+   "productName": "SAINT ALBY Chorizo",
+   "price": 1.51,
+   "unitPrice": 6.71,
+   "unit": "kg",
+   "packSize": 0.225,
+   "packLabel": "225 g",
+   "url": "https://www.lidl.fr/p/saint-alby-chorizo/p11685574",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
+  },
+  {
    "ingredientId": "porc_echine",
    "productName": "L'ÉTAL DU BOUCHER 4 Côtes de porc échine",
    "price": 4.99,
@@ -314,6 +454,18 @@
    "packLabel": "2 x 150 g",
    "url": "https://www.lidl.fr/p/lardons-fumes/p12179885",
    "validFrom": "2026-10-08",
+   "promo": true
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "Jambon supérieur sans nitrite",
+   "price": 3.99,
+   "unitPrice": 9.5,
+   "unit": "kg",
+   "packSize": 0.42,
+   "packLabel": "420 g",
+   "url": "https://www.lidl.fr/p/jambon-superieur-sans-nitrite/p12180645",
+   "validFrom": "2026-10-15",
    "promo": true
   }
  ]
