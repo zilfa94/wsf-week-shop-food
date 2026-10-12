@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-11T11:04:38.771Z",
+ "scrapedAt": "2026-10-12T12:34:58.491Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -21,13 +21,13 @@
   },
   {
    "ingredientId": "saucisse",
-   "productName": "DULANO Saucisses porc en bocal",
+   "productName": "OLDENHÄUSER Saucisses porc en bocal",
    "price": 2.99,
    "unitPrice": 8.31,
    "unit": "kg",
    "packSize": 0.36,
    "packLabel": "8 x 45 g",
-   "url": "https://www.lidl.fr/p/dulano-saucisses-porc-en-bocal/p11000861",
+   "url": "https://www.lidl.fr/p/oldenhauser-saucisses-porc-en-bocal/p11000861",
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
@@ -68,30 +68,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "MATRIKET Pomme de terre four",
-   "price": 1.69,
-   "unitPrice": 0.85,
-   "unit": "kg",
-   "packSize": 2.5,
-   "packLabel": "Le filet de 2,5 kg",
-   "url": "https://www.lidl.fr/p/matriket-pomme-de-terre-four/p11029473",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Pomme bicolore",
-   "price": 1.84,
-   "unitPrice": 1.23,
-   "unit": "kg",
-   "packSize": 1.5,
-   "packLabel": "Le sachet de 1,5 kg",
-   "url": "https://www.lidl.fr/p/pomme-bicolore/p11030084",
-   "validFrom": "2026-10-08",
-   "promo": true
   },
   {
    "ingredientId": "miel",
@@ -143,18 +119,6 @@
    "validFrom": "2026-10-08",
    "promo": true,
    "validUntil": "2026-10-14"
-  },
-  {
-   "ingredientId": "avocat",
-   "productName": "Avocat",
-   "price": 0.65,
-   "unitPrice": 0.65,
-   "unit": "piece",
-   "packSize": 1,
-   "packLabel": "La pièce",
-   "url": "https://www.lidl.fr/p/avocat/p11150914",
-   "validFrom": "2026-09-17",
-   "promo": true
   },
   {
    "ingredientId": "huile_olive",
