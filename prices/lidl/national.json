@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-12T12:34:58.491Z",
+ "scrapedAt": "2026-10-13T12:17:36.523Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -57,19 +57,6 @@
    "promo": true
   },
   {
-   "ingredientId": "pomme_de_terre",
-   "productName": "Pommes de terre Halloween",
-   "price": 1.15,
-   "unitPrice": 2.56,
-   "unit": "kg",
-   "packSize": 0.45,
-   "packLabel": "450 g",
-   "url": "https://www.lidl.fr/p/pommes-de-terre-halloween/p11026365",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
    "ingredientId": "miel",
    "productName": "MCENNEDY Poitrine de porc fumée au miel",
    "price": 2.39,
@@ -90,19 +77,6 @@
    "packSize": 0.5,
    "packLabel": "500 g",
    "url": "https://www.lidl.fr/p/italiamo-mascarpone/p11143991",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "pates",
-   "productName": "HALLOWEEN Pâtes tricolores",
-   "price": 0.85,
-   "unitPrice": 2.14,
-   "unit": "kg",
-   "packSize": 0.397,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/halloween-pates-tricolores/p11145199",
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
