@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-13T12:17:36.523Z",
+ "scrapedAt": "2026-10-14T09:49:57.646Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -45,18 +45,6 @@
    "promo": true
   },
   {
-   "ingredientId": "pain",
-   "productName": "Baguette croustille",
-   "price": 0.71,
-   "unitPrice": 3.8,
-   "unit": "kg",
-   "packSize": 0.187,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
    "ingredientId": "miel",
    "productName": "MCENNEDY Poitrine de porc fumée au miel",
    "price": 2.39,
@@ -80,19 +68,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "croissant",
-   "productName": "MANO DUONA Croissant pur beurre",
-   "price": 0.38,
-   "unitPrice": 7.08,
-   "unit": "kg",
-   "packSize": 0.054,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-14"
   },
   {
    "ingredientId": "huile_olive",
