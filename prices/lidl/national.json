@@ -4,21 +4,9 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-14T09:49:57.646Z",
+ "scrapedAt": "2026-10-15T09:30:34.687Z",
  "scraperVersion": "0.1.0",
  "prices": [
-  {
-   "ingredientId": "saucisse",
-   "productName": "MCENNEDY Saucisses pour hot dog",
-   "price": 2.65,
-   "unitPrice": 5.85,
-   "unit": "kg",
-   "packSize": 0.453,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/mcennedy-saucisses-pour-hot-dog/p11000328",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
   {
    "ingredientId": "saucisse",
    "productName": "OLDENHÄUSER Saucisses porc en bocal",
@@ -33,28 +21,17 @@
    "validUntil": "2026-10-21"
   },
   {
-   "ingredientId": "poulet_blanc",
-   "productName": "MCENNEDY Ailes et filets de poulet frits",
-   "price": 6.99,
-   "unitPrice": 9.32,
+   "ingredientId": "pomme_de_terre",
+   "productName": "RYNECZEK LIDLA Pomme de terre",
+   "price": 2.3,
+   "unitPrice": 1.54,
    "unit": "kg",
-   "packSize": 0.75,
-   "packLabel": "750 g",
-   "url": "https://www.lidl.fr/p/mcennedy-ailes-et-filets-de-poulet-frits/p11003125",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
-   "ingredientId": "miel",
-   "productName": "MCENNEDY Poitrine de porc fumée au miel",
-   "price": 2.39,
-   "unitPrice": 11.21,
-   "unit": "kg",
-   "packSize": 0.213,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/mcennedy-poitrine-de-porc-fumee-au-miel/p11034154",
-   "validFrom": "2026-10-08",
-   "promo": true
+   "packSize": 1.5,
+   "packLabel": "Le filet de 1,5 kg",
+   "url": "https://www.lidl.fr/p/ryneczek-lidla-pomme-de-terre/p11029603",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "mascarpone",
@@ -68,18 +45,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "huile_olive",
-   "productName": "PRIMADONNA Huile d'olive vierge extra",
-   "price": 4.52,
-   "unitPrice": 5.49,
-   "unit": "l",
-   "packSize": 0.823,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/primadonna-huile-d-olive-vierge-extra/p11208738",
-   "validFrom": "2026-10-08",
-   "promo": true
   },
   {
    "ingredientId": "porc_echine",
@@ -133,31 +98,6 @@
    "validUntil": "2026-10-21"
   },
   {
-   "ingredientId": "pomme_de_terre",
-   "productName": "DUCDECOEUR Pommes de terre à la Sarladaise",
-   "price": 2.39,
-   "unitPrice": 3.98,
-   "unit": "kg",
-   "packSize": 0.6,
-   "packLabel": "600 g",
-   "url": "https://www.lidl.fr/p/ducdecoeur-pommes-de-terre-a-la-sarladaise/p11439513",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
-   "ingredientId": "poulet_cuisse",
-   "productName": "L'ÉTAL DU VOLAILLER Cuisses de poulet avec portions de dos",
-   "price": 7.99,
-   "unitPrice": 3.2,
-   "unit": "kg",
-   "packSize": 2.5,
-   "packLabel": "2,5 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-cuisses-de-poulet-avec-portions-de-dos/p11439790",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-14"
-  },
-  {
    "ingredientId": "dinde_escalope",
    "productName": "L'ÉTAL DU VOLAILLER Escalopes de dinde",
    "price": 9.99,
@@ -171,18 +111,6 @@
    "validUntil": "2026-10-21"
   },
   {
-   "ingredientId": "emmental_rape",
-   "productName": "CHÊNE D' ARGENT Emmental français râpé",
-   "price": 7.49,
-   "unitPrice": 7.49,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/chene-d-argent-emmental-francais-rape/p11441808",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
    "ingredientId": "porc_echine",
    "productName": "SAINT ALBY Rôti de porc",
    "price": 1.48,
@@ -194,19 +122,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "crevette",
-   "productName": "- Gambas",
-   "price": 8.99,
-   "unitPrice": 8.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/gambas/p11450002",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-14"
   },
   {
    "ingredientId": "crevette",
@@ -232,19 +147,6 @@
    "url": "https://www.lidl.fr/p/baguette-pavot/p11502128",
    "validFrom": "2026-10-15",
    "promo": true
-  },
-  {
-   "ingredientId": "curry_poudre",
-   "productName": "L'ÉTAL DU BOUCHER Émincés de porc au curry",
-   "price": 2.79,
-   "unitPrice": 9.3,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "300 g",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-eminces-de-porc-au-curry/p11502381",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-14"
   },
   {
    "ingredientId": "pates",
@@ -296,42 +198,6 @@
    "validUntil": "2026-10-21"
   },
   {
-   "ingredientId": "epinard",
-   "productName": "TOQUE DU CHEF Tortellini ricotta épinards",
-   "price": 0.89,
-   "unitPrice": 3.97,
-   "unit": "kg",
-   "packSize": 0.224,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/toque-du-chef-tortellini-ricotta-epinards/p11525899",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
-   "ingredientId": "boeuf_hache",
-   "productName": "L'ÉTAL DU BOUCHER Steak haché",
-   "price": 24.99,
-   "unitPrice": 12.5,
-   "unit": "kg",
-   "packSize": 2,
-   "packLabel": "2 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-steak-hache/p11654976",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
-   "ingredientId": "fruits_rouges_surgeles",
-   "productName": "Pom'Potes fruits rouges",
-   "price": 11.25,
-   "unitPrice": 3.91,
-   "unit": "kg",
-   "packSize": 2.877,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/pom-potes-fruits-rouges/p11672950",
-   "validFrom": "2026-10-08",
-   "promo": true
-  },
-  {
    "ingredientId": "chorizo",
    "productName": "SAINT ALBY Chorizo",
    "price": 1.51,
@@ -343,31 +209,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "porc_echine",
-   "productName": "L'ÉTAL DU BOUCHER 4 Côtes de porc échine",
-   "price": 4.99,
-   "unitPrice": 7.13,
-   "unit": "kg",
-   "packSize": 0.7,
-   "packLabel": "700 g",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-4-cotes-de-porc-echine/p11970835",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-14"
-  },
-  {
-   "ingredientId": "lardons",
-   "productName": "Lardons fumés",
-   "price": 2.79,
-   "unitPrice": 9.3,
-   "unit": "kg",
-   "packSize": 0.3,
-   "packLabel": "2 x 150 g",
-   "url": "https://www.lidl.fr/p/lardons-fumes/p12179885",
-   "validFrom": "2026-10-08",
-   "promo": true
   },
   {
    "ingredientId": "jambon_blanc",
