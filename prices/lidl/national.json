@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-16T09:23:22.953Z",
+ "scrapedAt": "2026-10-17T08:54:51.739Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -59,19 +59,6 @@
    "validUntil": "2026-11-04"
   },
   {
-   "ingredientId": "pain",
-   "productName": "Baguette croustille",
-   "price": 0.71,
-   "unitPrice": 3.8,
-   "unit": "kg",
-   "packSize": 0.187,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-28"
-  },
-  {
    "ingredientId": "miel",
    "productName": "ALESTO Cacahuètes au miel",
    "price": 1.49,
@@ -86,13 +73,13 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "Lovilio Mozzarella",
+   "productName": "ITALIAMO Mozzarella",
    "price": 1.9,
    "unitPrice": 4.75,
    "unit": "kg",
    "packSize": 0.4,
    "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/lovilio-mozzarella/p11008526",
+   "url": "https://www.lidl.fr/p/italiamo-mozzarella/p11008526",
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-28"
@@ -171,9 +158,9 @@
    "packSize": 0.397,
    "packLabel": "Le 2e produit",
    "url": "https://www.lidl.fr/p/halloween-pates-tricolores/p11145199",
-   "validFrom": "2026-10-22",
+   "validFrom": "2026-10-15",
    "promo": true,
-   "validUntil": "2026-10-28"
+   "validUntil": "2026-10-31"
   },
   {
    "ingredientId": "croissant",
@@ -341,7 +328,7 @@
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-filets-de-poulet/p11439484",
    "validFrom": "2026-10-22",
    "promo": true,
-   "validUntil": "2026-10-28"
+   "validUntil": "2026-11-04"
   },
   {
    "ingredientId": "dinde_escalope",
