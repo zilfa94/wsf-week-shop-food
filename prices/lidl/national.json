@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-18T09:12:50.474Z",
+ "scrapedAt": "2026-10-19T10:23:04.645Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -59,6 +59,19 @@
    "validUntil": "2026-11-04"
   },
   {
+   "ingredientId": "pain",
+   "productName": "Baguette croustille",
+   "price": 0.71,
+   "unitPrice": 3.8,
+   "unit": "kg",
+   "packSize": 0.187,
+   "packLabel": "L’unité",
+   "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-28"
+  },
+  {
    "ingredientId": "miel",
    "productName": "ALESTO Cacahuètes au miel",
    "price": 1.49,
@@ -73,26 +86,26 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "ITALIAMO Mozzarella",
+   "productName": "MILBONA Mozzarella",
    "price": 1.9,
    "unitPrice": 4.75,
    "unit": "kg",
    "packSize": 0.4,
    "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/italiamo-mozzarella/p11008526",
+   "url": "https://www.lidl.fr/p/milbona-mozzarella/p11008526",
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-28"
   },
   {
    "ingredientId": "spaghetti",
-   "productName": "ITALIAMO Spaghetti",
+   "productName": "COMBINO Spaghetti",
    "price": 0.88,
    "unitPrice": 0.88,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/italiamo-spaghetti/p11008607",
+   "url": "https://www.lidl.fr/p/combino-spaghetti/p11008607",
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
@@ -109,19 +122,6 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-31"
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "RYNECZEK LIDLA Pomme de terre",
-   "price": 2.3,
-   "unitPrice": 1.54,
-   "unit": "kg",
-   "packSize": 1.5,
-   "packLabel": "Le filet de 1,5 kg",
-   "url": "https://www.lidl.fr/p/ryneczek-lidla-pomme-de-terre/p11029603",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "riz_basmati",
