@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-19T10:23:04.645Z",
+ "scrapedAt": "2026-10-20T09:42:45.351Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -86,13 +86,13 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "MILBONA Mozzarella",
+   "productName": "ITALIAMO Mozzarella",
    "price": 1.9,
    "unitPrice": 4.75,
    "unit": "kg",
    "packSize": 0.4,
    "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/milbona-mozzarella/p11008526",
+   "url": "https://www.lidl.fr/p/italiamo-mozzarella/p11008526",
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-28"
@@ -163,19 +163,6 @@
    "validUntil": "2026-10-31"
   },
   {
-   "ingredientId": "croissant",
-   "productName": "MANO DUONA Croissant pur beurre",
-   "price": 0.38,
-   "unitPrice": 8.49,
-   "unit": "kg",
-   "packSize": 0.045,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
-   "validFrom": "2026-10-22",
-   "promo": true,
-   "validUntil": "2026-11-04"
-  },
-  {
    "ingredientId": "lentilles",
    "productName": "FRESHONA Lentilles",
    "price": 0.81,
@@ -239,18 +226,6 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
-  },
-  {
-   "ingredientId": "porc_echine",
-   "productName": "L'ÉTAL DU BOUCHER, - 12 côtes de porc",
-   "price": 11.99,
-   "unitPrice": 5.71,
-   "unit": "kg",
-   "packSize": 2.1,
-   "packLabel": "2,1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-12-cotes-de-porc/p11326997",
-   "validFrom": "2026-10-15",
-   "promo": true
   },
   {
    "ingredientId": "poulet_blanc",
@@ -558,6 +533,19 @@
    "url": "https://www.lidl.fr/p/jambon-superieur-sans-nitrite/p12180645",
    "validFrom": "2026-10-15",
    "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "RYNECZEK LIDLA Pomme de terre",
+   "price": 2.3,
+   "unitPrice": 1.54,
+   "unit": "kg",
+   "packSize": 1.5,
+   "packLabel": "Le filet de 1,5 kg",
+   "url": "https://www.lidl.fr/p/ryneczek-lidla-pomme-de-terre/p66000277",
+   "validFrom": "2026-10-15",
+   "promo": true,
+   "validUntil": "2026-10-21"
   }
  ]
 }
