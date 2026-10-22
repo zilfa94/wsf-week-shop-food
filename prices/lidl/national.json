@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-21T09:44:10.634Z",
+ "scrapedAt": "2026-10-22T09:43:44.899Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -18,19 +18,6 @@
    "url": "https://www.lidl.fr/p/milbona-feta-aop/p11000024",
    "validFrom": "2026-10-22",
    "promo": true
-  },
-  {
-   "ingredientId": "saucisse",
-   "productName": "OLDENHÄUSER Saucisses porc en bocal",
-   "price": 2.99,
-   "unitPrice": 8.31,
-   "unit": "kg",
-   "packSize": 0.36,
-   "packLabel": "8 x 45 g",
-   "url": "https://www.lidl.fr/p/oldenhauser-saucisses-porc-en-bocal/p11000861",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "mozzarella",
@@ -124,6 +111,30 @@
    "validUntil": "2026-10-31"
   },
   {
+   "ingredientId": "pomme_de_terre",
+   "productName": "MATRIKET Pomme de terre four",
+   "price": 1.97,
+   "unitPrice": 0.99,
+   "unit": "kg",
+   "packSize": 2,
+   "packLabel": "Le filet de 2 kg",
+   "url": "https://www.lidl.fr/p/matriket-pomme-de-terre-four/p11029473",
+   "validFrom": "2026-10-22",
+   "promo": true
+  },
+  {
+   "ingredientId": "oignon",
+   "productName": "Oignon rosé",
+   "price": 1.11,
+   "unitPrice": 1.11,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "Le filet de 1 kg",
+   "url": "https://www.lidl.fr/p/oignon-rose/p11029549",
+   "validFrom": "2026-10-22",
+   "promo": true
+  },
+  {
    "ingredientId": "riz_basmati",
    "productName": "GOLDENSUN Riz basmati",
    "price": 7.39,
@@ -137,19 +148,6 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "mascarpone",
-   "productName": "ITALIAMO Mascarpone",
-   "price": 3.07,
-   "unitPrice": 6.14,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500 g",
-   "url": "https://www.lidl.fr/p/italiamo-mascarpone/p11143991",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
    "ingredientId": "pates",
    "productName": "HALLOWEEN Pâtes tricolores",
    "price": 0.85,
@@ -161,6 +159,19 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-31"
+  },
+  {
+   "ingredientId": "avocat",
+   "productName": "Avocat",
+   "price": 0.65,
+   "unitPrice": 0.65,
+   "unit": "piece",
+   "packSize": 1,
+   "packLabel": "La pièce",
+   "url": "https://www.lidl.fr/p/avocat/p11150914",
+   "validFrom": "2026-10-01",
+   "promo": true,
+   "validUntil": "2026-10-28"
   },
   {
    "ingredientId": "lentilles",
@@ -228,21 +239,8 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "poulet_blanc",
-   "productName": "L'ÉTAL DU VOLAILLER Émincés de filet de poulet",
-   "price": 8.99,
-   "unitPrice": 8.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11328295",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
    "ingredientId": "pain_mie",
-   "productName": "MAITRE JEAN-PIERRE Pain de mie complet",
+   "productName": "MAÎTRE JEAN-PIERRE Pain de mie complet",
    "price": 1.17,
    "unitPrice": 2.34,
    "unit": "kg",
@@ -252,19 +250,6 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
-  },
-  {
-   "ingredientId": "dinde_escalope",
-   "productName": "L'ETAL DU VOLAILLER Escalopes de dinde",
-   "price": 9.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-escalopes-de-dinde/p11340828",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "huile_tournesol",
@@ -280,19 +265,6 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "parmesan",
-   "productName": "MILBONA Parmigiano Reggiano",
-   "price": 1.98,
-   "unitPrice": 19.8,
-   "unit": "kg",
-   "packSize": 0.1,
-   "packLabel": "100 g",
-   "url": "https://www.lidl.fr/p/milbona-parmigiano-reggiano/p11349437",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
    "ingredientId": "poulet_blanc",
    "productName": "L'ÉTAL DU VOLAILLER Filets de poulet",
    "price": 12.49,
@@ -304,19 +276,6 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-11-04"
-  },
-  {
-   "ingredientId": "dinde_escalope",
-   "productName": "L'ÉTAL DU VOLAILLER Escalopes de dinde",
-   "price": 9.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-escalopes-de-dinde/p11441557",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-21"
   },
   {
    "ingredientId": "porc_echine",
@@ -384,19 +343,6 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "porc_echine",
-   "productName": "SAINT ALBY Rôti de porc",
-   "price": 1.48,
-   "unitPrice": 8.22,
-   "unit": "kg",
-   "packSize": 0.18,
-   "packLabel": "180 g",
-   "url": "https://www.lidl.fr/p/saint-alby-roti-de-porc/p11449375",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
    "ingredientId": "poulet_cuisse",
    "productName": "L'ÉTAL DU VOLAILLER Hauts de cuisse de poulet",
    "price": 6.99,
@@ -410,52 +356,15 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "crevette",
-   "productName": "- Gambas crues ASC",
-   "price": 9.99,
-   "unitPrice": 12.49,
+   "ingredientId": "pomme",
+   "productName": "Pommes bicolores",
+   "price": 3.49,
+   "unitPrice": 1.17,
    "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800 g",
-   "url": "https://www.lidl.fr/p/gambas-crues-asc/p11450045",
-   "validFrom": "2026-10-08",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "pain",
-   "productName": "- Baguette pavot",
-   "price": 0.59,
-   "unitPrice": 2.12,
-   "unit": "kg",
-   "packSize": 0.278,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/baguette-pavot/p11502128",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
-   "ingredientId": "pates",
-   "productName": "Tagliatelle poulet",
-   "price": 5.89,
-   "unitPrice": 9.82,
-   "unit": "kg",
-   "packSize": 0.6,
-   "packLabel": "600 g",
-   "url": "https://www.lidl.fr/p/tagliatelle-poulet/p11502692",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
-   "ingredientId": "boeuf_hache",
-   "productName": "L'ÉTAL DU BOUCHER Steaks hachés",
-   "price": 13.99,
-   "unitPrice": 13.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-steaks-haches/p11502755",
-   "validFrom": "2026-10-15",
+   "packSize": 3,
+   "packLabel": "Le sachet de 3 kg",
+   "url": "https://www.lidl.fr/p/pommes-bicolores/p11491814",
+   "validFrom": "2026-10-22",
    "promo": true
   },
   {
@@ -472,18 +381,6 @@
    "validUntil": "2026-10-28"
   },
   {
-   "ingredientId": "spaghetti",
-   "productName": "Spaghetti",
-   "price": 2.99,
-   "unitPrice": 1.66,
-   "unit": "kg",
-   "packSize": 1.8,
-   "packLabel": "3 x 600 g",
-   "url": "https://www.lidl.fr/p/spaghetti/p11503940",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
    "ingredientId": "crevette",
    "productName": "- Gambas ASC entière cuites",
    "price": 8.99,
@@ -495,57 +392,6 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "TOQUE DU CHEF Gnocchi aux pommes de terre",
-   "price": 0.87,
-   "unitPrice": 2.29,
-   "unit": "kg",
-   "packSize": 0.38,
-   "packLabel": "380 g",
-   "url": "https://www.lidl.fr/p/toque-du-chef-gnocchi-aux-pommes-de-terre/p11525014",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "chorizo",
-   "productName": "SAINT ALBY Chorizo",
-   "price": 1.51,
-   "unitPrice": 6.71,
-   "unit": "kg",
-   "packSize": 0.225,
-   "packLabel": "225 g",
-   "url": "https://www.lidl.fr/p/saint-alby-chorizo/p11685574",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
-  },
-  {
-   "ingredientId": "jambon_blanc",
-   "productName": "Jambon supérieur sans nitrite",
-   "price": 3.99,
-   "unitPrice": 9.5,
-   "unit": "kg",
-   "packSize": 0.42,
-   "packLabel": "420 g",
-   "url": "https://www.lidl.fr/p/jambon-superieur-sans-nitrite/p12180645",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "RYNECZEK LIDLA Pomme de terre",
-   "price": 2.3,
-   "unitPrice": 1.54,
-   "unit": "kg",
-   "packSize": 1.5,
-   "packLabel": "Le filet de 1,5 kg",
-   "url": "https://www.lidl.fr/p/ryneczek-lidla-pomme-de-terre/p66000277",
-   "validFrom": "2026-10-15",
-   "promo": true,
-   "validUntil": "2026-10-21"
   }
  ]
 }
