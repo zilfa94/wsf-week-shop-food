@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-22T09:43:44.899Z",
+ "scrapedAt": "2026-10-23T09:39:40.946Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -44,6 +44,18 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-11-04"
+  },
+  {
+   "ingredientId": "thon_boite",
+   "productName": "DELUXE Thon à l'huile d'olive",
+   "price": 4.99,
+   "unitPrice": 4.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 16,63",
+   "url": "https://www.lidl.fr/p/deluxe-thon-a-l-huile-d-olive/p11002918",
+   "validFrom": "2026-10-29",
+   "promo": true
   },
   {
    "ingredientId": "pain",
@@ -135,6 +147,42 @@
    "promo": true
   },
   {
+   "ingredientId": "miel",
+   "productName": "DELUXE Miel d'acacia",
+   "price": 7.99,
+   "unitPrice": 7.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 15,98",
+   "url": "https://www.lidl.fr/p/deluxe-miel-d-acacia/p11030805",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "chevre_frais",
+   "productName": "VIVAROIS Fromage de chèvre frais",
+   "price": 1.51,
+   "unitPrice": 1.51,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 7,55",
+   "url": "https://www.lidl.fr/p/vivarois-fromage-de-chevre-frais/p11039854",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "poivron",
+   "productName": "Bouchées aux poivrons",
+   "price": 3.99,
+   "unitPrice": 3.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 26,60",
+   "url": "https://www.lidl.fr/p/bouchees-aux-poivrons/p11040946",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
    "ingredientId": "riz_basmati",
    "productName": "GOLDENSUN Riz basmati",
    "price": 7.39,
@@ -148,6 +196,18 @@
    "validUntil": "2026-10-28"
   },
   {
+   "ingredientId": "moules",
+   "productName": "DUCDECOEUR 12 moules ASC farcies",
+   "price": 3.39,
+   "unitPrice": 3.39,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 27,12",
+   "url": "https://www.lidl.fr/p/ducdecoeur-12-moules-asc-farcies/p11137010",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
    "ingredientId": "pates",
    "productName": "HALLOWEEN Pâtes tricolores",
    "price": 0.85,
@@ -159,6 +219,18 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-31"
+  },
+  {
+   "ingredientId": "croissant",
+   "productName": "MANO DUONA Croissant pur beurre",
+   "price": 0.38,
+   "unitPrice": 0.38,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 8,49",
+   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
+   "validFrom": "2026-10-29",
+   "promo": true
   },
   {
    "ingredientId": "avocat",
@@ -213,6 +285,18 @@
    "validUntil": "2026-10-28"
   },
   {
+   "ingredientId": "miel",
+   "productName": "DELUXE Miel de Manukahonig",
+   "price": 12.49,
+   "unitPrice": 12.49,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 49,96",
+   "url": "https://www.lidl.fr/p/deluxe-miel-de-manukahonig/p11256074",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
    "ingredientId": "curry_poudre",
    "productName": "KANIA Curry en poudre",
    "price": 0.3,
@@ -237,6 +321,18 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
+  },
+  {
+   "ingredientId": "porc_echine",
+   "productName": "L'ÉTAL DU BOUCHER, - 12 côtes de porc",
+   "price": 11.99,
+   "unitPrice": 11.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 5,71",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-12-cotes-de-porc/p11326997",
+   "validFrom": "2026-10-29",
+   "promo": true
   },
   {
    "ingredientId": "pain_mie",
@@ -265,6 +361,30 @@
    "validUntil": "2026-10-28"
   },
   {
+   "ingredientId": "oeuf",
+   "productName": "DELUXE Œufs de truite",
+   "price": 4.69,
+   "unitPrice": 4.69,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 58,63",
+   "url": "https://www.lidl.fr/p/deluxe-oeufs-de-truite/p11434866",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "agneau_epaule",
+   "productName": "L'ETAL DU BOUCHER Gigot d'agneau",
+   "price": 13.49,
+   "unitPrice": 5.62,
+   "unit": "kg",
+   "packSize": 2.4,
+   "packLabel": "La pièce d’environ 1,5 et 2,4 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-gigot-d-agneau/p11437235",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
    "ingredientId": "poulet_blanc",
    "productName": "L'ÉTAL DU VOLAILLER Filets de poulet",
    "price": 12.49,
@@ -276,6 +396,30 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-11-04"
+  },
+  {
+   "ingredientId": "dinde_escalope",
+   "productName": "L'ÉTAL DU VOLAILLER Filet de dinde",
+   "price": 8.99,
+   "unitPrice": 8.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-filet-de-dinde/p11439707",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "poulet_cuisse",
+   "productName": "L'ÉTAL DU VOLAILLER Cuisses de poulet avec portions de dos",
+   "price": 7.99,
+   "unitPrice": 7.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 3,20",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-cuisses-de-poulet-avec-portions-de-dos/p11439790",
+   "validFrom": "2026-10-29",
+   "promo": true
   },
   {
    "ingredientId": "porc_echine",
@@ -302,6 +446,42 @@
    "validFrom": "2026-10-15",
    "promo": true,
    "validUntil": "2026-10-28"
+  },
+  {
+   "ingredientId": "echalote",
+   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
+   "price": 5.75,
+   "unitPrice": 5.75,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 19,17",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "steak_boeuf",
+   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
+   "price": 5.75,
+   "unitPrice": 5.75,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 19,17",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "- Queues de crevettes cuites et décortiquées",
+   "price": 4.39,
+   "unitPrice": 4.39,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 21,95",
+   "url": "https://www.lidl.fr/p/queues-de-crevettes-cuites-et-decortiquees/p11446316",
+   "validFrom": "2026-10-29",
+   "promo": true
   },
   {
    "ingredientId": "miel",
@@ -343,6 +523,18 @@
    "validUntil": "2026-10-28"
   },
   {
+   "ingredientId": "agneau_epaule",
+   "productName": "DELUXE Souris d'agneau",
+   "price": 8.99,
+   "unitPrice": 8.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 19,98",
+   "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
    "ingredientId": "poulet_cuisse",
    "productName": "L'ÉTAL DU VOLAILLER Hauts de cuisse de poulet",
    "price": 6.99,
@@ -365,6 +557,30 @@
    "packLabel": "Le sachet de 3 kg",
    "url": "https://www.lidl.fr/p/pommes-bicolores/p11491814",
    "validFrom": "2026-10-22",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "DELUXE Cassolette au colin d'alaska, noix de saint jacques et crevettes",
+   "price": 7.79,
+   "unitPrice": 7.79,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 12,98",
+   "url": "https://www.lidl.fr/p/deluxe-cassolette-au-colin-d-alaska-noix-de-saint-jacques-et-crevettes/p11501868",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "confiture",
+   "productName": "DELUXE Confiture fraise Litchi",
+   "price": 2.49,
+   "unitPrice": 2.49,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 8,03",
+   "url": "https://www.lidl.fr/p/deluxe-confiture-fraise-litchi/p11502894",
+   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -392,6 +608,30 @@
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
+  },
+  {
+   "ingredientId": "mozzarella",
+   "productName": "mozzarella di latte di bufala",
+   "price": 3.59,
+   "unitPrice": 3.59,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 11,97",
+   "url": "https://www.lidl.fr/p/mozzarella-di-latte-di-bufala/p11504770",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "concombre",
+   "productName": "TOQUE DU CHEF Salade de concombres",
+   "price": 1.99,
+   "unitPrice": 1.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 3,98",
+   "url": "https://www.lidl.fr/p/toque-du-chef-salade-de-concombres/p11505020",
+   "validFrom": "2026-10-29",
+   "promo": true
   }
  ]
 }
