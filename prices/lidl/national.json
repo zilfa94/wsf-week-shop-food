@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-23T09:39:40.946Z",
+ "scrapedAt": "2026-10-24T09:12:04.877Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -98,13 +98,13 @@
   },
   {
    "ingredientId": "spaghetti",
-   "productName": "ITALIAMO Spaghetti",
+   "productName": "COMBINO Spaghetti",
    "price": 0.88,
    "unitPrice": 0.88,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/italiamo-spaghetti/p11008607",
+   "url": "https://www.lidl.fr/p/combino-spaghetti/p11008607",
    "validFrom": "2026-10-22",
    "promo": true,
    "validUntil": "2026-10-28"
