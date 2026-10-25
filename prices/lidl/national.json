@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-24T09:12:04.877Z",
+ "scrapedAt": "2026-10-25T09:29:21.593Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -511,7 +511,7 @@
   },
   {
    "ingredientId": "lait_coco",
-   "productName": "Vemondo Lait de coco",
+   "productName": "VEMONDO Lait de coco",
    "price": 1.51,
    "unitPrice": 2.52,
    "unit": "l",
