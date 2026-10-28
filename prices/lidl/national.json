@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-27T10:06:45.349Z",
+ "scrapedAt": "2026-10-28T10:53:30.368Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -33,13 +33,25 @@
   },
   {
    "ingredientId": "chevre_frais",
-   "productName": "VIVAROIS Fromage de chèvre frais",
+   "productName": "CHÊNE D' ARGENT Fromage de chèvre frais",
    "price": 1.51,
    "unitPrice": 1.51,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg = 7,55",
-   "url": "https://www.lidl.fr/p/vivarois-fromage-de-chevre-frais/p11039854",
+   "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "poivron",
+   "productName": "Bouchées aux poivrons",
+   "price": 3.99,
+   "unitPrice": 3.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 26,60",
+   "url": "https://www.lidl.fr/p/bouchees-aux-poivrons/p11040946",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -104,18 +116,6 @@
    "promo": true
   },
   {
-   "ingredientId": "agneau_epaule",
-   "productName": "L'ETAL DU BOUCHER Gigot d'agneau",
-   "price": 13.49,
-   "unitPrice": 5.62,
-   "unit": "kg",
-   "packSize": 2.4,
-   "packLabel": "La pièce d’environ 1,5 et 2,4 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-gigot-d-agneau/p11437235",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "dinde_escalope",
    "productName": "L'ÉTAL DU VOLAILLER Filet de dinde",
    "price": 8.99,
@@ -136,7 +136,7 @@
    "packSize": 1,
    "packLabel": "1 kg = 3,20",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-cuisses-de-poulet-avec-portions-de-dos/p11439790",
-   "validFrom": "2026-10-29",
+   "validFrom": "2026-10-22",
    "promo": true
   },
   {
