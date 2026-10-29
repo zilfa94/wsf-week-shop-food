@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-28T10:53:30.368Z",
+ "scrapedAt": "2026-10-29T11:10:33.790Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -16,6 +16,18 @@
    "packSize": 1,
    "packLabel": "1 kg = 16,63",
    "url": "https://www.lidl.fr/p/deluxe-thon-a-l-huile-d-olive/p11002918",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "Pommes de terre de consommation",
+   "price": 1.49,
+   "unitPrice": 1.49,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "Le filet de 1 kg",
+   "url": "https://www.lidl.fr/p/pommes-de-terre-de-consommation/p11029463",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -33,13 +45,13 @@
   },
   {
    "ingredientId": "chevre_frais",
-   "productName": "CHÊNE D' ARGENT Fromage de chèvre frais",
+   "productName": "VIVAROIS Fromage de chèvre frais",
    "price": 1.51,
    "unitPrice": 1.51,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg = 7,55",
-   "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
+   "url": "https://www.lidl.fr/p/vivarois-fromage-de-chevre-frais/p11039854",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -184,6 +196,18 @@
    "packSize": 1,
    "packLabel": "1 kg = 19,98",
    "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
+   "validFrom": "2026-10-29",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme",
+   "productName": "Pomme à cuire",
+   "price": 2.99,
+   "unitPrice": 2.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg = 1,50",
+   "url": "https://www.lidl.fr/p/pomme-a-cuire/p11491829",
    "validFrom": "2026-10-29",
    "promo": true
   },
