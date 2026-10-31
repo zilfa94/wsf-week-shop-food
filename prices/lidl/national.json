@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-10-30T11:05:11.969Z",
+ "scrapedAt": "2026-10-31T10:39:12.066Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -33,13 +33,13 @@
   },
   {
    "ingredientId": "pain",
-   "productName": "Baguette croustille",
+   "productName": "CÔTÉ PAINS Baguette croustille",
    "price": 0.71,
    "unitPrice": 3.8,
    "unit": "kg",
    "packSize": 0.187,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/baguette-croustille/p11003271",
+   "url": "https://www.lidl.fr/p/cote-pains-baguette-croustille/p11003271",
    "validFrom": "2026-11-05",
    "promo": true
   },
@@ -81,7 +81,7 @@
   },
   {
    "ingredientId": "pomme",
-   "productName": "FAVORINA Stollen aux pommes",
+   "productName": "Favorina Stollen aux pommes",
    "price": 2.99,
    "unitPrice": 5.98,
    "unit": "kg",
