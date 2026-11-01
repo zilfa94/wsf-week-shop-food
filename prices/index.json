@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-31T10:44:29.186Z",
+ "generatedAt": "2026-11-01T11:38:41.525Z",
  "scraperVersion": "0.1.0",
  "files": [
   {
@@ -14,9 +14,9 @@
     }
    ],
    "source": "drive",
-   "scrapedAt": "2026-10-31T10:43:06.728Z",
+   "scrapedAt": "2026-11-01T11:37:19.364Z",
    "path": "auchan/6453.json",
-   "count": 675,
+   "count": 639,
    "ingredients": 62
   },
   {
@@ -31,10 +31,10 @@
     }
    ],
    "source": "drive",
-   "scrapedAt": "2026-10-31T10:41:24.285Z",
+   "scrapedAt": "2026-11-01T11:35:37.749Z",
    "path": "auchan/975.json",
-   "count": 1101,
-   "ingredients": 65
+   "count": 1079,
+   "ingredients": 64
   },
   {
    "retailer": "lidl",
@@ -42,7 +42,7 @@
    "storeName": "Lidl — offres en supermarché (France entière)",
    "postalCode": "",
    "source": "store",
-   "scrapedAt": "2026-10-31T10:39:12.066Z",
+   "scrapedAt": "2026-11-01T11:33:37.634Z",
    "path": "lidl/national.json",
    "count": 40,
    "ingredients": 29
