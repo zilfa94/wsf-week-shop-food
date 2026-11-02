@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-01T11:33:37.634Z",
+ "scrapedAt": "2026-11-02T12:56:45.875Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -41,18 +41,6 @@
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/cote-pains-baguette-croustille/p11003271",
    "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "Pommes de terre de consommation",
-   "price": 1.49,
-   "unitPrice": 1.49,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "Le filet de 1 kg",
-   "url": "https://www.lidl.fr/p/pommes-de-terre-de-consommation/p11029463",
-   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -304,18 +292,6 @@
    "packSize": 1,
    "packLabel": "1 kg = 19,98",
    "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Pomme à cuire",
-   "price": 2.99,
-   "unitPrice": 2.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 1,50",
-   "url": "https://www.lidl.fr/p/pomme-a-cuire/p11491829",
    "validFrom": "2026-10-29",
    "promo": true
   },
