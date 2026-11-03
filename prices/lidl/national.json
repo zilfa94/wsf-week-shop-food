@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-02T12:56:45.875Z",
+ "scrapedAt": "2026-11-03T12:28:46.756Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -45,7 +45,7 @@
   },
   {
    "ingredientId": "miel",
-   "productName": "DELUXE Miel d'acacia",
+   "productName": "Deluxe Miel d'acacia",
    "price": 7.99,
    "unitPrice": 7.99,
    "unit": "kg",
@@ -105,13 +105,13 @@
   },
   {
    "ingredientId": "moules",
-   "productName": "DUCDECOEUR 12 moules ASC farcies",
+   "productName": "Deluxe 12 moules ASC farcies",
    "price": 3.39,
    "unitPrice": 3.39,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg = 27,12",
-   "url": "https://www.lidl.fr/p/ducdecoeur-12-moules-asc-farcies/p11137010",
+   "url": "https://www.lidl.fr/p/deluxe-12-moules-asc-farcies/p11137010",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -125,18 +125,6 @@
    "packLabel": "400 g",
    "url": "https://www.lidl.fr/p/freshona-pois-chiches-bocal/p11139788",
    "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "croissant",
-   "productName": "MANO DUONA Croissant pur beurre",
-   "price": 0.38,
-   "unitPrice": 0.38,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 8,49",
-   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
-   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -165,7 +153,7 @@
   },
   {
    "ingredientId": "porc_echine",
-   "productName": "L'ÉTAL DU BOUCHER, - 12 côtes de porc",
+   "productName": "L’ÉTAL DU BOUCHER 12 côtes de porc",
    "price": 11.99,
    "unitPrice": 11.99,
    "unit": "kg",
@@ -200,18 +188,6 @@
    "promo": true
   },
   {
-   "ingredientId": "oeuf",
-   "productName": "DELUXE Œufs de truite",
-   "price": 4.69,
-   "unitPrice": 4.69,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 58,63",
-   "url": "https://www.lidl.fr/p/deluxe-oeufs-de-truite/p11434866",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "agneau_epaule",
    "productName": "L'Etal du Boucher Gigot d'agneau",
    "price": 13.49,
@@ -233,18 +209,6 @@
    "packLabel": "1 kg",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-filet-de-dinde/p11439707",
    "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "poulet_cuisse",
-   "productName": "L’ÉTAL DU VOLAILLER Cuisses de poulet avec portions de dos",
-   "price": 7.99,
-   "unitPrice": 7.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 3,20",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-cuisses-de-poulet-avec-portions-de-dos/p11439790",
-   "validFrom": "2026-10-22",
    "promo": true
   },
   {
@@ -284,18 +248,6 @@
    "promo": true
   },
   {
-   "ingredientId": "agneau_epaule",
-   "productName": "DELUXE Souris d'agneau",
-   "price": 8.99,
-   "unitPrice": 8.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 19,98",
-   "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "pomme",
    "productName": "DELUXE Boudins blancs aux pomme et cranberry.",
    "price": 2.99,
@@ -308,20 +260,8 @@
    "promo": true
   },
   {
-   "ingredientId": "crevette",
-   "productName": "DELUXE Cassolette au colin d'alaska, noix de saint jacques et crevettes",
-   "price": 7.79,
-   "unitPrice": 7.79,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 12,98",
-   "url": "https://www.lidl.fr/p/deluxe-cassolette-au-colin-d-alaska-noix-de-saint-jacques-et-crevettes/p11501868",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "agneau_epaule",
-   "productName": "DELUXE Gigot d'agneau",
+   "productName": "Deluxe Gigot d'agneau",
    "price": 14.99,
    "unitPrice": 24.98,
    "unit": "kg",
@@ -380,18 +320,6 @@
    "promo": true
   },
   {
-   "ingredientId": "confiture",
-   "productName": "- Calendrier de l'avent confitures",
-   "price": 15.99,
-   "unitPrice": 29.75,
-   "unit": "kg",
-   "packSize": 0.672,
-   "packLabel": "672 g",
-   "url": "https://www.lidl.fr/p/calendrier-de-l-avent-confitures/p11504018",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
    "ingredientId": "saucisse",
    "productName": "L'ÉTAL DU BOUCHER 8 saucisses de Toulouse",
    "price": 5.69,
@@ -441,13 +369,13 @@
   },
   {
    "ingredientId": "citron",
-   "productName": "Onctueux citron façon lemon curd",
+   "productName": "DELUXE Onctueux citron façon lemon curd",
    "price": 2.29,
    "unitPrice": 12.45,
    "unit": "kg",
    "packSize": 0.184,
    "packLabel": "2 x 92 g",
-   "url": "https://www.lidl.fr/p/onctueux-citron-facon-lemon-curd/p11672817",
+   "url": "https://www.lidl.fr/p/deluxe-onctueux-citron-facon-lemon-curd/p11672817",
    "validFrom": "2026-10-29",
    "promo": true
   },
