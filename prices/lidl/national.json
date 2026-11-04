@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-03T12:28:46.756Z",
+ "scrapedAt": "2026-11-04T12:39:45.892Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -345,13 +345,13 @@
   },
   {
    "ingredientId": "mozzarella",
-   "productName": "mozzarella di latte di bufala",
+   "productName": "CASA AZZURRA mozzarella di latte di bufala",
    "price": 3.59,
    "unitPrice": 3.59,
    "unit": "kg",
    "packSize": 1,
    "packLabel": "1 kg = 11,97",
-   "url": "https://www.lidl.fr/p/mozzarella-di-latte-di-bufala/p11504770",
+   "url": "https://www.lidl.fr/p/casa-azzurra-mozzarella-di-latte-di-bufala/p11504770",
    "validFrom": "2026-10-29",
    "promo": true
   },
