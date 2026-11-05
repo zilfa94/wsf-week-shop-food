@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-04T12:39:45.892Z",
+ "scrapedAt": "2026-11-05T12:50:01.205Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -20,18 +20,6 @@
    "promo": true
   },
   {
-   "ingredientId": "thon_boite",
-   "productName": "Deluxe Thon à l'huile d'olive",
-   "price": 4.99,
-   "unitPrice": 4.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 16,63",
-   "url": "https://www.lidl.fr/p/deluxe-thon-a-l-huile-d-olive/p11002918",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "pain",
    "productName": "CÔTÉ PAINS Baguette croustille",
    "price": 0.71,
@@ -44,15 +32,15 @@
    "promo": true
   },
   {
-   "ingredientId": "miel",
-   "productName": "Deluxe Miel d'acacia",
-   "price": 7.99,
-   "unitPrice": 7.99,
+   "ingredientId": "pomme_de_terre",
+   "productName": "QUALITÉ SUISSE Pomme de terre à chair ferme",
+   "price": 2.29,
+   "unitPrice": 0.92,
    "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 15,98",
-   "url": "https://www.lidl.fr/p/deluxe-miel-d-acacia/p11030805",
-   "validFrom": "2026-10-29",
+   "packSize": 2.5,
+   "packLabel": "Le filet de 2,5 kg",
+   "url": "https://www.lidl.fr/p/qualite-suisse-pomme-de-terre-a-chair-ferme/p11029598",
+   "validFrom": "2026-11-05",
    "promo": true
   },
   {
@@ -80,42 +68,6 @@
    "promo": true
   },
   {
-   "ingredientId": "chevre_frais",
-   "productName": "CHÊNE D'ARGENT Fromage de chèvre frais",
-   "price": 1.51,
-   "unitPrice": 1.51,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 7,55",
-   "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "poivron",
-   "productName": "Bouchées aux poivrons",
-   "price": 3.99,
-   "unitPrice": 3.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 26,60",
-   "url": "https://www.lidl.fr/p/bouchees-aux-poivrons/p11040946",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "moules",
-   "productName": "Deluxe 12 moules ASC farcies",
-   "price": 3.39,
-   "unitPrice": 3.39,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 27,12",
-   "url": "https://www.lidl.fr/p/deluxe-12-moules-asc-farcies/p11137010",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "pois_chiches",
    "productName": "FRESHONA Pois chiches bocal",
    "price": 0.87,
@@ -124,6 +76,18 @@
    "packSize": 0.4,
    "packLabel": "400 g",
    "url": "https://www.lidl.fr/p/freshona-pois-chiches-bocal/p11139788",
+   "validFrom": "2026-11-05",
+   "promo": true
+  },
+  {
+   "ingredientId": "avocat",
+   "productName": "Avocat",
+   "price": 0.65,
+   "unitPrice": 0.65,
+   "unit": "piece",
+   "packSize": 1,
+   "packLabel": "La pièce",
+   "url": "https://www.lidl.fr/p/avocat/p11150914",
    "validFrom": "2026-11-05",
    "promo": true
   },
@@ -137,30 +101,6 @@
    "packLabel": "530 g",
    "url": "https://www.lidl.fr/p/freshona-lentilles/p11252387",
    "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "miel",
-   "productName": "DELUXE Miel de Manukahonig",
-   "price": 12.49,
-   "unitPrice": 12.49,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 49,96",
-   "url": "https://www.lidl.fr/p/deluxe-miel-de-manukahonig/p11256074",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "porc_echine",
-   "productName": "L’ÉTAL DU BOUCHER 12 côtes de porc",
-   "price": 11.99,
-   "unitPrice": 11.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 5,71",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-12-cotes-de-porc/p11326997",
-   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -185,66 +125,6 @@
    "packLabel": "500 g",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11357482",
    "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "agneau_epaule",
-   "productName": "L'Etal du Boucher Gigot d'agneau",
-   "price": 13.49,
-   "unitPrice": 5.62,
-   "unit": "kg",
-   "packSize": 2.4,
-   "packLabel": "La pièce d’environ 1,5 et 2,4 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-gigot-d-agneau/p11437235",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "dinde_escalope",
-   "productName": "L'ÉTAL DU VOLAILLER Filet de dinde",
-   "price": 8.99,
-   "unitPrice": 8.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-filet-de-dinde/p11439707",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "echalote",
-   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
-   "price": 5.75,
-   "unitPrice": 5.75,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 19,17",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "steak_boeuf",
-   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
-   "price": 5.75,
-   "unitPrice": 5.75,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 19,17",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "crevette",
-   "productName": "- Queues de crevettes cuites et décortiquées",
-   "price": 4.39,
-   "unitPrice": 4.39,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 21,95",
-   "url": "https://www.lidl.fr/p/queues-de-crevettes-cuites-et-decortiquees/p11446316",
-   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -284,18 +164,6 @@
    "promo": true
   },
   {
-   "ingredientId": "confiture",
-   "productName": "DELUXE Confiture fraise Litchi",
-   "price": 2.49,
-   "unitPrice": 2.49,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 8,03",
-   "url": "https://www.lidl.fr/p/deluxe-confiture-fraise-litchi/p11502894",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "lardons",
    "productName": "SAINT ALBY Lardons nature",
    "price": 0.69,
@@ -320,18 +188,6 @@
    "promo": true
   },
   {
-   "ingredientId": "saucisse",
-   "productName": "L'ÉTAL DU BOUCHER 8 saucisses de Toulouse",
-   "price": 5.69,
-   "unitPrice": 5.69,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-8-saucisses-de-toulouse/p11504305",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
    "ingredientId": "pomme",
    "productName": "- Cookies pomme caramel",
    "price": 6.99,
@@ -340,30 +196,6 @@
    "packSize": 0.4,
    "packLabel": "400 g",
    "url": "https://www.lidl.fr/p/cookies-pomme-caramel/p11504521",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "mozzarella",
-   "productName": "CASA AZZURRA mozzarella di latte di bufala",
-   "price": 3.59,
-   "unitPrice": 3.59,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 11,97",
-   "url": "https://www.lidl.fr/p/casa-azzurra-mozzarella-di-latte-di-bufala/p11504770",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "concombre",
-   "productName": "TOQUE DU CHEF Salade de concombres",
-   "price": 1.99,
-   "unitPrice": 1.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "1 kg = 3,98",
-   "url": "https://www.lidl.fr/p/toque-du-chef-salade-de-concombres/p11505020",
    "validFrom": "2026-10-29",
    "promo": true
   },
