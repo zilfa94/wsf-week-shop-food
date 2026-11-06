@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-05T12:50:01.205Z",
+ "scrapedAt": "2026-11-06T12:34:51.412Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -185,6 +185,18 @@
    "packLabel": "Le 2e produit",
    "url": "https://www.lidl.fr/p/tartare-ail-fines-herbes/p11503988",
    "validFrom": "2026-11-05",
+   "promo": true
+  },
+  {
+   "ingredientId": "confiture",
+   "productName": "- Calendrier de l'avent confitures",
+   "price": 15.99,
+   "unitPrice": 29.75,
+   "unit": "kg",
+   "packSize": 0.672,
+   "packLabel": "672 g",
+   "url": "https://www.lidl.fr/p/calendrier-de-l-avent-confitures/p11504018",
+   "validFrom": "2026-10-29",
    "promo": true
   },
   {
