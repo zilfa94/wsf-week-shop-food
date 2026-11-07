@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-06T12:34:51.412Z",
+ "scrapedAt": "2026-11-07T11:24:25.520Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -33,13 +33,13 @@
   },
   {
    "ingredientId": "pomme_de_terre",
-   "productName": "QUALITÉ SUISSE Pomme de terre à chair ferme",
+   "productName": "RYNECZEK LIDLA Pomme de terre à chair ferme",
    "price": 2.29,
    "unitPrice": 0.92,
    "unit": "kg",
    "packSize": 2.5,
    "packLabel": "Le filet de 2,5 kg",
-   "url": "https://www.lidl.fr/p/qualite-suisse-pomme-de-terre-a-chair-ferme/p11029598",
+   "url": "https://www.lidl.fr/p/ryneczek-lidla-pomme-de-terre-a-chair-ferme/p11029598",
    "validFrom": "2026-11-05",
    "promo": true
   },
