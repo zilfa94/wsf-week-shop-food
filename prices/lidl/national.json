@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-09T13:28:05.552Z",
+ "scrapedAt": "2026-11-10T13:07:23.570Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -28,18 +28,6 @@
    "packSize": 0.187,
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/cote-pains-baguette-croustille/p11003271",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Harvest Basket Pommes Duchesse",
-   "price": 0.99,
-   "unitPrice": 1.65,
-   "unit": "kg",
-   "packSize": 0.6,
-   "packLabel": "600 g",
-   "url": "https://www.lidl.fr/p/harvest-basket-pommes-duchesse/p11030579",
    "validFrom": "2026-11-05",
    "promo": true
   },
@@ -93,13 +81,13 @@
   },
   {
    "ingredientId": "croissant",
-   "productName": "Croissant pur beurre",
+   "productName": "MANO DUONA Croissant pur beurre",
    "price": 0.38,
    "unitPrice": 7.08,
    "unit": "kg",
    "packSize": 0.054,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
+   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
    "validFrom": "2026-11-12",
    "promo": true
   },
