@@ -4,45 +4,9 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-11T12:17:03.022Z",
+ "scrapedAt": "2026-11-12T13:25:40.954Z",
  "scraperVersion": "0.1.0",
  "prices": [
-  {
-   "ingredientId": "vanille_extrait",
-   "productName": "Deluxe Gousses de vanille",
-   "price": 1.99,
-   "unitPrice": 497.5,
-   "unit": "kg",
-   "packSize": 0.004,
-   "packLabel": "4 g",
-   "url": "https://www.lidl.fr/p/deluxe-gousses-de-vanille/p11002168",
-   "validFrom": "2026-10-15",
-   "promo": true
-  },
-  {
-   "ingredientId": "pain",
-   "productName": "CÔTÉ PAINS Baguette croustille",
-   "price": 0.71,
-   "unitPrice": 3.8,
-   "unit": "kg",
-   "packSize": 0.187,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/cote-pains-baguette-croustille/p11003271",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "saumon",
-   "productName": "- Filet de saumon ASC entier",
-   "price": 16.99,
-   "unitPrice": 16.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "La pièce d’environ 1 kg",
-   "url": "https://www.lidl.fr/p/filet-de-saumon-asc-entier/p11034309",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
   {
    "ingredientId": "saucisse",
    "productName": "Toque du Chef Couscous poulet merguez",
@@ -53,30 +17,6 @@
    "packLabel": "Le 2e produit",
    "url": "https://www.lidl.fr/p/toque-du-chef-couscous-poulet-merguez/p11038317",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Favorina Stollen aux pommes",
-   "price": 2.99,
-   "unitPrice": 5.98,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500 g",
-   "url": "https://www.lidl.fr/p/favorina-stollen-aux-pommes/p11039727",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "pois_chiches",
-   "productName": "FRESHONA Pois chiches bocal",
-   "price": 0.87,
-   "unitPrice": 2.17,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/freshona-pois-chiches-bocal/p11139788",
-   "validFrom": "2026-11-05",
    "promo": true
   },
   {
@@ -92,6 +32,18 @@
    "promo": true
   },
   {
+   "ingredientId": "poireau",
+   "productName": "Poireau",
+   "price": 1.99,
+   "unitPrice": 1.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "La botte de 1 kg",
+   "url": "https://www.lidl.fr/p/poireau/p11151064",
+   "validFrom": "2026-11-12",
+   "promo": true
+  },
+  {
    "ingredientId": "huile_olive",
    "productName": "Deluxe Huile d'olive vierge extra",
    "price": 7.49,
@@ -101,18 +53,6 @@
    "packLabel": "75 cL",
    "url": "https://www.lidl.fr/p/deluxe-huile-d-olive-vierge-extra/p11208772",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "lentilles",
-   "productName": "FRESHONA Lentilles",
-   "price": 0.98,
-   "unitPrice": 1.85,
-   "unit": "kg",
-   "packSize": 0.53,
-   "packLabel": "530 g",
-   "url": "https://www.lidl.fr/p/freshona-lentilles/p11252387",
-   "validFrom": "2026-11-05",
    "promo": true
   },
   {
@@ -137,18 +77,6 @@
    "packLabel": "1 kg",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11328295",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "croissant",
-   "productName": "DELUXE Croissant bicolore fourré au cacao",
-   "price": 0.79,
-   "unitPrice": 10.13,
-   "unit": "kg",
-   "packSize": 0.078,
-   "packLabel": "78 g",
-   "url": "https://www.lidl.fr/p/deluxe-croissant-bicolore-fourre-au-cacao/p11333108",
-   "validFrom": "2026-11-05",
    "promo": true
   },
   {
@@ -188,18 +116,6 @@
    "promo": true
   },
   {
-   "ingredientId": "poulet_blanc",
-   "productName": "L'ÉTAL DU VOLAILLER Émincés de filet de poulet",
-   "price": 4.75,
-   "unitPrice": 9.5,
-   "unit": "kg",
-   "packSize": 0.5,
-   "packLabel": "500 g",
-   "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11357482",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
    "ingredientId": "oeuf",
    "productName": "Deluxe Œufs de truite",
    "price": 4.99,
@@ -208,7 +124,7 @@
    "packSize": 0.08,
    "packLabel": "80 g",
    "url": "https://www.lidl.fr/p/deluxe-oeufs-de-truite/p11434866",
-   "validFrom": "2026-11-12",
+   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -292,19 +208,19 @@
    "packSize": 0.45,
    "packLabel": "450 g",
    "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
-   "validFrom": "2026-11-12",
+   "validFrom": "2026-10-29",
    "promo": true
   },
   {
-   "ingredientId": "pomme",
-   "productName": "DELUXE Boudins blancs aux pomme et cranberry.",
-   "price": 2.99,
-   "unitPrice": 7.97,
+   "ingredientId": "pomme_de_terre",
+   "productName": "Pomme de terre rouge",
+   "price": 2.29,
+   "unitPrice": 0.92,
    "unit": "kg",
-   "packSize": 0.375,
-   "packLabel": "330 / 375 g",
-   "url": "https://www.lidl.fr/p/deluxe-boudins-blancs-aux-pomme-et-cranberry/p11501720",
-   "validFrom": "2026-11-05",
+   "packSize": 2.5,
+   "packLabel": "Le filet de 2,5 kg",
+   "url": "https://www.lidl.fr/p/pomme-de-terre-rouge/p11493414",
+   "validFrom": "2026-11-12",
    "promo": true
   },
   {
@@ -316,30 +232,6 @@
    "packSize": 0.6,
    "packLabel": "600 g",
    "url": "https://www.lidl.fr/p/deluxe-cassolette-au-colin-d-alaska-noix-de-saint-jacques-et-crevettes/p11501868",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "agneau_epaule",
-   "productName": "Deluxe Gigot d'agneau",
-   "price": 14.99,
-   "unitPrice": 24.98,
-   "unit": "kg",
-   "packSize": 0.6,
-   "packLabel": "600 g",
-   "url": "https://www.lidl.fr/p/deluxe-gigot-d-agneau/p11502090",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "confiture",
-   "productName": "DELUXE Confiture mangue fruit de la passion",
-   "price": 2.49,
-   "unitPrice": 8.03,
-   "unit": "kg",
-   "packSize": 0.11,
-   "packLabel": "110 g",
-   "url": "https://www.lidl.fr/p/deluxe-confiture-mangue-fruit-de-la-passion/p11502235",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -380,30 +272,6 @@
    "promo": true
   },
   {
-   "ingredientId": "lardons",
-   "productName": "SAINT ALBY Lardons nature",
-   "price": 0.69,
-   "unitPrice": 4.67,
-   "unit": "kg",
-   "packSize": 0.148,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/saint-alby-lardons-nature/p11503613",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
-   "ingredientId": "ail",
-   "productName": "Tartare ail & fines herbes",
-   "price": 1.12,
-   "unitPrice": 7.82,
-   "unit": "kg",
-   "packSize": 0.143,
-   "packLabel": "Le 2e produit",
-   "url": "https://www.lidl.fr/p/tartare-ail-fines-herbes/p11503988",
-   "validFrom": "2026-11-05",
-   "promo": true
-  },
-  {
    "ingredientId": "confiture",
    "productName": "- Calendrier de l'avent confitures",
    "price": 19.99,
@@ -412,18 +280,6 @@
    "packSize": 0.672,
    "packLabel": "672 g",
    "url": "https://www.lidl.fr/p/calendrier-de-l-avent-confitures/p11504018",
-   "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "- Cookies pomme caramel",
-   "price": 6.99,
-   "unitPrice": 17.48,
-   "unit": "kg",
-   "packSize": 0.4,
-   "packLabel": "400 g",
-   "url": "https://www.lidl.fr/p/cookies-pomme-caramel/p11504521",
    "validFrom": "2026-10-29",
    "promo": true
   },
@@ -449,18 +305,6 @@
    "packLabel": "1,531 kg",
    "url": "https://www.lidl.fr/p/fairy-fairy-platinum-citron/p11505373",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "citron",
-   "productName": "DELUXE Onctueux citron façon lemon curd",
-   "price": 2.29,
-   "unitPrice": 12.45,
-   "unit": "kg",
-   "packSize": 0.184,
-   "packLabel": "2 x 92 g",
-   "url": "https://www.lidl.fr/p/deluxe-onctueux-citron-facon-lemon-curd/p11672817",
-   "validFrom": "2026-10-29",
    "promo": true
   },
   {
@@ -497,18 +341,6 @@
    "packLabel": "500 g",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-poelee-de-filet-de-poulet/p11818579",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "porc_echine",
-   "productName": "L'ÉTAL DU BOUCHER Rôti de porc au chorizo",
-   "price": 7.99,
-   "unitPrice": 9.99,
-   "unit": "kg",
-   "packSize": 0.8,
-   "packLabel": "800 g",
-   "url": "https://www.lidl.fr/p/l-etal-du-boucher-roti-de-porc-au-chorizo/p11970829",
-   "validFrom": "2026-11-05",
    "promo": true
   },
   {
