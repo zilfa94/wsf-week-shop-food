@@ -4,9 +4,46 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-12T13:25:40.954Z",
+ "scrapedAt": "2026-11-13T12:42:26.281Z",
  "scraperVersion": "0.1.0",
  "prices": [
+  {
+   "ingredientId": "parmesan",
+   "productName": "Deluxe Parmigiano reggiano AOP",
+   "price": 2.49,
+   "unitPrice": 24.9,
+   "unit": "kg",
+   "packSize": 0.1,
+   "packLabel": "100 g",
+   "url": "https://www.lidl.fr/p/deluxe-parmigiano-reggiano-aop/p11000959",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
+  },
+  {
+   "ingredientId": "mozzarella",
+   "productName": "MILBONA Mozzarella rapée",
+   "price": 3.69,
+   "unitPrice": 7.38,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/milbona-mozzarella-rapee/p11001445",
+   "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme",
+   "productName": "Harvest Basket Pommes Duchesse",
+   "price": 0.99,
+   "unitPrice": 1.65,
+   "unit": "kg",
+   "packSize": 0.6,
+   "packLabel": "600 g",
+   "url": "https://www.lidl.fr/p/harvest-basket-pommes-duchesse/p11030579",
+   "validFrom": "2026-11-05",
+   "promo": true
+  },
   {
    "ingredientId": "saucisse",
    "productName": "Toque du Chef Couscous poulet merguez",
@@ -20,14 +57,26 @@
    "promo": true
   },
   {
+   "ingredientId": "chevre_frais",
+   "productName": "CHÊNE D'ARGENT Fromage de chèvre frais",
+   "price": 1.51,
+   "unitPrice": 7.55,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200 g",
+   "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
+   "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
    "ingredientId": "croissant",
-   "productName": "MANO DUONA Croissant pur beurre",
+   "productName": "Croissant pur beurre",
    "price": 0.38,
    "unitPrice": 7.08,
    "unit": "kg",
    "packSize": 0.054,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
+   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
    "validFrom": "2026-11-12",
    "promo": true
   },
@@ -56,6 +105,30 @@
    "promo": true
   },
   {
+   "ingredientId": "pain",
+   "productName": "Baguette Rustique",
+   "price": 0.5,
+   "unitPrice": 3,
+   "unit": "kg",
+   "packSize": 0.167,
+   "packLabel": "L’unité",
+   "url": "https://www.lidl.fr/p/baguette-rustique/p11208955",
+   "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "camembert",
+   "productName": "- Camembert di Buffala truffe",
+   "price": 3.99,
+   "unitPrice": 26.6,
+   "unit": "kg",
+   "packSize": 0.15,
+   "packLabel": "150 g",
+   "url": "https://www.lidl.fr/p/camembert-di-buffala-truffe/p11317227",
+   "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
    "ingredientId": "porc_echine",
    "productName": "L'étal du Boucher Sauté de porc",
    "price": 7.79,
@@ -78,6 +151,19 @@
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11328295",
    "validFrom": "2026-11-12",
    "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "- Crevettes décortiquées",
+   "price": 7.99,
+   "unitPrice": 19.98,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400 g",
+   "url": "https://www.lidl.fr/p/crevettes-decortiquees/p11332611",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
   },
   {
    "ingredientId": "dinde_escalope",
@@ -114,6 +200,19 @@
    "url": "https://www.lidl.fr/p/kania-ail-semoule/p11353562",
    "validFrom": "2026-11-12",
    "promo": true
+  },
+  {
+   "ingredientId": "poulet_blanc",
+   "productName": "L'ÉTAL DU VOLAILLER Sauté de filet de poulet",
+   "price": 4.79,
+   "unitPrice": 9.58,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-saute-de-filet-de-poulet/p11357491",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
   },
   {
    "ingredientId": "oeuf",
@@ -164,6 +263,19 @@
    "promo": true
   },
   {
+   "ingredientId": "agneau_epaule",
+   "productName": "L'étal du Boucher Demi gigot d'agneau",
+   "price": 16.99,
+   "unitPrice": 13.59,
+   "unit": "kg",
+   "packSize": 1.25,
+   "packLabel": "La barquette de 1,25 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-demi-gigot-d-agneau/p11440024",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
+  },
+  {
    "ingredientId": "porc_echine",
    "productName": "SAINT ALBY Rôti de porc",
    "price": 1.12,
@@ -176,6 +288,19 @@
    "promo": true
   },
   {
+   "ingredientId": "saumon",
+   "productName": "- 8 pavés de saumon ASC",
+   "price": 17.99,
+   "unitPrice": 17.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/8-paves-de-saumon-asc/p11444272",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
+  },
+  {
    "ingredientId": "thon_boite",
    "productName": "PETIT NAVIRE Thon entier",
    "price": 2.58,
@@ -186,6 +311,32 @@
    "url": "https://www.lidl.fr/p/petit-navire-thon-entier/p11445234",
    "validFrom": "2026-11-12",
    "promo": true
+  },
+  {
+   "ingredientId": "echalote",
+   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
+   "price": 5.35,
+   "unitPrice": 17.83,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "300 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
+  },
+  {
+   "ingredientId": "steak_boeuf",
+   "productName": "L'ÉTAL DU BOUCHER Bavette fondue à l'échalote",
+   "price": 5.35,
+   "unitPrice": 17.83,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "300 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-bavette-fondue-a-l-echalote/p11445503",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
   },
   {
    "ingredientId": "pomme_de_terre",
@@ -236,6 +387,19 @@
    "promo": true
   },
   {
+   "ingredientId": "boeuf_hache",
+   "productName": "L'étal du Boucher Viande hachée pur bœuf",
+   "price": 14.99,
+   "unitPrice": 14.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-viande-hachee-pur-boeuf/p11501932",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
+  },
+  {
    "ingredientId": "pomme",
    "productName": "FINDUS Pommes noisettes",
    "price": 2.15,
@@ -246,6 +410,19 @@
    "url": "https://www.lidl.fr/p/findus-pommes-noisettes/p11502531",
    "validFrom": "2026-11-12",
    "promo": true
+  },
+  {
+   "ingredientId": "steak_boeuf",
+   "productName": "L’ETAL DU BOUCHER 4 faux-filets***",
+   "price": 13.29,
+   "unitPrice": 19.54,
+   "unit": "kg",
+   "packSize": 0.68,
+   "packLabel": "680 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-4-faux-filets/p11502688",
+   "validFrom": "2026-11-19",
+   "promo": true,
+   "validUntil": "2026-11-25"
   },
   {
    "ingredientId": "boeuf_hache",
@@ -305,6 +482,18 @@
    "packLabel": "1,531 kg",
    "url": "https://www.lidl.fr/p/fairy-fairy-platinum-citron/p11505373",
    "validFrom": "2026-11-12",
+   "promo": true
+  },
+  {
+   "ingredientId": "biscotte",
+   "productName": "MAITRE JEAN-PIERRE Biscottes croustillantes",
+   "price": 1.86,
+   "unitPrice": 9.3,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "200 g",
+   "url": "https://www.lidl.fr/p/maitre-jean-pierre-biscottes-croustillantes/p11714279",
+   "validFrom": "2026-11-19",
    "promo": true
   },
   {
