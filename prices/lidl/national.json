@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-15T12:21:23.719Z",
+ "scrapedAt": "2026-11-16T13:13:39.296Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -66,30 +66,6 @@
    "packLabel": "200 g",
    "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
    "validFrom": "2026-11-19",
-   "promo": true
-  },
-  {
-   "ingredientId": "croissant",
-   "productName": "Croissant pur beurre",
-   "price": 0.38,
-   "unitPrice": 7.08,
-   "unit": "kg",
-   "packSize": 0.054,
-   "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
-   "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "poireau",
-   "productName": "Poireau",
-   "price": 1.99,
-   "unitPrice": 1.99,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "La botte de 1 kg",
-   "url": "https://www.lidl.fr/p/poireau/p11151064",
-   "validFrom": "2026-11-12",
    "promo": true
   },
   {
@@ -360,18 +336,6 @@
    "packLabel": "450 g",
    "url": "https://www.lidl.fr/p/deluxe-souris-d-agneau/p11448944",
    "validFrom": "2026-10-29",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme_de_terre",
-   "productName": "Pomme de terre rouge",
-   "price": 2.29,
-   "unitPrice": 0.92,
-   "unit": "kg",
-   "packSize": 2.5,
-   "packLabel": "Le filet de 2,5 kg",
-   "url": "https://www.lidl.fr/p/pomme-de-terre-rouge/p11493414",
-   "validFrom": "2026-11-12",
    "promo": true
   },
   {
