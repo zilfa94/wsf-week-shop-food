@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-16T13:13:39.296Z",
+ "scrapedAt": "2026-11-17T13:56:56.718Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -505,6 +505,30 @@
    "packSize": 0.48,
    "packLabel": "3 x 6 tranches",
    "url": "https://www.lidl.fr/p/fleury-michon-filet-de-poulet/p12321329",
+   "validFrom": "2026-11-12",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "Pomme de terre rouge",
+   "price": 2.29,
+   "unitPrice": 0.92,
+   "unit": "kg",
+   "packSize": 2.5,
+   "packLabel": "Le filet de 2,5 kg",
+   "url": "https://www.lidl.fr/p/pomme-de-terre-rouge/p66000490",
+   "validFrom": "2026-11-12",
+   "promo": true
+  },
+  {
+   "ingredientId": "poireau",
+   "productName": "Poireau",
+   "price": 1.99,
+   "unitPrice": 1.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "La botte de 1 kg",
+   "url": "https://www.lidl.fr/p/poireau/p66000491",
    "validFrom": "2026-11-12",
    "promo": true
   }
