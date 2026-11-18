@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-17T13:56:56.718Z",
+ "scrapedAt": "2026-11-18T13:33:24.765Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -54,18 +54,6 @@
    "packLabel": "Le 2e produit",
    "url": "https://www.lidl.fr/p/toque-du-chef-couscous-poulet-merguez/p11038317",
    "validFrom": "2026-11-12",
-   "promo": true
-  },
-  {
-   "ingredientId": "chevre_frais",
-   "productName": "CHÊNE D'ARGENT Fromage de chèvre frais",
-   "price": 1.51,
-   "unitPrice": 7.55,
-   "unit": "kg",
-   "packSize": 0.2,
-   "packLabel": "200 g",
-   "url": "https://www.lidl.fr/p/chene-d-argent-fromage-de-chevre-frais/p11039854",
-   "validFrom": "2026-11-19",
    "promo": true
   },
   {
