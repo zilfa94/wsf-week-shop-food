@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-19T13:59:52.803Z",
+ "scrapedAt": "2026-11-20T13:42:20.708Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -30,6 +30,30 @@
    "packLabel": "500 g",
    "url": "https://www.lidl.fr/p/milbona-mozzarella-rapee/p11001445",
    "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme_de_terre",
+   "productName": "Pomme de terre à chair ferme",
+   "price": 3.02,
+   "unitPrice": 1.51,
+   "unit": "kg",
+   "packSize": 2,
+   "packLabel": "Le filet de 2 kg",
+   "url": "https://www.lidl.fr/p/pomme-de-terre-a-chair-ferme/p11029604",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "salade",
+   "productName": "Sucrine",
+   "price": 0.99,
+   "unitPrice": 0.99,
+   "unit": "piece",
+   "packSize": 1,
+   "packLabel": "Le sachet de 3 fruits",
+   "url": "https://www.lidl.fr/p/sucrine/p11029873",
+   "validFrom": "2026-11-26",
    "promo": true
   },
   {
@@ -117,6 +141,18 @@
    "promo": true
   },
   {
+   "ingredientId": "pain",
+   "productName": "Baguette",
+   "price": 0.19,
+   "unitPrice": 0.75,
+   "unit": "kg",
+   "packSize": 0.253,
+   "packLabel": "L’unité",
+   "url": "https://www.lidl.fr/p/baguette/p11256196",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
    "ingredientId": "camembert",
    "productName": "- Camembert di Buffala truffe",
    "price": 3.99,
@@ -142,6 +178,18 @@
    "validUntil": "2026-11-25"
   },
   {
+   "ingredientId": "pain_mie",
+   "productName": "Maître Jean-Pierre Pain de mie grandes tranches",
+   "price": 0.64,
+   "unitPrice": 1.49,
+   "unit": "kg",
+   "packSize": 0.43,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/maitre-jean-pierre-pain-de-mie-grandes-tranches/p11340615",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
    "ingredientId": "poulet_blanc",
    "productName": "L'ÉTAL DU VOLAILLER Sauté de filet de poulet",
    "price": 4.79,
@@ -153,6 +201,30 @@
    "validFrom": "2026-11-19",
    "promo": true,
    "validUntil": "2026-11-25"
+  },
+  {
+   "ingredientId": "poulet_blanc",
+   "productName": "L'ÉTAL DU VOLAILLER Émincés de filet de poulet",
+   "price": 4.79,
+   "unitPrice": 9.58,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11361815",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "dinde_escalope",
+   "productName": "L'ÉTAL DU VOLAILLER Filet de dinde",
+   "price": 8.49,
+   "unitPrice": 8.49,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-filet-de-dinde/p11439707",
+   "validFrom": "2026-11-26",
+   "promo": true
   },
   {
    "ingredientId": "agneau_epaule",
@@ -207,6 +279,30 @@
    "validUntil": "2026-11-25"
   },
   {
+   "ingredientId": "poulet_cuisse",
+   "productName": "L'ÉTAL DU VOLAILLER Hauts de cuisse de poulet",
+   "price": 6.99,
+   "unitPrice": 3.5,
+   "unit": "kg",
+   "packSize": 2,
+   "packLabel": "2 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-hauts-de-cuisse-de-poulet/p11449456",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "poulet_cuisse",
+   "productName": "L'étal du Volailler Pilons de poulet",
+   "price": 5.25,
+   "unitPrice": 3.5,
+   "unit": "kg",
+   "packSize": 1.5,
+   "packLabel": "1,5 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-pilons-de-poulet/p11449644",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
    "ingredientId": "pomme",
    "productName": "Pommes bicolores",
    "price": 3.49,
@@ -232,6 +328,18 @@
    "validUntil": "2026-11-25"
   },
   {
+   "ingredientId": "confiture",
+   "productName": "DELUXE Confiture de Noël",
+   "price": 1.99,
+   "unitPrice": 6.42,
+   "unit": "kg",
+   "packSize": 0.31,
+   "packLabel": "310 g",
+   "url": "https://www.lidl.fr/p/deluxe-confiture-de-noel/p11502211",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
    "ingredientId": "steak_boeuf",
    "productName": "L’ETAL DU BOUCHER 4 faux-filets***",
    "price": 13.29,
@@ -245,6 +353,78 @@
    "validUntil": "2026-11-25"
   },
   {
+   "ingredientId": "boeuf_hache",
+   "productName": "L'ÉTAL DU BOUCHER Steaks hachés",
+   "price": 13.99,
+   "unitPrice": 13.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-steaks-haches/p11502755",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "confiture",
+   "productName": "DELUXE Confiture fraise Litchi",
+   "price": 2.49,
+   "unitPrice": 8.03,
+   "unit": "kg",
+   "packSize": 0.31,
+   "packLabel": "310 g",
+   "url": "https://www.lidl.fr/p/deluxe-confiture-fraise-litchi/p11502894",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "piment_en_poudre",
+   "productName": "DELUXE Confit mangues piment d'espelette",
+   "price": 0.99,
+   "unitPrice": 9,
+   "unit": "kg",
+   "packSize": 0.11,
+   "packLabel": "110 g",
+   "url": "https://www.lidl.fr/p/deluxe-confit-mangues-piment-d-espelette/p11503646",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "- Gambas ASC entière cuites",
+   "price": 8.99,
+   "unitPrice": 8.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/gambas-asc-entiere-cuites/p11503960",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "citron",
+   "productName": "Tourtel Twist citron sans sucre",
+   "price": 2.69,
+   "unitPrice": 2.18,
+   "unit": "l",
+   "packSize": 1.234,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/tourtel-twist-citron-sans-sucre/p11574818",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "thon_boite",
+   "productName": "NIXE Morceaux de thon au naturel",
+   "price": 2.99,
+   "unitPrice": 11.69,
+   "unit": "kg",
+   "packSize": 0.256,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/nixe-morceaux-de-thon-au-naturel/p11654106",
+   "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
    "ingredientId": "biscotte",
    "productName": "MAITRE JEAN-PIERRE Biscottes croustillantes",
    "price": 1.86,
@@ -254,6 +434,18 @@
    "packLabel": "200 g",
    "url": "https://www.lidl.fr/p/maitre-jean-pierre-biscottes-croustillantes/p11714279",
    "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "lentilles_corail",
+   "productName": "DELUXE Noix de Saint-Jacques avec corail",
+   "price": 6.99,
+   "unitPrice": 23.3,
+   "unit": "kg",
+   "packSize": 0.3,
+   "packLabel": "300 g",
+   "url": "https://www.lidl.fr/p/deluxe-noix-de-saint-jacques-avec-corail/p11810712",
+   "validFrom": "2026-11-26",
    "promo": true
   }
  ]
