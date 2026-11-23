@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-22T12:55:49.409Z",
+ "scrapedAt": "2026-11-23T15:30:09.779Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -82,50 +82,14 @@
   },
   {
    "ingredientId": "croissant",
-   "productName": "MANO DUONA Croissant pur beurre",
+   "productName": "Croissant pur beurre",
    "price": 0.38,
    "unitPrice": 7.08,
    "unit": "kg",
    "packSize": 0.054,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
+   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
    "validFrom": "2026-11-26",
-   "promo": true
-  },
-  {
-   "ingredientId": "avocat",
-   "productName": "Avocat",
-   "price": 0.65,
-   "unitPrice": 0.65,
-   "unit": "piece",
-   "packSize": 1,
-   "packLabel": "La pièce",
-   "url": "https://www.lidl.fr/p/avocat/p11150914",
-   "validFrom": "2026-11-19",
-   "promo": true
-  },
-  {
-   "ingredientId": "concombre",
-   "productName": "Concombre",
-   "price": 0.85,
-   "unitPrice": 0.85,
-   "unit": "piece",
-   "packSize": 1,
-   "packLabel": "La pièce",
-   "url": "https://www.lidl.fr/p/concombre/p11151055",
-   "validFrom": "2026-11-19",
-   "promo": true
-  },
-  {
-   "ingredientId": "carotte",
-   "productName": "Carottes",
-   "price": 1.11,
-   "unitPrice": 1.11,
-   "unit": "kg",
-   "packSize": 1,
-   "packLabel": "Le sachet de 1 kg",
-   "url": "https://www.lidl.fr/p/carottes/p11151142",
-   "validFrom": "2026-11-19",
    "promo": true
   },
   {
@@ -300,18 +264,6 @@
    "packLabel": "1,5 kg",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-pilons-de-poulet/p11449644",
    "validFrom": "2026-11-26",
-   "promo": true
-  },
-  {
-   "ingredientId": "pomme",
-   "productName": "Pommes bicolores",
-   "price": 3.49,
-   "unitPrice": 1.17,
-   "unit": "kg",
-   "packSize": 3,
-   "packLabel": "Le sachet de 3 kg",
-   "url": "https://www.lidl.fr/p/pommes-bicolores/p11491814",
-   "validFrom": "2026-11-19",
    "promo": true
   },
   {
