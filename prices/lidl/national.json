@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-23T15:30:09.779Z",
+ "scrapedAt": "2026-11-24T15:24:26.864Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -82,13 +82,13 @@
   },
   {
    "ingredientId": "croissant",
-   "productName": "Croissant pur beurre",
+   "productName": "MANO DUONA Croissant pur beurre",
    "price": 0.38,
    "unitPrice": 7.08,
    "unit": "kg",
    "packSize": 0.054,
    "packLabel": "L’unité",
-   "url": "https://www.lidl.fr/p/croissant-pur-beurre/p11150398",
+   "url": "https://www.lidl.fr/p/mano-duona-croissant-pur-beurre/p11150398",
    "validFrom": "2026-11-26",
    "promo": true
   },
@@ -102,6 +102,18 @@
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/baguette-rustique/p11208955",
    "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "huile_olive",
+   "productName": "DELUXE Huile d'olive",
+   "price": 7.99,
+   "unitPrice": 15.98,
+   "unit": "l",
+   "packSize": 0.5,
+   "packLabel": "50 cL",
+   "url": "https://www.lidl.fr/p/deluxe-huile-d-olive/p11209629",
+   "validFrom": "2026-11-26",
    "promo": true
   },
   {
@@ -398,6 +410,30 @@
    "packLabel": "300 g",
    "url": "https://www.lidl.fr/p/deluxe-noix-de-saint-jacques-avec-corail/p11810712",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "pomme",
+   "productName": "Pommes bicolores",
+   "price": 3.49,
+   "unitPrice": 1.17,
+   "unit": "kg",
+   "packSize": 3,
+   "packLabel": "Le sachet de 3 kg",
+   "url": "https://www.lidl.fr/p/pommes-bicolores/p66000294",
+   "validFrom": "2026-11-19",
+   "promo": true
+  },
+  {
+   "ingredientId": "carotte",
+   "productName": "Carottes",
+   "price": 1.11,
+   "unitPrice": 1.11,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "Le sachet de 1 kg",
+   "url": "https://www.lidl.fr/p/carottes/p66000502",
+   "validFrom": "2026-11-19",
    "promo": true
   }
  ]
