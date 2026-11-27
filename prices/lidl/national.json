@@ -4,9 +4,21 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-26T14:35:27.672Z",
+ "scrapedAt": "2026-11-27T14:29:39.043Z",
  "scraperVersion": "0.1.0",
  "prices": [
+  {
+   "ingredientId": "sauce_tomate",
+   "productName": "COMBINO Sauces tomates italiennes",
+   "price": 0.69,
+   "unitPrice": 2.3,
+   "unit": "l",
+   "packSize": 0.3,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/combino-sauces-tomates-italiennes/p11008957",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
   {
    "ingredientId": "pomme_de_terre",
    "productName": "Pomme de terre à chair ferme",
@@ -29,6 +41,42 @@
    "packLabel": "Le sachet de 3 fruits",
    "url": "https://www.lidl.fr/p/sucrine/p11029873",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "miel",
+   "productName": "Deluxe Miel d'acacia",
+   "price": 7.99,
+   "unitPrice": 15.98,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/deluxe-miel-d-acacia/p11030805",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "pates",
+   "productName": "COMBINO Pâtes colorées motif Noël",
+   "price": 1.49,
+   "unitPrice": 2.98,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/combino-pates-colorees-motif-noel/p11031193",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "- Crevettes ASC",
+   "price": 3.99,
+   "unitPrice": 7.98,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/crevettes-asc/p11137074",
+   "validFrom": "2026-12-03",
    "promo": true
   },
   {
@@ -68,6 +116,18 @@
    "promo": true
   },
   {
+   "ingredientId": "lentilles",
+   "productName": "FRESHONA Lentilles",
+   "price": 0.98,
+   "unitPrice": 1.85,
+   "unit": "kg",
+   "packSize": 0.53,
+   "packLabel": "530 g (PNE)",
+   "url": "https://www.lidl.fr/p/freshona-lentilles/p11252387",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
    "ingredientId": "pain",
    "productName": "Baguette",
    "price": 0.19,
@@ -77,6 +137,18 @@
    "packLabel": "L’unité",
    "url": "https://www.lidl.fr/p/baguette/p11256196",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "poulet_blanc",
+   "productName": "L’ÉTAL DU VOLAILLER Émincés de filet de poulet",
+   "price": 8.99,
+   "unitPrice": 8.99,
+   "unit": "kg",
+   "packSize": 1,
+   "packLabel": "1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-eminces-de-filet-de-poulet/p11328295",
+   "validFrom": "2026-12-03",
    "promo": true
   },
   {
@@ -104,6 +176,30 @@
    "promo": true
   },
   {
+   "ingredientId": "bouillon_cube",
+   "productName": "MAGGI Kub Or",
+   "price": 0.92,
+   "unitPrice": 7.16,
+   "unit": "kg",
+   "packSize": 0.128,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/maggi-kub-or/p11439315",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "poulet_blanc",
+   "productName": "L’ÉTAL DU VOLAILLER Filets de poulet",
+   "price": 12.99,
+   "unitPrice": 8.33,
+   "unit": "kg",
+   "packSize": 1.5,
+   "packLabel": "1,5 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-filets-de-poulet/p11439484",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
    "ingredientId": "dinde_escalope",
    "productName": "L'ÉTAL DU VOLAILLER Filet de dinde",
    "price": 8.49,
@@ -113,6 +209,126 @@
    "packLabel": "1 kg",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-filet-de-dinde/p11439707",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "poulet_cuisse",
+   "productName": "L’ÉTAL DU VOLAILLER Cuisses de poulet avec portions de dos",
+   "price": 7.99,
+   "unitPrice": 3.2,
+   "unit": "kg",
+   "packSize": 2.5,
+   "packLabel": "2,5 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-volailler-cuisses-de-poulet-avec-portions-de-dos/p11439790",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "porc_echine",
+   "productName": "L'étal du Boucher 15 côtes de porc premières",
+   "price": 11.99,
+   "unitPrice": 5.71,
+   "unit": "kg",
+   "packSize": 2.1,
+   "packLabel": "2,1 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-15-cotes-de-porc-premieres/p11441826",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "Deluxe Queues de crevettes",
+   "price": 9.99,
+   "unitPrice": 13.88,
+   "unit": "kg",
+   "packSize": 0.72,
+   "packLabel": "720 g",
+   "url": "https://www.lidl.fr/p/deluxe-queues-de-crevettes/p11445359",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "steak_boeuf",
+   "productName": "L'étal du Boucher 2 faux-filets",
+   "price": 9.99,
+   "unitPrice": 24.98,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-2-faux-filets/p11445408",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
+   "productName": "L’ÉTAL DU BOUCHER 4 steaks hachés",
+   "price": 6.99,
+   "unitPrice": 17.48,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-4-steaks-haches/p11445416",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "steak_boeuf",
+   "productName": "L'étal du Boucher 2 entrecôtes***",
+   "price": 15.99,
+   "unitPrice": 28.55,
+   "unit": "kg",
+   "packSize": 0.56,
+   "packLabel": "560 g",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-2-entrecotes/p11445424",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "jambon_blanc",
+   "productName": "SAINT ALBY Jambon de Paris",
+   "price": 1.43,
+   "unitPrice": 7.96,
+   "unit": "kg",
+   "packSize": 0.18,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/saint-alby-jambon-de-paris/p11446963",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "lardons",
+   "productName": "SAINT ALBY Allumettes fumées",
+   "price": 1.35,
+   "unitPrice": 6.75,
+   "unit": "kg",
+   "packSize": 0.2,
+   "packLabel": "2 x 100 g",
+   "url": "https://www.lidl.fr/p/saint-alby-allumettes-fumees/p11448025",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "lait_coco",
+   "productName": "Vemondo Lait de coco",
+   "price": 1.42,
+   "unitPrice": 2.37,
+   "unit": "l",
+   "packSize": 0.6,
+   "packLabel": "3 x 20 cL",
+   "url": "https://www.lidl.fr/p/vemondo-lait-de-coco/p11448879",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "Deluxe Gambas sauvage géantes",
+   "price": 13.99,
+   "unitPrice": 34.98,
+   "unit": "kg",
+   "packSize": 0.4,
+   "packLabel": "400 g",
+   "url": "https://www.lidl.fr/p/deluxe-gambas-sauvage-geantes/p11449060",
+   "validFrom": "2026-12-03",
    "promo": true
   },
   {
@@ -137,6 +353,30 @@
    "packLabel": "1,5 kg",
    "url": "https://www.lidl.fr/p/l-etal-du-volailler-pilons-de-poulet/p11449644",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "Deluxe Cassolette au colin d'alaska, noix de saint jacques et crevettes",
+   "price": 7.79,
+   "unitPrice": 12.98,
+   "unit": "kg",
+   "packSize": 0.6,
+   "packLabel": "600 g",
+   "url": "https://www.lidl.fr/p/deluxe-cassolette-au-colin-d-alaska-noix-de-saint-jacques-et-crevettes/p11501868",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "comte",
+   "productName": "- Comté AOP",
+   "price": 5.99,
+   "unitPrice": 34.23,
+   "unit": "kg",
+   "packSize": 0.175,
+   "packLabel": "175 g",
+   "url": "https://www.lidl.fr/p/comte-aop/p11501928",
+   "validFrom": "2026-12-03",
    "promo": true
   },
   {
@@ -200,6 +440,30 @@
    "promo": true
   },
   {
+   "ingredientId": "riz_basmati",
+   "productName": "Taureau Ailé riz basmati format familial",
+   "price": 1.74,
+   "unitPrice": 3.63,
+   "unit": "kg",
+   "packSize": 0.479,
+   "packLabel": "Le 2e produit",
+   "url": "https://www.lidl.fr/p/taureau-aile-riz-basmati-format-familial/p11504672",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
+   "ingredientId": "crevette",
+   "productName": "- Crevettes ASC cuites entières",
+   "price": 3.99,
+   "unitPrice": 7.98,
+   "unit": "kg",
+   "packSize": 0.5,
+   "packLabel": "500 g",
+   "url": "https://www.lidl.fr/p/crevettes-asc-cuites-entieres/p11505569",
+   "validFrom": "2026-12-03",
+   "promo": true
+  },
+  {
    "ingredientId": "citron",
    "productName": "Tourtel Twist citron sans sucre",
    "price": 2.69,
@@ -221,6 +485,18 @@
    "packLabel": "Le 2e produit",
    "url": "https://www.lidl.fr/p/nixe-morceaux-de-thon-au-naturel/p11654106",
    "validFrom": "2026-11-26",
+   "promo": true
+  },
+  {
+   "ingredientId": "boeuf_hache",
+   "productName": "L'ÉTAL DU BOUCHER Steak haché",
+   "price": 23.79,
+   "unitPrice": 11.9,
+   "unit": "kg",
+   "packSize": 2,
+   "packLabel": "2 kg",
+   "url": "https://www.lidl.fr/p/l-etal-du-boucher-steak-hache/p11654976",
+   "validFrom": "2026-12-03",
    "promo": true
   },
   {
