@@ -4,7 +4,7 @@
  "storeName": "Lidl — offres en supermarché (France entière)",
  "postalCode": "",
  "source": "store",
- "scrapedAt": "2026-11-27T14:29:39.043Z",
+ "scrapedAt": "2026-11-28T13:45:21.667Z",
  "scraperVersion": "0.1.0",
  "prices": [
   {
@@ -52,7 +52,7 @@
    "packSize": 0.5,
    "packLabel": "500 g",
    "url": "https://www.lidl.fr/p/deluxe-miel-d-acacia/p11030805",
-   "validFrom": "2026-12-03",
+   "validFrom": "2026-11-12",
    "promo": true
   },
   {
@@ -364,7 +364,7 @@
    "packSize": 0.6,
    "packLabel": "600 g",
    "url": "https://www.lidl.fr/p/deluxe-cassolette-au-colin-d-alaska-noix-de-saint-jacques-et-crevettes/p11501868",
-   "validFrom": "2026-12-03",
+   "validFrom": "2026-11-12",
    "promo": true
   },
   {
